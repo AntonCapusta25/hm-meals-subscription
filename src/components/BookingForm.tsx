@@ -7,8 +7,12 @@ import { Calendar, Users, Utensils, ArrowRight, Star, Sparkles, ChefHat, BookOpe
 import { menus, chefs } from "@/lib/data";
 import confetti from "canvas-confetti";
 import { trackEvent } from "@/lib/analytics";
+import { useI18n } from "@/contexts/I18nContext";
 
 function BookingFormContent() {
+    const { dictionary } = useI18n();
+    const t = (dictionary as any)?.bookingForm || {};
+
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
     const searchParams = useSearchParams();
@@ -155,9 +159,9 @@ function BookingFormContent() {
                             <CheckCircle2 size={48} />
                         </motion.div>
 
-                        <h3 className="text-3xl font-heading font-bold text-cream mb-4">You're Booked!</h3>
+                        <h3 className="text-3xl font-heading font-bold text-cream mb-4">{t.successTitle || "You're Booked!"}</h3>
                         <p className="text-gray-400 mb-8 max-w-xs mx-auto">
-                            Thank you for your request. Our catering team will contact you shortly to finalize your event details!
+                            {t.successMessage || "Thank you for your request. Our catering team will contact you shortly to finalize your event details!"}
                         </p>
 
                         <motion.button
@@ -166,7 +170,7 @@ function BookingFormContent() {
                             onClick={() => { setIsSuccess(false); setSelectedMenuId(""); setSelectedChefName(""); setSelectedCuisine(""); }}
                             className="px-8 py-3 bg-[#F27D42] text-white rounded-xl font-bold hover:bg-[#d66a35] transition-colors"
                         >
-                            Book Another
+                            {t.bookAnother || "Book Another"}
                         </motion.button>
                     </div>
                 </div>
@@ -187,14 +191,14 @@ function BookingFormContent() {
 
 
                 <h2 className="text-5xl lg:text-7xl font-heading font-bold text-cream mb-6 leading-tight">
-                    Reserve Your <br />
+                    {t.title1 || "Reserve Your"} <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F27D42] to-[#FF9F6D]">
-                        Catering Service
+                        {t.title2 || "Catering Service"}
                     </span>
                 </h2>
 
                 <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                    From corporate events to celebrations, we deliver exceptional catering experiences tailored to your needs.
+                    {t.subtitle || "From corporate events to celebrations, we deliver exceptional catering experiences tailored to your needs."}
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 text-gray-400 text-sm">
@@ -202,13 +206,13 @@ function BookingFormContent() {
                         <div className="p-2 rounded-full bg-white/5 text-[#F27D42]">
                             <Star size={16} fill="currentColor" />
                         </div>
-                        <span>5-Star Rated Chefs</span>
+                        <span>{t.feature1 || "5-Star Rated Chefs"}</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <div className="p-2 rounded-full bg-white/5 text-[#F27D42]">
                             <Utensils size={16} />
                         </div>
-                        <span>Custom Curated Menus</span>
+                        <span>{t.feature2 || "Custom Curated Menus"}</span>
                     </div>
                 </div>
             </motion.div>
@@ -228,7 +232,7 @@ function BookingFormContent() {
                             <div className="space-y-4">
                                 {/* Menu Selection */}
                                 <div className="space-y-2">
-                                    <label className="text-xs font-medium uppercase tracking-wider text-gray-500 ml-1">Select Menu</label>
+                                    <label className="text-xs font-medium uppercase tracking-wider text-gray-500 ml-1">{t.selectMenuLabel || "Select Menu"}</label>
                                     <div className="relative group">
                                         <BookOpen className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#F27D42] transition-colors" size={18} />
                                         <select
@@ -236,7 +240,7 @@ function BookingFormContent() {
                                             onChange={handleMenuChange}
                                             className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 pl-12 text-cream focus:outline-none focus:border-[#F27D42]/50 focus:bg-white/10 transition-all appearance-none cursor-pointer"
                                         >
-                                            <option className="bg-[#2D2420]" value="">-- I'll Customize My Own --</option>
+                                            <option className="bg-[#2D2420]" value="">{t.customMenuOption || "-- I'll Customize My Own --"}</option>
                                             {menus.filter(menu => !menu.soldOut).map(menu => (
                                                 <option key={menu.id} value={menu.id} className="bg-[#2D2420]">
                                                     {menu.title}
@@ -249,7 +253,7 @@ function BookingFormContent() {
                                 {/* Chef & Cuisine (Auto-filled or Manual) */}
                                 <div className="grid grid-cols-2 gap-4">
                                     <div className="space-y-2">
-                                        <label className="text-xs font-medium uppercase tracking-wider text-gray-500 ml-1">Preferred Chef</label>
+                                        <label className="text-xs font-medium uppercase tracking-wider text-gray-500 ml-1">{t.preferredChefLabel || "Preferred Chef"}</label>
                                         <div className="relative group">
                                             <ChefHat className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#F27D42] transition-colors" size={18} />
                                             {selectedMenuId ? (
@@ -266,7 +270,7 @@ function BookingFormContent() {
                                                     required
                                                     className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 pl-12 text-cream focus:outline-none focus:border-[#F27D42]/50 focus:bg-white/10 transition-all appearance-none cursor-pointer"
                                                 >
-                                                    <option className="bg-[#2D2420]" value="">Any Chef</option>
+                                                    <option className="bg-[#2D2420]" value="">{t.anyChefOption || "Any Chef"}</option>
                                                     {chefs.map(chef => (
                                                         <option key={chef.name} value={chef.name} className="bg-[#2D2420]">{chef.name}</option>
                                                     ))}
@@ -276,14 +280,14 @@ function BookingFormContent() {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <label className="text-xs font-medium uppercase tracking-wider text-gray-500 ml-1">Cuisine Style</label>
+                                        <label className="text-xs font-medium uppercase tracking-wider text-gray-500 ml-1">{t.cuisineStyleLabel || "Cuisine Style"}</label>
                                         <div className="relative group">
                                             <Utensils className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#F27D42] transition-colors" size={18} />
                                             <input
                                                 type="text"
                                                 value={selectedCuisine}
                                                 onChange={(e) => setSelectedCuisine(e.target.value)}
-                                                placeholder="e.g. Italian"
+                                                placeholder={t.cuisinePlaceholder || "e.g. Italian"}
                                                 className={`w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 pl-12 text-cream placeholder-gray-600 focus:outline-none focus:border-[#F27D42]/50 focus:bg-white/10 transition-all ${selectedMenuId ? 'text-cream/70' : ''}`}
                                                 readOnly={!!selectedMenuId}
                                             />
@@ -293,7 +297,7 @@ function BookingFormContent() {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-xs font-medium uppercase tracking-wider text-gray-500 ml-1">Event Details</label>
+                                <label className="text-xs font-medium uppercase tracking-wider text-gray-500 ml-1">{t.eventDetailsLabel || "Event Details"}</label>
                                 <div className="grid grid-cols-2 gap-4">
                                     <div className="relative group">
                                         <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#F27D42] transition-colors" size={18} />
@@ -307,10 +311,10 @@ function BookingFormContent() {
                                     <div className="relative group">
                                         <Users className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#F27D42] transition-colors" size={18} />
                                         <select name="guests" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 pl-12 text-cream focus:outline-none focus:border-[#F27D42]/50 focus:bg-white/10 transition-all appearance-none cursor-pointer">
-                                            <option className="bg-[#2D2420]">2 Guests</option>
-                                            <option className="bg-[#2D2420]">3-5 Guests</option>
-                                            <option className="bg-[#2D2420]">6-10 Guests</option>
-                                            <option className="bg-[#2D2420]">10+ Guests</option>
+                                            <option className="bg-[#2D2420]">{t.guests?.g2 || "2 Guests"}</option>
+                                            <option className="bg-[#2D2420]">{t.guests?.g3_5 || "3-5 Guests"}</option>
+                                            <option className="bg-[#2D2420]">{t.guests?.g6_10 || "6-10 Guests"}</option>
+                                            <option className="bg-[#2D2420]">{t.guests?.g10plus || "10+ Guests"}</option>
                                         </select>
                                     </div>
                                 </div>
@@ -321,7 +325,7 @@ function BookingFormContent() {
                                     <input
                                         name="name"
                                         type="text"
-                                        placeholder="Your Name"
+                                        placeholder={t.namePlaceholder || "Your Name"}
                                         required
                                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-cream placeholder-gray-600 focus:outline-none focus:border-[#F27D42]/50 focus:bg-white/10 transition-all"
                                     />
@@ -330,7 +334,7 @@ function BookingFormContent() {
                                     <input
                                         name="email"
                                         type="email"
-                                        placeholder="Email Address"
+                                        placeholder={t.emailPlaceholder || "Email Address"}
                                         required
                                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-cream placeholder-gray-600 focus:outline-none focus:border-[#F27D42]/50 focus:bg-white/10 transition-all"
                                     />
@@ -348,7 +352,7 @@ function BookingFormContent() {
                                         <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                                     ) : (
                                         <>
-                                            <span>Book Now</span>
+                                            <span>{t.bookNowBtn || "Book Now"}</span>
                                             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                                         </>
                                     )}
@@ -358,7 +362,7 @@ function BookingFormContent() {
                             </motion.button>
 
                             <p className="text-center text-xs text-gray-500 mt-4">
-                                No payment required instantly. <br />You'll be contacted to finalize details.
+                                {t.noPaymentText || "No payment required instantly."} <br />{t.contactedText || "You'll be contacted to finalize details."}
                             </p>
                         </form>
                     </div>
@@ -369,6 +373,9 @@ function BookingFormContent() {
 }
 
 export default function BookingForm() {
+    const { dictionary } = useI18n();
+    const t = (dictionary as any)?.bookingForm || {};
+
     return (
         <section id="booking" className="relative py-32 overflow-hidden bg-dark">
             {/* Ambient Background Elements */}
@@ -379,7 +386,7 @@ export default function BookingForm() {
             </div>
 
             <div className="container mx-auto px-5 relative z-10">
-                <Suspense fallback={<div className="text-white text-center">Loading form...</div>}>
+                <Suspense fallback={<div className="text-white text-center">{t.loadingText || "Loading form..."}</div>}>
                     <BookingFormContent />
                 </Suspense>
             </div>

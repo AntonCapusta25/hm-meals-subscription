@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import { I18nProvider } from "@/contexts/I18nContext";
+import { getDictionary } from "@/i18n/getDictionary";
+import { Locale } from "@/i18n/config";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -15,18 +18,47 @@ const inter = Inter({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Homemade Catering - Premium Event Catering Services",
-  description: "Professional catering services for corporate events, weddings, parties, and special occasions. Custom menus crafted by expert chefs.",
-};
+export async function generateMetadata(
+  props: { params: Promise<{ lang: string }> }
+): Promise<Metadata> {
+  const params = await props.params;
+  const dictionary = await getDictionary(params.lang as Locale);
+  const m = (dictionary as any).metadata || {};
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+  return {
+    metadataBase: new URL('https://homemademeals.net'),
+    title: m.homeTitle || "Homemade Catering - Premium Event Catering Services",
+    description: m.homeDescription || "Professional catering services for corporate events, weddings, parties, and special occasions. Custom menus crafted by expert chefs.",
+    alternates: {
+      languages: {
+        'en': '/en',
+        'nl-NL': '/nl',
+        'fr': '/fr',
+        'ar': '/ar',
+        'hi': '/hi',
+      },
+    },
+  };
+}
+
+export default async function RootLayout(props: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ lang: string }>;
+}) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
+  const {
+    children
+  } = props;
+
+  const dictionary = await getDictionary(lang as Locale);
+
   return (
-    <html lang="en">
+    <html lang={lang} dir={lang === "ar" ? "rtl" : "ltr"}>
       <body
         className={`${fraunces.variable} ${inter.variable} antialiased bg-cream text-dark`}
       >
@@ -113,7 +145,9 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         />
         {/* End Google Analytics */}
 
-        {children}
+        <I18nProvider lang={lang as any} dictionary={dictionary as any}>
+          {children}
+        </I18nProvider>
       </body>
     </html>
   );

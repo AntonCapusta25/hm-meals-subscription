@@ -3,10 +3,21 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useI18n } from "@/contexts/I18nContext";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [bookingLink, setBookingLink] = useState("#booking");
+
+    // Fallbacks incase dictionary misses keys
+    const i18n = useI18n();
+    const t = i18n?.dictionary?.navigation || {
+        howItWorks: "How it Works",
+        menu: "Menus",
+        occasions: "Occasions",
+        bookNow: "Book Now"
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -59,23 +70,27 @@ export default function Navbar() {
 
             <div className="hidden md:flex items-center gap-8 text-light font-medium text-sm tracking-wide">
                 <Link href="#how-it-works" className="hover:text-orange transition-colors">
-                    How it Works
+                    {t.howItWorks || "How it Works"}
                 </Link>
                 <Link href="#menu-boxes" className="hover:text-orange transition-colors">
-                    Menus
+                    {t.menu || "Menus"}
                 </Link>
                 <Link href="#occasions" className="hover:text-orange transition-colors">
-                    Occasions
+                    {(t as any).occasions || "Occasions"}
                 </Link>
             </div>
 
-            <Link
-                href={bookingLink}
-                target={bookingLink.startsWith('http') ? "_blank" : "_self"}
-                className="bg-orange hover:bg-orange/90 text-white px-5 py-2 rounded-full font-semibold text-xs uppercase tracking-wide shadow-md hover:-translate-y-0.5 transition-all duration-300"
-            >
-                Book Now
-            </Link>
+            <div className="flex items-center gap-4">
+                <LanguageSwitcher />
+
+                <Link
+                    href={bookingLink}
+                    target={bookingLink.startsWith('http') ? "_blank" : "_self"}
+                    className="bg-orange hover:bg-orange/90 text-white px-5 py-2 rounded-full font-semibold text-xs uppercase tracking-wide shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    {t.bookNow || "Book Now"}
+                </Link>
+            </div>
         </motion.nav>
     );
 }

@@ -10,13 +10,17 @@ import { motion } from "framer-motion";
 import { occasions } from "@/lib/data";
 import OccasionCard from "./ui/OccasionCard";
 import { trackOccasionView } from "@/lib/analytics";
+import { useI18n } from "@/contexts/I18nContext";
 
 export default function OccasionsCarousel() {
+    const { dictionary } = useI18n();
+    const t = (dictionary as any)?.occasions || {};
+
     return (
         <section id="occasions" className="py-24 bg-white relative">
             <div className="container mx-auto px-5 mb-10 flex justify-between items-end">
                 <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark">
-                    Occasions
+                    {t.title || "Occasions"}
                 </h2>
                 <div className="flex gap-4">
                     <button className="custom-prev w-12 h-12 rounded-full border border-dark/20 flex items-center justify-center hover:bg-dark hover:text-white transition-colors">

@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import { searchRestaurants } from "@/lib/hyperzod";
 import type { Restaurant } from "@/lib/hyperzod";
 import { useCity } from "@/contexts/CityContext";
+import { useI18n } from "@/contexts/I18nContext";
 
 const CITIES = [
     "Amsterdam",
@@ -21,6 +22,9 @@ const CITIES = [
 ];
 
 export default function MenuGrid() {
+    const { dictionary } = useI18n();
+    const t = (dictionary as any)?.menuGrid || {};
+
     const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -55,10 +59,10 @@ export default function MenuGrid() {
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-5">
                     <div>
                         <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark mb-4">
-                            Catering Restaurants
+                            {t.title || "Catering Restaurants"}
                         </h2>
                         <p className="text-light max-w-md mb-6">
-                            Explore our diverse restaurant options. Each restaurant can be customized to your needs.
+                            {t.subtitle || "Explore our diverse restaurant options. Each restaurant can be customized to your needs."}
                         </p>
 
                         {/* City Selector - Improved Design */}
@@ -66,10 +70,10 @@ export default function MenuGrid() {
                             <label className="block text-sm font-semibold text-dark mb-2">
                                 {isDetectingLocation ? (
                                     <span className="flex items-center gap-2">
-                                        <span className="animate-pulse">📍</span> Detecting your location...
+                                        <span className="animate-pulse">📍</span> {t.detectingLocation || "Detecting your location..."}
                                     </span>
                                 ) : (
-                                    "📍 Select City"
+                                    t.selectCity || "📍 Select City"
                                 )}
                             </label>
                             <div className="relative">
@@ -92,7 +96,10 @@ export default function MenuGrid() {
                                 </div>
                             </div>
                             <p className="text-xs text-light mt-2">
-                                Showing {restaurants.length} restaurant{restaurants.length !== 1 ? 's' : ''} in {selectedCity}
+                                {t.showingRestaurants
+                                    ? t.showingRestaurants.replace("{count}", restaurants.length.toString()).replace("{city}", selectedCity)
+                                    : `Showing ${restaurants.length} restaurant${restaurants.length !== 1 ? 's' : ''} in ${selectedCity}`
+                                }
                             </p>
                         </div>
                     </div>
@@ -110,19 +117,19 @@ export default function MenuGrid() {
             {loading && (
                 <div className="w-full text-center py-20">
                     <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-orange"></div>
-                    <p className="mt-4 text-light">Loading restaurants from {selectedCity}...</p>
+                    <p className="mt-4 text-light">{t.loading ? t.loading.replace("{city}", selectedCity) : `Loading restaurants from ${selectedCity}...`}</p>
                 </div>
             )}
 
             {error && (
                 <div className="w-full text-center py-20">
-                    <p className="text-red-600 font-semibold">{error}</p>
+                    <p className="text-red-600 font-semibold">{t.failLoad || error}</p>
                 </div>
             )}
 
             {!loading && !error && restaurants.length === 0 && (
                 <div className="w-full text-center py-20">
-                    <p className="text-light">No restaurants found in {selectedCity}</p>
+                    <p className="text-light">{t.noRestaurants ? t.noRestaurants.replace("{city}", selectedCity) : `No restaurants found in ${selectedCity}`}</p>
                 </div>
             )}
 
@@ -204,7 +211,7 @@ export default function MenuGrid() {
                                             href={`/restaurant/${restaurant.id}`}
                                             className="block w-full bg-orange text-white text-sm font-bold uppercase tracking-wider py-3 rounded-full hover:bg-dark transition-colors text-center shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0"
                                         >
-                                            View Menu →
+                                            {t.viewMenu || "View Menu →"}
                                         </Link>
                                     </div>
                                 </div>

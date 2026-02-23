@@ -2,26 +2,30 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle2, Users, Sparkles } from "lucide-react";
-
-const benefits = [
-    {
-        icon: CheckCircle2,
-        title: "Better food than restaurants",
-        description: "Chef-prepared meals with premium ingredients, tailored to your preferences"
-    },
-    {
-        icon: Users,
-        title: "Intimate atmosphere for real bonding",
-        description: "Create meaningful connections in a comfortable, private setting"
-    },
-    {
-        icon: Sparkles,
-        title: "Fully customizable & flexible",
-        description: "Adapt menus, timing, and service to match your exact needs"
-    }
-];
+import { useI18n } from "@/contexts/I18nContext";
 
 export default function ProblemSolution() {
+    const { dictionary } = useI18n();
+    const t = (dictionary as any)?.problemSolution || {};
+
+    const benefits = [
+        {
+            icon: CheckCircle2,
+            title: t.benefit1Title || "Better food than restaurants",
+            description: t.benefit1Desc || "Chef-prepared meals with premium ingredients, tailored to your preferences"
+        },
+        {
+            icon: Users,
+            title: t.benefit2Title || "Intimate atmosphere for real bonding",
+            description: t.benefit2Desc || "Create meaningful connections in a comfortable, private setting"
+        },
+        {
+            icon: Sparkles,
+            title: t.benefit3Title || "Fully customizable & flexible",
+            description: t.benefit3Desc || "Adapt menus, timing, and service to match your exact needs"
+        }
+    ];
+
     return (
         <section className="relative py-32 bg-gradient-to-b from-cream to-white overflow-hidden">
             {/* Background Elements */}
@@ -38,9 +42,9 @@ export default function ProblemSolution() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-heading font-bold text-dark mb-4 leading-tight">
-                        Restaurant catering is expensive.
+                        {t.title1 || "Restaurant catering is expensive."}
                         <br />
-                        Team bonding is hard.
+                        {t.title2 || "Team bonding is hard."}
                     </h2>
                 </motion.div>
 
@@ -54,43 +58,47 @@ export default function ProblemSolution() {
                 >
                     <div className="inline-block px-8 py-4 rounded-2xl bg-gradient-to-r from-[#F27D42] to-[#FF9F6D] text-white mb-6">
                         <h3 className="text-2xl md:text-4xl font-heading font-bold">
-                            Private chef team dinners at 40% less cost
+                            {t.solutionTitle || "Private chef team dinners at 40% less cost"}
                         </h3>
                     </div>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Skip the overpriced restaurants. Get exceptional food, real connections, and significant savings.
+                        {t.solutionDesc || "Skip the overpriced restaurants. Get exceptional food, real connections, and significant savings."}
                     </p>
                 </motion.div>
 
                 {/* Benefits Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    {benefits.map((benefit, index) => (
-                        <motion.div
-                            key={benefit.title}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 0.1 * index }}
-                            className="relative group"
-                        >
-                            <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 h-full flex flex-col items-start text-left">
-                                {/* Number */}
-                                <div className="text-6xl font-heading font-light text-orange/30 mb-6">
-                                    0{index + 1}
-                                </div>
+                    {benefits.map((benefit, index) => {
+                        const IconComponent = benefit.icon;
+                        return (
+                            <motion.div
+                                key={benefit.title}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 0.1 * index }}
+                                className="relative group"
+                            >
+                                <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 h-full flex flex-col items-start text-left">
+                                    {/* Number */}
+                                    <div className="text-6xl font-heading font-light text-orange/30 mb-6 flex items-center gap-4">
+                                        0{index + 1}
+                                        <IconComponent className="w-10 h-10 text-orange" />
+                                    </div>
 
-                                {/* Content */}
-                                <div>
-                                    <h4 className="text-xl font-heading font-bold text-dark mb-3">
-                                        {benefit.title}
-                                    </h4>
-                                    <p className="text-gray-600 leading-relaxed">
-                                        {benefit.description}
-                                    </p>
+                                    {/* Content */}
+                                    <div>
+                                        <h4 className="text-xl font-heading font-bold text-dark mb-3">
+                                            {benefit.title}
+                                        </h4>
+                                        <p className="text-gray-600 leading-relaxed">
+                                            {benefit.description}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        </motion.div>
-                    ))}
+                            </motion.div>
+                        );
+                    })}
                 </div>
             </div>
         </section>

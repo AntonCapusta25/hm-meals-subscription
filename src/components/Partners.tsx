@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useI18n } from "@/contexts/I18nContext";
 
 const PARTNERS = [
     { name: "El Nino", logo: "/images/partners/el-nino.png" },
@@ -13,11 +14,14 @@ const PARTNERS = [
 ];
 
 export default function Partners() {
+    const { dictionary } = useI18n();
+    const t = (dictionary as any)?.partners || {};
+
     return (
         <section className="py-24 bg-[#FFF8F0] border-b border-gray-100 overflow-hidden">
             <div className="container mx-auto px-5 mb-8 text-center">
                 <p className="text-light uppercase tracking-widest text-xs font-bold">
-                    Proudly Partnering With
+                    {t.heading || "Proudly Partnering With"}
                 </p>
             </div>
 

@@ -4,8 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { trackFAQClick, trackCTAClick } from "@/lib/analytics";
+import { useI18n } from "@/contexts/I18nContext";
 
-const faqs = [
+const fallbackFaqs = [
     {
         question: "What's included in each package?",
         answer: "Each package includes professional chef service, all ingredients, table setup, and cleanup. The Starter package includes a 2-course menu and non-alcoholic beverages. Growth adds a 3-course menu, alcoholic beverages, and pre-event consultation. Premium features a 4-course menu, premium beverages, event coordinator, and optional professional photos."
@@ -70,6 +71,10 @@ const faqs = [
 
 export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const { dictionary } = useI18n();
+    const t = (dictionary as any)?.faq || {};
+
+    const items = t.items || fallbackFaqs;
 
     const toggleFAQ = (index: number) => {
         const isOpening = openIndex !== index;
@@ -77,7 +82,7 @@ export default function FAQ() {
 
         // Track when FAQ is opened
         if (isOpening) {
-            trackFAQClick(faqs[index].question);
+            trackFAQClick(items[index].question);
         }
     };
 
@@ -97,16 +102,16 @@ export default function FAQ() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark mb-4">
-                        Frequently Asked Questions
+                        {t.title || "Frequently Asked Questions"}
                     </h2>
                     <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                        Everything you need to know about our catering services. Can't find your answer? Contact us directly.
+                        {t.subtitle || "Everything you need to know about our catering services. Can't find your answer? Contact us directly."}
                     </p>
                 </motion.div>
 
                 {/* FAQ Accordion */}
                 <div className="max-w-3xl mx-auto space-y-4">
-                    {faqs.map((faq, index) => (
+                    {items.map((faq: any, index: number) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
@@ -166,13 +171,13 @@ export default function FAQ() {
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="text-center mt-12"
                 >
-                    <p className="text-gray-600 mb-4">Still have questions?</p>
+                    <p className="text-gray-600 mb-4">{t.stillQuestions || "Still have questions?"}</p>
                     <a
                         href="#booking"
                         onClick={() => trackCTAClick("Contact Our Team", "faq_section")}
                         className="inline-block px-8 py-4 bg-[#F27D42] text-white rounded-xl font-bold hover:bg-[#d66a35] transition-colors shadow-lg hover:shadow-xl"
                     >
-                        Contact Our Team
+                        {t.contactTeam || "Contact Our Team"}
                     </a>
                 </motion.div>
             </div>

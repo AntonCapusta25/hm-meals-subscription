@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { trackCTAClick } from "@/lib/analytics";
+import { useI18n } from "@/contexts/I18nContext";
 
 const HERO_IMAGES = [
     "/images/hero-48.png",
@@ -13,6 +14,9 @@ const HERO_IMAGES = [
 ];
 
 export default function Hero() {
+    const { dictionary } = useI18n();
+    const t = (dictionary as any)?.hero || {};
+
     const [bookingLink, setBookingLink] = useState("#booking");
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -71,9 +75,7 @@ export default function Hero() {
             <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
             <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-cream to-transparent z-0" />
 
-            {/* Content */}
             <div className="relative z-10 text-center max-w-4xl px-5">
-
 
                 <motion.h1
                     initial={{ opacity: 0, y: 30 }}
@@ -81,9 +83,9 @@ export default function Hero() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="text-5xl md:text-7xl font-heading font-bold leading-tight mb-6 drop-shadow-lg"
                 >
-                    Exceptional Catering
+                    {t.titlePart1 || "Exceptional Catering"}
                     <br />
-                    for Every <span className="text-orange italic font-serif">Occasion</span>
+                    {t.titlePart2 || "for Every"} <span className="text-orange italic font-serif">{t.titleHighlight || "Occasion"}</span>
                 </motion.h1>
 
                 <motion.p
@@ -92,7 +94,7 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                     className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto drop-shadow-md"
                 >
-                    From intimate gatherings to grand celebrations, we bring restaurant-quality cuisine to your event.
+                    {t.subtitle || "From intimate gatherings to grand celebrations, we bring restaurant-quality cuisine to your event."}
                 </motion.p>
 
                 <motion.div
@@ -107,7 +109,7 @@ export default function Hero() {
                         onClick={() => trackCTAClick("Request Quote", "hero_section")}
                         className="bg-orange/90 hover:bg-orange text-white px-10 py-4 rounded-full font-semibold uppercase tracking-wide backdrop-blur-sm border border-white/20 shadow-lg hover:shadow-orange/40 hover:-translate-y-1 transition-all duration-300"
                     >
-                        Request Quote
+                        {t.cta || "Request Quote"}
                     </Link>
                 </motion.div>
             </div>

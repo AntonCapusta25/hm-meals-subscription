@@ -3,12 +3,17 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Occasion } from '@/lib/data';
+import { useI18n } from "@/contexts/I18nContext";
 
 interface OccasionCardProps {
     occasion: Occasion;
 }
 
 export default function OccasionCard({ occasion }: OccasionCardProps) {
+    const { dictionary } = useI18n();
+    const t = (dictionary as any)?.occasions || {};
+    const translation = t.items?.[occasion.id] || {};
+
     return (
         <motion.div
             whileHover={{ scale: 0.98 }}
@@ -16,7 +21,7 @@ export default function OccasionCard({ occasion }: OccasionCardProps) {
         >
             <Image
                 src={occasion.image}
-                alt={occasion.title}
+                alt={translation.title || occasion.title}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
             />
@@ -24,13 +29,13 @@ export default function OccasionCard({ occasion }: OccasionCardProps) {
 
             <div className="absolute bottom-0 left-0 p-8 text-white">
                 <span className="uppercase tracking-[0.2em] text-xs font-semibold opacity-90 mb-2 block">
-                    {occasion.subtitle}
+                    {translation.subtitle || occasion.subtitle}
                 </span>
                 <h3 className="text-3xl font-heading font-bold mb-4">
-                    {occasion.title}
+                    {translation.title || occasion.title}
                 </h3>
                 <span className="text-sm font-semibold border-b border-white/50 pb-1 hover:text-orange hover:border-orange transition-colors">
-                    Explore Menu &rarr;
+                    {t.exploreMenu || "Explore Menu"} &rarr;
                 </span>
             </div>
         </motion.div>

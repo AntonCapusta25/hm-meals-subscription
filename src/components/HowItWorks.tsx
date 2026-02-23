@@ -2,34 +2,38 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-
-const steps = [
-    {
-        number: "01",
-        title: "Choose Your Menu",
-        description: "Browse our curated catering packages or request custom options.",
-        image: "/images/select-menu-47.png",
-    },
-    {
-        number: "02",
-        title: "Confirm Details",
-        description: "Select your date, guest count, and delivery preferences.",
-        image: "/images/step-book.png",
-    },
-    {
-        number: "03",
-        title: "We Deliver Excellence",
-        description: "Professional setup, premium service, and seamless cleanup.",
-        image: "/images/step-enjoy.png",
-    },
-];
+import { useI18n } from "@/contexts/I18nContext";
 
 export default function HowItWorks() {
+    const { dictionary } = useI18n();
+    const t = (dictionary as any)?.howItWorks || {};
+
+    const steps = [
+        {
+            number: "01",
+            title: t.step1Title || "Choose Your Menu",
+            description: t.step1Desc || "Browse our curated catering packages or request custom options.",
+            image: "/images/select-menu-47.png",
+        },
+        {
+            number: "02",
+            title: t.step2Title || "Confirm Details",
+            description: t.step2Desc || "Select your date, guest count, and delivery preferences.",
+            image: "/images/step-book.png",
+        },
+        {
+            number: "03",
+            title: t.step3Title || "We Deliver Excellence",
+            description: t.step3Desc || "Professional setup, premium service, and seamless cleanup.",
+            image: "/images/step-enjoy.png",
+        },
+    ];
+
     return (
         <section id="how-it-works" className="py-24 bg-white text-center">
             <div className="container mx-auto px-5">
                 <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark mb-16">
-                    How it Works
+                    {t.title || "How it Works"}
                 </h2>
 
                 <div className="relative">

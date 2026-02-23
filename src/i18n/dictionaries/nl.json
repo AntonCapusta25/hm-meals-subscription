@@ -1,0 +1,385 @@
+{
+    "navigation": {
+        "howItWorks": "Hoe Het Werkt",
+        "menu": "Menu",
+        "about": "Over Ons",
+        "faq": "Veelgestelde Vragen",
+        "bookNow": "Boek Nu"
+    },
+    "hero": {
+        "titlePart1": "Uitzonderlijke Catering",
+        "titlePart2": "voor Elke",
+        "titleHighlight": "Gelegenheid",
+        "subtitle": "Van intieme diners tot grote vieringen, wij brengen culinair genot naar uw evenement.",
+        "cta": "Vraag Offerte Aan"
+    },
+    "partners": {
+        "heading": "Met Trots Samenwerkend Met"
+    },
+    "problemSolution": {
+        "title1": "Catering van een restaurant is duur.",
+        "title2": "Teambuilding is moeilijk.",
+        "solutionTitle": "Privékok teamdiners tegen 40% lagere kosten",
+        "solutionDesc": "Sla de te dure restaurants over. Krijg uitzonderlijk eten, echte connecties en aanzienlijke besparingen.",
+        "benefit1Title": "Beter eten dan in restaurants",
+        "benefit1Desc": "Door de chef-kok bereide maaltijden met hoogwaardige ingrediënten, afgestemd op uw voorkeuren",
+        "benefit2Title": "Intieme sfeer voor echte verbinding",
+        "benefit2Desc": "Creëer betekenisvolle verbindingen in een comfortabele, privéomgeving",
+        "benefit3Title": "Volledig aanpasbaar en flexibel",
+        "benefit3Desc": "Pas de menu's, timing en service aan uw exacte behoeften aan"
+    },
+    "howItWorks": {
+        "title": "Hoe het Werkt",
+        "step1Title": "Kies uw Menu",
+        "step1Desc": "Bekijk onze samengestelde cateringpakketten of vraag aangepaste opties aan.",
+        "step2Title": "Bevestig Details",
+        "step2Desc": "Selecteer uw datum, aantal gasten en bezorgvoorkeuren.",
+        "step3Title": "Wij Leveren Uitmuntendheid",
+        "step3Desc": "Professionele opzet, premium service en naadloze opruiming."
+    },
+    "cuisineShowcase": {
+        "title1": "Ontdek Onze",
+        "title2": "Keukens",
+        "subtitle": "Van authentieke klassiekers tot moderne fusie, kies een culinair thema dat perfect past bij de sfeer van uw evenement.",
+        "requestQuote": "Vraag Offerte Aan",
+        "planMenu": "Plan Nu Uw Menu",
+        "customAlert": "Aangepaste menu's op aanvraag beschikbaar",
+        "items": {
+            "surinami": {
+                "title": "Surinaams Soul Food",
+                "description": "Een levendige fusie van Creoolse, Hindoestaanse en Javaanse smaken."
+            },
+            "asian": {
+                "title": "Aziatische Fusie",
+                "description": "Een gedurfde mix van oosterse smaken met moderne culinaire technieken."
+            },
+            "indian": {
+                "title": "Authentiek Indiaas",
+                "description": "Rijke curry's, aromatische kruiden en traditionele recepten."
+            },
+            "italian": {
+                "title": "Italiaans Gourmet",
+                "description": "Handgemaakte pasta, premium sauzen en de echte smaak van Italië."
+            },
+            "vegetarian": {
+                "title": "Vers Vegetarisch",
+                "description": "Levendige, plantaardige gerechten die seizoensgebonden producten vieren."
+            },
+            "seafood": {
+                "title": "Schatten van de Oceaan",
+                "description": "Verse vangsten bereid om hun natuurlijke delicate smaken te benadrukken."
+            }
+        }
+    },
+    "occasions": {
+        "title": "Gelegenheden",
+        "exploreMenu": "Ontdek Menu",
+        "items": {
+            "kerst": {
+                "title": "Feestdagen",
+                "subtitle": "Seizoensgebonden"
+            },
+            "shared": {
+                "title": "Familie Dineren",
+                "subtitle": "Sociaal"
+            },
+            "newyear": {
+                "title": "Vieringen & Feesten",
+                "subtitle": "Viering"
+            },
+            "corporate": {
+                "title": "Zakelijke Evenementen",
+                "subtitle": "Professioneel"
+            },
+            "romantic": {
+                "title": "Privé Dineren",
+                "subtitle": "Intiem"
+            }
+        }
+    },
+    "packageTiers": {
+        "title": "Team Diner Pakketten",
+        "subtitle": "Transparante prijzen, uitzonderlijke waarde. Alle pakketten zijn inclusief professionele service en opruiming.",
+        "badgePopular": "Meest Populair",
+        "groupLabel": "Groep:",
+        "timeLabel": "Tijd:",
+        "choosePackage": "Kies dit pakket",
+        "note": "Alle prijzen zijn exclusief BTW. Definitieve offerte verstrekt na overleg. Minimum groepsgroottes zijn van toepassing.",
+        "packages": {
+            "starter": {
+                "name": "Start Team Diner",
+                "priceUnit": "per persoon",
+                "groupSize": "15-30 personen",
+                "duration": "2.5-3 uur",
+                "description": "Budgetbewuste teams, eerste evenementen",
+                "features": [
+                    "2-gangen menu",
+                    "Alcoholvrije dranken",
+                    "Tafelopstelling & opruimen",
+                    "1 dieetwens"
+                ]
+            },
+            "growth": {
+                "name": "Groei Team Diner",
+                "priceUnit": "per persoon",
+                "groupSize": "20-50 personen",
+                "duration": "3-3.5 uur",
+                "description": "Perfecte balans tussen kwaliteit en waarde",
+                "features": [
+                    "3-gangen menu",
+                    "Alcoholische dranken (wijn/bier)",
+                    "Premium tafelopstelling",
+                    "Onbeperkte dieetwensen",
+                    "Voorafgaand overleg (30 min)",
+                    "Aangepaste menuaanpassingen",
+                    "5+ menu-opties"
+                ]
+            },
+            "premium": {
+                "name": "Premium Team Viering",
+                "priceUnit": "per persoon",
+                "groupSize": "30-100 personen",
+                "duration": "3.5-4 uur",
+                "description": "Ultieme ervaring voor speciale gelegenheden",
+                "features": [
+                    "4-gangen menu",
+                    "Premium drankenpakket",
+                    "Aangepast linnengoed & premium opstelling",
+                    "Volledige culinaire aanpassingen",
+                    "1-uur planningsgesprek",
+                    "Feedback na het evenement",
+                    "Evenement coördinator/assistent",
+                    "Optionele professionele foto's"
+                ]
+            }
+        }
+    },
+    "testimonials": {
+        "title": "Wat Onze Klanten Zeggen",
+        "subtitle": "Echte ervaringen van klanten die van onze privé kok diensten hebben genoten.",
+        "joinText": "Sluit je aan bij honderden tevreden klanten",
+        "bookButton": "Boek Uw Team Diner",
+        "verifiedClient": "Geverifieerde Klant",
+        "metrics": {
+            "happyClients": "Tevreden Klanten",
+            "averageRating": "Gemiddelde Beoordeling",
+            "savings": "Besparing vs. Restaurants",
+            "guarantee": "Tevredenheidsgarantie"
+        },
+        "items": [
+            {
+                "company": "Verjaardagsfeest",
+                "eventType": "Aangepaste Tiramisu Bestelling",
+                "quote": "Tiramisu besteld voor mijn verjaardag in plaats van de gewone taart!!! Wat kan ik zeggen... Beste keuze ooit!!! Al mijn vrienden vonden het geweldig en Domenico heeft mijn bestelling uitgevoerd met slechts 48 uur te gaan voor mijn feest! 3 schalen besteld en we hebben alles opgegeten!! Bedankt Dome, ik wist dat ik op je kon rekenen!"
+            },
+            {
+                "company": "Privédiner",
+                "eventType": "Steak & Empanadas",
+                "quote": "Het eten was geweldig, de steak was perfect gebakken met smakelijke chimichurri, en de empanada smaakte precies zoals authentieke empanadas horen te smaken!"
+            },
+            {
+                "company": "Speciale Gelegenheid",
+                "eventType": "Italiaanse Desserts Catering",
+                "quote": "Dit is veruit een van de beste Tiramisu die ik heb geproefd! Het smelt op de een of andere manier in je mond! Super Goed!!"
+            },
+            {
+                "company": "Familiebijeenkomst",
+                "eventType": "Privé Chef Service",
+                "quote": "Heerlijk!! Goedgekeurd door mijn tiramisu-liefhebbende vriend. Hij zei dat het de beste is die hij ooit heeft gehad!"
+            },
+            {
+                "company": "Directe Bestelling",
+                "eventType": "Terugkerende Klant",
+                "quote": "Ik heb een paar keer bij Bottega da Dome besteld en ze hebben met afstand de beste tiramisu! Zal zeker weer bij hen bestellen :)"
+            },
+            {
+                "company": "Catering",
+                "eventType": "Evenementen Catering",
+                "quote": "Heerlijke tiramisu! We vonden het allemaal geweldig. Zeer goed gemaakt en Domenico is een zeer vriendelijke chef. Zal zeker weer bestellen!"
+            },
+            {
+                "company": "Dinerpartij",
+                "eventType": "Authentieke Biryani",
+                "quote": "De biryani was erg hartig en smakelijk! Goede portie met kip en aardappelen. Zal zeker weer bestellen."
+            }
+        ]
+    },
+    "faq": {
+        "title": "Veelgestelde Vragen",
+        "subtitle": "Alles wat u moet weten over onze cateringservices. Kunt u uw antwoord niet vinden? Neem direct contact met ons op.",
+        "stillQuestions": "Heeft u nog vragen?",
+        "contactTeam": "Neem Contact Op",
+        "items": [
+            {
+                "question": "Wat is inbegrepen in elk pakket?",
+                "answer": "Elk pakket is inclusief professionele chef-kok service, alle ingrediënten, tafelopstelling en opruimen. Het Starter pakket bevat een 2-gangen menu en non-alcoholische dranken. Growth voegt een 3-gangen menu, alcoholische dranken en pre-event overleg toe. Premium biedt een 4-gangen menu, premium dranken, een evenementencoördinator en optionele professionele foto's."
+            },
+            {
+                "question": "Kunnen we het menu aanpassen?",
+                "answer": "Absoluut! Alle pakketten bieden de mogelijkheid om het menu aan te passen. Het Starter pakket biedt standaard aanpassingen, terwijl Growth en Premium pakketten uitgebreide aanpassingsmogelijkheden bieden. We werken met u samen om een menu samen te stellen dat past bij uw voorkeuren, dieetwensen en evenementthema."
+            },
+            {
+                "question": "Hoe zit het met dieetwensen?",
+                "answer": "We houden rekening met alle dieetbeperkingen en -voorkeuren. Het Starter pakket bevat 1 dieetaanpassing, terwijl Growth en Premium pakketten onbeperkte aanpassingen bieden. We behandelen vegetarische, veganistische, glutenvrije, halal, koosjere en alle allergiegerelateerde vereisten."
+            },
+            {
+                "question": "Hoeveel personen kunnen we ontvangen?",
+                "answer": "Onze pakketten bedienen verschillende groepsgroottes: Starter (15-30 personen), Growth (20-50 personen) en Premium (30-100 personen). Neem voor groepen buiten deze aantallen contact met ons op voor een offerte op maat. We kunnen onze service aanpassen aan uw behoeften."
+            },
+            {
+                "question": "Kunnen we onze gewenste datum en tijd kiezen?",
+                "answer": "Ja! Wij werken om uw schema heen. Tijdens het boeken kiest u de gewenste datum en tijd. We raden aan om minimaal 2-3 weken van tevoren te boeken voor de beste beschikbaarheid, hoewel we voor kleinere evenementen soms op kortere termijn kunnen plannen."
+            },
+            {
+                "question": "Is alcohol inbegrepen?",
+                "answer": "Alcohol is inbegrepen bij de Growth (wijn/bier) en Premium (volledig drankenpakket) niveaus. Het Starter pakket bevat uitsluitend alcoholvrije dranken. U kunt elk pakket tegen een meerprijs upgraden met alcoholische dranken."
+            },
+            {
+                "question": "Wat als ons aantal gasten verandert?",
+                "answer": "We begrijpen dat het aantal gasten kan fluctueren. U kunt uw gastenaantal tot 5 dagen voor het evenement kosteloos aanpassen. Bij wijzigingen binnen 5 dagen kunnen extra kosten in rekening worden gebracht. We werken met u samen om ervoor te zorgen dat we voorbereid zijn op uw definitieve aantal."
+            },
+            {
+                "question": "Hoe ver van tevoren moeten we boeken?",
+                "answer": "We raden aan om 2-4 weken van tevoren te boeken om de beschikbaarheid te garanderen en tijd te hebben voor het plannen van het menu. Voor grote evenementen (50+ personen), of tijdens piekseizoenen is 4-6 weken ideaal. Spoedboekingen zijn mogelijk—neem contact met ons op om de beschikbaarheid te controleren."
+            },
+            {
+                "question": "Wat is uw annuleringsbeleid?",
+                "answer": "Annuleringen die 14+ dagen voor het evenement zijn gemaakt, krijgen een volledige terugbetaling. Annuleringen 7-13 dagen vooraf krijgen 50%. Annuleringen binnen 7 dagen worden niet gerestitueerd, hoewel we kunnen verzetten op basis van beschikbaarheid. Weer gerelateerde annuleringen worden per geval behandeld."
+            },
+            {
+                "question": "Kunnen we wijnarrangementen toevoegen aan ons menu?",
+                "answer": "Ja! Wijnarrangement is inbegrepen in het Premium-pakket en beschikbaar als add-on voor Starter- en Growth-pakketten. Onze sommelier selecteert wijnen die bij elke gang passen. Prijzen variëren op basis van wijnselectie en aantal gasten."
+            },
+            {
+                "question": "Werken jullie met onze bestaande locatie?",
+                "answer": "We kunnen op de meeste locaties cateren, waaronder kantoren, particuliere huizen, evenementenruimtes en buitenlocaties. We hebben basis toegang tot de keuken nodig (of kunnen draagbare apparatuur meenemen) en ruimte voor de opstelling. Tijdens het consult bespreken we de specifieke vereisten van uw locatie."
+            },
+            {
+                "question": "Kunnen we foto's van eerdere evenementen zien?",
+                "answer": "Zeker! We hebben een portfolio van eerdere evenementen die onze voedselpresentatie, tafelopstellingen en tevreden klanten laten zien. Neem contact met ons op of bekijk onze sociale media voor recente evenementfoto's. We zijn er trots op ons werk te delen!"
+            },
+            {
+                "question": "Hoe gaan jullie om met dieetbeperkingen?",
+                "answer": "We nemen dieetbeperkingen zeer serieus. Tijdens het boeken specificeert u alle dieetwensen. Onze chef-koks bereiden aparte gerechten of passen recepten aan om ervoor te zorgen dat iedereen veilig van de maaltijd geniet. Wij hebben ervaring met allergieën, religieuze vereisten en levensstijlvoorkeuren."
+            },
+            {
+                "question": "Wat is de doorlooptijd voor een boeking?",
+                "answer": "De minimale doorlooptijd is meestal 1 week voor kleine evenementen (minder dan 20 personen) en 2 weken voor grotere groepen. We hebben echter indien mogelijk last-minute verzoeken ingewilligd. Neem onmiddellijk contact met ons op als u een dringende behoefte heeft - we zullen ons best doen om u te helpen."
+            },
+            {
+                "question": "Bieden jullie teambuildingactiviteiten aan?",
+                "answer": "Hoewel onze focus ligt op uitzonderlijke catering, kunnen we coördineren met teambuildingpartners voor activiteiten zoals kooklessen, wijnproeverijen of interactieve eetervaringen. Laat ons uw interesses weten tijdens het consult en we helpen bij het creëren van een complete evenementervaring."
+            }
+        ]
+    },
+    "footer": {
+        "copyright": "© 2024 Savor the Magic. Alle rechten voorbehouden.",
+        "terms": "Voorwaarden",
+        "privacy": "Privacy",
+        "contact": "Contact"
+    },
+    "bookingForm": {
+        "successTitle": "U bent Geboekt!",
+        "successMessage": "Bedankt voor uw aanvraag. Ons cateringteam neemt binnenkort contact met u op om uw evenementdetails af te ronden!",
+        "bookAnother": "Boek Nog Een",
+        "title1": "Reserveer Uw",
+        "title2": "Cateringservice",
+        "subtitle": "Van zakelijke evenementen tot feesten, wij leveren uitzonderlijke cateringervaringen die zijn afgestemd op uw behoeften.",
+        "feature1": "5-Sterren Chef-koks",
+        "feature2": "Op Maat Gemaakte Menu's",
+        "selectMenuLabel": "Selecteer Menu",
+        "customMenuOption": "-- Ik Stel Mijn Eigen Samen --",
+        "preferredChefLabel": "Voorkeurschef",
+        "anyChefOption": "Elke Chef",
+        "cuisineStyleLabel": "Keukenstijl",
+        "cuisinePlaceholder": "bijv. Italiaans",
+        "eventDetailsLabel": "Evenement Details",
+        "guests": {
+            "g2": "2 Gasten",
+            "g3_5": "3-5 Gasten",
+            "g6_10": "6-10 Gasten",
+            "g10plus": "10+ Gasten"
+        },
+        "namePlaceholder": "Uw Naam",
+        "emailPlaceholder": "E-mailadres",
+        "bookNowBtn": "Nu Boeken",
+        "noPaymentText": "Geen directe betaling vereist.",
+        "contactedText": "Er wordt contact met u opgenomen om de details af te ronden.",
+        "loadingText": "Formulier laden..."
+    },
+    "menuGrid": {
+        "title": "Catering Restaurants",
+        "subtitle": "Ontdek onze diverse restaurantopties. Elk restaurant kan worden aangepast aan uw behoeften.",
+        "detectingLocation": "Uw locatie detecteren...",
+        "selectCity": "📍 Selecteer Stad",
+        "showingRestaurants": "{count} restaurant(s) in {city} weergeven",
+        "loading": "Restaurants laden uit {city}...",
+        "failLoad": "Kan restaurants niet laden",
+        "noRestaurants": "Geen restaurants gevonden in {city}",
+        "viewMenu": "Bekijk Menu →"
+    },
+    "chefCarousel": {
+        "title1": "Onze ",
+        "title2": "Uitgelichte",
+        "title3": " Restaurants",
+        "subtitle": "Ontdek geweldige thuiskoks en restaurants die klaar staan om uw volgende evenement te cateren.",
+        "loading": "Restaurants laden...",
+        "failLoad": "Kan restaurants niet laden",
+        "noRestaurants": "Geen restaurants gevonden."
+    },
+    "packageComparison": {
+        "title": "Vergelijk Pakketten",
+        "subtitle": "Bekijk precies wat er in elk pakket is inbegrepen om de perfecte match voor uw team te vinden.",
+        "featureCol": "Kenmerk",
+        "starter": "Starter",
+        "growth": "Growth",
+        "premium": "Premium",
+        "mostPopular": "Meest Populair",
+        "perPerson": "per persoon",
+        "select": "Kies",
+        "selectPkg": "Kies",
+        "features": {
+            "numberOfCourses": "Aantal Gangen",
+            "courses2": "2 gangen",
+            "courses3": "3 gangen",
+            "courses4": "4 gangen",
+            "menuOptions": "Menu Opties",
+            "standard": "Standaard",
+            "options5": "5+ opties",
+            "unlimited": "Onbeperkt",
+            "customMenuAdjustments": "Aangepaste Menuwijzigingen",
+            "dietaryAccommodations": "Dieetwensen",
+            "type1": "1 type",
+            "nonAlcoholicDrinks": "Alcoholvrije Dranken",
+            "wineBeer": "Wijn & Bier",
+            "premiumBeverage": "Premium Drankenpakket",
+            "tableSetup": "Tafel Dekken & Opruimen",
+            "premiumTableSetup": "Premium Tafelopstelling",
+            "customLinens": "Op Maat Gemaakt Linnen",
+            "eventCoordinator": "Evenementencoördinator",
+            "preEventConsultation": "Voorafgaand Overleg",
+            "min30": "30 min",
+            "hour1": "1 uur",
+            "postEventFeedback": "Feedback Achteraf",
+            "professionalPhotos": "Professionele Foto's",
+            "optional": "Optioneel",
+            "groupSize": "Groepsgrootte",
+            "size1530": "15-30",
+            "size2050": "20-50",
+            "size30100": "30-100",
+            "duration": "Duur",
+            "dur253": "2,5-3u",
+            "dur335": "3-3,5u",
+            "dur354": "3,5-4u"
+        }
+    },
+    "chefSignup": {
+        "title": "Ben je een Kok?",
+        "subtitle": "Sluit je aan bij ons exclusieve netwerk van top-privékoks en presenteer je kerstmenu's.",
+        "applyBtn": "Aanmelden als Kok"
+    },
+    "metadata": {
+        "homeTitle": "Huisgemaakte Maaltijden Bezorgen | Thuiskok in Amsterdam & Nederland | Homemade",
+        "homeDescription": "Bestel verse, huisgemaakte maaltijden van gecertificeerde thuiskoks bij jou in de buurt. Betaalbaar, lekker en altijd vers bereid. Bestel vandaag in Amsterdam, Rotterdam en Enschede."
+    }
+}

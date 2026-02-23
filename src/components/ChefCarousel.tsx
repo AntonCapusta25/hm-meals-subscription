@@ -13,8 +13,12 @@ import { searchRestaurants } from "@/lib/hyperzod";
 import type { Restaurant } from "@/lib/hyperzod";
 import { useCity } from "@/contexts/CityContext";
 import ChefCard from "./ui/ChefCard";
+import { useI18n } from "@/contexts/I18nContext";
 
 export default function ChefCarousel() {
+    const { dictionary } = useI18n();
+    const t = (dictionary as any)?.chefCarousel || {};
+
     const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -53,23 +57,23 @@ export default function ChefCarousel() {
         <section className="relative w-full min-h-screen flex flex-col justify-center bg-cream overflow-hidden py-24">
             <div className="container mx-auto px-5 mb-10 text-center">
                 <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark mb-4">
-                    Our <span className="text-orange">Featured</span> Restaurants
+                    {t.title1 || "Our "} <span className="text-orange">{t.title2 || "Featured"}</span> {t.title3 || " Restaurants"}
                 </h2>
                 <p className="text-light max-w-xl mx-auto text-lg">
-                    Discover amazing home chefs and restaurants ready to cater your next event.
+                    {t.subtitle || "Discover amazing home chefs and restaurants ready to cater your next event."}
                 </p>
             </div>
 
             {loading && (
                 <div className="w-full text-center py-20">
                     <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-orange"></div>
-                    <p className="mt-4 text-light">Loading restaurants...</p>
+                    <p className="mt-4 text-light">{t.loading || "Loading restaurants..."}</p>
                 </div>
             )}
 
             {error && (
                 <div className="w-full text-center py-20">
-                    <p className="text-red-500">{error}</p>
+                    <p className="text-red-500">{t.failLoad || error}</p>
                 </div>
             )}
 
@@ -111,7 +115,7 @@ export default function ChefCarousel() {
 
             {!loading && !error && restaurants.length === 0 && (
                 <div className="w-full text-center py-20">
-                    <p className="text-light">No restaurants found.</p>
+                    <p className="text-light">{t.noRestaurants || "No restaurants found."}</p>
                 </div>
             )}
 

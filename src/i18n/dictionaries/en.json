@@ -1,0 +1,385 @@
+{
+    "navigation": {
+        "howItWorks": "How It Works",
+        "menu": "Menu",
+        "about": "About Us",
+        "faq": "FAQ",
+        "bookNow": "Book Now"
+    },
+    "hero": {
+        "titlePart1": "Exceptional Catering",
+        "titlePart2": "for Every",
+        "titleHighlight": "Occasion",
+        "subtitle": "From intimate gatherings to grand celebrations, we bring restaurant-quality cuisine to your event.",
+        "cta": "Request Quote"
+    },
+    "partners": {
+        "heading": "Proudly Partnering With"
+    },
+    "problemSolution": {
+        "title1": "Restaurant catering is expensive.",
+        "title2": "Team bonding is hard.",
+        "solutionTitle": "Private chef team dinners at 40% less cost",
+        "solutionDesc": "Skip the overpriced restaurants. Get exceptional food, real connections, and significant savings.",
+        "benefit1Title": "Better food than restaurants",
+        "benefit1Desc": "Chef-prepared meals with premium ingredients, tailored to your preferences",
+        "benefit2Title": "Intimate atmosphere for real bonding",
+        "benefit2Desc": "Create meaningful connections in a comfortable, private setting",
+        "benefit3Title": "Fully customizable & flexible",
+        "benefit3Desc": "Adapt menus, timing, and service to match your exact needs"
+    },
+    "howItWorks": {
+        "title": "How it Works",
+        "step1Title": "Choose Your Menu",
+        "step1Desc": "Browse our curated catering packages or request custom options.",
+        "step2Title": "Confirm Details",
+        "step2Desc": "Select your date, guest count, and delivery preferences.",
+        "step3Title": "We Deliver Excellence",
+        "step3Desc": "Professional setup, premium service, and seamless cleanup."
+    },
+    "cuisineShowcase": {
+        "title1": "Explore Our",
+        "title2": "Cuisines",
+        "subtitle": "From authentic classics to modern fusion, choose a culinary theme that perfectly matches your event's vibe.",
+        "requestQuote": "Request Quote",
+        "planMenu": "Plan Your Menu Now",
+        "customAlert": "Custom menus available upon request",
+        "items": {
+            "surinami": {
+                "title": "Suriname Soul Food",
+                "description": "A vibrant fusion of Creole, Hindustani, and Javanese flavors."
+            },
+            "asian": {
+                "title": "Asian Fusion",
+                "description": "A bold mix of Eastern flavors with modern culinary techniques."
+            },
+            "indian": {
+                "title": "Authentic Indian",
+                "description": "Rich curries, aromatic spices, and traditional recipes."
+            },
+            "italian": {
+                "title": "Italian Gourmet",
+                "description": "Handcrafted pasta, premium sauces, and the true taste of Italy."
+            },
+            "vegetarian": {
+                "title": "Fresh Vegetarian",
+                "description": "Vibrant, plant-based dishes that celebrate seasonal produce."
+            },
+            "seafood": {
+                "title": "Ocean Treasures",
+                "description": "Fresh catches prepared to highlight their natural delicate flavors."
+            }
+        }
+    },
+    "occasions": {
+        "title": "Occasions",
+        "exploreMenu": "Explore Menu",
+        "items": {
+            "kerst": {
+                "title": "Holiday Events",
+                "subtitle": "Seasonal"
+            },
+            "shared": {
+                "title": "Family-Style Dining",
+                "subtitle": "Social"
+            },
+            "newyear": {
+                "title": "Celebrations & Parties",
+                "subtitle": "Celebration"
+            },
+            "corporate": {
+                "title": "Corporate Events",
+                "subtitle": "Professional"
+            },
+            "romantic": {
+                "title": "Private Dining",
+                "subtitle": "Intimate"
+            }
+        }
+    },
+    "packageTiers": {
+        "title": "Team Dinner Packages",
+        "subtitle": "Transparent pricing, exceptional value. All packages include professional service and cleanup.",
+        "badgePopular": "Most Popular",
+        "groupLabel": "Group:",
+        "timeLabel": "Time:",
+        "choosePackage": "Choose this package",
+        "note": "All prices exclude VAT. Final quote provided after consultation. Minimum group sizes apply.",
+        "packages": {
+            "starter": {
+                "name": "Starter Team Dinner",
+                "priceUnit": "per person",
+                "groupSize": "15-30 people",
+                "duration": "2.5-3 hours",
+                "description": "Budget-conscious teams, first events",
+                "features": [
+                    "2-course menu",
+                    "Non-alcoholic beverages",
+                    "Table setup & cleanup",
+                    "1 dietary accommodation"
+                ]
+            },
+            "growth": {
+                "name": "Growth Team Dinner",
+                "priceUnit": "per person",
+                "groupSize": "20-50 people",
+                "duration": "3-3.5 hours",
+                "description": "Perfect balance of quality and value",
+                "features": [
+                    "3-course menu",
+                    "Alcoholic beverages (wine/beer)",
+                    "Premium table setup",
+                    "Unlimited dietary accommodations",
+                    "Pre-event consultation (30 min)",
+                    "Custom menu adjustments",
+                    "5+ menu options"
+                ]
+            },
+            "premium": {
+                "name": "Premium Team Celebration",
+                "priceUnit": "per person",
+                "groupSize": "30-100 people",
+                "duration": "3.5-4 hours",
+                "description": "Ultimate experience for special occasions",
+                "features": [
+                    "4-course menu",
+                    "Premium beverage package",
+                    "Custom linens & premium setup",
+                    "Full culinary customization",
+                    "1-hour planning call",
+                    "Post-event feedback",
+                    "Event coordinator/assistant",
+                    "Optional professional photos"
+                ]
+            }
+        }
+    },
+    "testimonials": {
+        "title": "What Our Customers Say",
+        "subtitle": "Real experiences from clients who've enjoyed our private chef services.",
+        "joinText": "Join hundreds of satisfied clients",
+        "bookButton": "Book Your Team Dinner",
+        "verifiedClient": "Verified Client",
+        "metrics": {
+            "happyClients": "Happy Clients",
+            "averageRating": "Average Rating",
+            "savings": "Savings vs. Restaurants",
+            "guarantee": "Satisfaction Guarantee"
+        },
+        "items": [
+            {
+                "company": "Birthday Celebration",
+                "eventType": "Custom Tiramisu Order",
+                "quote": "Ordered Tiramisú for my Bday instead of the regular Bday cake!!! What to say... Best choice ever!!! All my friends loved it and Domenico fulfilled my order with only 48 hours to go before my party! Ordered 3 trays and we finished all of it!! Thanks Dome, I knew I could count on you!"
+            },
+            {
+                "company": "Private Dinner",
+                "eventType": "Steak & Empanadas",
+                "quote": "The food was amazing, steak was cooked perfectly with tasty chimichurri, and the empanada was exactly how authentic empanadas should taste!"
+            },
+            {
+                "company": "Special Occasion",
+                "eventType": "Italian Dessert Catering",
+                "quote": "This is by far one of the best Tiramisu I have tasted! It somehow melts inside the mouth! Super Good!!"
+            },
+            {
+                "company": "Family Gathering",
+                "eventType": "Private Chef Service",
+                "quote": "Delicious!! Approved by my tiramisu loved boyfriend. He said it's the best he's ever had!"
+            },
+            {
+                "company": "Direct Order",
+                "eventType": "Recurring Client",
+                "quote": "I ordered from Bottega da Dome a few times and they have hands down the best tiramisu! Will keep ordering from them again :)"
+            },
+            {
+                "company": "Catering",
+                "eventType": "Event Catering",
+                "quote": "Delicious tiramisu! We all loved it. Very well made and Domenico is a very friendly chef. Will order again!"
+            },
+            {
+                "company": "Dinner Party",
+                "eventType": "Authentic Biryani",
+                "quote": "The biryani was very hearty and tasty! Good portion with chicken and potatoes. Definitely will order again."
+            }
+        ]
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about our catering services. Can't find your answer? Contact us directly.",
+        "stillQuestions": "Still have questions?",
+        "contactTeam": "Contact Our Team",
+        "items": [
+            {
+                "question": "What's included in each package?",
+                "answer": "Each package includes professional chef service, all ingredients, table setup, and cleanup. The Starter package includes a 2-course menu and non-alcoholic beverages. Growth adds a 3-course menu, alcoholic beverages, and pre-event consultation. Premium features a 4-course menu, premium beverages, event coordinator, and optional professional photos."
+            },
+            {
+                "question": "Can we customize the menu?",
+                "answer": "Absolutely! All packages allow menu customization. The Starter package offers standard adjustments, while Growth and Premium packages provide extensive customization options. We work with you to create a menu that matches your preferences, dietary needs, and event theme."
+            },
+            {
+                "question": "What about dietary restrictions?",
+                "answer": "We accommodate all dietary restrictions and preferences. The Starter package includes 1 dietary accommodation, while Growth and Premium packages offer unlimited accommodations. We handle vegetarian, vegan, gluten-free, halal, kosher, and all allergy-related requirements."
+            },
+            {
+                "question": "How many people can we accommodate?",
+                "answer": "Our packages serve different group sizes: Starter (15-30 people), Growth (20-50 people), and Premium (30-100 people). For groups outside these ranges, contact us for a custom quote. We can scale our service to match your needs."
+            },
+            {
+                "question": "Can we choose our preferred date and time?",
+                "answer": "Yes! We work around your schedule. During booking, you'll select your preferred date and time. We recommend booking at least 2-3 weeks in advance for best availability, though we can sometimes accommodate shorter notice for smaller events."
+            },
+            {
+                "question": "Is alcohol included?",
+                "answer": "Alcohol is included in the Growth (wine/beer) and Premium (full beverage package) tiers. The Starter package includes non-alcoholic beverages only. You can upgrade any package to include alcoholic beverages for an additional fee."
+            },
+            {
+                "question": "What if our headcount changes?",
+                "answer": "We understand headcounts can fluctuate. You can adjust your guest count up to 5 days before the event without penalty. Changes within 5 days may incur additional fees. We'll work with you to ensure we're prepared for your final number."
+            },
+            {
+                "question": "How far in advance should we book?",
+                "answer": "We recommend booking 2-4 weeks in advance to ensure availability and allow time for menu planning. For large events (50+ people) or during peak seasons, 4-6 weeks is ideal. Rush bookings may be possible—contact us to check availability."
+            },
+            {
+                "question": "What's your cancellation policy?",
+                "answer": "Cancellations made 14+ days before the event receive a full refund. Cancellations 7-13 days prior receive a 50% refund. Cancellations within 7 days are non-refundable, though we can reschedule based on availability. Weather-related cancellations are handled case-by-case."
+            },
+            {
+                "question": "Can we add wine pairing to our menu?",
+                "answer": "Yes! Wine pairing is included in the Premium package and available as an add-on for Starter and Growth packages. Our sommelier will select wines that complement each course. Pricing varies based on wine selection and guest count."
+            },
+            {
+                "question": "Do you work with our existing venue?",
+                "answer": "We can cater at most venues including offices, private homes, event spaces, and outdoor locations. We'll need basic kitchen access (or can bring portable equipment) and space for setup. During consultation, we'll discuss your venue's specific requirements."
+            },
+            {
+                "question": "Can we see photos from past events?",
+                "answer": "Absolutely! We have a portfolio of past events showcasing our food presentation, table setups, and happy clients. Contact us or check our social media for recent event photos. We're proud to share our work!"
+            },
+            {
+                "question": "How do you handle dietary restrictions?",
+                "answer": "We take dietary restrictions very seriously. During booking, you'll specify all dietary needs. Our chefs prepare separate dishes or modify recipes to ensure everyone enjoys the meal safely. We're experienced with allergies, religious requirements, and lifestyle preferences."
+            },
+            {
+                "question": "What's the lead time for booking?",
+                "answer": "Minimum lead time is typically 1 week for small events (under 20 people) and 2 weeks for larger groups. However, we've accommodated last-minute requests when possible. Contact us immediately if you have an urgent need—we'll do our best to help."
+            },
+            {
+                "question": "Do you offer team building activities?",
+                "answer": "While our focus is exceptional catering, we can coordinate with team building partners for activities like cooking classes, wine tastings, or interactive dining experiences. Let us know your interests during consultation, and we'll help create a complete event experience."
+            }
+        ]
+    },
+    "footer": {
+        "copyright": "© 2024 Savor the Magic. All rights reserved.",
+        "terms": "Terms",
+        "privacy": "Privacy",
+        "contact": "Contact"
+    },
+    "bookingForm": {
+        "successTitle": "You're Booked!",
+        "successMessage": "Thank you for your request. Our catering team will contact you shortly to finalize your event details!",
+        "bookAnother": "Book Another",
+        "title1": "Reserve Your",
+        "title2": "Catering Service",
+        "subtitle": "From corporate events to celebrations, we deliver exceptional catering experiences tailored to your needs.",
+        "feature1": "5-Star Rated Chefs",
+        "feature2": "Custom Curated Menus",
+        "selectMenuLabel": "Select Menu",
+        "customMenuOption": "-- I'll Customize My Own --",
+        "preferredChefLabel": "Preferred Chef",
+        "anyChefOption": "Any Chef",
+        "cuisineStyleLabel": "Cuisine Style",
+        "cuisinePlaceholder": "e.g. Italian",
+        "eventDetailsLabel": "Event Details",
+        "guests": {
+            "g2": "2 Guests",
+            "g3_5": "3-5 Guests",
+            "g6_10": "6-10 Guests",
+            "g10plus": "10+ Guests"
+        },
+        "namePlaceholder": "Your Name",
+        "emailPlaceholder": "Email Address",
+        "bookNowBtn": "Book Now",
+        "noPaymentText": "No payment required instantly.",
+        "contactedText": "You'll be contacted to finalize details.",
+        "loadingText": "Loading form..."
+    },
+    "menuGrid": {
+        "title": "Catering Restaurants",
+        "subtitle": "Explore our diverse restaurant options. Each restaurant can be customized to your needs.",
+        "detectingLocation": "Detecting your location...",
+        "selectCity": "📍 Select City",
+        "showingRestaurants": "Showing {count} restaurant(s) in {city}",
+        "loading": "Loading restaurants from {city}...",
+        "failLoad": "Failed to load restaurants",
+        "noRestaurants": "No restaurants found in {city}",
+        "viewMenu": "View Menu →"
+    },
+    "chefCarousel": {
+        "title1": "Our ",
+        "title2": "Featured",
+        "title3": " Restaurants",
+        "subtitle": "Discover amazing home chefs and restaurants ready to cater your next event.",
+        "loading": "Loading restaurants...",
+        "failLoad": "Failed to load restaurants",
+        "noRestaurants": "No restaurants found."
+    },
+    "packageComparison": {
+        "title": "Compare Packages",
+        "subtitle": "See exactly what's included in each package to find the perfect fit for your team.",
+        "featureCol": "Feature",
+        "starter": "Starter",
+        "growth": "Growth",
+        "premium": "Premium",
+        "mostPopular": "Most Popular",
+        "perPerson": "per person",
+        "select": "Select",
+        "selectPkg": "Select",
+        "features": {
+            "numberOfCourses": "Number of Courses",
+            "courses2": "2 courses",
+            "courses3": "3 courses",
+            "courses4": "4 courses",
+            "menuOptions": "Menu Options",
+            "standard": "Standard",
+            "options5": "5+ options",
+            "unlimited": "Unlimited",
+            "customMenuAdjustments": "Custom Menu Adjustments",
+            "dietaryAccommodations": "Dietary Accommodations",
+            "type1": "1 type",
+            "nonAlcoholicDrinks": "Non-Alcoholic Drinks",
+            "wineBeer": "Wine & Beer",
+            "premiumBeverage": "Premium Beverage Package",
+            "tableSetup": "Table Setup & Cleanup",
+            "premiumTableSetup": "Premium Table Setup",
+            "customLinens": "Custom Linens",
+            "eventCoordinator": "Event Coordinator",
+            "preEventConsultation": "Pre-Event Consultation",
+            "min30": "30 min",
+            "hour1": "1 hour",
+            "postEventFeedback": "Post-Event Feedback",
+            "professionalPhotos": "Professional Photos",
+            "optional": "Optional",
+            "groupSize": "Group Size",
+            "size1530": "15-30",
+            "size2050": "20-50",
+            "size30100": "30-100",
+            "duration": "Duration",
+            "dur253": "2.5-3h",
+            "dur335": "3-3.5h",
+            "dur354": "3.5-4h"
+        }
+    },
+    "chefSignup": {
+        "title": "Are You a Chef?",
+        "subtitle": "Join our exclusive network of top-tier private chefs and showcase your christmas menus.",
+        "applyBtn": "Apply as Chef"
+    },
+    "metadata": {
+        "homeTitle": "Homemade Meals Delivery | Private Chef in Amsterdam & Netherlands",
+        "homeDescription": "Order fresh, homemade meals from certified private chefs near you. Affordable, delicious, and always freshly prepared. Order today in Amsterdam, Rotterdam, and Enschede."
+    }
+}
