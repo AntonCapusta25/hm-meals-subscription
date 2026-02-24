@@ -16,13 +16,13 @@ export type BlogPost = {
 // We store the data as a dictionary mapped by language code
 export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
     nl: [
-        {
-            title: "Best Home Cooked Food Delivery in Amsterdam: Why Private Chefs Beat Takeout",
+                {
+            title: "Beste Thuisbezorgde Maaltijden in Amsterdam: Why Private Chefs Beat Takeout",
             slug: "best-home-cooked-food-delivery-amsterdam",
             category: "Local Guides",
             readTime: "7 min read",
             publishedAt: "Feb 23, 2026",
-            excerpt: "Discover why Amsterdam locals are ditching standard takeout for authentic, restaurant-quality home-cooked food delivery and private chef services right in their living rooms.",
+            excerpt: "Vind uw perfecte maaltijd met deze geweldige opties bereid door een privékok in uw eigen huis.",
             image: "https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2670&auto=format&fit=crop",
             author: {
                 name: "Chef Anton",
@@ -32,7 +32,7 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
     <h2>The Evolution of Food Delivery in Amsterdam</h2>
     <p>Amsterdam is an incredibly vibrant culinary capital, famous for its historic canals, bustling markets, and diverse restaurant scene. But what happens when you crave that high-end restaurant experience without the hassle of navigating through the rain, struggling to find parking, or shouting over crowded dining rooms? Enter the rising trend of premium <strong>home cooked food delivery in Amsterdam</strong>.</p>
     
-    <p>For years, food delivery in the Netherlands was synonymous with quick fixes—pizza boxes, lukewarm fries, or hastily packed sushi. But today's discerning Amsterdammer wants more. They want ethically sourced ingredients, stunning presentation, and meals that feel as though they were crafted with genuine care and passion. This is exactly where the concept of hiring a <a href="/en/thuiskok-amsterdam">private chef in Amsterdam</a> entirely changes the game.</p>
+    <p>For years, food delivery in the Netherlands was synonymous with quick fixes—pizza boxes, lukewarm fries, or hastily packed sushi. But today's discerning Amsterdammer wants more. They want ethically sourced ingredients, stunning presentation, and meals that feel as though they were crafted with genuine care and passion. This is exactly where the concept of hiring a <a href="/en/amsterdam">private chef in Amsterdam</a> entirely changes the game.</p>
 
     <h3>Why Standard Takeout is Losing its Appeal</h3>
     <p>We've all been there: you order from a highly-rated restaurant on a delivery app, wait 45 minutes, only to receive a lukewarm dish that has lost its texture during transit. The fries are soggy, the sauce has separated, and the presentation is completely ruined in the cardboard container. When you are celebrating a special occasion—or simply want a truly comforting, high-quality meal—standard delivery platforms often fall short.</p>
@@ -191,13 +191,13 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
     <p>Are you ready to elevate your next dinner party? Utilize the booking form below to instantly secure an elite private chef for your preferred date, and let us start designing your unforgettable customized menu, starring the finest poultry available.</p>
   `
         },
-        {
-            title: "10 Best Homemade Meals for Dinner Tonight (Chef Approved)",
+                {
+            title: "10 Beste Huisgemaakte Maaltijden for Dinner Tonight (Chef Approved)",
             slug: "10-best-homemade-meals-for-dinner-tonight",
             category: "Recipes & Menus",
             readTime: "8 min read",
             publishedAt: "Feb 23, 2026",
-            excerpt: "Searching for dinner inspiration? Here are the 10 absolute best homemade meals our private chefs are repeatedly asked to cook for high-end dinner parties.",
+            excerpt: "Vind uw perfecte maaltijd met deze geweldige opties bereid door een privékok in uw eigen huis.",
             image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2574&auto=format&fit=crop",
             author: {
                 name: "Chef Anton",
@@ -209,6 +209,19 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
 
     <p>We asked our elite roster of <a href="/en/thuiskok-inhuren">private chefs</a> across the Netherlands to compile the absolute top-tier, most requested home-cooked meals they prepare for our clients' most exclusive dinner parties. If you want to experience these extraordinary dishes without the stress of cooking, our teams in <a href="/en/amsterdam">Amsterdam</a> and <a href="/en/rotterdam">Rotterdam</a> are ready to step into your kitchen.</p>
 
+    <h3>The 10 Best Dinner Ideas at a Glance</h3>
+    <ol>
+        <li>Classic Truffle & Wild Mushroom Risotto</li>
+        <li>48-Hour Braised Beef Short Ribs</li>
+        <li>Authentic Surinamese Roti with Chicken Kari</li>
+        <li>Pan-Seared Scallops with Cauliflower Vanilla Puree</li>
+        <li>Fresh Tagliatelle al Ragù (Bolognese)</li>
+        <li>Deconstructed Beef Wellington</li>
+        <li>Miso-Glazed Chilean Sea Bass</li>
+        <li>The Ultimate Dutch Asparagus Feast (White Gold)</li>
+        <li>Spicy Thai Green Curry with Coconut Rice</li>
+        <li>Dark Chocolate Lava Cake (Fondant au Chocolat)</li>
+    </ol>
     <h3>1. Classic Truffle & Wild Mushroom Risotto</h3>
     <p>The ultimate comfort food. A truly spectacular risotto requires constant, rhythmic stirring to release the starches of the Arborio or Carnaroli rice, resulting in a wildly creamy texture without adding heavy cream. Our chefs elevate this by incorporating a deeply reduced porcini mushroom stock, finishing heavily with freshly shaved black truffle and 24-month aged Parmigiano-Reggiano.</p>
 
@@ -450,7 +463,7 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
         }
     ],
     en: [
-        {
+                {
             title: "Best Home Cooked Food Delivery in Amsterdam: Why Private Chefs Beat Takeout",
             slug: "best-home-cooked-food-delivery-amsterdam",
             category: "Local Guides",
@@ -466,7 +479,7 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
     <h2>The Evolution of Food Delivery in Amsterdam</h2>
     <p>Amsterdam is an incredibly vibrant culinary capital, famous for its historic canals, bustling markets, and diverse restaurant scene. But what happens when you crave that high-end restaurant experience without the hassle of navigating through the rain, struggling to find parking, or shouting over crowded dining rooms? Enter the rising trend of premium <strong>home cooked food delivery in Amsterdam</strong>.</p>
     
-    <p>For years, food delivery in the Netherlands was synonymous with quick fixes—pizza boxes, lukewarm fries, or hastily packed sushi. But today's discerning Amsterdammer wants more. They want ethically sourced ingredients, stunning presentation, and meals that feel as though they were crafted with genuine care and passion. This is exactly where the concept of hiring a <a href="/en/thuiskok-amsterdam">private chef in Amsterdam</a> entirely changes the game.</p>
+    <p>For years, food delivery in the Netherlands was synonymous with quick fixes—pizza boxes, lukewarm fries, or hastily packed sushi. But today's discerning Amsterdammer wants more. They want ethically sourced ingredients, stunning presentation, and meals that feel as though they were crafted with genuine care and passion. This is exactly where the concept of hiring a <a href="/en/amsterdam">private chef in Amsterdam</a> entirely changes the game.</p>
 
     <h3>Why Standard Takeout is Losing its Appeal</h3>
     <p>We've all been there: you order from a highly-rated restaurant on a delivery app, wait 45 minutes, only to receive a lukewarm dish that has lost its texture during transit. The fries are soggy, the sauce has separated, and the presentation is completely ruined in the cardboard container. When you are celebrating a special occasion—or simply want a truly comforting, high-quality meal—standard delivery platforms often fall short.</p>
@@ -625,7 +638,7 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
     <p>Are you ready to elevate your next dinner party? Utilize the booking form below to instantly secure an elite private chef for your preferred date, and let us start designing your unforgettable customized menu, starring the finest poultry available.</p>
   `
         },
-        {
+                {
             title: "10 Best Homemade Meals for Dinner Tonight (Chef Approved)",
             slug: "10-best-homemade-meals-for-dinner-tonight",
             category: "Recipes & Menus",
@@ -643,6 +656,19 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
 
     <p>We asked our elite roster of <a href="/en/thuiskok-inhuren">private chefs</a> across the Netherlands to compile the absolute top-tier, most requested home-cooked meals they prepare for our clients' most exclusive dinner parties. If you want to experience these extraordinary dishes without the stress of cooking, our teams in <a href="/en/amsterdam">Amsterdam</a> and <a href="/en/rotterdam">Rotterdam</a> are ready to step into your kitchen.</p>
 
+    <h3>The 10 Best Dinner Ideas at a Glance</h3>
+    <ol>
+        <li>Classic Truffle & Wild Mushroom Risotto</li>
+        <li>48-Hour Braised Beef Short Ribs</li>
+        <li>Authentic Surinamese Roti with Chicken Kari</li>
+        <li>Pan-Seared Scallops with Cauliflower Vanilla Puree</li>
+        <li>Fresh Tagliatelle al Ragù (Bolognese)</li>
+        <li>Deconstructed Beef Wellington</li>
+        <li>Miso-Glazed Chilean Sea Bass</li>
+        <li>The Ultimate Dutch Asparagus Feast (White Gold)</li>
+        <li>Spicy Thai Green Curry with Coconut Rice</li>
+        <li>Dark Chocolate Lava Cake (Fondant au Chocolat)</li>
+    </ol>
     <h3>1. Classic Truffle & Wild Mushroom Risotto</h3>
     <p>The ultimate comfort food. A truly spectacular risotto requires constant, rhythmic stirring to release the starches of the Arborio or Carnaroli rice, resulting in a wildly creamy texture without adding heavy cream. Our chefs elevate this by incorporating a deeply reduced porcini mushroom stock, finishing heavily with freshly shaved black truffle and 24-month aged Parmigiano-Reggiano.</p>
 
@@ -1097,13 +1123,13 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
         }
     ],
     fr: [
-        {
-            title: "Best Home Cooked Food Delivery in Amsterdam: Why Private Chefs Beat Takeout",
+                {
+            title: "Meilleure Livraison de Repas à Domicile à Amsterdam: Why Private Chefs Beat Takeout",
             slug: "best-home-cooked-food-delivery-amsterdam",
             category: "Local Guides",
             readTime: "7 min read",
             publishedAt: "Feb 23, 2026",
-            excerpt: "Discover why Amsterdam locals are ditching standard takeout for authentic, restaurant-quality home-cooked food delivery and private chef services right in their living rooms.",
+            excerpt: "Trouvez votre repas parfait avec ces excellentes options préparées par un chef privé chez vous.",
             image: "https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2670&auto=format&fit=crop",
             author: {
                 name: "Chef Anton",
@@ -1113,7 +1139,7 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
     <h2>The Evolution of Food Delivery in Amsterdam</h2>
     <p>Amsterdam is an incredibly vibrant culinary capital, famous for its historic canals, bustling markets, and diverse restaurant scene. But what happens when you crave that high-end restaurant experience without the hassle of navigating through the rain, struggling to find parking, or shouting over crowded dining rooms? Enter the rising trend of premium <strong>home cooked food delivery in Amsterdam</strong>.</p>
     
-    <p>For years, food delivery in the Netherlands was synonymous with quick fixes—pizza boxes, lukewarm fries, or hastily packed sushi. But today's discerning Amsterdammer wants more. They want ethically sourced ingredients, stunning presentation, and meals that feel as though they were crafted with genuine care and passion. This is exactly where the concept of hiring a <a href="/en/thuiskok-amsterdam">private chef in Amsterdam</a> entirely changes the game.</p>
+    <p>For years, food delivery in the Netherlands was synonymous with quick fixes—pizza boxes, lukewarm fries, or hastily packed sushi. But today's discerning Amsterdammer wants more. They want ethically sourced ingredients, stunning presentation, and meals that feel as though they were crafted with genuine care and passion. This is exactly where the concept of hiring a <a href="/en/amsterdam">private chef in Amsterdam</a> entirely changes the game.</p>
 
     <h3>Why Standard Takeout is Losing its Appeal</h3>
     <p>We've all been there: you order from a highly-rated restaurant on a delivery app, wait 45 minutes, only to receive a lukewarm dish that has lost its texture during transit. The fries are soggy, the sauce has separated, and the presentation is completely ruined in the cardboard container. When you are celebrating a special occasion—or simply want a truly comforting, high-quality meal—standard delivery platforms often fall short.</p>
@@ -1272,13 +1298,13 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
     <p>Are you ready to elevate your next dinner party? Utilize the booking form below to instantly secure an elite private chef for your preferred date, and let us start designing your unforgettable customized menu, starring the finest poultry available.</p>
   `
         },
-        {
-            title: "10 Best Homemade Meals for Dinner Tonight (Chef Approved)",
+                {
+            title: "10 Meilleurs Repas Faits Maison for Dinner Tonight (Chef Approved)",
             slug: "10-best-homemade-meals-for-dinner-tonight",
             category: "Recipes & Menus",
             readTime: "8 min read",
             publishedAt: "Feb 23, 2026",
-            excerpt: "Searching for dinner inspiration? Here are the 10 absolute best homemade meals our private chefs are repeatedly asked to cook for high-end dinner parties.",
+            excerpt: "Trouvez votre repas parfait avec ces excellentes options préparées par un chef privé chez vous.",
             image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2574&auto=format&fit=crop",
             author: {
                 name: "Chef Anton",
@@ -1290,6 +1316,19 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
 
     <p>We asked our elite roster of <a href="/en/thuiskok-inhuren">private chefs</a> across the Netherlands to compile the absolute top-tier, most requested home-cooked meals they prepare for our clients' most exclusive dinner parties. If you want to experience these extraordinary dishes without the stress of cooking, our teams in <a href="/en/amsterdam">Amsterdam</a> and <a href="/en/rotterdam">Rotterdam</a> are ready to step into your kitchen.</p>
 
+    <h3>The 10 Best Dinner Ideas at a Glance</h3>
+    <ol>
+        <li>Classic Truffle & Wild Mushroom Risotto</li>
+        <li>48-Hour Braised Beef Short Ribs</li>
+        <li>Authentic Surinamese Roti with Chicken Kari</li>
+        <li>Pan-Seared Scallops with Cauliflower Vanilla Puree</li>
+        <li>Fresh Tagliatelle al Ragù (Bolognese)</li>
+        <li>Deconstructed Beef Wellington</li>
+        <li>Miso-Glazed Chilean Sea Bass</li>
+        <li>The Ultimate Dutch Asparagus Feast (White Gold)</li>
+        <li>Spicy Thai Green Curry with Coconut Rice</li>
+        <li>Dark Chocolate Lava Cake (Fondant au Chocolat)</li>
+    </ol>
     <h3>1. Classic Truffle & Wild Mushroom Risotto</h3>
     <p>The ultimate comfort food. A truly spectacular risotto requires constant, rhythmic stirring to release the starches of the Arborio or Carnaroli rice, resulting in a wildly creamy texture without adding heavy cream. Our chefs elevate this by incorporating a deeply reduced porcini mushroom stock, finishing heavily with freshly shaved black truffle and 24-month aged Parmigiano-Reggiano.</p>
 
@@ -1694,13 +1733,13 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
         }
     ],
     ar: [
-        {
-            title: "Best Home Cooked Food Delivery in Amsterdam: Why Private Chefs Beat Takeout",
+                {
+            title: "أفضل توصيل طعام مطبوخ في المنزل في أمستردام: Why Private Chefs Beat Takeout",
             slug: "best-home-cooked-food-delivery-amsterdam",
             category: "Local Guides",
             readTime: "7 min read",
             publishedAt: "Feb 23, 2026",
-            excerpt: "Discover why Amsterdam locals are ditching standard takeout for authentic, restaurant-quality home-cooked food delivery and private chef services right in their living rooms.",
+            excerpt: "اعثر على وحبتك المثالية مع هذه الخيارات الرائعة التي أعدها طاهٍ خاص في منزلك.",
             image: "https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2670&auto=format&fit=crop",
             author: {
                 name: "Chef Anton",
@@ -1710,7 +1749,7 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
     <h2>The Evolution of Food Delivery in Amsterdam</h2>
     <p>Amsterdam is an incredibly vibrant culinary capital, famous for its historic canals, bustling markets, and diverse restaurant scene. But what happens when you crave that high-end restaurant experience without the hassle of navigating through the rain, struggling to find parking, or shouting over crowded dining rooms? Enter the rising trend of premium <strong>home cooked food delivery in Amsterdam</strong>.</p>
     
-    <p>For years, food delivery in the Netherlands was synonymous with quick fixes—pizza boxes, lukewarm fries, or hastily packed sushi. But today's discerning Amsterdammer wants more. They want ethically sourced ingredients, stunning presentation, and meals that feel as though they were crafted with genuine care and passion. This is exactly where the concept of hiring a <a href="/en/thuiskok-amsterdam">private chef in Amsterdam</a> entirely changes the game.</p>
+    <p>For years, food delivery in the Netherlands was synonymous with quick fixes—pizza boxes, lukewarm fries, or hastily packed sushi. But today's discerning Amsterdammer wants more. They want ethically sourced ingredients, stunning presentation, and meals that feel as though they were crafted with genuine care and passion. This is exactly where the concept of hiring a <a href="/en/amsterdam">private chef in Amsterdam</a> entirely changes the game.</p>
 
     <h3>Why Standard Takeout is Losing its Appeal</h3>
     <p>We've all been there: you order from a highly-rated restaurant on a delivery app, wait 45 minutes, only to receive a lukewarm dish that has lost its texture during transit. The fries are soggy, the sauce has separated, and the presentation is completely ruined in the cardboard container. When you are celebrating a special occasion—or simply want a truly comforting, high-quality meal—standard delivery platforms often fall short.</p>
@@ -1869,13 +1908,13 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
     <p>Are you ready to elevate your next dinner party? Utilize the booking form below to instantly secure an elite private chef for your preferred date, and let us start designing your unforgettable customized menu, starring the finest poultry available.</p>
   `
         },
-        {
-            title: "10 Best Homemade Meals for Dinner Tonight (Chef Approved)",
+                {
+            title: "أفضل 10 وجبات مطبوخة في المنزل for Dinner Tonight (Chef Approved)",
             slug: "10-best-homemade-meals-for-dinner-tonight",
             category: "Recipes & Menus",
             readTime: "8 min read",
             publishedAt: "Feb 23, 2026",
-            excerpt: "Searching for dinner inspiration? Here are the 10 absolute best homemade meals our private chefs are repeatedly asked to cook for high-end dinner parties.",
+            excerpt: "اعثر على وحبتك المثالية مع هذه الخيارات الرائعة التي أعدها طاهٍ خاص في منزلك.",
             image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2574&auto=format&fit=crop",
             author: {
                 name: "Chef Anton",
@@ -1887,6 +1926,19 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
 
     <p>We asked our elite roster of <a href="/en/thuiskok-inhuren">private chefs</a> across the Netherlands to compile the absolute top-tier, most requested home-cooked meals they prepare for our clients' most exclusive dinner parties. If you want to experience these extraordinary dishes without the stress of cooking, our teams in <a href="/en/amsterdam">Amsterdam</a> and <a href="/en/rotterdam">Rotterdam</a> are ready to step into your kitchen.</p>
 
+    <h3>The 10 Best Dinner Ideas at a Glance</h3>
+    <ol>
+        <li>Classic Truffle & Wild Mushroom Risotto</li>
+        <li>48-Hour Braised Beef Short Ribs</li>
+        <li>Authentic Surinamese Roti with Chicken Kari</li>
+        <li>Pan-Seared Scallops with Cauliflower Vanilla Puree</li>
+        <li>Fresh Tagliatelle al Ragù (Bolognese)</li>
+        <li>Deconstructed Beef Wellington</li>
+        <li>Miso-Glazed Chilean Sea Bass</li>
+        <li>The Ultimate Dutch Asparagus Feast (White Gold)</li>
+        <li>Spicy Thai Green Curry with Coconut Rice</li>
+        <li>Dark Chocolate Lava Cake (Fondant au Chocolat)</li>
+    </ol>
     <h3>1. Classic Truffle & Wild Mushroom Risotto</h3>
     <p>The ultimate comfort food. A truly spectacular risotto requires constant, rhythmic stirring to release the starches of the Arborio or Carnaroli rice, resulting in a wildly creamy texture without adding heavy cream. Our chefs elevate this by incorporating a deeply reduced porcini mushroom stock, finishing heavily with freshly shaved black truffle and 24-month aged Parmigiano-Reggiano.</p>
 
@@ -2320,13 +2372,13 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
         }
     ],
     hi: [
-        {
-            title: "Best Home Cooked Food Delivery in Amsterdam: Why Private Chefs Beat Takeout",
+                {
+            title: "एम्स्टर्डम में सर्वश्रेष्ठ घर का पका भोजन वितरण: Why Private Chefs Beat Takeout",
             slug: "best-home-cooked-food-delivery-amsterdam",
             category: "Local Guides",
             readTime: "7 min read",
             publishedAt: "Feb 23, 2026",
-            excerpt: "Discover why Amsterdam locals are ditching standard takeout for authentic, restaurant-quality home-cooked food delivery and private chef services right in their living rooms.",
+            excerpt: "अपने घर में एक निजी शेफ द्वारा तैयार इन शानदार विकल्पों के साथ अपना आदर्श भोजन खोजें।",
             image: "https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2670&auto=format&fit=crop",
             author: {
                 name: "Chef Anton",
@@ -2336,7 +2388,7 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
     <h2>The Evolution of Food Delivery in Amsterdam</h2>
     <p>Amsterdam is an incredibly vibrant culinary capital, famous for its historic canals, bustling markets, and diverse restaurant scene. But what happens when you crave that high-end restaurant experience without the hassle of navigating through the rain, struggling to find parking, or shouting over crowded dining rooms? Enter the rising trend of premium <strong>home cooked food delivery in Amsterdam</strong>.</p>
     
-    <p>For years, food delivery in the Netherlands was synonymous with quick fixes—pizza boxes, lukewarm fries, or hastily packed sushi. But today's discerning Amsterdammer wants more. They want ethically sourced ingredients, stunning presentation, and meals that feel as though they were crafted with genuine care and passion. This is exactly where the concept of hiring a <a href="/en/thuiskok-amsterdam">private chef in Amsterdam</a> entirely changes the game.</p>
+    <p>For years, food delivery in the Netherlands was synonymous with quick fixes—pizza boxes, lukewarm fries, or hastily packed sushi. But today's discerning Amsterdammer wants more. They want ethically sourced ingredients, stunning presentation, and meals that feel as though they were crafted with genuine care and passion. This is exactly where the concept of hiring a <a href="/en/amsterdam">private chef in Amsterdam</a> entirely changes the game.</p>
 
     <h3>Why Standard Takeout is Losing its Appeal</h3>
     <p>We've all been there: you order from a highly-rated restaurant on a delivery app, wait 45 minutes, only to receive a lukewarm dish that has lost its texture during transit. The fries are soggy, the sauce has separated, and the presentation is completely ruined in the cardboard container. When you are celebrating a special occasion—or simply want a truly comforting, high-quality meal—standard delivery platforms often fall short.</p>
@@ -2495,13 +2547,13 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
     <p>Are you ready to elevate your next dinner party? Utilize the booking form below to instantly secure an elite private chef for your preferred date, and let us start designing your unforgettable customized menu, starring the finest poultry available.</p>
   `
         },
-        {
-            title: "10 Best Homemade Meals for Dinner Tonight (Chef Approved)",
+                {
+            title: "शीर्ष 10 घर का पका भोजन for Dinner Tonight (Chef Approved)",
             slug: "10-best-homemade-meals-for-dinner-tonight",
             category: "Recipes & Menus",
             readTime: "8 min read",
             publishedAt: "Feb 23, 2026",
-            excerpt: "Searching for dinner inspiration? Here are the 10 absolute best homemade meals our private chefs are repeatedly asked to cook for high-end dinner parties.",
+            excerpt: "अपने घर में एक निजी शेफ द्वारा तैयार इन शानदार विकल्पों के साथ अपना आदर्श भोजन खोजें।",
             image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2574&auto=format&fit=crop",
             author: {
                 name: "Chef Anton",
@@ -2513,6 +2565,19 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
 
     <p>We asked our elite roster of <a href="/en/thuiskok-inhuren">private chefs</a> across the Netherlands to compile the absolute top-tier, most requested home-cooked meals they prepare for our clients' most exclusive dinner parties. If you want to experience these extraordinary dishes without the stress of cooking, our teams in <a href="/en/amsterdam">Amsterdam</a> and <a href="/en/rotterdam">Rotterdam</a> are ready to step into your kitchen.</p>
 
+    <h3>The 10 Best Dinner Ideas at a Glance</h3>
+    <ol>
+        <li>Classic Truffle & Wild Mushroom Risotto</li>
+        <li>48-Hour Braised Beef Short Ribs</li>
+        <li>Authentic Surinamese Roti with Chicken Kari</li>
+        <li>Pan-Seared Scallops with Cauliflower Vanilla Puree</li>
+        <li>Fresh Tagliatelle al Ragù (Bolognese)</li>
+        <li>Deconstructed Beef Wellington</li>
+        <li>Miso-Glazed Chilean Sea Bass</li>
+        <li>The Ultimate Dutch Asparagus Feast (White Gold)</li>
+        <li>Spicy Thai Green Curry with Coconut Rice</li>
+        <li>Dark Chocolate Lava Cake (Fondant au Chocolat)</li>
+    </ol>
     <h3>1. Classic Truffle & Wild Mushroom Risotto</h3>
     <p>The ultimate comfort food. A truly spectacular risotto requires constant, rhythmic stirring to release the starches of the Arborio or Carnaroli rice, resulting in a wildly creamy texture without adding heavy cream. Our chefs elevate this by incorporating a deeply reduced porcini mushroom stock, finishing heavily with freshly shaved black truffle and 24-month aged Parmigiano-Reggiano.</p>
 
