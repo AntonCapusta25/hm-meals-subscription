@@ -13,6 +13,7 @@ import Footer from '@/components/Footer';
 import HowItWorks from '@/components/HowItWorks';
 import ProblemSolution from '@/components/ProblemSolution';
 import Testimonials from '@/components/Testimonials';
+import CitiesMarquee from '@/components/CitiesMarquee';
 import FAQ from '@/components/FAQ';
 
 export const SUPPORTED_CITIES = [
@@ -150,6 +151,7 @@ export default async function CityLandingPage({
         <CuisineShowcase />
         <OccasionsCarousel />
         <Testimonials />
+        <CitiesMarquee />
         <HowItWorks />
         <FAQ />
 
