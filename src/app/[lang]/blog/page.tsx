@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BookingForm from "@/components/BookingForm";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -108,6 +109,8 @@ export default async function BlogIndexPage({
                     ))}
                 </div>
             </section>
+
+            <BookingForm />
 
             <Footer />
         </main>
