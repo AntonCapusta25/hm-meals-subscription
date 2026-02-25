@@ -11,7 +11,7 @@ function getUrl(lang: string, path: string = '') {
 export default function sitemap(): MetadataRoute.Sitemap {
     const sitemapEntries: MetadataRoute.Sitemap = []
 
-    // Define our static routes
+    // Define our base static routes
     const staticRoutes = [
         '',
         'catering',
@@ -23,12 +23,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
         'about-us',
         'blog',
         'contact',
-        // We also generated many other city pages, let's add a few top ones
-        'thuiskok-den-haag',
-        'thuiskok-utrecht',
-        'thuiskok-haarlem',
-        'thuiskok-leiden'
     ]
+
+    // Our heavily targeted operational cities
+    const supportedCities = [
+        'amsterdam',
+        'rotterdam',
+        'enschede',
+        'den-haag',
+        'haarlem',
+        'hengelo',
+        'groningen',
+        'utrecht',
+        'leiden'
+    ];
+
+    // Add all cities into the static routes
+    supportedCities.forEach(city => staticRoutes.push(city));
 
     // Add static routes and their alternates
     staticRoutes.forEach((route) => {
@@ -44,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 url: getUrl(locale, route),
                 lastModified: new Date(),
                 changeFrequency: 'weekly',
-                priority: route === '' ? 1.0 : 0.8,
+                priority: route === '' ? 1.0 : (supportedCities.includes(route) ? 0.9 : 0.8),
                 alternates: {
                     languages: alternates
                 }
@@ -53,23 +64,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
 
     // Add Dynamic Blog Posts
-    // We iterate through all blog posts in all languages
-    Object.entries(BLOG_POSTS_I18N).forEach(([localeStr, posts]) => {
-        const locale = localeStr as Locale;
+    // Group them by their index (as they are identically aligned in batch generation)
+    // or by the slug prefix if possible. Since the slugs are translated, index is safest.
+    // The English array forms our definitive list of "post entities".
+    const baseLocalePosts = BLOG_POSTS_I18N['en'] || [];
 
-        // Skip if somehow the locale in blogData isn't supported by the router
-        if (!locales.includes(locale)) return
+    baseLocalePosts.forEach((enPost, index) => {
+        // Build the alternates linking all 5 languages for *this* specific post
+        const alternates: Record<string, string> = {};
 
-        (posts as BlogPost[]).forEach((post: BlogPost) => {
+        locales.forEach((locale: Locale) => {
+            const localizedPosts = BLOG_POSTS_I18N[locale] as BlogPost[];
+            if (localizedPosts && localizedPosts[index]) {
+                alternates[locale] = getUrl(locale, `blog/${localizedPosts[index].slug}`);
+            }
+        });
 
-            sitemapEntries.push({
-                url: getUrl(locale, `blog/${post.slug}`),
-                lastModified: new Date(),
-                changeFrequency: 'monthly',
-                priority: 0.6
-            })
-        })
-    })
+        // Now inject the actual sitemap entries for this specific post across all languages
+        locales.forEach((locale: Locale) => {
+            const localizedPosts = BLOG_POSTS_I18N[locale] as BlogPost[];
+            if (localizedPosts && localizedPosts[index]) {
+                const targetSlug = localizedPosts[index].slug;
+                sitemapEntries.push({
+                    url: getUrl(locale, `blog/${targetSlug}`),
+                    lastModified: new Date(), // Could be parsed from publishedAt if normalized
+                    changeFrequency: 'monthly',
+                    priority: 0.7,
+                    alternates: {
+                        languages: alternates
+                    }
+                });
+            }
+        });
+    });
 
     return sitemapEntries
 }
