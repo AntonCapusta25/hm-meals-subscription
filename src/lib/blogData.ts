@@ -17,6 +17,179 @@ export type BlogPost = {
 export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
     nl: [
         {
+            title: "Kok aan huis in Utrecht: De Beste Keuze voor een Diner Thuis",
+            slug: "best-home-chef-delivery-utrecht",
+            category: "Exclusieve Tips",
+            readTime: "5 min leestijd",
+            publishedAt: "25 Feb, 2026",
+            excerpt: "Zoekt u een kok aan huis in Utrecht? Ontdek hoe makkelijk en gezellig het is om een professionele thuiskok in te huren voor een perfect diner in uw eigen woonkamer.",
+            image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2669&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Culinary Expert" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Waarom een Kok aan Huis in Utrecht Echt de Beste Keuze is</h2>
+<p class="mb-4">Utrecht is een prachtige stad vol grachten en gezellige restaurants. Maar soms wilt u gewoon lekker thuis blijven. Misschien viert u een speciale verjaardag of zoekt u een rustige plek voor uw familie. Een restaurant kan druk en lawaaierig zijn. De oplossing? Een <strong><a href="/nl/thuiskok-inhuren" class="text-[#D97757] font-semibold hover:underline">kok aan huis in Utrecht</a></strong> inhuren. Dit is veel makkelijker en leuker dan u denkt.</p>
+<p class="mb-6">Catering thuis betekent dat u niets hoeft te doen. U hoeft niet af te wassen en u hoeft niet in de rij te staan. Een professionele thuiskok regelt alles, van het koken tot het schoonmaken van de keuken.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Hoe Werkt Catering Thuis?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Samen het menu kiezen:</strong> U vertelt de thuiskok wat u lekker vindt. Vegetarisch of juist vlees? Alles kan.</li>
+    <li><strong>Boodschappen en voorbereiding:</strong> De kok koopt verse ingrediënten. Vaak bereidt hij al veel voor in zijn eigen keuken.</li>
+    <li><strong>Koken in uw keuken:</strong> De kok aan huis komt met alle spullen naar u toe en kookt live in uw keuken.</li>
+    <li><strong>Serveren en opruimen:</strong> U geniet van het eten. De thuiskok serveert de gerechten en laat de keuken weer blinkend schoon achter.</li>
+</ul>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Wat Kost een Thuiskok in Utrecht?</h3>
+<p class="mb-6">Veel mensen denken dat een kok aan huis inhuren heel duur is. Dat valt mee! Voor een groep van 6 tot 10 personen is catering thuis vaak net zo duur als een luxe restaurant in Utrecht. U bespaart bovendien op dure drankjes, omdat u uw eigen wijn kunt schenken.</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "Moet mijn keuken in Utrecht groot zijn voor een thuiskok?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nee. Onze thuiskoks kunnen werken in kleine stedelijke keukens. We hebben alleen vier kookpitten en een oven nodig."
+        }
+    },
+    {
+        "@type": "Question",
+        "name": "Ruimt de kok aan huis echt alles op?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Na het diner is uw keuken weer net zo leeg en schoon als voordat de chef arriveerde."
+        }
+    }
+  ]
+}
+</script>
+        `
+        },
+        {
+            title: "Catering aan Huis voor een Luxe Dinerparty",
+            slug: "dinner-party-catering-at-home-netherlands",
+            category: "Exclusieve Tips",
+            readTime: "5 min leestijd",
+            publishedAt: "25 Feb, 2026",
+            excerpt: "Plan een perfecte dinerparty zonder stress. Met onze catering aan huis verzorgt een professionele thuiskok heerlijke gerechten, zodat u tijd heeft voor uw gasten.",
+            image: "https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?q=80&w=2574&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Culinary Expert" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Catering aan Huis: Geniet Zelf van uw Eigen Feestje</h2>
+<p class="mb-4">U geeft een dinerparty voor uw beste vrienden. U wilt dat het onvergetelijk wordt. Maar vaak staat u de hele avond zelf in de keuken. U mist de gesprekken en bent alleen maar aan het rennen. Door te kiezen voor <strong><a href="/nl/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">catering aan huis</a></strong> verandert dit compleet.</p>
+<p class="mb-6">Wanneer u een thuiskok inhuurt, geeft u alle stress uit handen. De chef kookt een luxe meergangendiner en u schuift gewoon aan als gast in uw eigen huis.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Waarom een Diner aan Huis de Trend Is</h3>
+<p class="mb-4">Steeds meer mensen in Nederland boeken een thuiskok voor hun dinerparty. Hier zijn de grootste voordelen:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Geen stress in de keuken:</strong> De chef regelt alles, u hoeft niet bang te zijn dat het vlees verbrandt.</li>
+    <li><strong>Geen haast om naar huis te gaan:</strong> U kunt zo lang tafelen als u wilt. Uw woonkamer sluit niet om middernacht.</li>
+    <li><strong>Persoonlijke aandacht:</strong> De kok vertelt bij elke gang iets over het gerecht, net als in een echt restaurant.</li>
+</ul>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Een Thuiskok Inhuren in 3 Simpele Stappen</h3>
+<p class="mb-6">Catering thuis regelen is simpel. U kiest een menu op onze website, bespreekt het aantal gasten, en de kok komt bij u koken. Maak van uw volgende etentje een echte ervaring.</p>
+        `
+        },
+        {
+            title: "Luxe BBQ Catering Thuis met een Privé Chef",
+            slug: "bbq-private-chef-catering-netherlands",
+            category: "Exclusieve Tips",
+            readTime: "5 min leestijd",
+            publishedAt: "25 Feb, 2026",
+            excerpt: "Maak van uw zomerfeest een succes met luxe BBQ catering thuis. Een chef aan huis grilt de beste steak en maakt verse salades, direct in uw achtertuin.",
+            image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Culinary Expert" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Luxe BBQ Catering Thuis: Echt Genieten in de Tuin</h2>
+<p class="mb-4">De zomer is de perfecte tijd voor een barbecue met familie en vrienden. Maar een goede BBQ organiseren is veel werk. U moet vlees kopen, salades maken en de hele avond bij het hete vuur staan. Daarom is <strong><a href="/nl/menus/3" class="text-[#D97757] font-semibold hover:underline">BBQ catering thuis</a></strong> met een privé chef zo populair.</p>
+<p class="mb-6">Een kok aan huis neemt zijn eigen tools mee, grilt perfecte stukken vis en vlees, en serveert dit aan uw gasten. Het enige wat u hoeft te doen, is een lekker drankje inschenken in de zon.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Wat Krijgt U bij BBQ Catering Thuis?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Topkwaliteit vlees en vis:</strong> Geen standaard supermarkt pakketjes, maar kogelbiefstuk, zalm of luxe vega opties.</li>
+    <li><strong>Bijgerechten die verrassen:</strong> Verse salades, gegrilde groenten en knapperig brood.</li>
+    <li><strong>Een chef aan de grill:</strong> Een thuiskok weet precies wanneer het eten gaar is. Zo bent u altijd zeker van het beste resultaat.</li>
+</ul>
+
+<p class="mb-6">BBQ catering thuis is ideaal voor warme zomeravonden, familiefeesten in de tuin, of om het festivalseizoen goed af te sluiten op uw eigen grasveld.</p>
+        `
+        },
+        {
+            title: "Zakelijke Catering en de Luxe Bedrijfslunch",
+            slug: "corporate-event-catering-lunch-netherlands",
+            category: "Exclusieve Tips",
+            readTime: "5 min leestijd",
+            publishedAt: "25 Feb, 2026",
+            excerpt: "Verwen uw team en klanten met luxe zakelijke catering. Van een verse, gezonde lunchclub op kantoor tot een groot netwerkdiner: wij regelen alles.",
+            image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Culinary Expert" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Zakelijke Catering voor Bedrijven die meer Willen</h2>
+<p class="mb-4">Als u een belangrijke klant op kantoor krijgt, of als uw team een groot succes viert, zijn standaard broodjes kaas niet genoeg. Mensen willen goed, gezond en lekker eten. Onze gespecialiseerde <strong><a href="/nl/zakelijke-catering-amsterdam" class="text-[#D97757] font-semibold hover:underline">zakelijke catering</a></strong> biedt een oplossing. Een kok bereidt verse lunches en luxe diners direct op uw locatie.</p>
+<p class="mb-6">Steeds meer bedrijven stappen af van saai kantooreten. Wij brengen de ervaring van een chic restaurant direct naar uw vergaderzaal of bedrijfskantine.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">De Voordelen van de Lunchclub</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Scherper en energieker team:</strong> Gezonde lunches (met warme gerechten en salades) zorgen voor betere werkprestaties in de middag.</li>
+    <li><strong>Maak indruk op gasten:</strong> Een thuiskok op kantoor inhuren is een fantastische manier om belangrijk bezoek te verwelkomen.</li>
+    <li><strong>Flexibel aan huis:</strong> Zelfs voor teamuitjes bij uw collega thuis, of in een gehuurde villa, verzorgen wij de beste catering.</li>
+</ul>
+
+<p class="mb-6">Investeer in goed eten voor uw bedrijf. Of het nu gaat om een dagelijkse gezonde lunchclub of een eenmalig uitgebreid kerstdiner, culinaire kwaliteit maakt het verschil.</p>
+        `
+        },
+        {
+            title: "Thuiskok in Leiden: Culinair Genieten in de Sleutelstad",
+            slug: "best-home-chef-delivery-leiden",
+            category: "Exclusieve Tips",
+            readTime: "5 min leestijd",
+            publishedAt: "25 Feb, 2026",
+            excerpt: "Huur een privé thuiskok in Leiden. Vermijd parkeerproblemen en restaurants op de gracht, en dineer veilig en ontspannen met familie of vrienden in uw eigen huis.",
+            image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=2740&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Culinary Expert" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Breng het Restaurant naar u Toe met een Thuiskok in Leiden</h2>
+<p class="mb-4">Leiden is prachtig en historisch, met veel kleine steegjes en oude panden. Het vinden van een goede parkeerplek is vaak lastig, vooral in het weekend. Als u een luxe diner wilt zonder gedoe, is een <strong><a href="/nl/thuiskok-inhuren" class="text-[#D97757] font-semibold hover:underline">thuiskok inhuren in Leiden</a></strong> de meest simpele en elegante oplossing.</p>
+<p class="mb-6">Catering thuis zorgt voor rust. Geen oppas voor de kinderen nodig, niet naar de stad fietsen door de regen. Onze privékok komt met alle verse ingrediënten naar uw adres in Leiden.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Wat is Catering Thuis precies?</h3>
+<p class="mb-4">Als u een kok aan huis in Leiden boekt, gebeurt er het volgende:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li>De chef arriveert twee uur voor het diner in uw opgeruimde keuken.</li>
+    <li>De kok bereidt, kookt en serveert elke gang aan uw eigen tafel. U voelt zich een gast.</li>
+    <li>Na het toetje ruimt de chef alles op. Zelfs de vuilniszak wordt meegenomen!</li>
+</ul>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "Past een thuiskok wel in mijn Leidse grachtenpand?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zeker. We zijn bekend in Leiden en snappen dat studentenhuizen of oude binnenstad woningen soms kleine keukens hebben. Wij passen ons aan."
+        }
+    },
+    {
+        "@type": "Question",
+        "name": "Zijn de drankjes inbegrepen bij de catering thuis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standaard zorgt u zelf voor bier, wijn en fris. Dit is veel voordeliger voor u! Indien gewenst kan de chef wel wijnarrangementen meenemen."
+        }
+    }
+  ]
+}
+</script>
+        `
+        },
+        {
             title: "Prive Kok in Den Haag: Een Exclusieve Culinaire Ervaring Thuis",
             slug: "best-home-chef-delivery-den-haag",
             category: "Exclusive Guides",
@@ -776,6 +949,179 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
         }
     ],
     en: [
+        {
+            title: "Private Chef in Utrecht: The Best Choice for Home Dining",
+            slug: "best-home-chef-delivery-utrecht",
+            category: "Exclusive Guides",
+            readTime: "5 min read",
+            publishedAt: "Feb 25, 2026",
+            excerpt: "Looking for a private chef in Utrecht? Discover how easy and cozy it is to hire a professional home chef for a perfect dinner in your own living room.",
+            image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2669&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Culinary Expert" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Why a Private Chef in Utrecht is Truly the Best Choice</h2>
+<p class="mb-4">Utrecht is a beautiful city full of canals and cozy restaurants. But sometimes, you just want to stay comfortably at home. Maybe you are celebrating a special birthday or looking for a quiet place with your family. A restaurant can be busy and noisy. The solution? Hiring a <strong><a href="/en/thuiskok-inhuren" class="text-[#D97757] font-semibold hover:underline">private chef in Utrecht</a></strong>. It is much easier and more fun than you think.</p>
+<p class="mb-6">Catering at home means you don't have to do anything. You don't have to wash the dishes and you don't have to wait in line. A professional home cook arranges everything, from cooking to cleaning your kitchen.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">How Does Home Catering Work?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Choosing the menu together:</strong> You tell the home chef what you like. Vegetarian or meat? Everything is possible.</li>
+    <li><strong>Groceries and prep:</strong> The chef buys fresh ingredients. Often they prepare a lot of the heavy work in their own kitchen.</li>
+    <li><strong>Cooking in your kitchen:</strong> The private chef comes to you with all the necessary tools and cooks live in your kitchen.</li>
+    <li><strong>Serving and cleaning:</strong> You enjoy the food. The home chef serves the dishes and leaves the kitchen sparkling clean.</li>
+</ul>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">What Does a Home Chef in Utrecht Cost?</h3>
+<p class="mb-6">Many people think that hiring a private chef is very expensive. It's actually quite reasonable! For a group of 6 to 10 people, catering at home is often just as affordable as dining at a luxury restaurant in Utrecht. Plus, you save on expensive drinks because you can pour your own wine.</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "Does my kitchen in Utrecht need to be large for a home chef?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Our home chefs can work in small urban kitchens. We only need four stovetops and an oven."
+        }
+    },
+    {
+        "@type": "Question",
+        "name": "Does the private chef really clean everything up?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. After dinner, your kitchen will be just as empty and spotless as it was before the chef arrived."
+        }
+    }
+  ]
+}
+</script>
+        `
+        },
+        {
+            title: "Home Catering for a Luxury Dinner Party",
+            slug: "dinner-party-catering-at-home-netherlands",
+            category: "Exclusive Guides",
+            readTime: "5 min read",
+            publishedAt: "Feb 25, 2026",
+            excerpt: "Plan a perfect dinner party without stress. With our home catering, a professional private chef prepares delicious dishes so you have time for your guests.",
+            image: "https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?q=80&w=2574&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Culinary Expert" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Home Catering: Enjoy Your Own Party</h2>
+<p class="mb-4">You are hosting a dinner party for your best friends. You want it to be unforgettable. But often, you spend the entire evening cooking in the kitchen. You miss the conversations and are constantly rushing. Choosing <strong><a href="/en/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">home catering</a></strong> completely changes this.</p>
+<p class="mb-6">When you hire a home cook, you hand over all the stress. The chef cooks a luxurious multi-course dinner, and you simply sit down as a guest in your own home.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Why Dining at Home is the Trend</h3>
+<p class="mb-4">More and more people in the Netherlands are booking a home chef for their dinner parties. Here are the biggest advantages:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>No stress in the kitchen:</strong> The chef handles everything; you don't have to worry about burning the food.</li>
+    <li><strong>No rush to leave:</strong> You can dine at the table for as long as you want. Your living room doesn't close at midnight.</li>
+    <li><strong>Personal attention:</strong> The chef explains the inspiration behind each dish, just like in a real restaurant.</li>
+</ul>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Hire a Home Chef in 3 Simple Steps</h3>
+<p class="mb-6">Arranging home catering is simple. You select a menu on our website, discuss the number of guests, and the chef comes to cook for you. Make your next dinner an authentic experience.</p>
+        `
+        },
+        {
+            title: "Luxury BBQ Home Catering with a Private Chef",
+            slug: "bbq-private-chef-catering-netherlands",
+            category: "Exclusive Guides",
+            readTime: "5 min read",
+            publishedAt: "Feb 25, 2026",
+            excerpt: "Make your summer party a success with luxury BBQ home catering. A private chef grills the perfect steak and prepares fresh salads, right in your backyard.",
+            image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Culinary Expert" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Luxury BBQ Home Catering: True Enjoyment in the Garden</h2>
+<p class="mb-4">Summer is the perfect time for a barbecue with family and friends. But organizing a good BBQ is a lot of work. You have to buy the meat, make the salads, and stand next to the hot grill all evening. That is why <strong><a href="/en/menus/3" class="text-[#D97757] font-semibold hover:underline">BBQ home catering</a></strong> with a private chef is wildly popular.</p>
+<p class="mb-6">A private chef brings their own tools, expertly grills high-quality cuts of meat and fish, and serves it to your guests. The only thing you have to do is pour yourself a nice drink in the sun.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">What Do You Get with BBQ Catering?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Premium quality meat and fish:</strong> No standard supermarket packages, but tenderloin, fresh salmon, or luxury vegetarian options.</li>
+    <li><strong>Surprising side dishes:</strong> Freshly tossed salads, perfectly grilled vegetables, and artisan bread.</li>
+    <li><strong>A chef at the grill:</strong> A professional cook knows exactly when the food is perfectly done, ensuring the best culinary outcome.</li>
+</ul>
+
+<p class="mb-6">BBQ catering at home is perfect for warm summer evenings, family celebrations in the garden, or closing the festival season nicely right on your own lawn.</p>
+        `
+        },
+        {
+            title: "Corporate Catering and the Luxury Office Lunch",
+            slug: "corporate-event-catering-lunch-netherlands",
+            category: "Exclusive Guides",
+            readTime: "5 min read",
+            publishedAt: "Feb 25, 2026",
+            excerpt: "Treat your team and clients with premium corporate catering. From a fresh, healthy lunch club at the office to a large networking dinner: we handle it all.",
+            image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Culinary Expert" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Corporate Catering for Companies Who Demand More</h2>
+<p class="mb-4">If an important client is visiting the office, or if your team is celebrating a big success, standard cheese sandwiches simply aren't enough. People want good, healthy, and delicious food. Our specialized <strong><a href="/en/zakelijke-catering-amsterdam" class="text-[#D97757] font-semibold hover:underline">corporate catering</a></strong> offers the perfect solution. A chef prepares fresh lunches and luxurious dinners directly at your location.</p>
+<p class="mb-6">More and more companies are moving away from boring office food. We bring the high-end restaurant experience straight into your boardroom or corporate cafeteria.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">The Benefits of the Lunch Club</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>A sharper, more energetic team:</strong> Healthy lunches (featuring warm dishes and salads) lead to better afternoon work performance.</li>
+    <li><strong>Impress your guests:</strong> Hiring a private chef at the office is a fantastic way to welcome important VIP visitors.</li>
+    <li><strong>Flexible at-home options:</strong> Even for team outings at a colleague's home or a rented villa, we provide the absolute best catering.</li>
+</ul>
+
+<p class="mb-6">Invest in great food for your business. Whether it's a daily healthy lunch club or a once-a-year lavish Christmas dinner, culinary quality makes all the difference.</p>
+        `
+        },
+        {
+            title: "Private Chef in Leiden: Culinary Dining in the Key City",
+            slug: "best-home-chef-delivery-leiden",
+            category: "Exclusive Guides",
+            readTime: "5 min read",
+            publishedAt: "Feb 25, 2026",
+            excerpt: "Rent a private home chef in Leiden. Avoid parking problems and crowded canal restaurants, and dine safely and relaxed with family or friends in your own home.",
+            image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=2740&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Culinary Expert" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Bring the Restaurant to You with a Private Chef in Leiden</h2>
+<p class="mb-4">Leiden is beautiful and historical, filled with tiny alleyways and old buildings. Finding decent parking is notoriously difficult, especially on weekends. If you want a luxurious dinner without the hassle, <strong><a href="/en/thuiskok-inhuren" class="text-[#D97757] font-semibold hover:underline">hiring a private chef in Leiden</a></strong> is the simplest and most elegant solution.</p>
+<p class="mb-6">Catering at home brings peace. No need for a babysitter, and no need to bike into the city through the pouring rain. Our private chef arrives with all the fresh ingredients directly to your address in Leiden.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">What Exactly is Home Catering?</h3>
+<p class="mb-4">When you book a private chef in Leiden, the following happens:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li>The chef arrives two hours before dinner in your clean kitchen.</li>
+    <li>The cook prepares, finishes, and serves each course directly at your dining table. You feel completely like a guest.</li>
+    <li>After dessert, the chef cleans everything. Even the trash bag is taken away!</li>
+</ul>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "Will a private chef physically fit in my classic Leiden canal house kitchen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Certainly. We are very familiar with Leiden and understand that historic inner-city homes sometimes have tiny kitchens. Our chefs are highly adaptable."
+        }
+    },
+    {
+        "@type": "Question",
+        "name": "Are the drinks included with the home catering?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "By standard, you provide your own beer, wine, and sodas. This is much cheaper for you! If desired, the chef can bring curated wine pairings."
+        }
+    }
+  ]
+}
+</script>
+        `
+        },
         {
             title: "Best Home Chef Delivery in The Hague: International Tastes, Local Elegance",
             slug: "best-home-chef-delivery-den-haag",
@@ -1765,6 +2111,179 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
     ],
     fr: [
         {
+            title: "Chef à Domicile à Utrecht: Le Meilleur Choix pour Dîner chez Soi",
+            slug: "best-home-chef-delivery-utrecht",
+            category: "Guides Exclusifs",
+            readTime: "5 min de lecture",
+            publishedAt: "25 Fév, 2026",
+            excerpt: "Vous cherchez un chef privé à Utrecht ? Découvrez à quel point il est facile et convivial d'engager un cuisinier professionnel pour un dîner parfait dans votre salon.",
+            image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2669&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Expert Culinaire" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Pourquoi un Chef à Domicile à Utrecht est Vraiment le Meilleur Choix</h2>
+<p class="mb-4">Utrecht est une belle ville remplie de canaux et de restaurants chaleureux. Mais parfois, vous voulez simplement rester confortablement chez vous. Peut-être célébrez-vous un anniversaire spécial ou cherchez-vous un endroit calme avec votre famille. Un restaurant peut être bruyant. La solution ? Engager un <strong><a href="/fr/thuiskok-inhuren" class="text-[#D97757] font-semibold hover:underline">chef à domicile à Utrecht</a></strong>. C'est beaucoup plus facile et amusant que vous ne le pensez.</p>
+<p class="mb-6">Le traiteur à domicile signifie que vous n'avez rien à faire. Vous n'avez pas à faire la vaisselle et vous n'avez pas à faire la queue. Un cuisinier professionnel organise tout, de la préparation des plats au nettoyage de votre cuisine.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Comment Fonctionne le Traiteur à Domicile ?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Choisir le menu ensemble:</strong> Vous dites au chef ce que vous aimez. Végétarien ou viande ? Tout est possible.</li>
+    <li><strong>Courses et préparation:</strong> Le chef achète des ingrédients frais. Souvent, il prépare une grande partie du travail dans sa propre cuisine.</li>
+    <li><strong>Cuisiner dans votre cuisine:</strong> Le chef privé vient chez vous avec tout le matériel nécessaire et cuisine en direct dans votre cuisine.</li>
+    <li><strong>Service et nettoyage:</strong> Vous profitez de la nourriture. Le chef sert les plats et laisse la cuisine étincelante de propreté.</li>
+</ul>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Combien Coûte un Chef à Domicile à Utrecht ?</h3>
+<p class="mb-6">Beaucoup de gens pensent qu'engager un chef privé coûte très cher. C'est en fait assez raisonnable ! Pour un groupe de 6 à 10 personnes, le traiteur à domicile est souvent aussi abordable qu'un dîner dans un restaurant de luxe à Utrecht. De plus, vous économisez sur les boissons coûteuses car vous pouvez servir votre propre vin.</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "Ma cuisine à Utrecht doit-elle être grande pour un chef à domicile ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. Nos chefs à domicile peuvent travailler dans de petites cuisines urbaines. Nous n'avons besoin que de quatre plaques de cuisson et d'un four."
+        }
+    },
+    {
+        "@type": "Question",
+        "name": "Le chef privé nettoie-t-il vraiment tout ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. Après le dîner, votre cuisine sera tout aussi vide et impeccable qu'avant l'arrivée du chef."
+        }
+    }
+  ]
+}
+</script>
+        `
+        },
+        {
+            title: "Traiteur à Domicile pour un Dîner de Luxe",
+            slug: "dinner-party-catering-at-home-netherlands",
+            category: "Guides Exclusifs",
+            readTime: "5 min de lecture",
+            publishedAt: "25 Fév, 2026",
+            excerpt: "Planifiez un dîner parfait sans stress. Avec notre traiteur à domicile, un chef privé professionnel prépare de délicieux plats pour que vous ayez du temps pour vos invités.",
+            image: "https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?q=80&w=2574&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Expert Culinaire" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Traiteur à Domicile : Profitez de Votre Propre Fête</h2>
+<p class="mb-4">Vous organisez un dîner pour vos meilleurs amis. Vous voulez qu'il soit inoubliable. Mais souvent, vous passez toute la soirée à cuisiner. Vous manquez les conversations et vous courez tout le temps. Choisir <strong><a href="/fr/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">le traiteur à domicile</a></strong> change complètement cela.</p>
+<p class="mb-6">Lorsque vous engagez un  chef à domicile, vous évitez tout stress. Le chef cuisine un luxueux dîner à plusieurs plats, et vous vous asseyez simplement comme invité dans votre propre maison.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Pourquoi Dîner à la Maison est la Tendance</h3>
+<p class="mb-4">De plus en plus de personnes aux Pays-Bas réservent un chef à domicile pour leurs dîners. Voici les plus grands avantages :</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Aucun stress dans la cuisine :</strong> Le chef s'occupe de tout; vous n'avez pas à craindre de brûler la viande.</li>
+    <li><strong>Aucune hâte de partir :</strong> Vous pouvez dîner à table aussi longtemps que vous le souhaitez. Votre salon ne ferme pas à minuit.</li>
+    <li><strong>Attention personnelle :</strong> Le chef explique l'inspiration derrière chaque plat, comme dans un vrai restaurant.</li>
+</ul>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Engagez un Chef à Domicile en 3 Étapes Simples</h3>
+<p class="mb-6">Organiser un traiteur à domicile est simple. Vous sélectionnez un menu sur notre site web, discutez du nombre d'invités, et le chef vient cuisiner pour vous. Faites de votre prochain dîner une expérience culinaire inoubliable.</p>
+        `
+        },
+        {
+            title: "Traiteur BBQ de Luxe avec un Chef Privé",
+            slug: "bbq-private-chef-catering-netherlands",
+            category: "Guides Exclusifs",
+            readTime: "5 min de lecture",
+            publishedAt: "25 Fév, 2026",
+            excerpt: "Faites de votre fête estivale un succès avec un traiteur BBQ de luxe à domicile. Un chef privé grille le steak parfait et prépare des salades fraîches dans votre jardin.",
+            image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Expert Culinaire" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Traiteur BBQ de Luxe à Domicile : Le Vrai Plaisir dans le Jardin</h2>
+<p class="mb-4">L'été est le moment idéal pour faire un barbecue en famille et entre amis. Mais organiser un bon BBQ demande beaucoup de travail. Vous devez acheter la viande, faire les salades et rester près du feu chaud toute la soirée. C'est pourquoi le <strong><a href="/fr/menus/3" class="text-[#D97757] font-semibold hover:underline">traiteur BBQ à domicile</a></strong> avec un chef privé est très populaire.</p>
+<p class="mb-6">Un chef privé apporte ses propres outils, grille à la perfection des morceaux de viande et de poisson d'excellente qualité, et les sert à vos invités. La seule chose que vous ayez à faire est de vous servir une bonne boisson au soleil.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Qu'Obtiendrez-vous avec un Traiteur BBQ ?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Viande et poisson de qualité supérieure :</strong> Pas de colis de supermarché standard, mais du filet de bœuf, du saumon ou des options végétariennes de luxe.</li>
+    <li><strong>Des plats d'accompagnement surprenants :</strong> Des salades fraîches, des légumes parfaitement grillés et du pain croustillant.</li>
+    <li><strong>Un chef au grill :</strong> Un cuisinier professionnel sait exactement quand les aliments sont cuits, ce qui garantit le meilleur résultat culinaire.</li>
+</ul>
+
+<p class="mb-6">Le traiteur BBQ à domicile est parfait pour les chaudes soirées d'été, les fêtes de famille dans le jardin ou pour bien clôturer la saison des festivals sur votre propre pelouse.</p>
+        `
+        },
+        {
+            title: "Catering d'Entreprise et Déjeuner de Luxe au Bureau",
+            slug: "corporate-event-catering-lunch-netherlands",
+            category: "Guides Exclusifs",
+            readTime: "5 min de lecture",
+            publishedAt: "25 Fév, 2026",
+            excerpt: "Faites plaisir à votre équipe et à vos clients avec un service de traiteur d'entreprise de luxe. Du déjeuner sain au grand dîner de réseautage : nous l'organisons.",
+            image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Expert Culinaire" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Catering d'Entreprise pour les Sociétés Exigeantes</h2>
+<p class="mb-4">Si un client important vient au bureau, ou si votre équipe célèbre un grand succès, de simples sandwichs au fromage ne suffisent pas. Les gens veulent de la nourriture bonne, saine et délicieuse. Notre service spécialisé de <strong><a href="/fr/zakelijke-catering-amsterdam" class="text-[#D97757] font-semibold hover:underline">catering d'entreprise</a></strong> offre la solution parfaite. Un chef prépare des déjeuners frais et des dîners luxueux directement sur votre lieu de travail.</p>
+<p class="mb-6">De plus en plus d'entreprises abandonnent la nourriture de bureau ennuyeuse. Nous apportons l'expérience d'un restaurant haut de gamme directement dans votre salle de réunion ou votre cantine d'entreprise.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Les Avantages du Club Déjeuner</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Une équipe plus vive et énergique :</strong> Des déjeuners sains (avec plats chauds et salades) améliorent les performances de l'après-midi.</li>
+    <li><strong>Impressionnez vos invités :</strong> Engager un chef privé au bureau est une façon fantastique d'accueillir des visiteurs importants.</li>
+    <li><strong>Options flexibles à domicile :</strong> Même pour des sorties d'équipe chez un collègue ou dans une villa louée, nous fournissons le meilleur service traiteur.</li>
+</ul>
+
+<p class="mb-6">Investissez dans de la bonne nourriture pour votre entreprise. Qu'il s'agisse d'un club déjeuner sain quotidien ou d'un grand dîner de Noël annuel, la qualité culinaire fait toute la différence.</p>
+        `
+        },
+        {
+            title: "Chef à Domicile à Leiden : Un Repas Culinaire dans la Clé de la Ville",
+            slug: "best-home-chef-delivery-leiden",
+            category: "Guides Exclusifs",
+            readTime: "5 min de lecture",
+            publishedAt: "25 Fév, 2026",
+            excerpt: "Louez un chef de cuisine privé à Leiden. Évitez les problèmes de stationnement et les restaurants bondés, et dînez en toute sécurité en famille dans votre propre maison.",
+            image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=2740&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Expert Culinaire" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Faites Venir le Restaurant à Vous avec un Chef Privé à Leiden</h2>
+<p class="mb-4">Leiden est magnifique et historique, avec beaucoup de petites ruelles et de vieux bâtiments. Trouver une bonne place de parking est difficile, surtout le week-end. Si vous voulez un dîner luxueux sans tracas, <strong><a href="/fr/thuiskok-inhuren" class="text-[#D97757] font-semibold hover:underline">engager un chef privé à Leiden</a></strong> est la solution la plus simple et la plus élégante.</p>
+<p class="mb-6">Le traiteur à domicile apporte la paix. Pas besoin de baby-sitter, pas besoin d'aller en ville à vélo sous la pluie. Notre chef privé arrive avec tous les ingrédients frais directement à votre adresse à Leiden.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Qu'est-ce que le Traiteur à Domicile ?</h3>
+<p class="mb-4">Lorsque vous réservez un chef privé à Leiden, voici ce qui se passe :</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li>Le chef arrive deux heures avant le dîner dans votre cuisine propre.</li>
+    <li>Le cuisinier prépare, termine et sert chaque plat directement à votre table de salle à manger. Vous vous sentez complètement comme un invité.</li>
+    <li>Après le dessert, le chef nettoie tout. Même le sac poubelle est emporté !</li>
+</ul>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "Un chef privé aura-t-il la place physique de s'installer dans ma petite cuisine classique de la maison de Leiden ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Certainement. Nous connaissons très bien Leiden et comprenons que les maisons très historiques ont parfois de petites cuisines. Nos chefs s'adaptent facilement."
+        }
+    },
+    {
+        "@type": "Question",
+        "name": "Les boissons sont-elles incluses avec le traiteur à domicile ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En standard, vous fournissez votre propre bière, vin et sodas. C'est beaucoup moins cher pour vous ! Si vous le souhaitez, le chef peut apporter des accords de vins."
+        }
+    }
+  ]
+}
+</script>
+        `
+        },
+        {
             title: "Le Meilleur Chef à Domicile à La Haye : L'Élégance Culinaire",
             slug: "best-home-chef-delivery-den-haag",
             category: "Exclusive Guides",
@@ -2684,6 +3203,189 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
         }
     ],
     ar: [
+        {
+            title: "طاهٍ خاص في أوتريخت: الخيار الأفضل لتناول الطعام في المنزل",
+            slug: "best-home-chef-delivery-utrecht",
+            category: "أدلة حصرية",
+            readTime: "5 دقائق للقراءة",
+            publishedAt: "25 فبراير 2026",
+            excerpt: "هل تبحث عن طاهٍ خاص في أوتريخت؟ اكتشف مدى سهولة وراحة استئجار خبير طهي محترف لتناول عشاء مثالي في غرفة معيشتك.",
+            image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2669&auto=format&fit=crop",
+            author: { name: "الشيف ديفيد", role: "خبير طهي" },
+            contentHtml: `
+<div dir="rtl" class="text-right font-arabic">
+<h2 class="text-3xl font-bold mb-6 text-[#1A4D2E]">لماذا يعتبر الطاهي الخاص في أوتريخت الخيار الأفضل حقًا</h2>
+<p class="mb-4">أوتريخت مدينة جميلة مليئة بالقنوات والمطاعم المريحة. ولكن في بعض الأحيان، ترغب فقط في البقاء في المنزل براحة. ربما تحتفل بعيد ميلاد خاص أو تبحث عن مكان هادئ مع عائلتك. يمكن أن يكون المطعم مزدحمًا وصاخبًا. الحل؟ استئجار <strong><a href="/ar/thuiskok-inhuren" class="text-[#D97757] font-semibold hover:underline">طاهٍ خاص في أوتريخت</a></strong>. إنه أسهل بكثير وأكثر متعة مما تعتقد.</p>
+<p class="mb-6">تقديم الطعام في المنزل يعني أنك لست مضطرًا للقيام بأي شيء. لست مضطرًا لغسل الأطباق ولست مضطرًا للانتظار في الطابور. يرتب طباخ منزلي محترف كل شيء، من الطهي إلى تنظيف مطبخك.</p>
+
+<h3 class="text-2xl font-bold mb-4 text-[#1A4D2E]">كيف يعمل تقديم الطعام في المنزل؟</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>اختيار القائمة معًا:</strong> أخبر طاهي المنزل بما يعجبك. نباتي أم لحم؟ كل شيء ممكن.</li>
+    <li><strong>البقالة والتحضير:</strong> يشتري الطاهي المكونات الطازجة. غالبًا ما يكملون الكثير من العمل الشاق في مطبخهم الخاص.</li>
+    <li><strong>الطبخ في مطبخك:</strong> يأتي الطاهي الخاص إليك بجميع الأدوات اللازمة ويطبخ مباشرة في مطبخك.</li>
+    <li><strong>التقديم والتنظيف:</strong> أنت تستمتع بالطعام. يقدم طاهي المنزل الأطباق ويترك المطبخ نظيفًا لامعًا.</li>
+</ul>
+
+<h3 class="text-2xl font-bold mb-4 text-[#1A4D2E]">ما هي تكلفة طاهٍ منزلي في أوتريخت؟</h3>
+<p class="mb-6">يعتقد الكثير من الناس أن استئجار طاهٍ خاص مكلف للغاية. في الواقع إنها تكلفة معقولة جدًا! بالنسبة لمجموعة من 6 إلى 10 أشخاص، غالبًا ما يكون تقديم الطعام في المنزل بأسعار معقولة تمامًا مثل تناول الطعام في مطعم فاخر في أوتريخت. بالإضافة إلى ذلك، يمكنك التوفير في المشروبات باهظة الثمن.</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "هل يجب أن يكون مطبخي في أوتريخت كبيرًا حتى يتمكن الطاهي المنزلي من العمل؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "لا. يستطيع طهاتنا المنزليون العمل في المطابخ الحضرية الصغيرة. نحتاج فقط إلى أربعة مواقد وفرن."
+        }
+    },
+    {
+        "@type": "Question",
+        "name": "هل يقوم الطاهي الخاص حقًا بتنظيف كل شيء؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم. بعد العشاء، سيكون مطبخك فارغًا ونظيفًا تمامًا كما كان قبل وصول الطاهي."
+        }
+    }
+  ]
+}
+</script>
+</div>
+        `
+        },
+        {
+            title: "تقديم الطعام في المنزل لحفل عشاء فاخر",
+            slug: "dinner-party-catering-at-home-netherlands",
+            category: "أدلة حصرية",
+            readTime: "5 دقائق للقراءة",
+            publishedAt: "25 فبراير 2026",
+            excerpt: "التخطيط لحفل عشاء مثالي دون أي ضغوط. من خلال تقديم الطعام في المنزل، يقوم طاهٍ خاص محترف بإعداد أطباق لذيذة حتى يتوفر لك الوقت لضيوفك.",
+            image: "https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?q=80&w=2574&auto=format&fit=crop",
+            author: { name: "الشيف ديفيد", role: "خبير طهي" },
+            contentHtml: `
+<div dir="rtl" class="text-right font-arabic">
+<h2 class="text-3xl font-bold mb-6 text-[#1A4D2E]">تقديم الطعام في المنزل: استمتع بحفلتك الخاصة</h2>
+<p class="mb-4">أنت تستضيف حفل عشاء لأفضل أصدقائك. تريد أن يكون لا يُنسى. ولكن غالبًا ما تقضي المساء بأكمله في الطهي في المطبخ. تفوتك المحادثات وتكون دائمًا في عجلة من أمرك. اختيار <strong><a href="/ar/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">التموين المنزلي</a></strong> يغير هذا تمامًا.</p>
+<p class="mb-6">عندما تستأجر طباخًا منزليًا، فإنك تسلم كل الضغوط. يقوم الطاهي بطهي عشاء فاخر متعدد الأطباق، وتجلس ببساطة كضيف في منزلك.</p>
+
+<h3 class="text-2xl font-bold mb-4 text-[#1A4D2E]">لماذا يعتبر تناول الطعام في المنزل هو الاتجاه السائد</h3>
+<p class="mb-4">يطلب المزيد والمزيد من الناس في هولندا طاهيًا منزليًا لحفلات العشاء الخاصة بهم. إليك أكبر المزايا:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>لا ضغوط في المطبخ:</strong> الطاهي يعتني بكل شيء؛ لا داعي للقلق بشأن حرق الطعام.</li>
+    <li><strong>لا داعي للاندفاع للمغادرة:</strong> يمكنك تناول العشاء على الطاولة للمدة التي تريدها. غرفة معيشتك لا تغلق عند منتصف الليل.</li>
+    <li><strong>اهتمام شخصي:</strong> يشرح الطاهي الإلهام وراء كل طبق، تمامًا كما في مطعم حقيقي.</li>
+</ul>
+
+<h3 class="text-2xl font-bold mb-4 text-[#1A4D2E]">استأجر طاهيًا منزليًا في 3 خطوات بسيطة</h3>
+<p class="mb-6">ترتيب تقديم الطعام في المنزل أمر بسيط. تختار قائمة طعام على موقعنا الإلكتروني، وتناقش عدد الضيوف، ويأتي طاهٍ خاص للطهي لك. اجعل عشاءك القادم تجربة طهي لا تُنسى.</p>
+</div>
+        `
+        },
+        {
+            title: "تجهيز طعام الشواء الفاخر في المنزل مع طاهٍ خاص",
+            slug: "bbq-private-chef-catering-netherlands",
+            category: "أدلة حصرية",
+            readTime: "5 دقائق للقراءة",
+            publishedAt: "25 فبراير 2026",
+            excerpt: "اجعل حفلتك الصيفية ناجحة مع الفخامة في تقديم الشواء في المنزل. يقوم طاهي الحفلات الخاص بشوي شرائح اللحم المثالية وإعداد السلطات الطازجة في حديقتك.",
+            image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "الشيف ديفيد", role: "خبير طهي" },
+            contentHtml: `
+<div dir="rtl" class="text-right font-arabic">
+<h2 class="text-3xl font-bold mb-6 text-[#1A4D2E]">تجهيز الشواء الفاخر في المنزل: متعة حقيقية في الحديقة</h2>
+<p class="mb-4">الصيف هو الوقت المثالي لإقامة حفل شواء مع العائلة والأصدقاء. لكن تنظيم حفل شواء جيد يتطلب الكثير من العمل. عليك شراء اللحوم وإعداد السلطات والوقوف بجانب الشواية الساخنة طوال المساء. لهذا السبب فإن <strong><a href="/ar/menus/3" class="text-[#D97757] font-semibold hover:underline">مأدبة الشواء المنزلية</a></strong> مع طاهٍ خاص تحظى بشعبية كبيرة.</p>
+<p class="mb-6">يحضر الطاهي الخاص أدواته الخاصة، ويشوي قطع اللحم والسمك عالية الجودة بمهارة، ويقدمها لضيوفك. الشيء الوحيد الذي عليك القيام به هو صب مشروب لنفسك في الشمس.</p>
+
+<h3 class="text-2xl font-bold mb-4 text-[#1A4D2E]">ما الذي تحصل عليه مع تقديم الشواء؟</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>لحوم وأسماك عالية الجودة:</strong> لا توجد عبوات سوبر ماركت قياسية، بل لحم بقري المتن أو سمك السلمون الطازج أو وجبات نباتية فاخرة.</li>
+    <li><strong>أطباق جانبية مفاجئة:</strong> سلطات طازجة وخضروات مشوية تمامًا وخبز حرفي.</li>
+    <li><strong>طاهٍ في الشواية:</strong> يعرف الطباخ المحترف بالضبط متى يتم نضج الطعام، مما يضمن أفضل نتيجة طهي.</li>
+</ul>
+
+<p class="mb-6">يعتبر تقديم الشواء في المنزل مثاليًا لأمسيات الصيف الدافئة، والاحتفالات العائلية في الحديقة، أو إغلاق موسم المهرجانات بشكل رائع، في حديقتك الخاصة.</p>
+</div>
+        `
+        },
+        {
+            title: "تقديم الطعام للشركات وغداء المكتب الفاخر",
+            slug: "corporate-event-catering-lunch-netherlands",
+            category: "أدلة حصرية",
+            readTime: "5 دقائق للقراءة",
+            publishedAt: "25 فبراير 2026",
+            excerpt: "دلل فريقك وعملائك بتقديم خدمات طعام متميزة للشركات. من نادي الغداء الصحي في المكتب إلى عشاء التواصل الكبير: نحن نتعامل مع كل شيء.",
+            image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "الشيف ديفيد", role: "خبير طهي" },
+            contentHtml: `
+<div dir="rtl" class="text-right font-arabic">
+<h2 class="text-3xl font-bold mb-6 text-[#1A4D2E]">تقديم الطعام للشركات التي تطلب المزيد</h2>
+<p class="mb-4">إذا كان عميل مهم يزور المكتب، أو إذا كان فريقك يحتفل بنجاح كبير، فلن تكون شطائر الجبن القياسية كافية ببساطة. الناس يريدون طعامًا جيدًا وصحيًا ولذيذًا. تقدم <strong><a href="/ar/zakelijke-catering-amsterdam" class="text-[#D97757] font-semibold hover:underline">خدمات الطعام للشركات</a></strong> المتخصصة لدينا الحل الأمثل. يُعد الشيف وجبات غداء طازجة وعشاء فاخر مباشرة في موقع شركتك.</p>
+<p class="mb-6">تبتعد المزيد والمزيد من الشركات عن طعام المكاتب الممل. نحن نجلب تجربة مطعم راقية مباشرة إلى غرفة الاجتماعات أو كافيتريا شركتك.</p>
+
+<h3 class="text-2xl font-bold mb-4 text-[#1A4D2E]">فوائد نادي الغداء</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>فريق أكثر ذكاءً ونشاطًا:</strong> تؤدي وجبات الغداء الصحية (التي تتميز بالأطباق الدافئة والسلطات) إلى أداء عمل أفضل في فترة ما بعد الظهر.</li>
+    <li><strong>أبهر ضيوفك:</strong> يعد استئجار طاهٍ خاص في المكتب طريقة رائعة للترحيب بكبار الزوار المهمين.</li>
+    <li><strong>خيارات مرنة في المنزل:</strong> حتى بالنسبة لنزهات الفريق في منزل أحد الزملاء أو في فيلا مستأجرة، نقدم أفضل تقديم للطعام بشكل مطلق.</li>
+</ul>
+
+<p class="mb-6">استثمر في طعام رائع لعملك. سواء كان ذلك نادي غداء صحي يومي أو عشاء عيد الميلاد السنوي الفخم، فإن جودة الطهي تصنع الفارق بأكمله.</p>
+</div>
+        `
+        },
+        {
+            title: "طاهٍ خاص في لايدن: تناول طعام في المدينة الرئيسية",
+            slug: "best-home-chef-delivery-leiden",
+            category: "أدلة حصرية",
+            readTime: "5 دقائق للقراءة",
+            publishedAt: "25 فبراير 2026",
+            excerpt: "استئجار طاهٍ منزلي خاص في لايدن. تجنب مشاكل وقوف السيارات ومطاعم القناة المزدحمة، وتناول العشاء بأمان واسترخاء مع العائلة أو الأصدقاء في منزلك.",
+            image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=2740&auto=format&fit=crop",
+            author: { name: "الشيف ديفيد", role: "خبير طهي" },
+            contentHtml: `
+<div dir="rtl" class="text-right font-arabic">
+<h2 class="text-3xl font-bold mb-6 text-[#1A4D2E]">أحضر المطعم إليك مع طاهٍ خاص في لايدن</h2>
+<p class="mb-4">مدينة لايدن جميلة وتاريخية، مليئة بالأزقة الصغيرة والمباني القديمة. من الصعب جدًا العثور على موقف سيارات مناسب، خاصة في عطلات نهاية الأسبوع. إذا كنت ترغب في عشاء فاخر دون أي متاعب، فإن <strong><a href="/ar/thuiskok-inhuren" class="text-[#D97757] font-semibold hover:underline">استئجار طاهٍ خاص في لايدن</a></strong> هو الحل الأبسط والأكثر أناقة.</p>
+<p class="mb-6">تقديم الطعام في المنزل يجلب السلام. ليست هناك حاجة لمجالسة الأطفال، وليست هناك حاجة لركوب الدراجة في المدينة عبر الأمطار الغزيرة. يصل طاهنا الخاص ومعه جميع المكونات الطازجة مباشرة إلى عنوانك في لايدن.</p>
+
+<h3 class="text-2xl font-bold mb-4 text-[#1A4D2E]">كيف يعمل التموين المنزلي؟</h3>
+<p class="mb-4">عند حجز طاهٍ خاص في لايدن، يحدث ما يلي:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li>يصل الشيف قبل العشاء بساعتين في مطبخك النظيف.</li>
+    <li>يقوم الطباخ بإعداد وإنهاء وتقديم كل دورة مباشرة على طاولة طعامك. تشعر تماما وكأنك ضيف.</li>
+    <li>بعد الحلوى، يقوم الشيف بتنظيف كل شيء. حتى كيس القمامة يتم أخذه بعيدًا!</li>
+</ul>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "هل سيجد طاهٍ خاص مساحة كافية جسديًا في مطبخي بمنزلي الكلاسيكي في لايدن؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "بالتأكيد. نحن نعرف مدينة لايدن جيدًا وندرك أن المنازل التاريخية جدًا تحتوي أحيانًا على مطابخ صغيرة. طهاتنا قابلون للتكيف بسهولة."
+        }
+    },
+    {
+        "@type": "Question",
+        "name": "هل المشروبات مشمولة مع التموين المنزلي؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "بشكل قياسي، يُطلب منك توفير البيرة والنبيذ والمشروبات الغازية الخاصة بك. هذا أرخص بكثير بالنسبة لك! ولكن يمكن للطاهي جلب النبيذ المُصاحب إذا رغبت في ذلك."
+        }
+    }
+  ]
+}
+</script>
+</div>
+        `
+        },
         {
             title: "أفضل طاهٍ منزلي في لاهاي: أناقة الطهي وخصوصية المطاعم الفاخرة",
             slug: "best-home-chef-delivery-den-haag",
@@ -3653,6 +4355,179 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
         }
     ],
     hi: [
+        {
+            title: "यूट्रेक्ट में प्राइवेट शेफ: घर पर बेहतरीन खाने का विकल्प",
+            slug: "best-home-chef-delivery-utrecht",
+            category: "विशेष गाइड",
+            readTime: "5 मिनट पढ़ने का समय",
+            publishedAt: "25 फरवरी 2026",
+            excerpt: "क्या आप यूट्रेक्ट में प्राइवेट शेफ ढूंढ रहे हैं? जानिए कैसे आप अपने लिविंग रूम में एक परफेक्ट डिनर के लिए आसानी से प्रोफेशनल होम शेफ को बुला सकते हैं।",
+            image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2669&auto=format&fit=crop",
+            author: { name: "शेफ डेविड", role: "पाककला विशेषज्ञ" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">यूट्रेक्ट में प्राइवेट शेफ क्यों सबसे अच्छा विकल्प है</h2>
+<p class="mb-4">यूट्रेक्ट नहरों और आरामदायक रेस्टोरेंट्स से भरा एक खूबसूरत शहर है। लेकिन कभी-कभी, आप बस अपने घर में आराम से रहना चाहते हैं। हो सकता है आप कोई खास जन्मदिन मना रहे हों या अपने परिवार के साथ शांतिपूर्ण जगह ढूंढ रहे हों। एक रेस्टोरेंट भीड़भाड़ वाला और शोरगुल वाला हो सकता है। इसका उपाय? एक <strong><a href="/hi/thuiskok-inhuren" class="text-[#D97757] font-semibold hover:underline">प्राइवेट शेफ यूट्रेक्ट में नियुक्त करें</a></strong>। यह आपके विचार से कहीं अधिक आसान और मजेदार है।</p>
+<p class="mb-6">घर पर कैटरिंग का मतलब है कि आपको कुछ भी नहीं करना है। आपको बर्तन नहीं धोने हैं और लाइन में इंतजार नहीं करना है। एक प्रोफेशनल कुक खाना पकाने से लेकर आपकी रसोई साफ करने तक सब कुछ संभाल लेता है।</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">होम कैटरिंग कैसे काम करती है?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>साथ मिलकर मेन्यू चुनना:</strong> आप होम शेफ को बताते हैं कि आपको क्या पसंद है। शाकाहारी या नॉन-वेज? सब कुछ संभव है।</li>
+    <li><strong>सामान और तैयारी:</strong> शेफ ताज़ा सामग्री लाता है। वे अक्सर अपनी खुद की रसोई में बहुत सारी तैयारी पूरी कर लेते हैं।</li>
+    <li><strong>आपकी रसोई में खाना बनाना:</strong> प्राइवेट शेफ सभी आवश्यक उपकरणों के साथ आपके पास आता है और सीधे आपकी रसोई में खाना बनाता है।</li>
+    <li><strong>परोसना और सफाई:</strong> आप आराम से खाने का आनंद लेते हैं। शेफ व्यंजन परोसता है और रसोई को बिल्कुल नया जैसा साफ छोड़ देता है।</li>
+</ul>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">यूट्रेक्ट में होम शेफ की कीमत क्या है?</h3>
+<p class="mb-6">बहुत से लोग सोचते हैं कि प्राइवेट शेफ नियुक्त करना बहुत महंगा है। जबकि असल में यह काफी किफायती है! 6 से 10 लोगों के समूह के लिए, घर पर कैटरिंग अक्सर यूट्रेक्ट के एक लक्जरी रेस्टोरेंट में खाने जितना ही किफायती होता है। इसके अलावा, आप अपनी खुद की शराब परोस कर महंगे ड्रिंक्स पर बचत कर सकते हैं।</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "क्या होम शेफ को काम करने के लिए यूट्रेक्ट में मेरी रसोई का बड़ा होना ज़रूरी है?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "नहीं। हमारे होम शेफ छोटे शहरी रसोईघरों में भी काम कर सकते हैं। हमें सिर्फ चार स्टोवटॉप और एक ओवन की आवश्यकता है।"
+        }
+    },
+    {
+        "@type": "Question",
+        "name": "क्या प्राइवेट शेफ सचमुच सब कुछ साफ कर देता है?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "हाँ। डिनर के बाद, आपकी रसोई वैसी ही बिल्कुल खाली और साफ होगी जैसी शेफ के आने से पहले थी।"
+        }
+    }
+  ]
+}
+</script>
+        `
+        },
+        {
+            title: "लक्ज़री डिनर पार्टी के लिए होम कैटरिंग",
+            slug: "dinner-party-catering-at-home-netherlands",
+            category: "विशेष गाइड",
+            readTime: "5 मिनट पढ़ने का समय",
+            publishedAt: "25 फरवरी 2026",
+            excerpt: "बिना किसी तनाव के अपनी परफेक्ट डिनर पार्टी की योजना बनाएं। होम कैटरिंग के साथ, एक प्रोफेशनल प्राइवेट शेफ स्वादिष्ट व्यंजन बनाता है ताकि आपको अपने मेहमानों के लिए समय मिल सके।",
+            image: "https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?q=80&w=2574&auto=format&fit=crop",
+            author: { name: "शेफ डेविड", role: "पाककला विशेषज्ञ" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">होम कैटरिंग: आराम से अपनी पार्टी का आनंद लें</h2>
+<p class="mb-4">आप अपने सबसे अच्छे दोस्तों के लिए डिनर पार्टी आयोजित कर रहे हैं। आप चाहते हैं कि यह हमेशा याद रहे। लेकिन अक्सर, आप पूरी शाम रसोई में खाना पकाने में बिताते हैं। आप बातचीत से चूक जाते हैं और हमेशा जल्दबाजी में रहते हैं। <strong><a href="/hi/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">होम कैटरिंग</a></strong> चुनना इसे पूरी तरह से बदल देता है।</p>
+<p class="mb-6">जब आप एक होम कुक नियुक्त करते हैं, तो आप सारा तनाव दूर कर देते हैं। शेफ कई तरह के लग्जरी व्यंजन बनाता है, और आप अपने ही घर में एक मेहमान के रूप में आराम से बैठते हैं।</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">घर पर डाइनिंग आज का ट्रेंड क्यों है</h3>
+<p class="mb-4">नीदरलैंड में अधिक से अधिक लोग अपनी डिनर पार्टियों के लिए होम शेफ बुक कर रहे हैं। इसके सबसे बड़े फायदे ये हैं:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>रसोई में कोई तनाव नहीं:</strong> शेफ सब कुछ संभालता है; आपको खाना जलने की चिंता करने की जरूरत नहीं है।</li>
+    <li><strong>जल्दी जाने की कोई जल्दी नहीं:</strong> आप जितनी देर चाहें मेज पर खाना खा सकते हैं। आपका घर आधी रात को बंद नहीं होता है।</li>
+    <li><strong>व्यक्तिगत ध्यान:</strong> शेफ प्रत्येक डिश के पीछे की प्रेरणा के बारे में बताता है, बिल्कुल एक असली रेस्टोरेंट की तरह।</li>
+</ul>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">3 सरल चरणों में होम शेफ नियुक्त करें</h3>
+<p class="mb-6">होम कैटरिंग का इंतज़ाम करना आसान है। आप हमारी वेबसाइट पर मेन्यू का चयन करें, मेहमानों की संख्या पर चर्चा करें, और शेफ आपके लिए खाना बनाने के लिए आता है। अपने अगले डिनर को एक शानदार व्यंजन का अनुभव बनाएं।</p>
+        `
+        },
+        {
+            title: "एक प्राइवेट शेफ के साथ लक्ज़री BBQ कैटरिंग घर पर",
+            slug: "bbq-private-chef-catering-netherlands",
+            category: "विशेष गाइड",
+            readTime: "5 मिनट पढ़ने का समय",
+            publishedAt: "25 फरवरी 2026",
+            excerpt: "घर पर लक्ज़री बारबेक्यू कैटरिंग के साथ अपनी समर पार्टी को सफल बनाएं। एक प्राइवेट शेफ सीधे आपके बगीचे में परफेक्ट स्टेक ग्रिल करता है और ताज़ा सलाद तैयार करता है।",
+            image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "शेफ डेविड", role: "पाककला विशेषज्ञ" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">घर पर लक्ज़री बारबेक्यू कैटरिंग: बगीचे में असली आनंद</h2>
+<p class="mb-4">गर्मियों का मौसम परिवार और दोस्तों के साथ बारबेक्यू के लिए एकदम सही समय होता है। लेकिन एक अच्छा BBQ आयोजित करना बहुत काम का काम है। आपको मीट खरीदना है, सलाद बनाना है और पूरी शाम गर्म ग्रिल के पास खड़ा रहना है। इसीलिए प्राइवेट शेफ के साथ <strong><a href="/hi/menus/3" class="text-[#D97757] font-semibold hover:underline">होम बारबेक्यू कैटरिंग</a></strong> बेहद लोकप्रिय है।</p>
+<p class="mb-6">प्राइवेट शेफ अपने उपकरण खुद लाते हैं, उच्च गुणवत्ता वाले मीट और मछलियों को ग्रिल करते हैं, और उन्हें आपके मेहमानों को परोसते हैं। आपको बस धूप में आराम करना है और अपने लिए एक अच्छी ड्रिंक लेनी है।</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">बारबेक्यू कैटरिंग के साथ आपको क्या मिलता है?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>कमाल की गुणवत्ता वाला मांस और मछली:</strong> कोई साधारण सुपरमार्केट का पैकेज नहीं, बल्कि टेंडरलॉइन, ताज़ा सालमन, या लक्जरी शाकाहारी विकल्प।</li>
+    <li><strong>विभिन्न प्रकार की साइड डिश:</strong> ताज़ा सलाद, भुनी हुई सब्जियां और कुरकुरी ब्रेड।</li>
+    <li><strong>ग्रिल पर एक शेफ:</strong> एक पेशेवर रसोइया ठीक-ठीक जानता है कि खाना कब पूरी तरह से पक गया है, जो सबसे अच्छे टेस्ट की गारंटी देता है।</li>
+</ul>
+
+<p class="mb-6">घर पर बारबेक्यू कैटरिंग गर्मियों की गर्म शामों, बगीचे में पारिवारिक समारोहों या अपने लॉन पर फेस्टिवल सीज़न को खूबसूरती से समाप्त करने के लिए एकदम सही है।</p>
+        `
+        },
+        {
+            title: "कॉर्पोरेट कैटरिंग और लक्ज़री ऑफिस लंच",
+            slug: "corporate-event-catering-lunch-netherlands",
+            category: "विशेष गाइड",
+            readTime: "5 मिनट पढ़ने का समय",
+            publishedAt: "25 फरवरी 2026",
+            excerpt: "लक्ज़री कॉर्पोरेट कैटरिंग के साथ अपनी टीम और ग्राहकों को खुश करें। कार्यालय में एक स्वस्थ लंच क्लब से लेकर एक बड़े नेटवर्किंग डिनर तक: हम सब कुछ संभालते हैं।",
+            image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "शेफ डेविड", role: "पाककला विशेषज्ञ" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">बेहतरीन स्वाद की मांग करने वाली कंपनियों के लिए कैटरिंग</h2>
+<p class="mb-4">यदि कोई महत्वपूर्ण ग्राहक कार्यालय में आ रहा है, या यदि आपकी टीम कोई बहुत बड़ी सफलता का जश्न मना रही है, तो साधारण पनीर सैंडविच पर्याप्त नहीं हैं। लोग अच्छा, स्वस्थ और स्वादिष्ट भोजन चाहते हैं। हमारी खास <strong><a href="/hi/zakelijke-catering-amsterdam" class="text-[#D97757] font-semibold hover:underline">कॉर्पोरेट कैटरिंग</a></strong> इसका सबसे सही समाधान प्रस्तुत करती है। एक शेफ सीधे आपके कंपनी के स्थान पर ताज़ा लंच और शानदार डिनर तैयार करता है।</p>
+<p class="mb-6">अधिक से अधिक कंपनियां अब कार्यालय के उबाऊ भोजन से दूर हो रही हैं। हम सीधे आपके मीटिंग रूम या कंपनी के डाइनिंग एरिया में एक बेहतरीन रेस्टोरेंट का अनुभव लेकर आते हैं।</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">लंच क्लब के लाभ</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>एक तेज़ और ऊर्जावान टीम:</strong> स्वस्थ दोपहर का भोजन (गर्म व्यंजनों और सलाद के साथ) दोपहर में आपके काम करने की क्षमता को बेहतर बनाता है।</li>
+    <li><strong>अपने ग्राहकों को प्रभावित करें:</strong> कार्यालय में काम करने के लिए प्राइवेट शेफ को नियुक्त करना महत्वपूर्ण वीआईपी आगंतुकों का स्वागत करने का एक शानदार तरीका है।</li>
+    <li><strong>घर पर लचीले विकल्प:</strong> यहां तक कि किसी सहकर्मी के घर पर या किराए के विला में टीम आउटिंग के लिए भी, हम सबसे अच्छी खान-पान सेवा प्रदान करते हैं।</li>
+</ul>
+
+<p class="mb-6">अपने व्यवसाय के लिए बेहतरीन भोजन में निवेश करें। चाहे वह दैनिक स्वस्थ लंच क्लब हो या साल में एक बार होने वाला शानदार क्रिसमस डिनर, भोजन की गुणवत्ता पूरा अंतर पैदा करती है।</p>
+        `
+        },
+        {
+            title: "लीडन में प्राइवेट शेफ: आपके अपने घर में लक्ज़री डाइनिंग",
+            slug: "best-home-chef-delivery-leiden",
+            category: "विशेष गाइड",
+            readTime: "5 मिनट पढ़ने का समय",
+            publishedAt: "25 फरवरी 2026",
+            excerpt: "लीडन में एक प्राइवेट होम शेफ बुक करें। पार्किंग की समस्या और भीड़भाड़ वाले नहरों के रेस्तरां से बचें, और अपने घर पर सुरक्षित रूप से डिनर करें।",
+            image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=2740&auto=format&fit=crop",
+            author: { name: "शेफ डेविड", role: "पाककला विशेषज्ञ" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">लीडन में प्राइवेट शेफ के साथ रेस्टोरेंट को अपने घर लाएं</h2>
+<p class="mb-4">लीडन सुंदर और ऐतिहासिक है, जो छोटी गलियों और पुरानी इमारतों से भरा है। विशेष रूप से सप्ताहांत पर अच्छी पार्किंग ढूंढना बहुत मुश्किल होता है। अगर आप बिना किसी परेशानी के एक लग्जरी डिनर चाहते हैं, तो <strong><a href="/hi/thuiskok-inhuren" class="text-[#D97757] font-semibold hover:underline">लीडन में एक प्राइवेट शेफ नियुक्त करना</a></strong> सबसे सरल और शानदार उपाय है।</p>
+<p class="mb-6">आसानी से घर पर कैटरिंग। किसी बेबीसिटर की जरूरत नहीं, ज्यादा बारिश में शहर में साइकिल चलाने की जरूरत नहीं। हमारा प्राइवेट शेफ सीधे आपके पते पर सभी ताज़ा सामग्रियों के साथ पहुंचता है।</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">होम कैटरिंग असल में होता क्या है?</h3>
+<p class="mb-4">जब आप लीडन में प्राइवेट शेफ बुक करते हैं, तो निम्नलिखित बातें होती हैं:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li>शेफ डिनर से दो घंटे पहले आपकी साफ रसोई में आता है।</li>
+    <li>कुक तैयार करता है, खाना पकाता है, और आपको डाइनिंग टेबल पर भोजन परोसता है। आप पूरी तरह से एक मेहमान की तरह महसूस करते हैं।</li>
+    <li>अंतिम मिठाई के बाद, शेफ सब कुछ साफ कर देता है। कचरा भी ले जाया जाता है!</li>
+</ul>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "क्या कोई प्राइवेट शेफ शारीरिक रूप से लीडन के घर में मेरी सामान्य छोटी रसोई में फिट होगा?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ज़रूर। हम लीडन से बहुत परिचित हैं और समझते हैं कि ऐतिहासिक घरों में अक्सर छोटी रसोई होती है। हमारे शेफ आसानी से अपना काम कर लेते हैं।"
+        }
+    },
+    {
+        "@type": "Question",
+        "name": "क्या होम कैटरिंग में ड्रिंक्स भी शामिल हैं?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "आमतौर पर, आप खुद अपना बीयर, शराब और सोडा प्रदान करते हैं। यह आपके लिए काफी सस्ता होता है! लेकिन अगर आप चाहें, तो शेफ वाइन पेयरिंग के साथ भी आ सकते हैं।"
+        }
+    }
+  ]
+}
+</script>
+        `
+        },
         {
             title: "द हेग में सर्वश्रेष्ठ होम शेफ: अंतरराष्ट्रीय स्वाद, स्थानीय लालित्य",
             slug: "best-home-chef-delivery-den-haag",
