@@ -1,6 +1,7 @@
 "use client";
 
 import { useI18n } from "@/contexts/I18nContext";
+import Image from "next/image";
 
 export default function Footer() {
     const { dictionary } = useI18n();
@@ -11,9 +12,11 @@ export default function Footer() {
             <div className="container mx-auto px-5 flex flex-col md:flex-row justify-between items-center gap-8">
                 <div className="text-center md:text-left">
                     <div className="relative w-32 h-12 mb-4 mx-auto md:mx-0">
-                        <img
+                        <Image
                             src="/images/logo-homemade.png"
                             alt="Homemade Logo"
+                            width={128}
+                            height={48}
                             className="object-contain w-full h-full brightness-0 invert"
                         />
                     </div>

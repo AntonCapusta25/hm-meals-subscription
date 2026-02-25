@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useI18n } from "@/contexts/I18nContext";
@@ -61,10 +62,13 @@ export default function Navbar() {
                 <Link href={`/${i18n.lang || 'en'}`} className="flex items-center gap-2">
                     {/* Logo */}
                     <div className="h-9 w-auto">
-                        <img
+                        <Image
                             src="/images/logo-new.png"
                             alt="Homemade Logo"
+                            width={150}
+                            height={36}
                             className="h-full w-auto object-contain rounded-md"
+                            priority
                         />
                     </div>
                 </Link>

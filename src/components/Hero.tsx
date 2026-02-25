@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { trackCTAClick } from "@/lib/analytics";
 import { useI18n } from "@/contexts/I18nContext";
@@ -57,7 +58,7 @@ export default function Hero({ city }: HeroProps) {
 
     return (
         <header className="relative h-screen w-full flex items-center justify-center overflow-hidden text-white bg-black">
-            {/* Background Slideshow */}
+            {/* Background Slideshow using Next.js Image for LCP Optimization */}
             <AnimatePresence mode="popLayout">
                 <motion.div
                     key={currentImageIndex}
@@ -65,14 +66,17 @@ export default function Hero({ city }: HeroProps) {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 1.5, ease: "easeInOut" }}
-                    className="absolute top-0 left-0 w-full h-full z-0"
-                    style={{
-                        backgroundImage: `url('${HERO_IMAGES[currentImageIndex]}')`,
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                    }}
-                />
+                    className="absolute top-0 left-0 w-full h-full z-0 block"
+                >
+                    <Image
+                        src={HERO_IMAGES[currentImageIndex]}
+                        alt={`Hero Background ${currentImageIndex + 1}`}
+                        fill
+                        priority={true}
+                        className="object-cover"
+                        sizes="100vw"
+                    />
+                </motion.div>
             </AnimatePresence>
 
             {/* Permanent Overlay to ensure text readability */}

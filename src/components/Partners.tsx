@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useI18n } from "@/contexts/I18nContext";
 
@@ -57,10 +58,12 @@ export default function Partners() {
                                         : 'w-32 h-16 md:w-40 md:h-20'
                                     }`}
                             >
-                                <img
+                                <Image
                                     src={partner.logo}
                                     alt={partner.name}
-                                    className="w-full h-full object-contain"
+                                    fill
+                                    className="object-contain"
+                                    sizes="(max-width: 768px) 50vw, 25vw"
                                 />
                             </div>
                         ))}

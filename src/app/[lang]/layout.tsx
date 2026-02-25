@@ -59,6 +59,9 @@ export default async function RootLayout(props: {
 
   return (
     <html lang={lang} dir={lang === "ar" ? "rtl" : "ltr"}>
+      <head>
+        <link rel="preconnect" href="https://firebasestorage.googleapis.com" />
+      </head>
       <body
         className={`${fraunces.variable} ${inter.variable} antialiased bg-cream text-dark`}
       >
