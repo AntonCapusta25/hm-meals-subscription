@@ -28,15 +28,15 @@ for (const locale of locales) {
 
     // The files are in the root directory, named by full language word
     const filePrefix = localeToFileMap[locale];
-    // We are now only importing Batch 3
-    const batch3Path = path.join(rootDir, `${filePrefix}_batch_3.json`);
+    // We are now only importing Batch 4
+    const batch4Path = path.join(rootDir, `${filePrefix}_batch_4.json`);
 
-    if (fs.existsSync(batch3Path)) {
-        console.log(`[+] Found ${batch3Path}`);
-        const batch3Data = JSON.parse(fs.readFileSync(batch3Path, 'utf8'));
-        allPostsForLocale = allPostsForLocale.concat(batch3Data);
+    if (fs.existsSync(batch4Path)) {
+        console.log(`[+] Found ${batch4Path}`);
+        const batch4Data = JSON.parse(fs.readFileSync(batch4Path, 'utf8'));
+        allPostsForLocale = allPostsForLocale.concat(batch4Data);
     } else {
-        console.log(`[-] MISSING: ${batch3Path}`);
+        console.log(`[-] MISSING: ${batch4Path}`);
     }
 
     if (allPostsForLocale.length > 0) {
@@ -51,14 +51,14 @@ for (const locale of locales) {
 
             let formattedPosts = '';
             for (const post of allPostsForLocale) {
-                const category = post.category || 'Exclusive Guides';
+                const category = post.category || 'Amsterdam Catering';
                 const readTime = post.readTime || '5 min read';
                 // Depending on locale, adjust publishedAt slightly
-                let publishedAt = 'Feb 25, 2026';
-                if (locale === 'nl') publishedAt = '25 Feb, 2026';
-                if (locale === 'fr') publishedAt = '25 Fév, 2026';
-                if (locale === 'ar') publishedAt = '25 فبراير 2026';
-                if (locale === 'hi') publishedAt = '25 फरवरी 2026';
+                let publishedAt = 'Feb 26, 2026';
+                if (locale === 'nl') publishedAt = '26 Feb, 2026';
+                if (locale === 'fr') publishedAt = '26 Fév, 2026';
+                if (locale === 'ar') publishedAt = '26 فبراير 2026';
+                if (locale === 'hi') publishedAt = '26 फरवरी 2026';
 
                 // Construct the object string manually to ensure it's valid TS
                 const title = JSON.stringify(post.title);

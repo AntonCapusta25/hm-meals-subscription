@@ -17,6 +17,215 @@ export type BlogPost = {
 export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
     nl: [
         {
+            title: "Beste Catering in Amsterdam voor Grote Feesten",
+            slug: "beste-catering-amsterdam-grote-feesten",
+            category: "Amsterdam Catering",
+            readTime: "4 min leestijd",
+            publishedAt: "26 Feb, 2026",
+            excerpt: "Organiseert u een groot feest in Amsterdam? Ontdek hoe onze professionele catering uw verjaardag of jubileum onvergetelijk maakt met perfecte service en heerlijk eten.",
+            image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2669&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">De Beste Keuze voor Grote Feesten in Amsterdam</h2>
+<p class="mb-4">Een groot feest organiseren in Amsterdam kan best veel stress geven. Of het nu gaat om een 50ste verjaardag, een groot familiediner of een speciaal jubileum in uw eigen huis. Het eten moet perfect zijn en er moet genoeg zijn voor iedereen. Daarom is <strong><a href="/nl/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">catering in Amsterdam</a></strong> voor grote groepen de ideale oplossing.</p>
+<p class="mb-6">Wanneer u kiest voor onze catering service, hoeft u zich nergens zorgen over te maken. Een team van professionele chefs neemt alle taken uit handen, van het koken tot de uiteindelijke schoonmaak.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Wat Maakt Onze Amsterdamse Catering Bijzonder?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Maatwerk menu's:</strong> Wij bouwen het menu rondom uw wensen. Van een luxe lopend buffet tot een exclusief 5-gangen diner aan de grote eettafel.</li>
+    <li><strong>Alles inbegrepen:</strong> Wij brengen niet alleen het eten. Als dat nodig is, regelen we ook borden, bestek en glazen, zodat u niets hoeft te huren of af te wassen.</li>
+    <li><strong>Ervaren thuiskoks:</strong> Onze chefs zijn gewend om in Amsterdamse keukens te werken, zelfs als de ruimte soms wat krap aandoet.</li>
+</ul>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "Kunt u grote feesten cateren in een Amsterdams appartement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, we cateren regelematig grote feesten en borrels in Amsterdamse appartementen. We passen ons menu en onze werkwijze aan op de beschikbare ruimte."
+        }
+    },
+    {
+        "@type": "Question",
+        "name": "Ruimt de catering alles weer op na het feest?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zeker. We zorgen dat uw keuken en buffetruimte na afloop weer helemaal netjes en schoon zijn."
+        }
+    }
+  ]
+}
+</script>
+        `
+        },
+        {
+            title: "Luxe Zakelijke Catering op de Zuidas Amsterdam",
+            slug: "luxe-zakelijke-catering-zuidas-amsterdam",
+            category: "Amsterdam Catering",
+            readTime: "4 min leestijd",
+            publishedAt: "26 Feb, 2026",
+            excerpt: "Maak indruk op uw grootste klanten met exclusieve zakelijke catering op de Zuidas. Wij bieden gezonde lunches en high-end board room diners.",
+            image: "https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?q=80&w=2574&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Luxe Zakelijke Catering op de Zuidas in Amsterdam</h2>
+<p class="mb-4">Als u zaken doet op de Zuidas, weet u dat kwaliteit voorop staat. Standaard belegde broodjes zijn niet altijd de juiste keuze wanneer u de CEO van een groot bedrijf of een belangrijke internationale klant ontvangt. Kies in plaats daarvan voor <strong><a href="/nl/zakelijke-catering-amsterdam" class="text-[#D97757] font-semibold hover:underline">luxe zakelijke catering</a></strong> waarbij een culinaire chef een verse lunch of een indrukwekkend diner verzorgt, gewoon in uw eigen vergaderruimte.</p>
+<p class="mb-6">Catering in het zakelijke hart van Amsterdam draait om discretie, stiptheid, en absoluut perfect eten. Dat is precies wat wij leveren.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Onze Opties voor de Zuidas</h3>
+<p class="mb-4">Elk kantoor en elk event is anders. Daarom bieden we verschillende pakketten aan:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>De Board Room Lunch:</strong> Een gezonde, lichte en verse meergangenlunch die u scherp houdt. Prachtig opgemaakte borden met verse vis, salades en warme elementen.</li>
+    <li><strong>Exclusief Zakendiner:</strong> Sluit een belangrijke deal niet af in een luidruchtig restaurant, maar in de privacy van uw eigen board room met een privé kok.</li>
+    <li><strong>Vrijdagmiddagborrel Catering:</strong> Luxe hapjes, oesters, en exclusieve finger food om de week perfect met uw team af te sluiten.</li>
+</ul>
+
+<p class="mb-6">Boek vandaag nog een chef voor uw kantoor op de Zuidas en til uw zakelijke bijeenkomsten direct naar een veel hoger culinair niveau.</p>
+        `
+        },
+        {
+            title: "Bruiloften en Evenementen Catering in Amsterdam",
+            slug: "catering-bruiloften-evenementen-amsterdam",
+            category: "Amsterdam Catering",
+            readTime: "4 min leestijd",
+            publishedAt: "26 Feb, 2026",
+            excerpt: "Beleef de perfecte dag met onze Amsterdamse bruiloftscatering. Van een heerlijk wandelend diner tot luxe hapjes op uw unieke event locatie.",
+            image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Onvergetelijke Catering voor Bruiloften in Amsterdam</h2>
+<p class="mb-4">Uw trouwdag is één van de belangrijkste dagen in uw leven. Goed eten speelt hier een enorme rol in. Bent u van plan om in Amsterdam te trouwen? Of u het nu viert in een prachtige kerkelijke locatie, een hip pakhuis, of intiem in eigen tuin: onze <strong><a href="/nl/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">bruiloftscatering</a></strong> maakt het culinair onvergetelijk.</p>
+<p class="mb-6">Wij nemen de volledige zorg voor het eten uit handen, en werken met de beste seizoensgebonden en lokale ingrediënten om uw trouwmenu precies naar wens samen te stellen.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Walking Dinners en Sit-Down Diners</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Shared Dining:</strong> Grote, weelderige planken vol heerlijkheden midden op tafel, perfect voor een informele en zeer sfeervolle bruiloft.</li>
+    <li><strong>Klassiek Meergangendiner:</strong> Een elegante 4- of 5-gangen sit-down maaltijd, waarbij elke gast bediend wordt aan fantastisch gedekte tafels.</li>
+    <li><strong>Walking Dinner:</strong> Heeft uw locatie weinig zitplaatsen? Wij serveren luxe warme en koude gerechtjes uit de hand. Gasten kunnen gewoon blijven staan en kletsen!</li>
+</ul>
+
+<p class="mb-6">Neem contact met ons team op om de perfecte catering voor uw unieke evenement of bruiloft in Amsterdam door te spreken.</p>
+        `
+        },
+        {
+            title: "Exclusieve Borrelhapjes en Finger Food Catering in Amsterdam",
+            slug: "exclusieve-borrelhapjes-catering-amsterdam",
+            category: "Amsterdam Catering",
+            readTime: "4 min leestijd",
+            publishedAt: "26 Feb, 2026",
+            excerpt: "Maak uw Amsterdamse borrel compleet met onze luxe finger food catering. Heerlijke, vers gemaakte hapjes voor bedrijfsfeesten en netwerkevents.",
+            image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Topklasse Borrelhapjes voor uw Amsterdamse Event</h2>
+<p class="mb-4">De Nederlandse 'borrel' is wereldberoemd. In Amsterdam borrelen we graag! Maar vergeet de standaard kaasblokjes met een vlaggetje of de vette bitterballen. Tegenwoordig verwachten uw gasten meer. Wij bieden <strong><a href="/nl/menus/2" class="text-[#D97757] font-semibold hover:underline">luxe borrelhapjes en finger food catering</a></strong> die garant staan voor verbazing en smaak.</p>
+<p class="mb-6">Stel u een chique netwerkevent, een galerie opening, of uw eigen verjaardagsfeest voor met prachtig gepresenteerde, eetbare kunstwerkjes. De hapjes worden ter plekke bereid door onze privé chefs en direct warm en vers geserveerd.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Wat is Luxe Finger Food?</h3>
+<p class="mb-4">Bij luxe finger food moet u denken aan gerechten zoals:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li>Blini's met gerookte zalm en crème fraîche.</li>
+    <li>Krokante gyoza's met verse truffel dip.</li>
+    <li>Mini-tataki van rund met een soja glazuur.</li>
+    <li>Vegetarische bruschetta met gepofte tomaat en burrata.</li>
+</ul>
+
+<p class="mb-6">Met perfecte finger food catering zorgt u ervoor dat gasten blijven praten over de geweldige sfeer en kwaliteit van uw event in Amsterdam.</p>
+        `
+        },
+        {
+            title: "Luxe Boot Catering op de Amsterdamse Grachten",
+            slug: "luxe-boot-catering-amsterdamse-grachten",
+            category: "Amsterdam Catering",
+            readTime: "4 min leestijd",
+            publishedAt: "26 Feb, 2026",
+            excerpt: "Vaar door Amsterdam terwijl u geniet van een privé chef aan boord. Ontdek de ultieme luxe boot catering op de grachten voor kleine events.",
+            image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=2740&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Catering aan Boord: Dineren op de Amsterdamse Grachten</h2>
+<p class="mb-4">Niets is meer iconisch in Amsterdam dan varen over de prachtige historische grachtengordel. En wat dit nóg onvergetelijker maakt, is een indrukwekkend diner of verse lunch direct aan boord. Met speciale <strong><a href="/nl/thuiskok-amsterdam" class="text-[#D97757] font-semibold hover:underline">luxe boot catering</a></strong> huurt u een privé chef in die de pannenkoeken en bitterballen verruilt voor een high-end fine dining ervaring op het water.</p>
+<p class="mb-6">Onze thuiskoks zijn erg flexibel. We hebben ervaring met het bereiden van luxe maaltijden in de compacte kombuizen (keukentjes) van Amsterdamse salonboten en grachtenboten.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Waarom Catering op een Boot?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Een wisselend decor:</strong> Geniet van uw voor- en hoofdgerecht terwijl monumentale panden en bruggen langzaam voorbij glijden.</li>
+    <li><strong>Ultieme privacy:</strong> U heeft geen last van andere restauranttafels naast u. Het is ideaal voor het sluiten van deals of intieme familie uitjes.</li>
+    <li><strong>Vers bereid:</strong> Wij brengen niet zomaar voorverpakte maaltijden aan boord. Het eten wordt à la minute en vers door uw privé chef opgediend.</li>
+</ul>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "Past een privé chef en de catering wel op een kleine sloep in Amsterdam?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Voor open sloepjes bieden we perfect voorbereide exclusieve picknicks en koude finger food planken. Voor een echt gekookt diner adviseren we een salonboot met minimaal een kleine keuken en stroom."
+        }
+    }
+  ]
+}
+</script>
+        `
+        },
+        {
+            title: "Vegetarische en Vegan Catering in Amsterdam",
+            slug: "vegetarische-vegan-catering-amsterdam",
+            category: "Amsterdam Catering",
+            readTime: "4 min leestijd",
+            publishedAt: "26 Feb, 2026",
+            excerpt: "Ontdek de allerbeste puur plantaardige en vegetarische catering in Amsterdam. Laat u verrassen door een luxe diner vol smaak, zonder vlees.",
+            image: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=2574&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Topkwaliteit Plantaardige en Vegetarische Catering in Amsterdam</h2>
+<p class="mb-4">Amsterdam is een stad die vooroploopt als het gaat om duurzaam en plantaardig eten. Veel mensen kiezen bewust vaker voor gerechten zonder vlees. Maar vegetarisch en vegan eten mag absoluut niet saai zijn. Onze speciale <strong><a href="/nl/menus/5" class="text-[#D97757] font-semibold hover:underline">vegan catering in Amsterdam</a></strong> draait om explosieve smaken, creativiteit en culinaire hoogstandjes.</p>
+<p class="mb-6">Onze privé chefs toveren knolselderij, biet, en paddenstoelen om tot exclusieve gerechten die zelfs fervente vleeseters vaak nog lekkerder vinden klinken.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Waarom Kiezen voor Vegan Catering Thuis?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Gezond en licht:</strong> Plantaardige meergangendiners liggen vaak minder zwaar op de maag. U voelt zich energiek, zelfs na vier gangen.</li>
+    <li><strong>Zeer kleurrijk:</strong> Vegan gerechten werken heel veel met verse felle kruiden en groenten. Borden zien er uit als schilderijen.</li>
+    <li><strong>Inclusief voor iedereen:</strong> Als u een groot gezelschap thuis ontvangt in Amsterdam, is een volledig verrassend vegetarisch menu de veiligste en lekkerste manier om iedereen tevreden te stellen.</li>
+</ul>
+
+<p class="mb-6">Verras uzelf en uw gasten met onze next-level vegetarische en veganistische chef aan huis.</p>
+        `
+        },
+        {
+            title: "Catering voor Verjaardagen en Familiefeesten in Amsterdam",
+            slug: "catering-verjaardagen-familiefeesten-amsterdam",
+            category: "Amsterdam Catering",
+            readTime: "4 min leestijd",
+            publishedAt: "26 Feb, 2026",
+            excerpt: "Vier de mijlpalen van uw leven met familie en geniet van perfecte catering thuis in Amsterdam. Geen boodschappen, geen rommel, enkel verbinding met uw naasten.",
+            image: "https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Zorgeloze Catering voor Familiefeesten in Amsterdam</h2>
+<p class="mb-4">Wordt oma 80 jaar? Heeft uw kind eindelijk zijn diploma, of vieren jullie een belangrijk gezinsjubileum? Familiefeesten zijn de mooiste momenten. Toch kan het organiseren ervan, zeker in een soms hectisch huishouden in Amsterdam, uitputtend zijn. Door te kiezen voor betrouwbare <strong><a href="/nl/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">thuis catering</a></strong> garandeert u niet alleen geweldig eten, maar geeft u uzelf ook het allergrootste cadeau: tijd.</p>
+<p class="mb-6">Een privékok of full-service catering team komt bij u thuis, zet alles klaar en zorgt ervoor dat niemand van de familie uren in de pannen hoeft te roeren.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Focus op Tijd met de Familie</h3>
+<p class="mb-4">Onze Amsterdamse familie catering kan alle kanten op:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Een vrolijk familie buffet:</strong> Rijkelijk gevulde schalen, salades en braadstukken waar iedereen zelf (en zo vaak hij wil) kan opscheppen. Ideaal voor grotere gezelschappen met wisselende leeftijden.</li>
+    <li><strong>Een statig sit-down familie diner:</strong> Heeft u iets heel speciaals te vieren? Dan koken en serveren we een prachtig drie- of viergangenmenu aan uw feestelijk gedekte tafel.</li>
+</ul>
+
+<p class="mb-6">Het lekkerste eten en de minste stress. Dat is het geheim van de beste familiefeesten in Amsterdam.</p>
+        `
+        },
+        {
             title: "Kok aan huis in Utrecht: De Beste Keuze voor een Diner Thuis",
             slug: "best-home-chef-delivery-utrecht",
             category: "Exclusieve Tips",
@@ -949,6 +1158,215 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
         }
     ],
     en: [
+        {
+            title: "Best Catering in Amsterdam for Large Parties",
+            slug: "beste-catering-amsterdam-grote-feesten",
+            category: "Amsterdam Catering",
+            readTime: "4 min read",
+            publishedAt: "Feb 26, 2026",
+            excerpt: "Organizing a large party in Amsterdam? Discover how our professional catering makes your birthday or anniversary unforgettable with perfect service and delicious food.",
+            image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2669&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">The Best Choice for Large Parties in Amsterdam</h2>
+<p class="mb-4">Organizing a large party in Amsterdam can be quite stressful. Whether it's a 50th birthday, a large family dinner, or a special anniversary in your own home. The food has to be perfect and there has to be enough for everyone. That is why <strong><a href="/en/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">catering in Amsterdam</a></strong> for large groups is the ideal solution.</p>
+<p class="mb-6">When you choose our catering service, you don't have to worry about anything. A team of professional chefs takes all tasks off your hands, from cooking to the final cleanup.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">What Makes Our Amsterdam Catering Special?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Custom menus:</strong> We build the menu around your wishes. From a luxury walking buffet to an exclusive 5-course dinner at the large dining table.</li>
+    <li><strong>All-inclusive:</strong> We don't just bring the food. If needed, we also arrange plates, cutlery, and glasses, so you don't have to rent or wash anything.</li>
+    <li><strong>Experienced home cooks:</strong> Our chefs are used to working in Amsterdam kitchens, even if the space sometimes feels a bit tight.</li>
+</ul>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "Can you cater large parties in an Amsterdam apartment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we regularly cater large parties and drinks in Amsterdam apartments. We adapt our menu and our working method to the available space."
+        }
+    },
+    {
+        "@type": "Question",
+        "name": "Does the catering clean up everything after the party?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Certainly. We ensure that your kitchen and buffet area are completely neat and clean again afterwards."
+        }
+    }
+  ]
+}
+</script>
+        `
+        },
+        {
+            title: "Luxury Corporate Catering Zuidas Amsterdam",
+            slug: "luxe-zakelijke-catering-zuidas-amsterdam",
+            category: "Amsterdam Catering",
+            readTime: "4 min read",
+            publishedAt: "Feb 26, 2026",
+            excerpt: "Impress your biggest clients with exclusive corporate catering at the Zuidas. We offer healthy lunches and high-end board room dinners.",
+            image: "https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?q=80&w=2574&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Luxury Corporate Catering at the Zuidas in Amsterdam</h2>
+<p class="mb-4">If you do business at the Zuidas, you know that quality comes first. Standard sandwiches are not always the right choice when you receive the CEO of a large company or an important international client. Choose instead <strong><a href="/en/zakelijke-catering-amsterdam" class="text-[#D97757] font-semibold hover:underline">luxury corporate catering</a></strong> where a culinary chef provides a fresh lunch or an impressive dinner, right in your own meeting room.</p>
+<p class="mb-6">Catering in the business heart of Amsterdam is all about discretion, punctuality, and absolutely perfect food. That is exactly what we deliver.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Our Options for the Zuidas</h3>
+<p class="mb-4">Every office and every event is different. Therefore, we offer different packages:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>The Board Room Lunch:</strong> A healthy, light and fresh multi-course lunch that keeps you sharp. Beautifully arranged plates with fresh fish, salads and warm elements.</li>
+    <li><strong>Exclusive Business Dinner:</strong> Do not close an important deal in a noisy restaurant, but in the privacy of your own board room with a private chef.</li>
+    <li><strong>Friday Afternoon Drinks Catering:</strong> Luxury snacks, oysters, and exclusive finger food to perfectly end the week with your team.</li>
+</ul>
+
+<p class="mb-6">Book a chef for your office at the Zuidas today and immediately lift your business meetings to a much higher culinary level.</p>
+        `
+        },
+        {
+            title: "Wedding and Event Catering in Amsterdam",
+            slug: "catering-bruiloften-evenementen-amsterdam",
+            category: "Amsterdam Catering",
+            readTime: "4 min read",
+            publishedAt: "Feb 26, 2026",
+            excerpt: "Experience the perfect day with our Amsterdam wedding catering. From a delicious walking dinner to luxury snacks at your unique event location.",
+            image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Unforgettable Catering for Weddings in Amsterdam</h2>
+<p class="mb-4">Your wedding day is one of the most important days of your life. Good food plays a huge role in this. Are you planning to get married in Amsterdam? Whether you celebrate it in a beautiful church location, a trendy warehouse, or intimate in your own garden: our <strong><a href="/en/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">wedding catering</a></strong> makes it culinarily unforgettable.</p>
+<p class="mb-6">We take all the care for the food out of your hands, and work with the best seasonal and local ingredients to put together your wedding menu exactly as you wish.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Walking Dinners and Sit-Down Dinners</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Shared Dining:</strong> Large, lavish boards full of delicacies in the middle of the table, perfect for an informal and very atmospheric wedding.</li>
+    <li><strong>Classic Multi-Course Dinner:</strong> An elegant 4- or 5-course sit-down meal, where every guest is served at fantastically set tables.</li>
+    <li><strong>Walking Dinner:</strong> Does your location have few seats? We serve luxury warm and cold dishes by hand. Guests can just keep standing and chatting!</li>
+</ul>
+
+<p class="mb-6">Contact our team to discuss the perfect catering for your unique event or wedding in Amsterdam.</p>
+        `
+        },
+        {
+            title: "Exclusive Drinks and Finger Food Catering Amsterdam",
+            slug: "exclusieve-borrelhapjes-catering-amsterdam",
+            category: "Amsterdam Catering",
+            readTime: "4 min read",
+            publishedAt: "Feb 26, 2026",
+            excerpt: "Complete your Amsterdam drinks with our luxury finger food catering. Delicious, freshly made snacks for company parties and networking events.",
+            image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Top Class Snacks for your Amsterdam Event</h2>
+<p class="mb-4">The Dutch 'borrel' is world famous. In Amsterdam we love to borrel! But forget the standard cheese cubes with a flag or the greasy bitterballen. Nowadays your guests expect more. We offer <strong><a href="/en/menus/2" class="text-[#D97757] font-semibold hover:underline">luxury snacks and finger food catering</a></strong> that guarantee surprise and taste.</p>
+<p class="mb-6">Imagine a chic networking event, a gallery opening, or your own birthday party with beautifully presented, edible works of art. The snacks are prepared on site by our private chefs and served directly warm and fresh.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">What is Luxury Finger Food?</h3>
+<p class="mb-4">With luxury finger food you should think of dishes such as:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li>Blinis with smoked salmon and crème fraîche.</li>
+    <li>Crispy gyozas with fresh truffle dip.</li>
+    <li>Mini beef tataki with a soy glaze.</li>
+    <li>Vegetarian bruschetta with roasted tomato and burrata.</li>
+</ul>
+
+<p class="mb-6">With perfect finger food catering you ensure that guests keep talking about the amazing atmosphere and quality of your event in Amsterdam.</p>
+        `
+        },
+        {
+            title: "Luxury Boat Catering Amsterdam Canals",
+            slug: "luxe-boot-catering-amsterdamse-grachten",
+            category: "Amsterdam Catering",
+            readTime: "4 min read",
+            publishedAt: "Feb 26, 2026",
+            excerpt: "Sail through Amsterdam while enjoying a private chef on board. Discover the ultimate luxury boat catering on the canals for small events.",
+            image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=2740&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Catering on Board: Dining on the Amsterdam Canals</h2>
+<p class="mb-4">Nothing is more iconic in Amsterdam than sailing over the beautiful historic canal belt. And what makes this even more unforgettable is an impressive dinner or fresh lunch right on board. With special <strong><a href="/en/thuiskok-amsterdam" class="text-[#D97757] font-semibold hover:underline">luxury boat catering</a></strong> you hire a private chef who trades the pancakes and bitterballen for a high-end fine dining experience on the water.</p>
+<p class="mb-6">Our home cooks are very flexible. We have experience with preparing luxury meals in the compact galleys (kitchenettes) of Amsterdam saloon boats and canal boats.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Why Catering on a Boat?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>A changing scenery:</strong> Enjoy your starter and main course while monumental buildings and bridges slowly glide by.</li>
+    <li><strong>Ultimate privacy:</strong> You are not bothered by other restaurant tables next to you. It is ideal for closing deals or intimate family outings.</li>
+    <li><strong>Freshly prepared:</strong> We don't just bring pre-packaged meals on board. The food is served à la minute and fresh by your private chef.</li>
+</ul>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "Does a private chef and the catering fit on a small sloop in Amsterdam?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For open sloops we offer perfectly prepared exclusive picnics and cold finger food boards. For a truly cooked dinner we advise a saloon boat with at least a small kitchen and electricity."
+        }
+    }
+  ]
+}
+</script>
+        `
+        },
+        {
+            title: "Vegetarian and Vegan Catering in Amsterdam",
+            slug: "vegetarische-vegan-catering-amsterdam",
+            category: "Amsterdam Catering",
+            readTime: "4 min read",
+            publishedAt: "Feb 26, 2026",
+            excerpt: "Discover the very best purely plant-based and vegetarian catering in Amsterdam. Be surprised by a luxury dinner full of flavor, without meat.",
+            image: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=2574&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Top Quality Plant-Based and Vegetarian Catering in Amsterdam</h2>
+<p class="mb-4">Amsterdam is a city that leads the way when it comes to sustainable and plant-based food. Many people consciously choose dishes without meat more often. But vegetarian and vegan food definitely shouldn't be boring. Our special <strong><a href="/en/menus/5" class="text-[#D97757] font-semibold hover:underline">vegan catering in Amsterdam</a></strong> is all about explosive flavors, creativity and culinary delights.</p>
+<p class="mb-6">Our private chefs transform celeriac, beetroot, and mushrooms into exclusive dishes that even avid meat eaters often find sounding tastier.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Why Choose Vegan Catering at Home?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Healthy and light:</strong> Plant-based multi-course dinners often lie less heavy on the stomach. You feel energetic, even after four courses.</li>
+    <li><strong>Very colorful:</strong> Vegan dishes work a lot with fresh bright herbs and vegetables. Plates look like paintings.</li>
+    <li><strong>Inclusive for everyone:</strong> If you receive a large party at home in Amsterdam, a completely surprising vegetarian menu is the safest and tastiest way to satisfy everyone.</li>
+</ul>
+
+<p class="mb-6">Surprise yourself and your guests with our next-level vegetarian and vegan chef at home.</p>
+        `
+        },
+        {
+            title: "Catering for Birthdays and Family Parties in Amsterdam",
+            slug: "catering-verjaardagen-familiefeesten-amsterdam",
+            category: "Amsterdam Catering",
+            readTime: "4 min read",
+            publishedAt: "Feb 26, 2026",
+            excerpt: "Celebrate the milestones of your life with family and enjoy perfect catering at home in Amsterdam. No groceries, no mess, just connection with your loved ones.",
+            image: "https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Carefree Catering for Family Parties in Amsterdam</h2>
+<p class="mb-4">Is grandma turning 80? Has your child finally graduated, or are you celebrating an important family anniversary? Family parties are the most beautiful moments. Yet organizing them, especially in a sometimes hectic household in Amsterdam, can be exhausting. By choosing reliable <strong><a href="/en/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">home catering</a></strong> you not only guarantee great food, but you also give yourself the greatest gift: time.</p>
+<p class="mb-6">A private chef or full-service catering team comes to your home, sets everything up and ensures that no one in the family has to stir pots for hours.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Focus on Time with the Family</h3>
+<p class="mb-4">Our Amsterdam family catering is very versatile:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>A cheerful family buffet:</strong> Richly filled platters, salads and roasts where everyone can serve themselves (and as often as they like). Ideal for larger groups with varying ages.</li>
+    <li><strong>A stately sit-down family dinner:</strong> Do you have something very special to celebrate? Then we cook and serve a beautiful three- or four-course menu at your festively set table.</li>
+</ul>
+
+<p class="mb-6">The tastiest food and the least stress. That is the secret of the best family parties in Amsterdam.</p>
+        `
+        },
         {
             title: "Private Chef in Utrecht: The Best Choice for Home Dining",
             slug: "best-home-chef-delivery-utrecht",
@@ -2111,6 +2529,215 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
     ],
     fr: [
         {
+            title: "Le Meilleur Traiteur à Amsterdam pour les Grandes Fêtes",
+            slug: "beste-catering-amsterdam-grote-feesten",
+            category: "Amsterdam Catering",
+            readTime: "4 min de lecture",
+            publishedAt: "26 Fév, 2026",
+            excerpt: "Vous organisez une grande fête à Amsterdam ? Découvrez comment notre service de traiteur professionnel rend votre anniversaire ou célébration inoubliable avec un service parfait et une nourriture délicieuse.",
+            image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2669&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Le Meilleur Choix pour les Grandes Fêtes à Amsterdam</h2>
+<p class="mb-4">Organiser une grande fête à Amsterdam peut être assez stressant. Que ce soit pour un 50e anniversaire, un grand dîner de famille ou une célébration spéciale dans votre propre maison. La nourriture doit être parfaite et il doit y en avoir assez pour tout le monde. C'est pourquoi le <strong><a href="/fr/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">traiteur à Amsterdam</a></strong> pour les grands groupes est la solution idéale.</p>
+<p class="mb-6">Lorsque vous choisissez notre service de traiteur, vous n'avez à vous soucier de rien. Une équipe de chefs professionnels prend toutes les tâches en main, de la cuisine au nettoyage final.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Qu'est-ce qui rend notre Traiteur Amsterdamois Spécial ?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Menus sur mesure :</strong> Nous concevons le menu en fonction de vos souhaits. D'un buffet dinatoire de luxe à un dîner exclusif de 5 plats à la grande table à manger.</li>
+    <li><strong>Tout inclus :</strong> Nous n'apportons pas seulement la nourriture. Si nécessaire, nous fournissons également les assiettes, les couverts et les verres, vous n'avez donc rien à louer ou à laver.</li>
+    <li><strong>Cuisiniers à domicile expérimentés :</strong> Nos chefs ont l'habitude de travailler dans les cuisines d'Amsterdam, même si l'espace semble parfois un peu exigu.</li>
+</ul>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "Pouvez-vous organiser un traiteur pour de grandes fêtes dans un appartement à Amsterdam ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, nous organisons régulièrement de grandes fêtes et des apéritifs dans des appartements à Amsterdam. Nous adaptons notre menu et notre méthode de travail à l'espace disponible."
+        }
+    },
+    {
+        "@type": "Question",
+        "name": "Le traiteur nettoie-t-il tout après la fête ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Certainement. Nous veillons à ce que votre cuisine et votre espace buffet soient complètement propres et bien rangés après l'événement."
+        }
+    }
+  ]
+}
+</script>
+        `
+        },
+        {
+            title: "Traiteur d'Entreprise de Luxe Zuidas Amsterdam",
+            slug: "luxe-zakelijke-catering-zuidas-amsterdam",
+            category: "Amsterdam Catering",
+            readTime: "4 min de lecture",
+            publishedAt: "26 Fév, 2026",
+            excerpt: "Impressionnez vos plus gros clients avec un traiteur d'entreprise exclusif au cœur du Zuidas. Nous proposons des déjeuners sains et des dîners de conseil d'administration haut de gamme.",
+            image: "https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?q=80&w=2574&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Traiteur d'Entreprise de Luxe au Zuidas à Amsterdam</h2>
+<p class="mb-4">Si vous faites des affaires au Zuidas, vous savez que la qualité prime. Les sandwichs standards ne sont pas toujours le bon choix lorsque vous recevez le PDG d'une grande entreprise ou un client international important. Optez plutôt pour un <strong><a href="/fr/zakelijke-catering-amsterdam" class="text-[#D97757] font-semibold hover:underline">traiteur d'entreprise de luxe</a></strong> où un chef culinaire prépare un déjeuner frais ou un dîner impressionnant, directement dans votre propre salle de réunion.</p>
+<p class="mb-6">Le traiteur dans le cœur des affaires d'Amsterdam est tout au sujet de la discrétion, de la ponctualité et d'une nourriture absolument parfaite. C'est exactement ce que nous livrons.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Nos Options pour le Zuidas</h3>
+<p class="mb-4">Chaque bureau et chaque événement est différent. Par conséquent, nous proposons différents forfaits :</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Le Déjeuner de Direction :</strong> Un déjeuner sain, léger et frais composé de plusieurs plats qui maintient votre équipe éveillée. Des assiettes magnifiquement présentées avec du poisson frais, des salades et des éléments chauds.</li>
+    <li><strong>Dîner d'Affaires Exclusif :</strong> Ne concluez pas un accord important dans un restaurant bruyant, mais dans l'intimité de votre propre salle de conférence avec un chef privé.</li>
+    <li><strong>Traiteur pour l'Apéritif du Vendredi :</strong> Des bouchées luxueuses, des huîtres et des amuse-bouches exclusifs pour terminer la semaine en beauté avec votre équipe.</li>
+</ul>
+
+<p class="mb-6">Réservez un chef pour votre bureau au Zuidas dès aujourd'hui et élevez instantanément vos réunions d'affaires à un niveau culinaire bien supérieur.</p>
+        `
+        },
+        {
+            title: "Traiteur pour Mariages et Événements à Amsterdam",
+            slug: "catering-bruiloften-evenementen-amsterdam",
+            category: "Amsterdam Catering",
+            readTime: "4 min de lecture",
+            publishedAt: "26 Fév, 2026",
+            excerpt: "Vivez le jour parfait avec notre traiteur de mariage à Amsterdam. D'un délicieux buffet dinatoire aux bouchées luxueuses sur votre lieu d'événement unique.",
+            image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Un Traiteur Inoubliable pour les Mariages à Amsterdam</h2>
+<p class="mb-4">Le jour de votre mariage est l'un des plus importants de votre vie. La bonne nourriture y joue un rôle énorme. Prévoyez-vous de vous marier à Amsterdam ? Que vous le célébriez dans une magnifique église, un entrepôt branché, ou de façon intime dans votre propre jardin : notre <strong><a href="/fr/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">traiteur de mariage</a></strong> le rend culinairement inoubliable.</p>
+<p class="mb-6">Nous prenons en charge la totalité de l'organisation culinaire, et travaillons avec les meilleurs ingrédients locaux et de saison pour composer un menu de mariage répondant parfaitement à vos souhaits.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Buffets Dinatoires et Dîners Assis</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Repas Partagé :</strong> De grandes planches somptueuses remplies de délices au milieu de la table, parfaites pour un mariage informel et très convivial.</li>
+    <li><strong>Dîner Classique à Plusieurs Plats :</strong> Un élégant repas assis de 4 ou 5 plats, où chaque invité est servi à des tables fantastiquement dressées.</li>
+    <li><strong>Buffet Dinatoire :</strong> Votre lieu dispose de peu de places assises ? Nous servons à la main de luxueux plats chauds et froids. Les invités peuvent rester debout et discuter !</li>
+</ul>
+
+<p class="mb-6">Contactez notre équipe pour discuter du traiteur parfait pour votre événement unique ou mariage à Amsterdam.</p>
+        `
+        },
+        {
+            title: "Traiteur Exclusif de Bouchées et Amuse-Bouches à Amsterdam",
+            slug: "exclusieve-borrelhapjes-catering-amsterdam",
+            category: "Amsterdam Catering",
+            readTime: "4 min de lecture",
+            publishedAt: "26 Fév, 2026",
+            excerpt: "Complétez votre apéritif amsterdamois avec notre luxueux traiteur d'amuse-bouches. Des bouchées délicieuses et fraîchement préparées pour les fêtes d'entreprise.",
+            image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Des En-cas de Première Classe pour votre Événement à Amsterdam</h2>
+<p class="mb-4">Le 'borrel' (apéritif) néerlandais est mondialement connu. À Amsterdam, nous adorons prendre l'apéritif ! Mais oubliez les cubes de fromage standards avec un drapeau ou les bitterballen grasses. Aujourd'hui, vos invités attendent plus. Nous vous proposons un <strong><a href="/fr/menus/2" class="text-[#D97757] font-semibold hover:underline">service de traiteur de bouchées luxueuses</a></strong> qui garantit la surprise et le goût.</p>
+<p class="mb-6">Imaginez un événement de réseautage chic, un vernissage de galerie ou votre propre fête d'anniversaire avec de magnifiques œuvres d'art comestibles. Les bouchées sont préparées sur place par nos chefs privés et servies directement chaudes et fraîches.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Qu'est-ce que l'Amuse-Bouche de Luxe ?</h3>
+<p class="mb-4">Avec les amuse-bouches de luxe, il faut penser à des plats tels que :</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li>Blinis au saumon fumé et crème fraîche.</li>
+    <li>Gyozas croustillants avec trempette aux truffes fraîches.</li>
+    <li>Mini tataki de bœuf au glaçage de soja.</li>
+    <li>Bruschetta végétarienne aux tomates rôties et burrata.</li>
+</ul>
+
+<p class="mb-6">Avec un traiteur de bouchées parfait, vous vous assurez que les invités continuent de parler de l'atmosphère incroyable et de la qualité de votre événement à Amsterdam.</p>
+        `
+        },
+        {
+            title: "Traiteur de Luxe sur Bateau sur les Canaux d'Amsterdam",
+            slug: "luxe-boot-catering-amsterdamse-grachten",
+            category: "Amsterdam Catering",
+            readTime: "4 min de lecture",
+            publishedAt: "26 Fév, 2026",
+            excerpt: "Naviguez à travers Amsterdam tout en profitant d'un chef privé à bord. Découvrez l'ultime traiteur de luxe sur bateau pour de petits événements.",
+            image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=2740&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Traiteur à Bord : Dîner sur les Canaux d'Amsterdam</h2>
+<p class="mb-4">Rien n'est plus emblématique à Amsterdam que de naviguer sur la magnifique ceinture historique de canaux. Et ce qui rend cela encore plus inoubliable, c'est un dîner impressionnant ou un déjeuner frais directement à bord. Avec le <strong><a href="/fr/thuiskok-amsterdam" class="text-[#D97757] font-semibold hover:underline">traiteur de luxe sur bateau</a></strong>, vous engagez un chef privé qui échange les crêpes et les bitterballen pour une expérience culinaire haut de gamme sur l'eau.</p>
+<p class="mb-6">Nos cuisiniers à domicile sont très polyvalents. Nous avons l'expérience de la préparation de repas de luxe dans les cuisines compactes des bateaux-salons et des bateaux de canaux d'Amsterdam.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Pourquoi le Traiteur sur Bateau ?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Un décor changeant :</strong> Dégustez votre entrée et votre plat principal tandis que les bâtiments monumentaux et les ponts historiques d'Amsterdam glissent lentement.</li>
+    <li><strong>Une intimité absolue :</strong> Vous n'êtes pas dérangé par d'autres tables de restaurant à côté de vous. C'est idéal pour conclure des affaires ou pour des sorties intimes en famille.</li>
+    <li><strong>Fraîchement préparé :</strong> Nous n'apportons pas simplement des repas pré-emballés à bord. La nourriture est servie à la minute et fraîche.</li>
+</ul>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "Un chef privé et le service de traiteur peuvent-ils tenir sur un petit bateau ouvert à Amsterdam ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pour les sloops ouverts, nous proposons des pique-niques exclusifs et de superbes plateaux de bouchées froides. Pour un dîner vraiment cuisiné, nous conseillons un bateau-salon avec au moins une petite cuisine et de l'électricité."
+        }
+    }
+  ]
+}
+</script>
+        `
+        },
+        {
+            title: "Traiteur Végétarien et Végétalien à Amsterdam",
+            slug: "vegetarische-vegan-catering-amsterdam",
+            category: "Amsterdam Catering",
+            readTime: "4 min de lecture",
+            publishedAt: "26 Fév, 2026",
+            excerpt: "Découvrez le meilleur traiteur cent pour cent végétal et végétarien d'Amsterdam. Laissez-vous surprendre par un dîner de luxe, plein de saveurs, sans viande.",
+            image: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=2574&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Traiteur Végétarien de Haute Qualité à Amsterdam</h2>
+<p class="mb-4">Amsterdam est une ville qui ouvre la voie en matière d'alimentation durable et végétale. De nombreuses personnes choisissent consciemment des plats sans viande plus souvent. Mais la nourriture végétarienne et végétalienne ne doit surtout pas être ennuyeuse. Notre <strong><a href="/fr/menus/5" class="text-[#D97757] font-semibold hover:underline">traiteur végétalien spécial à Amsterdam</a></strong> met l'accent sur les saveurs explosives, la créativité et les délices culinaires.</p>
+<p class="mb-6">Nos chefs privés transforment le céleri-rave, la betterave et les champignons en plats luxueux que même les amateurs de viande fervents trouvent souvent encore plus savoureux.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Pourquoi Choisir un Traiteur Végétalien à Domicile ?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Sain et léger :</strong> Les dîners à plusieurs plats à base de plantes pèsent souvent moins sur l'estomac. Vous vous sentez dynamique, même après quatre plats.</li>
+    <li><strong>Très coloré :</strong> Les plats végétaliens utilisent beaucoup d'herbes et de légumes frais et brillants. Les assiettes ressemblent à des peintures.</li>
+    <li><strong>Inclusif pour tous :</strong> Si vous recevez de nombreux convives à la maison à Amsterdam, un menu végétarien est le moyen le plus sûr de satisfaire tout le monde.</li>
+</ul>
+
+<p class="mb-6">Surprenez-vous et surprenez vos invités avec notre chef végétarien et végétalien à domicile de niveau supérieur.</p>
+        `
+        },
+        {
+            title: "Traiteur pour Anniversaires et Fêtes de Famille à Amsterdam",
+            slug: "catering-verjaardagen-familiefeesten-amsterdam",
+            category: "Amsterdam Catering",
+            readTime: "4 min de lecture",
+            publishedAt: "26 Fév, 2026",
+            excerpt: "Célébrez les étapes importantes de votre vie et profitez d'un traiteur parfait à domicile. Pas de courses, pas de désordre, juste la connexion avec vos proches.",
+            image: "https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "Chef David", role: "Catering Specialist" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Traiteur Sans Souci pour les Fêtes de Famille à Amsterdam</h2>
+<p class="mb-4">Grand-mère fête ses 80 ans ? Votre enfant a-t-il enfin obtenu son diplôme, ou célébrez-vous un anniversaire de famille important ? Les fêtes de famille sont les plus beaux moments. Pourtant, les organiser, surtout dans un ménage parfois mouvementé à Amsterdam, peut être épuisant. En choisissant un <strong><a href="/fr/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">traiteur à domicile</a></strong> fiable, vous garantissez non seulement une excellente nourriture, mais vous vous offrez également le plus beau des cadeaux : du temps.</p>
+<p class="mb-6">Un chef privé vient chez vous, met tout en place et s'assure que personne ne doit remuer des casseroles pendant des heures.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Concentrez-vous sur le Temps Passé en Famille</h3>
+<p class="mb-4">Notre traiteur familial à Amsterdam est très polyvalent :</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>Un buffet familial joyeux :</strong> Des plateaux richement garnis, des salades et des rôtis où chacun peut se servir (et aussi souvent qu'il le souhaite).</li>
+    <li><strong>Un dîner de famille formel :</strong> Avez-vous quelque chose de très spécial à célébrer ? Nous cuisinons alors un magnifique menu à trois ou quatre plats.</li>
+</ul>
+
+<p class="mb-6">La nourriture la plus savoureuse et le moins de stress possible. C'est le secret des meilleures fêtes de famille à Amsterdam.</p>
+        `
+        },
+        {
             title: "Chef à Domicile à Utrecht: Le Meilleur Choix pour Dîner chez Soi",
             slug: "best-home-chef-delivery-utrecht",
             category: "Guides Exclusifs",
@@ -3203,6 +3830,229 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
         }
     ],
     ar: [
+        {
+            title: "أفضل تقديم للطعام في أمستردام للحفلات الكبيرة",
+            slug: "beste-catering-amsterdam-grote-feesten",
+            category: "أمستردام تقديم طعام",
+            readTime: "٤ دقائق",
+            publishedAt: "26 فبراير 2026",
+            excerpt: "هل تنظم حفلة كبيرة في أمستردام؟ اكتشف كيف يجعل تقديم الطعام الاحترافي لدينا عيد ميلادك أو ذكرى زواجك لا تُنسى من خلال خدمة مثالية وطعام لذيذ.",
+            image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2669&auto=format&fit=crop",
+            author: { name: "الشيف ديفيد", role: "خبير تقديم الطعام" },
+            contentHtml: `
+<div dir="rtl" class="text-right font-arabic">
+<h2 class="text-3xl font-bold mb-6 text-[#1A4D2E]">الخيار الأفضل للحفلات الكبيرة في أمستردام</h2>
+<p class="mb-4">قد يكون تنظيم حفلة كبيرة في أمستردام مرهقًا للغاية. سواء كان عيد ميلادك الخمسين، أو عشاء عائلي كبير، أو ذكرى مميزة في منزلك. يجب أن يكون الطعام مثاليًا ويجب أن يكون هناك ما يكفي للجميع. لهذا السبب فإن <strong><a href="/ar/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">تقديم الطعام في أمستردام</a></strong> للمجموعات الكبيرة هو الحل المثالي.</p>
+<p class="mb-6">عند اختيار خدمة تقديم الطعام لدينا، لا داعي للقلق بشأن أي شيء. يتولى فريق من الطهاة المحترفين المسؤولية عن كل شيء، بدءًا من الطهي وحتى التنظيف النهائي.</p>
+
+<h3 class="text-2xl font-bold mb-4 text-[#1A4D2E]">ما الذي يميز تقديم الطعام لدينا في أمستردام؟</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>قوائم طعام مخصصة:</strong> نقوم ببناء قائمة الطعام بناءً على رغباتك. من بوفيه مفتوح فاخر إلى عشاء حصري مكون من 5 أصناف على طاولة الطعام الكبيرة.</li>
+    <li><strong>شامل كل شيء:</strong> نحن لا نحضر الطعام فقط. إذا لزم الأمر، نقوم أيضًا بترتيب الأطباق وأدوات المائدة والأكواب، لذلك لا تضطر إلى استئجار أو غسل أي شيء.</li>
+    <li><strong>طهاة منزليون ذوو خبرة:</strong> اعتاد طهاتنا العمل في مطابخ أمستردام، حتى لو كانت المساحة تبدو ضيقة بعض الشيء في بعض الأحيان.</li>
+</ul>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "هل يمكنك تلبية احتياجات الحفلات الكبيرة في شقة في أمستردام؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم، نحن نقدم الطعام بانتظام للحفلات والمشروبات الكبيرة في شقق أمستردام. نكيّف القائمة وطريقة العمل مع المساحة المتاحة."
+        }
+    },
+    {
+        "@type": "Question",
+        "name": "هل تقوم خدمة تقديم الطعام بتنظيف كل شيء بعد الحفلة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "بالتأكيد. نحن نضمن أن المطبخ ومنطقة البوفيه ستكون نظيفة ومرتبة تمامًا مرة أخرى في وقت لاحق."
+        }
+    }
+  ]
+}
+</script>
+</div>
+        `
+        },
+        {
+            title: "تقديم الطعام الفاخر للشركات في حي الأعمال (زويداس) بأمستردام",
+            slug: "luxe-zakelijke-catering-zuidas-amsterdam",
+            category: "أمستردام تقديم طعام",
+            readTime: "٤ دقائق",
+            publishedAt: "26 فبراير 2026",
+            excerpt: "أبهر كبار عملائك بتقديم الطعام الفاخر والحصري للشركات في حي (زويداس). نحن نقدم وجبات غداء صحية وعشاء راقي لاجتماعات مجالس الإدارة.",
+            image: "https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?q=80&w=2574&auto=format&fit=crop",
+            author: { name: "الشيف ديفيد", role: "خبير تقديم الطعام" },
+            contentHtml: `
+<div dir="rtl" class="text-right font-arabic">
+<h2 class="text-3xl font-bold mb-6 text-[#1A4D2E]">تقديم الطعام الفاخر للشركات في حي زويداس في أمستردام</h2>
+<p class="mb-4">إذا كنت تمارس أعمالًا تجارية في زويداس، فأنت تدرك أن الجودة تأتي أولاً. ليست السندويشات العادية دائمًا الخيار الصحيح عندما تستقبل المدير التنفيذي لشركة كبرى أو عميلاً دولياً مهماً. اختر بدلاً من ذلك <strong><a href="/ar/zakelijke-catering-amsterdam" class="text-[#D97757] font-semibold hover:underline">تقديم طعام الشركات الفاخر</a></strong> حيث يوفر طاهٍ متميز غداءً طازجًا أو عشاءً مثيرًا للإعجاب، في غرفة اجتماعاتك الخاصة.</p>
+<p class="mb-6">تقديم الطعام في القلب التجاري لأمستردام يتعلق بالتقدير والمواعيد الدقيقة والطعام المثالي تمامًا. هذا بالضبط ما نقدمه.</p>
+
+<h3 class="text-2xl font-bold mb-4 text-[#1A4D2E]">خياراتنا لحي زويداس</h3>
+<p class="mb-4">كل مكتب وكل حدث يختلف عن الآخر. لذلك، نحن نقدم باقات مختلفة:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>غداء غرفة اجتماعات الإدارة:</strong> غداء صحي وخفيف وطازج مكون من عدة أطباق تبقيك متيقظًا، ويشمل أطباقًا مُرتبة بشكل جميل من الأسماك الطازجة والسلطات والمكونات الساخنة.</li>
+    <li><strong>عشاء عمل حصري:</strong> لا تبرم صفقات مهمة في مطعم صاخب، لنجعلها في خصوصية غرفة اجتماعاتك بحضور طاهٍ خاص.</li>
+    <li><strong>مشروبات بعد ظهر الجمعة:</strong> وجبات خفيفة فاخرة ومحار وأطعمة تؤكل باليد حصرية لإنهاء الأسبوع مع فريقك بشكل مثالي.</li>
+</ul>
+
+<p class="mb-6">احجز طاهيًا اليوم لمكتبك في حي (زويداس) للارتقاء الفوري باجتماعات عملك إلى مستوى طهي أعلى بكثير.</p>
+</div>
+        `
+        },
+        {
+            title: "تقديم الطعام لحفلات الزفاف والفعاليات في أمستردام",
+            slug: "catering-bruiloften-evenementen-amsterdam",
+            category: "أمستردام تقديم طعام",
+            readTime: "٤ دقائق",
+            publishedAt: "26 فبراير 2026",
+            excerpt: "عش اليوم المثالي مع تقديم طعام الزفاف في أمستردام. من العشاء الجوّال اللذيذ إلى الوجبات الخفيفة والمقبلات الفاخرة في موقع الحدث الفريد الخاص بك.",
+            image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "الشيف ديفيد", role: "خبير تقديم الطعام" },
+            contentHtml: `
+<div dir="rtl" class="text-right font-arabic">
+<h2 class="text-3xl font-bold mb-6 text-[#1A4D2E]">طعام لا ينسى لحفلات الزفاف في أمستردام</h2>
+<p class="mb-4">يُعد يوم زفافك من أهم الأيام في حياتك. ويلعب الطعام الجيد دورًا كبيرًا في ذلك. هل تخطط للزواج في أمستردام؟ سواء كنت تحتفل به في موقع كنيسة جميل، أو مستودع عصري، أو حميم في حديقتك الخاصة: فإن <strong><a href="/ar/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">تقديم طعام الزفاف</a></strong> الخاص بنا يجعله لا يُنسى من ناحية الطهي.</p>
+<p class="mb-6">نحن نتحمل جميع أعباء العناية بالطعام، ونعمل بأفضل المكونات الموسمية والمحلية لإعداد قائمة طعام حفل زفافك كما ترغب تمامًا.</p>
+
+<h3 class="text-2xl font-bold mb-4 text-[#1A4D2E]">العشاء الجوّال وعشاء الجلوس</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>تناول طعام مشترك:</strong> طاولات كبيرة وفخمة مليئة بالشهيات المتنوعة في منتصف الطاولة، ممتازة لزفاف غير رسمي وتفاعلي.</li>
+    <li><strong>عشاء كلاسيكي متعدد الأطباق:</strong> وجبة جلوس أنيقة مكونة من 4 أو 5 أطباق، حيث يتم تقديم الطعام لكل ضيف على طاولات مُرتبة بشكل مذهل.</li>
+    <li><strong>العشاء الجوّال:</strong> هل يوجد في موقعك عدد قليل من المقاعد؟ نحن نقدم أطباقًا دافئة وباردة فاخرة باليد. يمكن للضيوف الاستمرار في الوقوف والدردشة!</li>
+</ul>
+
+<p class="mb-6">تواصل مع فريقنا لمناقشة التموين المثالي لحدثك الفريد أو حفل زفافك في أمستردام.</p>
+</div>
+        `
+        },
+        {
+            title: "المشروبات الحصرية ووجبات الأصابع (الخفيفة) في أمستردام",
+            slug: "exclusieve-borrelhapjes-catering-amsterdam",
+            category: "أمستردام تقديم طعام",
+            readTime: "٤ دقائق",
+            publishedAt: "26 فبراير 2026",
+            excerpt: "أكمل مناسباتك الخاصة والمشروبات في أمستردام مع قائمة أطعمة الأصابع الفاخرة التي نقدمها. وجبات خفيفة لذيذة وطازجة لحفلات الشركات وفعاليات التعارف والتشبيك.",
+            image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "الشيف ديفيد", role: "خبير تقديم الطعام" },
+            contentHtml: `
+<div dir="rtl" class="text-right font-arabic">
+<h2 class="text-3xl font-bold mb-6 text-[#1A4D2E]">وجبات خفيفة من الدرجة الأولى لحدثك في أمستردام</h2>
+<p class="mb-4">تشتهر هولندا بثقافة الـ (borrel) (الاجتماع للمشروبات والأطباق الخفيفة). في أمستردام نحب ذلك! لكن انسى مكعبات الجبن القياسية أو الوجبات المقلية الدهنية. في هذه الأيام يتوقع ضيوفك المزيد. نحن نقدم <strong><a href="/ar/menus/2" class="text-[#D97757] font-semibold hover:underline">وجبات خفيفة فاخرة وأطعمة الأصابع</a></strong> تضمن المفاجأة والمذاق.</p>
+<p class="mb-6">تخيل حدث تعارف أنيقًا، أو افتتاح معرض فني، أو حفلة عيد ميلادك بأعمال فنية قابلة للأكل تُقدّم بشكل جميل. يتم تحضير الوجبات الخفيفة في الموقع بواسطة طهاتنا الخاصين وتقديمها مباشرة بشكل دافئ وطازج.</p>
+
+<h3 class="text-2xl font-bold mb-4 text-[#1A4D2E]">ما هو طعام الأصابع (الوجبات الخفيفة) الفاخر؟</h3>
+<p class="mb-4">مع وجبات الأصابع الفاخرة يجب أن تفكر في أطباق مثل:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li>بلينيس مع سمك السلمون المدخن والكريمة الطازجة.</li>
+    <li>غيوزا (زلابية) مقرمشة مع غمس الكمأة (الترافل) الطازجة.</li>
+    <li>تاتاكي لحم بقري صغير مع طبقة من الصويا.</li>
+    <li>بروسكيتا نباتية مع الطماطم المحمصة وجبن البوراتا.</li>
+</ul>
+
+<p class="mb-6">مع تقديم أطعمة الأصابع المثالية، تضمن أن يستمر الضيوف في الحديث عن الجو والجودة الرائعة لحدثك في أمستردام.</p>
+</div>
+        `
+        },
+        {
+            title: "تقديم طعام للقوارب الفاخرة على قنوات أمستردام",
+            slug: "luxe-boot-catering-amsterdamse-grachten",
+            category: "أمستردام تقديم طعام",
+            readTime: "٤ دقائق",
+            publishedAt: "26 فبراير 2026",
+            excerpt: "أبحر عبر أمستردام أثناء الاستمتاع بطاهٍ خاص على متن القارب. اكتشف التموين الفاخر الذي لا مثيل له للقوارب على القنوات المائية للفعاليات الصغيرة.",
+            image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=2740&auto=format&fit=crop",
+            author: { name: "الشيف ديفيد", role: "خبير تقديم الطعام" },
+            contentHtml: `
+<div dir="rtl" class="text-right font-arabic">
+<h2 class="text-3xl font-bold mb-6 text-[#1A4D2E]">تقديم الطعام على متن القارب: تناول العشاء في قنوات أمستردام</h2>
+<p class="mb-4">لا شيء أكثر شهرة في أمستردام من الإبحار فوق حزام القنوات التاريخي الجميل. وما يجعل هذا الأمر أكثر روعة ولا يُنسى هو عشاء مبهر أو غداء طازج على متن القارب. مع <strong><a href="/ar/thuiskok-amsterdam" class="text-[#D97757] font-semibold hover:underline">خدمة طعام القوارب الفخمة الخاصة</a></strong> يمكنك استئجار طاهٍ خاص يستبدل الفطائر المعتادة بتجربة طعام راقية ومميزة على الماء.</p>
+<p class="mb-6">طهاتنا المنزليون مرنون للغاية. لدينا خبرة في إعداد وجبات فاخرة في المطابخ المدمجة (الصغيرة) لقوارب الصالونات وقوارب القنوات في أمستردام.</p>
+
+<h3 class="text-2xl font-bold mb-4 text-[#1A4D2E]">لماذا تقديم الطعام على متن القارب؟</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>مشهد متغير:</strong> استمتع بالمقبلات والطبق الرئيسي بينما تمر المباني الضخمة والجسور وتتأملها بهدوء.</li>
+    <li><strong>خصوصية مطلقة:</strong> لا تزعجك طاولات المطاعم الأخرى بجوارك. إنه مثالي لإبرام الصفقات أو خروجات العائلة الحميمية.</li>
+    <li><strong>أطباق طازجة:</strong> نحن لا نُحضر فقط الوجبات المعبأة مسبقًا إلى القارب. يتم تقديم الطعام دقيقة بدقيقة ويكون طازجًا من قبل طاهيك الخاص.</li>
+</ul>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "هل يتسع القارب الصغير في أمستردام لطاهٍ خاص مع خدمات تقديم الطعام؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "بالنسبة للقوارب المفتوحة، فإننا نقدم رحلات نزهة معدة بشكل مثالي وحصرية مع أطباق باردة صغيرة. لتناول عشاء مطهو بشكل كامل على النار، ننصح بقارب صالون يحتوي على مطبخ صغير وتيار كهربائي على الأقل."
+        }
+    }
+  ]
+}
+</script>
+</div>
+        `
+        },
+        {
+            title: "تقديم طعام نباتي (خضري وفيغان) حصري في أمستردام",
+            slug: "vegetarische-vegan-catering-amsterdam",
+            category: "أمستردام تقديم طعام",
+            readTime: "٤ دقائق",
+            publishedAt: "26 فبراير 2026",
+            excerpt: "اكتشف أفضل تقديم طعام نباتي خالص بمدينة أمستردام. تفاجأ بعشاء فاخر مليء بالنكهة الرائعة والمميزة، وبدون أي لحوم.",
+            image: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=2574&auto=format&fit=crop",
+            author: { name: "الشيف ديفيد", role: "خبير تقديم الطعام" },
+            contentHtml: `
+<div dir="rtl" class="text-right font-arabic">
+<h2 class="text-3xl font-bold mb-6 text-[#1A4D2E]">تقديم الطعام النباتي (Vegan) والنباتي عالي الجودة في أمستردام</h2>
+<p class="mb-4">أمستردام هي مدينة رائدة في مجال الأغذية المستدامة والنباتية. يختار الكثير من الناس بوعي الأطباق بدون لحم في كثير من الأحيان. لكن الأطعمة النباتية والفيغان يجب ألا تكون مملة بالتأكيد. إن مطبخنا المتخصص في <strong><a href="/ar/menus/5" class="text-[#D97757] font-semibold hover:underline">تقديم الطعام النباتي الخاص في أمستردام</a></strong> يتمحور حول النكهات الانفجارية والإبداع والمأكولات الشهية.</p>
+<p class="mb-6">يقوم طهاتنا الخاصون بتحويل الكرفس وجذر الشمندر والفطر إلى أطباق حصرية غالبًا ما يجدها حتى عشاق اللحوم الأقوياء ألذّ.</p>
+
+<h3 class="text-2xl font-bold mb-4 text-[#1A4D2E]">لماذا تختار تقديم الطعام النباتي في المنزل؟</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>صحي وخفيف:</strong> الأطباق المتعددة النباتية غالباً ما تكن أقل ثقلاً على المعدة. تشعر بالحيوية، حتى بعد استهلاك أربع دورات من الطعام.</li>
+    <li><strong>ملونة للغاية:</strong> الأطباق النباتية تعتمد كثيراً على الأعشاب والخضروات والمكونات الملونة. تبدو الصحون كلوحات فنية استثنائية.</li>
+    <li><strong>شامل للجميع:</strong> إذا كنت تستقبل حفلاً كبيراً أو مجموعة كبيرة من الضيوف في أمستردام، فإن قائمة الخضار والنباتات الغنية بالتفاصيل والمفاجآت هي أكثر طريقة آمنة وأكثرها لذة لإرضاء الجميع.</li>
+</ul>
+
+<p class="mb-6">فاجئ نفسك وأصدقاءك وضيوفك من خلال تموين منزلي في أمستردام مع شيف نباتي حقيقي ذو مستوى طهي رفيع للغاية.</p>
+</div>
+        `
+        },
+        {
+            title: "تقديم الطعام لأعياد الميلاد والحفلات العائلية في أمستردام",
+            slug: "catering-verjaardagen-familiefeesten-amsterdam",
+            category: "أمستردام تقديم طعام",
+            readTime: "٤ دقائق",
+            publishedAt: "26 فبراير 2026",
+            excerpt: "احتفل بمناسباتك الاستثنائية مع العائلة واستمتع بتقديم طعام مثالي في المنزل في أمستردام. لا يوجد تسوق لشراء البقالة، ولا فوضى، بل مجرد تواصل عميق مع أحبائك وأصدقائك.",
+            image: "https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "الشيف ديفيد", role: "خبير تقديم الطعام" },
+            contentHtml: `
+<div dir="rtl" class="text-right font-arabic">
+<h2 class="text-3xl font-bold mb-6 text-[#1A4D2E]">تقديم طعام خالٍ من الهموم للحفلات العائلية في أمستردام</h2>
+<p class="mb-4">هل تحتفل الجدة بعيد ميلادها الثمانين؟ هل تخرج طفلك أخيرًا، أو هل تحتفل بذكرى عائلية مهمة؟ الحفلات العائلية هي أجمل اللحظات. ومع ذلك، فإن تنظيمها خاصة في منزل وعائلة كبيرة وأجواء أمستردام الصاخبة يمكن أن يكون مرهقًا. من خلال اختيار خدمة طعام منزلية موثوقة <strong><a href="/ar/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">التموين للمنازل</a></strong> لا تضمن فقط طعامًا رائعًا، بل إنك تمنح نفسك أيضًا أعظم هدية: الوقت.</p>
+<p class="mb-6">يأتي طاهٍ خاص لبيتك ويقوم هو وفريقه من خدمة تجهيز الطعام الشاملة بوضع كل شيء وإكماله بالكامل، لضمان ألا يقوم أي من الحاضرين بالبقاء مع القدور وساعات الطهي وتعب الغسيل للأواني وتجهيزات التقديم.</p>
+
+<h3 class="text-2xl font-bold mb-4 text-[#1A4D2E]">التركيز على قضاء الوقت مع العائلة</h3>
+<p class="mb-4">خدمة طعام الأسرة في أمستردام متعددة الاستخدامات ويمكن التكيف لمجموعة كاملة مع:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>بوفيه عائلي مبهج:</strong> أطباق غنية، سلطات متنوعة ومشاوي، حيث يمكن للجميع الاعتماد على أنفسهم (ومرتين وثلاثة بأريحية كاملة). اختيار مميز للتجمعات الكبيرة المتفاوتة الأعمار ومحبي الأكلات المفتوحة والسخية.</li>
+    <li><strong>عشاء جلوس وعائلي مهيب وأنيق:</strong> هل لديك شيء خاص جدًا تريد الاحتفال به؟ إذن نقوم بطهي وتقديم قائمة طعام جميلة من ثلاثة أو أربعة أطباق على طاولتك المرتبة بشكل احتفالي رائع وراقٍ.</li>
+</ul>
+
+<p class="mb-6">ألذ طعام وأقل ضغط وتوتر، في أمستردام والمنزل وفي خصوصيتك السعيدة. هنا يكمن سر أفضل الحفلات العائلية من خلالنا وأروعها أثراً وبقاءً في الذاكرة.</p>
+</div>
+        `
+        },
         {
             title: "طاهٍ خاص في أوتريخت: الخيار الأفضل لتناول الطعام في المنزل",
             slug: "best-home-chef-delivery-utrecht",
@@ -4355,6 +5205,215 @@ export const BLOG_POSTS_I18N: Record<string, BlogPost[]> = {
         }
     ],
     hi: [
+        {
+            title: "बड़ी पार्टियों के लिए एम्स्टर्डम में सर्वश्रेष्ठ कैटरिंग",
+            slug: "beste-catering-amsterdam-grote-feesten",
+            category: "एम्स्टर्डम कैटरिंग",
+            readTime: "4 मिनट पढ़ने का समय",
+            publishedAt: "26 फरवरी 2026",
+            excerpt: "क्या आप एम्स्टर्डम में एक बड़ी पार्टी आयोजित कर रहे हैं? जानिए कैसे हमारी पेशेवर कैटरिंग सही सर्विस और स्वादिष्ट भोजन के साथ आपके जन्मदिन या सालगिरह को यादगार बना देती है।",
+            image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2669&auto=format&fit=crop",
+            author: { name: "शेफ डेविड", role: "कैटरिंग विशेषज्ञ" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">एम्स्टर्डम में बड़ी पार्टियों के लिए सबसे अच्छा विकल्प</h2>
+<p class="mb-4">एम्स्टर्डम में एक बड़ी पार्टी का आयोजन करना काफी तनावपूर्ण हो सकता है। चाहे वह 50 वां जन्मदिन हो, एक बड़ा पारिवारिक रात्रिभोज, या आपके अपने घर में एक विशेष सालगिरह। खाना बेहतरीन होना चाहिए और सभी के लिए पर्याप्त होना चाहिए। इसीलिए बड़े समूहों के लिए <strong><a href="/hi/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">एम्स्टर्डम में कैटरिंग</a></strong> सबसे आदर्श समाधान है।</p>
+<p class="mb-6">जब आप हमारी कैटरिंग सेवा चुनते हैं, तो आपको किसी भी चीज़ के बारे में चिंता करने की ज़रूरत नहीं है। पेशेवर शेफ की एक टीम खाना पकाने से लेकर अंतिम सफाई तक, आपके सारे काम अपने हाथों में ले लेती है।</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">हमारी एम्स्टर्डम कैटरिंग को क्या खास बनाता है?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>कस्टम मेनू:</strong> हम आपकी इच्छाओं के अनुसार मेनू बनाते हैं। एक लक्जरी वॉकिंग बुफे से लेकर बड़ी डाइनिंग टेबल पर एक विशेष 5-कोर्स डिनर तक।</li>
+    <li><strong>सब कुछ शामिल:</strong> हम केवल खाना ही नहीं लाते हैं। यदि आवश्यक हो, तो हम प्लेट, कटलरी और साफ गिलास की भी व्यवस्था करते हैं, ताकि आपको कुछ भी किराए पर लेने या धोने की आवश्यकता न हो।</li>
+    <li><strong>अनुभवी होम कुक:</strong> हमारे शेफ एम्स्टर्डम के रसोईघरों में काम करने के आदी हैं, भले ही कभी-कभी जगह थोड़ी कम लगे।</li>
+</ul>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "क्या आप एम्स्टर्डम के एक अपार्टमेंट में बड़ी पार्टियों के लिए कैटरिंग कर सकते हैं?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "हाँ, हम नियमित रूप से एम्स्टर्डम के अपार्टमेंट में बड़ी पार्टियों और ड्रिंक्स के इवेंट्स की कैटरिंग करते हैं। हम उपलब्ध स्थान के अनुसार अपने मेन्यू और काम करने के तरीके को अनुकूलित करते हैं।"
+        }
+    },
+    {
+        "@type": "Question",
+        "name": "क्या पार्टी के बाद कैटरिंग टीम सब कुछ साफ करती है?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ज़रूर। हम यह सुनिश्चित करते हैं कि बाद में आपकी रसोई और बुफे क्षेत्र पूरी तरह से साफ और सुव्यवस्थित हो।"
+        }
+    }
+  ]
+}
+</script>
+        `
+        },
+        {
+            title: "ज़ुइडस एम्स्टर्डम में लक्ज़री कॉर्पोरेट कैटरिंग",
+            slug: "luxe-zakelijke-catering-zuidas-amsterdam",
+            category: "एम्स्टर्डम कैटरिंग",
+            readTime: "4 मिनट पढ़ने का समय",
+            publishedAt: "26 फरवरी 2026",
+            excerpt: "ज़ुइडस में विशेष कॉर्पोरेट कैटरिंग के साथ अपने सबसे बड़े ग्राहकों को प्रभावित करें। हम आपके कार्यालय के लिए स्वस्थ लंच और हाई-एंड बोर्ड रूम डिनर प्रदान करते हैं।",
+            image: "https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?q=80&w=2574&auto=format&fit=crop",
+            author: { name: "शेफ डेविड", role: "कैटरिंग विशेषज्ञ" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">ज़ुइडस एम्स्टर्डम में लक्ज़री कॉर्पोरेट कैटरिंग</h2>
+<p class="mb-4">यदि आप ज़ुइडस में व्यापार करते हैं, तो आप जानते हैं कि गुणवत्ता सबसे पहले आती है। जब आप एक बड़ी कंपनी के सीईओ या किसी महत्वपूर्ण अंतर्राष्ट्रीय ग्राहक का अपने कार्यालय में स्वागत करते हैं, तो मानक सैंडविच हमेशा सही विकल्प नहीं होते हैं। इसके बजाय <strong><a href="/hi/zakelijke-catering-amsterdam" class="text-[#D97757] font-semibold hover:underline">लक्ज़री कॉर्पोरेट कैटरिंग</a></strong> चुनें, जहाँ एक पाक शेफ आपके अपने मीटिंग रूम में ताज़ा लंच या एक प्रभावशाली डिनर प्रदान करता है।</p>
+<p class="mb-6">एम्स्टर्डम के व्यापारिक केंद्र में कैटरिंग पूरी तरह से विवेक, समय की पाबंदी और बिल्कुल सही भोजन के बारे में है। हम बिल्कुल यही प्रदान करते हैं।</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">ज़ुइडस के लिए हमारे विकल्प</h3>
+<p class="mb-4">हर ऑफिस और हर आयोजन अलग होता है। इसलिए, हम विभिन्न पैकेज प्रदान करते हैं:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>बोर्ड रूम लंच:</strong> एक स्वस्थ, हल्का और ताज़ा मल्टी-कोर्स लंच जो आपको सतर्क रखता है। ताज़ा मछली, सलाद और गर्म तत्वों के साथ खूबसूरती से व्यवस्थित प्लेट्स।</li>
+    <li><strong>एक्सक्लूसिव बिजनेस डिनर:</strong> शोर-शराबे वाले रेस्टोरेंट में कोई महत्वपूर्ण डील ना करें, बल्कि इसे एक प्राइवेट शेफ के साथ अपने बोर्ड रूम की प्राइवेसी में पूरी करें।</li>
+    <li><strong>फ्राइडे आफ्टरनून ड्रिंक्स कैटरिंग:</strong> अपनी टीम के साथ सप्ताह को शानदार तरीके से समाप्त करने के लिए लक्ज़री स्नैक्स, ऑयस्टर्स और शानदार फिंगर फूड।</li>
+</ul>
+
+<p class="mb-6">आज ही ज़ुइडस में अपने कार्यालय के लिए एक शेफ बुक करें और अपनी व्यावसायिक बैठकों को तुरंत उच्च पाक स्तर पर ले आएं।</p>
+        `
+        },
+        {
+            title: "एम्स्टर्डम में शादी और इवेंट कैटरिंग",
+            slug: "catering-bruiloften-evenementen-amsterdam",
+            category: "एम्स्टर्डम कैटरिंग",
+            readTime: "4 मिनट पढ़ने का समय",
+            publishedAt: "26 फरवरी 2026",
+            excerpt: "हमारी एम्स्टर्डम वेडिंग कैटरिंग के साथ अपने सबसे खास दिन का अनुभव लें। शानदार वॉकिंग डिनर से लेकर आपकी अनूठी इवेंट लोकेशन पर शानदार स्नैक्स तक।",
+            image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "शेफ डेविड", role: "कैटरिंग विशेषज्ञ" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">एम्स्टर्डम में शादियों के लिए अविस्मरणीय कैटरिंग</h2>
+<p class="mb-4">आपकी शादी का दिन आपके जीवन के सबसे महत्वपूर्ण दिनों में से एक होता है। इसमें अच्छा खाना बहुत बड़ी भूमिका निभाता है। क्या आप एम्स्टर्डम में शादी करने की योजना बना रहे हैं? चाहे आप किसी खूबसूरत चर्च, एक फैशनेबल वेयरहाउस, या अपने बगीचे में शादी का जश्न मना रहे हों: हमारा <strong><a href="/hi/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">शादी की कैटरिंग</a></strong> इसे पाक-कला के मामले में अविस्मरणीय बना देगा।</p>
+<p class="mb-6">हम खाने की सभी चिंताएं आपसे दूर ले लेते हैं, और आपके मन मुताबिक शादी का मेनू तैयार करने के लिए सर्वोत्तम मौसमी और स्थानीय सामग्री के साथ काम करते हैं।</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">वॉकिंग डिनर और सिट-डाउन डिनर</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>शेयरिंग डाइनिंग:</strong> टेबल के बीच में स्वादिष्ट व्यंजनों से भरे बड़े, शानदार बोर्ड, एक अनौपचारिक और बहुत ही शानदार शादी के लिए एकदम सही।</li>
+    <li><strong>क्लासिक मल्टी-कोर्स डिनर:</strong> एक सुंदर 4- या 5-कोर्स सिट-डाउन भोजन, जहां प्रत्येक अतिथि को शानदार ढंग से सजी टेबल पर परोसा जाता है।</li>
+    <li><strong>वॉकिंग डिनर:</strong> क्या आपके स्थान पर बैठने की जगह कम है? हम गर्म और ठंडे स्वादिष्ट व्यंजन हाथों में परोसते हैं। मेहमान खड़े रहकर एक-दूसरे से बात कर सकते हैं!</li>
+</ul>
+
+<p class="mb-6">एम्स्टर्डम में अपने अनूठे कार्यक्रम या शादी के लिए एकदम सही कैटरिंग पर चर्चा करने के लिए हमारी टीम से संपर्क करें।</p>
+        `
+        },
+        {
+            title: "एम्स्टर्डम में एक्सक्लूसिव ड्रिंक्स और फिंगर फूड कैटरिंग",
+            slug: "exclusieve-borrelhapjes-catering-amsterdam",
+            category: "एम्स्टर्डम कैटरिंग",
+            readTime: "4 मिनट पढ़ने का समय",
+            publishedAt: "26 फरवरी 2026",
+            excerpt: "हमारी लक्ज़री फिंगर फूड कैटरिंग के साथ अपने एम्स्टर्डम के ड्रिंक्स इवेंट्स को पूरा करें। कंपनी पार्टियों और नेटवर्किंग के लिए स्वादिष्ट, ताज़ा बने स्नैक्स।",
+            image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "शेफ डेविड", role: "कैटरिंग विशेषज्ञ" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">आपके एम्स्टर्डम इवेंट के लिए शीर्ष श्रेणी के स्नैक्स</h2>
+<p class="mb-4">डच 'बोरेल' (ड्रिंक्स एंड स्नैक्स) विश्व प्रसिद्ध है। एम्स्टर्डम में हम 'बोरेल' पसंद करते हैं! लेकिन झंडे वाले मानक पनीर के टुकड़ों या चिकनाई वाले बिटरबॉलन को भूल जाइए। आज-कल आपके मेहमान कुछ बेहतर की उम्मीद करते हैं। हम <strong><a href="/hi/menus/2" class="text-[#D97757] font-semibold hover:underline">लक्ज़री स्नैक्स और फिंगर फूड कैटरिंग</a></strong> प्रदान करते हैं जो आश्चर्य और स्वाद की गारंटी देते हैं।</p>
+<p class="mb-6">एक बेहतरीन नेटवर्किंग इवेंट, गैलरी ओपनिंग या खूबसूरती से प्रस्तुत, खाने योग्य खाद्य कलाकृतियों के साथ अपनी खुद की जन्मदिन की पार्टी की कल्पना करें। हमारे प्राइवेट शेफ द्वारा स्नैक्स को मौके पर ही तैयार किया जाता है और सीधे गरमागरम और ताज़ा परोसा जाता है।</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">लक्ज़री फिंगर फूड क्या है?</h3>
+<p class="mb-4">लक्ज़री फिंगर फूड से आपको इन जैसे व्यंजनों के बारे में सोचना चाहिए:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li>स्मोक्ड सैल्मन और क्रेम फ्रेश के साथ लजीज ब्लिनिस।</li>
+    <li>ताजा ट्रफल के साथ क्रिस्पी ग्योज़ा डंपलिंग्स।</li>
+    <li>सोया ग्लेज़ के साथ मिनी बीफ ताताकी।</li>
+    <li>भुने हुए टमाटर और बुर्राटा चीज़ के साथ शाकाहारी ब्रुशेट्टा।</li>
+</ul>
+
+<p class="mb-6">परफेक्ट फिंगर फूड कैटरिंग के साथ आप यह सुनिश्चित करते हैं कि मेहमान एम्स्टर्डम में आपके कार्यक्रम के अद्भुत माहौल और भोजन की गुणवत्ता के बारे में बात करते रहें।</p>
+        `
+        },
+        {
+            title: "एम्स्टर्डम की नहरों पर लक्ज़री बोट कैटरिंग",
+            slug: "luxe-boot-catering-amsterdamse-grachten",
+            category: "एम्स्टर्डम कैटरिंग",
+            readTime: "4 मिनट पढ़ने का समय",
+            publishedAt: "26 फरवरी 2026",
+            excerpt: "बोर्ड पर प्राइवेट शेफ का आनंद लेते हुए एम्स्टर्डम की नहरों के माध्यम से यात्रा करें। छोटे कार्यक्रमों के लिए नहरों पर बेहतरीन लक्ज़री बोट कैटरिंग का अनुभव लें।",
+            image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=2740&auto=format&fit=crop",
+            author: { name: "शेफ डेविड", role: "कैटरिंग विशेषज्ञ" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">बोट पर कैटरिंग: एम्स्टर्डम की नहरों पर खाने का आनंद लें</h2>
+<p class="mb-4">लक्ज़री ऐतिहासिक नहर के बेल्ट पर नाव से यात्रा करने से अधिक प्रतिष्ठित और कुछ भी नहीं है एम्स्टर्डम में। और जो बात इसे और भी अधिक यादगार बनाती है वह है बोर्ड पर एक प्रभावशाली डिनर या ताज़ा लंच। एक विशेष <strong><a href="/hi/thuiskok-amsterdam" class="text-[#D97757] font-semibold hover:underline">लक्ज़री बोट कैटरिंग</a></strong> के साथ आप एक प्राइवेट शेफ को नियुक्त करते हैं जो पानी पर बेहतरीन डाइनिंग अनुभव के लिए पैनकेक और बिटरबॉलन को छोड़ देता है।</p>
+<p class="mb-6">हमारे होम कुक बहुत लचीले (फ्लेक्सिबल) होते हैं। हमें एम्स्टर्डम की सैलून (saloon) नावों और नहर नावों के छोटी रसोई में लक्जरी भोजन तैयार करने का अनुभव है।</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">बोट पर कैटरिंग क्यों?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>बदलते हुए दृश्य:</strong> आराम से अपने स्टार्टर (starter) का आनंद लें जब विशाल ऐतिहासिक इमारतें और खूबसूरत पुल धीरे-धीरे आपके नाव के पास से गुज़रें।</li>
+    <li><strong>परम गोपनीयता:</strong> आपके बगल में किसी रेस्टोरेंट की अन्य टेबल से आपको कोई परेशानी नहीं होगी। यह बिजनेस डील (business deals) बंद करने या परिवार के साथ अंतरंग बैठकों (intimate meetings) के लिए एकदम सही है।</li>
+    <li><strong>ताज़ा बना हुआ खाना:</strong> हम सिर्फ पैक किया हुआ खाना नहीं लाते हैं। भोजन और विभिन्न व्यंजन आपके प्राइवेट शेफ (chef) द्वारा मौके पर बिल्कुल ताज़ा और गरमागरम परोसा जाता है।</li>
+</ul>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+        "@type": "Question",
+        "name": "क्या एक प्राइवेट शेफ और कैटरिंग टीम एम्स्टर्डम की एक छोटी नाव में फिट आ सकती है?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "खुली नावों के लिए, हम पूरी तरह से तैयार विशेष पिकनिक और स्वादिष्ट फिंगर फूड (फ़ूड) प्रदान करते हैं। पूरी तरह से पकाए गए शानदार डिनर के लिए हम कम से कम एक छोटी सी रसोई और पर्याप्त बिजली के साथ एक 'सलून नाव' (saloon boat) की सलाह देते हैं।"
+        }
+    }
+  ]
+}
+</script>
+        `
+        },
+        {
+            title: "एम्स्टर्डम में शाकाहारी और वीगन (Vegan) कैटरिंग",
+            slug: "vegetarische-vegan-catering-amsterdam",
+            category: "एम्स्टर्डम कैटरिंग",
+            readTime: "4 मिनट पढ़ने का समय",
+            publishedAt: "26 फरवरी 2026",
+            excerpt: "एम्स्टर्डम में सबसे अच्छी पूरी तरह से प्लांट-बेस्ड और शाकाहारी कैटरिंग की खोज करें। मांस रहित, परंतु बेहतरीन स्वाद से भरे एक शानदार डिनर से आश्चर्यचकित होने के लिए तैयार हो जाइए।",
+            image: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=2574&auto=format&fit=crop",
+            author: { name: "शेफ डेविड", role: "कैटरिंग विशेषज्ञ" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">एम्स्टर्डम में उच्च गुणवत्ता वाले प्लांट-बेस्ड और शाकाहारी कैटरिंग</h2>
+<p class="mb-4">एम्स्टर्डम एक ऐसा शहर है जो टिकाऊ और प्लांट-बेस्ड (पौधों पर आधारित) भोजन की बात आने पर आगे रहता है। बहुत से लोग अब सचेत रूप से बिना मांस के व्यंजन चुनते हैं। लेकिन शाकाहारी और वीगन भोजन को बिल्कुल भी उबाऊ नहीं होना चाहिए। हमारी विशेष <strong><a href="/hi/menus/5" class="text-[#D97757] font-semibold hover:underline">एम्स्टर्डम में वीगन (विगन) कैटरिंग</a></strong> नए स्वाद, भारी रचनात्मकता और शानदार पाक कला के बारे में है।</p>
+<p class="mb-6">हमारे प्राइवेट शेफ जड़ वाली सब्जियां (सेलरिएक), चुकंदर और बहुत सारे मशरूम को ऐसे खास व्यंजनों में बदल देते हैं जो अक्सर कट्टर मांसाहारी लोगों को भी स्वादिष्ट लगते हैं।</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">घर पर वीगन कैटरिंग क्यों चुनें?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>स्वस्थ और हल्का:</strong> प्लांट-बेस्ड मल्टी-कोर्स डिनर अक्सर पेट पर हल्के रहते हैं। आप चार कोर्स (व्यंजनों) के बाद भी ऊर्जावान महसूस करते हैं।</li>
+    <li><strong>बहुत रंगीन:</strong> वेगन व्यंजन ताजी जड़ी-बूटियों (हर्ब्स) और सब्जियों के साथ बहुत काम करते हैं। खाने की प्लेट्स खूबसूरत पेंटिंग की तरह नजर आती है।</li>
+    <li><strong>सभी के लिए समावेशी (Inclusive):</strong> यदि आप एम्स्टर्डम में अपने घर पर बड़े लोगों और विभिन्न आयु वर्ग के मेहमानों का स्वागत करते हैं, तो एक पूरी तरह से आश्चर्यजनक शाकाहारी मेनू सभी को संतुष्ट करने का सबसे सुरक्षित और स्वादिष्ट तरीका है।</li>
+</ul>
+
+<p class="mb-6">अपने घर पर एक बेहतरीन शाकाहारी शेफ के साथ खुद को और अपने शानदार मेहमानों को आश्चर्यचकित करें और डाइनिंग (dining) का आनंद लें।</p>
+        `
+        },
+        {
+            title: "एम्स्टर्डम में जन्मदिन और पारिवारिक पार्टियों के लिए कैटरिंग",
+            slug: "catering-verjaardagen-familiefeesten-amsterdam",
+            category: "एम्स्टर्डम कैटरिंग",
+            readTime: "4 मिनट पढ़ने का समय",
+            publishedAt: "26 फरवरी 2026",
+            excerpt: "परिवार के साथ जीवन के खास पलों का जश्न मनाएं और एम्स्टर्डम में घर पर एक बेहतरीन कैटरिंग का आनंद लें। कोई किराने का सामान नहीं और कोई परेशानी नहीं।",
+            image: "https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=2670&auto=format&fit=crop",
+            author: { name: "शेफ डेविड", role: "कैटरिंग विशेषज्ञ" },
+            contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">एम्स्टर्डम में पारिवारिक पार्टियों के लिए बेहतरीन और तनावमुक्त कैटरिंग</h2>
+<p class="mb-4">क्या दादी 80 साल की हो रही हैं? क्या आपके बच्चे ने आखिरकार स्नातक कर लिया है, या क्या आप एक महत्वपूर्ण पारिवारिक सालगिरह मना रहे हैं? पारिवारिक पार्टियां जीवन के सबसे खूबसूरत पल होते हैं। फिर भी इन्हें आयोजित करना, खासकर एम्स्टर्डम में, थका देने वाला हो सकता है। एक भरोसेमंद <strong><a href="/hi/catering-feest-thuis" class="text-[#D97757] font-semibold hover:underline">होम कैटरिंग सर्विस</a></strong> को चुनकर आप न केवल शानदार भोजन की गारंटी देते हैं, बल्कि आप खुद को सबसे बड़ा उपहार भी देते हैं: अपना समय और आराम।</p>
+<p class="mb-6">एक प्राइवेट शेफ या पूरी कैटरिंग टीम (full-service catering team) आपके घर आती है, सब कुछ तैयार करती है और यह सुनिश्चित करती है कि परिवार में किसी को भी घंटों रसोई में न रहना पड़े और न बर्तनों को साफ करने की चिंता करनी पड़े।</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">परिवार के साथ समय बिताने पर ध्यान दें</h3>
+<p class="mb-4">हमारी एम्स्टर्डम पारिवारिक कैटरिंग (family catering) बहुत ही बहुमुखी (versatile) है:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2 text-[#0F1E19]">
+    <li><strong>एक शानदार और आनंदमय पारिवारिक बुफे (Buffet):</strong> भरपूर रूप से भरी हुई प्लेटें, सलाद और बहुत सारे रोस्ट (roasts) जहां हर सदस्य अपनी मर्जी से (और जितनी बार चाहें उतनी बार) खुद से खाना परोस सकता है।</li>
+    <li><strong>एक शानदार सिट-डाउन (sit-down) परिवार का डिनर:</strong> क्या आपके पास जश्न मनाने के लिए कुछ बहुत ही खास है? फिर हम आपके घर पर ही एक सुंदर, उत्सव की मेज पर शानदार तीन या चार-कोर्स (course) का मेनू पकाते और बहुत सफाई से परोसते हैं।</li>
+</ul>
+
+<p class="mb-6">सबसे स्वादिष्ट भोजन और कम से कम तनाव और परेशानी। एम्स्टर्डम में हमारी बेहतर पारिवारिक पार्टियों (family parties) का यही रहस्य है। अपने परिवार के साथ अधिक से अधिक समय व्यतीत करें।</p>
+        `
+        },
         {
             title: "यूट्रेक्ट में प्राइवेट शेफ: घर पर बेहतरीन खाने का विकल्प",
             slug: "best-home-chef-delivery-utrecht",
