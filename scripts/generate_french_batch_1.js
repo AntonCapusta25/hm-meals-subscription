@@ -1,0 +1,175 @@
+const fs = require('fs');
+
+const posts = [
+    {
+        title: "Le Meilleur Chef à Domicile à La Haye : L'Élégance Culinaire",
+        slug: "best-home-chef-delivery-den-haag",
+        excerpt: "Découvrez pourquoi les expatriés et les résidents de La Haye délaissent les restaurants bondés pour l'exclusivité d'un chef privé à domicile.",
+        contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Le Nouveau Standard à La Haye : Les Chefs Privés</h2>
+<p class="mb-4">En tant que cœur politique des Pays-Bas et carrefour international, La Haye (Den Haag) possède une scène culinaire spectaculaire. Cependant, naviguer dans le Hofkwartier, trouver un parking ou supporter les salles à manger bruyantes peut gâcher le plaisir d'un bon repas. C'est pourquoi de plus en plus de résidents se tournent vers le luxe ultime : <strong><a href="/fr/den-haag" class="text-[#D97757] font-semibold hover:underline">engager un chef privé à La Haye</a></strong>.</p>
+<p class="mb-6">Que vous ayez un appartement face à la mer à Scheveningen ou une maison de ville classique dans le Statenkwartier, un chef à domicile transforme votre salle à manger en le restaurant le plus exclusif de la ville.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Pourquoi Choisir un Cuisinier à Domicile ?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2">
+    <li><strong>Confidentialité Diplomatique :</strong> Discutez affaires ou détendez-vous simplement sans le bruit et les indiscrétions fréquents dans les bistrots animés.</li>
+    <li><strong>Menus Internationaux Sur Mesure :</strong> S'appuyant sur les divers marchés de La Haye, les chefs peuvent tout créer : des classiques de la gastronomie française au majestueux Rijsttafel indonésien.</li>
+    <li><strong>Zéro Logistique :</strong> Pas de conduite, pas de frais de stationnement près de Het Plein, et absolument aucun nettoyage. Le chef arrive avec les ingrédients, cuisine, sert et laisse votre cuisine impeccable.</li>
+</ul>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Une Soirée Typique dans le Style Michelin</h3>
+<p class="mb-4">Imaginez rentrer chez vous après une longue journée. Un cuisinier professionnel est déjà dans votre cuisine en train de préparer un chef-d'œuvre à plusieurs plats. La table est dressée avec des couverts élégants. Vous servez un verre de vin, accueillez vos invités et prenez place. Plat après plat vous sont présentés avec une explication des ingrédients, souvent sourcés localement au Haagse Markt.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Questions Fréquemment Posées</h3>
+<div itemscope itemtype="https://schema.org/FAQPage" class="mt-8 space-y-6">
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[#FDFBF7] p-6 rounded-xl border border-[#E8E6E1]">
+        <h4 itemprop="name" class="font-bold text-[#1A4D2E] text-lg mb-2">Le chef peut-il répondre à des besoins alimentaires différents à La Haye ?</h4>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-gray-700">Absolument. Puisque tout est préparé de A à Z dans votre cuisine, le chef peut facilement satisfaire les végétaliens, les invités sans gluten et ceux ayant des allergies spécifiques simultanément.</p>
+        </div>
+    </div>
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[#FDFBF7] p-6 rounded-xl border border-[#E8E6E1]">
+        <h4 itemprop="name" class="font-bold text-[#1A4D2E] text-lg mb-2">Ai-je besoin d'une immense cuisine pour que le chef puisse travailler ?</h4>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-gray-700">Pas du tout. Nos chefs sont habitués à travailler dans des cuisines de ville standard. Ils s'adaptent à votre espace et apportent l'équipement spécialisé dont ils pourraient avoir besoin.</p>
+        </div>
+    </div>
+</div>
+        `,
+        image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2669&auto=format&fit=crop",
+        author: {
+            name: "Alexander Filippov",
+            role: "Directeur Culinaire",
+            avatar: "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=2568&auto=format&fit=crop"
+        }
+    },
+    {
+        title: "Le Guide Ultime de la Restauration d'Anniversaire par un Chef Privé",
+        slug: "private-chef-birthday-party",
+        excerpt: "Célébrez votre anniversaire avec élégance. Oubliez les restaurants bruyants et engagez un chef privé pour une expérience culinaire personnalisée inoubliable.",
+        contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Sublimez Votre Anniversaire : L'Expérience du Chef Privé</h2>
+<p class="mb-4">Les anniversaires sont des jalons censés être célébrés avec les proches. Mais organiser un dîner au restaurant implique souvent de gérer des additions complexes et des menus restreints. La solution moderne et luxueuse ? <strong>Engager un chef privé pour votre fête d'anniversaire</strong>.</p>
+<p class="mb-6">Imaginez organiser un dîner exclusif sans jamais mettre les pieds dans la cuisine. Pas de stress, pas de chronomètre pour le rôti, et surtout pas de montagnes de vaisselle à la fin de la soirée.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Pourquoi un Chef Privé Dépasse l'Expérience au Restaurant</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2">
+    <li><strong>Personnalisation Totale :</strong> C'est votre journée. Vous souhaitez un menu dégustation italien en 5 services ou une soirée tapas espagnole ? Le menu est créé selon vos désirs.</li>
+    <li><strong>Intimité et Partage :</strong> Les restaurants sont bruyants. Dehors, la conversation est difficile. Chez vous, riez aux éclats et prolongez la soirée autour d'une bonne bouteille sans être pressé.</li>
+    <li><strong>Animation Interactive :</strong> Un chef à domicile n'est pas seulement un cuisinier ; il fait partie de l'expérience. Les invités adorent observer la maîtrise du dressage et découvrir les subtilités de chaque plat.</li>
+</ul>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Le Déroulement de la Soirée</h3>
+<p class="mb-4">Le cuisinier arrive quelques heures avant vos invités avec des ingrédients frais de première qualité. Pendant que vous vous préparez, la cuisine s'emplit d'arômes incroyables. Dès l'arrivée de vos convives, d'élégants canapés peuvent être servis. Après le dernier toast, le chef nettoie minutieusement la cuisine pour que vous puissiez profiter pleinement de la nuit.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Questions Fréquemment Posées</h3>
+<div itemscope itemtype="https://schema.org/FAQPage" class="mt-8 space-y-6">
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[#FDFBF7] p-6 rounded-xl border border-[#E8E6E1]">
+        <h4 itemprop="name" class="font-bold text-[#1A4D2E] text-lg mb-2">Le chef peut-il réaliser un gâteau d'anniversaire sur mesure ?</h4>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-gray-700">De nombreux chefs maîtrisent l'art de la pâtisserie et peuvent confectionner un gâteau d'anniversaire ou un dessert spectaculaire. Précisez-le lors de votre réservation.</p>
+        </div>
+    </div>
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[#FDFBF7] p-6 rounded-xl border border-[#E8E6E1]">
+        <h4 itemprop="name" class="font-bold text-[#1A4D2E] text-lg mb-2">Comment cela se passe-t-il pour la vaisselle et l'argenterie ?</h4>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-gray-700">Généralement, le chef utilise votre propre vaisselle. Si vous recevez un groupe important, des solutions de location peuvent être organisées facilement.</p>
+        </div>
+    </div>
+</div>
+        `,
+        image: "https://images.unsplash.com/photo-1530103862676-de8892b07439?q=80&w=2670&auto=format&fit=crop",
+        author: {
+            name: "Alexander Filippov",
+            role: "Directeur Culinaire",
+            avatar: "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=2568&auto=format&fit=crop"
+        }
+    },
+    {
+        title: "Chef à Domicile à Haarlem : L'Excellence Culinaire Chez Soi",
+        slug: "best-home-chef-delivery-haarlem",
+        excerpt: "Haarlem est célèbre pour sa gastronomie. Découvrez comment la réservation d'un chef privé apporte cette expérience de fine-dining directement dans votre maison.",
+        contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Le Secret Bien Gardé de Haarlem : Le Chef Privé</h2>
+<p class="mb-4">Avec ses rues pavées historiques et sa réputation de véritable ville gastronomique, Haarlem abrite des restaurants remarquables. Cependant, sécuriser une table un vendredi soir près du Grote Markt relève parfois du défi. C'est pourquoi les amateurs de bonne chère découvrent une alternative plus exclusive : <strong><a href="/fr/haarlem" class="text-[#D97757] font-semibold hover:underline">réserver un chef privé à Haarlem</a></strong>.</p>
+<p class="mb-6">Que vous logiez dans un charmant Herenhuis du quartier de Vijfhoek ou dans un appartement surplombant la Spaarne, un chef à domicile vous offre l'expérience d'un restaurant gastronomique sans avoir à sortir de chez vous.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Les Avantages du Dîner à Domicile</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2">
+    <li><strong>Confort Inégalé :</strong> Retirez vos chaussures, lancez votre propre musique et profitez d'une cuisine exceptionnelle sans les codes vestimentaires des établissements formels.</li>
+    <li><strong>Ingrédients Locaux :</strong> Nos chefs basés à Haarlem choisissent leurs produits sur les marchés locaux de la Hollande-Septentrionale, garantissant des saveurs fraîches et authentiques.</li>
+    <li><strong>Idéal pour les Familles :</strong> Plus besoin de baby-sitter. Avec un chef privé, vos enfants peuvent dormir à l'étage pendant que vous savourez un dîner époustouflant au rez-de-chaussée.</li>
+</ul>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Une Prestation Sur Mesure de A à Z</h3>
+<p class="mb-6">Grâce à HomeMade, l'expérience est sans effort. Le chef professionnel achète les ingrédients, arrive en avance, prépare chaque plat en vous expliquant les techniques culinaires utilisées et, crucialement, nettoie votre cuisine avec le plus grand soin avant de repartir.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Questions Fréquemment Posées</h3>
+<div itemscope itemtype="https://schema.org/FAQPage" class="mt-8 space-y-6">
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[#FDFBF7] p-6 rounded-xl border border-[#E8E6E1]">
+        <h4 itemprop="name" class="font-bold text-[#1A4D2E] text-lg mb-2">Combien de temps à l'avance dois-je réserver mon chef à Haarlem ?</h4>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-gray-700">Nous recommandons une réservation au moins deux à trois semaines à l'avance, particulièrement pour les week-ends ou la saison des fêtes, afin de garantir la disponibilité des meilleurs professionnels.</p>
+        </div>
+    </div>
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[#FDFBF7] p-6 rounded-xl border border-[#E8E6E1]">
+        <h4 itemprop="name" class="font-bold text-[#1A4D2E] text-lg mb-2">Le chef propose-t-il des accords mets et vins ?</h4>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-gray-700">Oui ! Beaucoup de nos chefs privés possèdent une expérience de sommelier ou collaborent avec des cavistes d'Haarlem pour vous proposer l'accord idéal.</p>
+        </div>
+    </div>
+</div>
+        `,
+        image: "https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?q=80&w=2574&auto=format&fit=crop",
+        author: {
+            name: "Alexander Filippov",
+            role: "Directeur Culinaire",
+            avatar: "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=2568&auto=format&fit=crop"
+        }
+    },
+    {
+        title: "Le Meilleur Chef Privé à Hengelo : L'Hospitalité de la Twente",
+        slug: "best-home-chef-delivery-hengelo",
+        excerpt: "Expérimentez la chaleur et la riche tradition agricole de la région de la Twente servis directement à votre table par un chef privé à Hengelo.",
+        contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Dîner Privé à Hengelo : Une Tradition Régionale</h2>
+<p class="mb-4">Hengelo et la région de la Twente sont reconnues pour leur convivialité chaleureuse et leurs profondes racines agricoles. Bien qu'il existe d'excellentes tables, rien n'égale le confort de recevoir chez soi. En <strong><a href="/fr/hengelo" class="text-[#D97757] font-semibold hover:underline">sélectionnant un chef privé à Hengelo</a></strong>, vous associez le raffinement de la haute gastronomie au confort absolu de votre domicile.</p>
+<p class="mb-6">Qu'il s'agisse d'un anniversaire, d'un dîner d'affaires discret ou d'un rassemblement familial, le chef à domicile vous promet un voyage culinaire magique, sans aucune gestion de cuisine de votre part.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Mettre en Valeur les Produits de la Twente</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2">
+    <li><strong>De la Ferme à l'Assiette :</strong> Nos chefs cuisiniers mettent un point d'honneur à utiliser les superbes légumes, viandes et fromages biologiques fournis par les éleveurs d'Overijssel.</li>
+    <li><strong>Menus Saisonniers :</strong> Les recettes suivent rigoureusement le rythme des saisons pour garantir une fraîcheur et une saveur irréprochables tout au long de l'année.</li>
+    <li><strong>Proximité :</strong> Écoutez les anecdotes sur chaque produit de la Twente tandis que le chef dresse minutieusement les assiettes sous vos yeux.</li>
+</ul>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Sans Stress, Seulement du Plaisir</h3>
+<p class="mb-6">Habituellement, l'hôte passe sa soirée coincé dans la cuisine, ignorant les conversations du dîner. Grâce aux services de HomeMade, vous devenez pleinement invité à votre propre fête. À la fin de la soirée, les casseroles et la vaisselle sont soigneusement rangées.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Questions Fréquemment Posées</h3>
+<div itemscope itemtype="https://schema.org/FAQPage" class="mt-8 space-y-6">
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[#FDFBF7] p-6 rounded-xl border border-[#E8E6E1]">
+        <h4 itemprop="name" class="font-bold text-[#1A4D2E] text-lg mb-2">Les ingrédients sont-ils fournis par le chef ?</h4>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-gray-700">Oui, le coût total de la prestation inclut l'achat des produits de première qualité. Le chef réalise les courses et apporte tout le frais dans votre cuisine.</p>
+        </div>
+    </div>
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[#FDFBF7] p-6 rounded-xl border border-[#E8E6E1]">
+        <h4 itemprop="name" class="font-bold text-[#1A4D2E] text-lg mb-2">Puis-je réserver pour un repas d'affaires à Hengelo ?</h4>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-gray-700">Absolument. Nos chefs assurent une discrétion absolue, idéale pour conclure des négociations ou consolider les liens d'équipe en toute confidentialité, loin de l'agitation des restaurants publics.</p>
+        </div>
+    </div>
+</div>
+        `,
+        image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2670&auto=format&fit=crop",
+        author: {
+            name: "Alexander Filippov",
+            role: "Directeur Culinaire",
+            avatar: "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=2568&auto=format&fit=crop"
+        }
+    }
+];
+
+fs.writeFileSync('french_batch_1.json', JSON.stringify(posts, null, 2));
+console.log('French Batch 1 complete');

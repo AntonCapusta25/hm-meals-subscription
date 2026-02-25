@@ -1,0 +1,187 @@
+const fs = require('fs');
+
+const posts = [
+    {
+        title: "Best Home Chef Delivery in The Hague: International Tastes, Local Elegance",
+        slug: "best-home-chef-delivery-den-haag",
+        excerpt: "Discover why The Hague's expats and locals are trading crowded restaurants for the exclusivity and personalized touch of a private chef catering their dinners at home.",
+        contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">The Hague’s New Dining Standard: Private Chefs at Home</h2>
+<p class="mb-4">As the political heart of the Netherlands and an international hub, The Hague (Den Haag) boasts a spectacular culinary scene. Yet, navigating reservations in the busy Hofkwartier, finding parking, or dealing with packed dining rooms can detract from the joy of a good meal. That is why an increasing number of residents are turning to the ultimate luxury: <strong><a href="/en/den-haag" class="text-[#D97757] font-semibold hover:underline">Hiring a private chef in The Hague</a></strong>.</p>
+<p class="mb-6">Whether you have an apartment overlooking the sea in Scheveningen or a classic townhouse in Statenkwartier, a home chef transforms your dining room into the city's most exclusive, private restaurant.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Why Opt for a Home Cook in Den Haag?</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2">
+    <li><strong>Diplomatic Level Privacy:</strong> Discuss business, celebrate milestones, or simply unwind without the noise and eavesdropping common in busy bistros.</li>
+    <li><strong>Tailored International Menus:</strong> Leveraging The Hague’s diverse markets, chefs can craft anything from robust Dutch classics to exquisite Indonesian Rijsttafel or refined French haute cuisine.</li>
+    <li><strong>Zero Logistics:</strong> No driving, no parking fees near Plein, and absolutely no cleanup. The chef arrives with ingredients, cooks, serves, and leaves your kitchen spotless.</li>
+</ul>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">A Typical Private Michelin-Style Evening</h3>
+<p class="mb-4">Imagine coming home after a long day. A professional chef is already in your kitchen preparing a multi-course masterpiece. The table is set with elegant flatware. You pour a glass of wine, greet your guests, and sit down. Course by course, plates are presented to you with an explanation of ingredients, sourced locally perhaps from the Haagse Markt.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Perfect for Any Occasion</h3>
+<p class="mb-6">From an intimate anniversary to a <strong>large family gathering</strong>, HomeMade handles the logistics. We connect you with verified, top-tier culinary talent. Forget the standard catering deliveries that arrive lukewarm; this is food cooked live, customized to your exact dietary requirements, and served with impeccable hospitality.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Frequently Asked Questions</h3>
+<div itemscope itemtype="https://schema.org/FAQPage" class="mt-8 space-y-6">
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[#FDFBF7] p-6 rounded-xl border border-[#E8E6E1]">
+        <h4 itemprop="name" class="font-bold text-[#1A4D2E] text-lg mb-2">Can the chef accommodate guests with different dietary needs in The Hague?</h4>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-gray-700">Yes, absolutely. Since everything is cooked from scratch in your kitchen, the chef can easily cater to vegans, gluten-free guests, and those with specific allergies simultaneously.</p>
+        </div>
+    </div>
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[#FDFBF7] p-6 rounded-xl border border-[#E8E6E1]">
+        <h4 itemprop="name" class="font-bold text-[#1A4D2E] text-lg mb-2">Do I need a massive kitchen for the chef to work?</h4>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-gray-700">Not at all. Our chefs are experienced in working in standard Dutch city kitchens. They adapt to your space and bring any specialized equipment they might need.</p>
+        </div>
+    </div>
+</div>
+        `,
+        image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2669&auto=format&fit=crop",
+        author: {
+            name: "Alexander Filippov",
+            role: "Culinary Director",
+            avatar: "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=2568&auto=format&fit=crop"
+        }
+    },
+    {
+        title: "The Ultimate Guide to Private Chef Birthday Party Catering",
+        slug: "private-chef-birthday-party",
+        excerpt: "Celebrate your next birthday in style. Forget booking a loud restaurant; hire a private chef to craft an unforgettable, personalized culinary experience at home.",
+        contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Elevate Your Birthday: The Private Chef Experience</h2>
+<p class="mb-4">Birthdays are milestones meant to be celebrated with loved ones, great conversation, and phenomenal food. But coordinating a dinner party at a restaurant often means dealing with split bills, noise, and restricted menus. The modern, luxurious solution? <strong>Hiring a private chef for your birthday party</strong>.</p>
+<p class="mb-6">Imagine hosting an exclusive dinner party where you never have to step foot in the kitchen. No cooking stress, no timing the roast, and best of all, no towering pile of dishes waiting for you when the guests leave.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Why a Private Chef Beats the Restaurant Experience</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2">
+    <li><strong>Total Customization:</strong> It is your day. Do you want a 5-course Italian tasting menu, a casual Spanish tapas night, or a fine-dining vegan journey? The menu revolves entirely around your preferences.</li>
+    <li><strong>Intimacy & Connection:</strong> Restaurants can be loud and rushed. At home, you can laugh as loudly as you want, give speeches without shouting, and linger over wine long after the dessert is finished.</li>
+    <li><strong>Interactive Entertainment:</strong> A home chef isn't just a cook; they are part of the experience. Guests love watching the plating process and learning about the ingredients directly from a culinary professional.</li>
+</ul>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">How the Evening Unfolds</h3>
+<p class="mb-4">The chef arrives a few hours before your guests with fresh, premium ingredients. While you get dressed and prepare a playlist, the kitchen fills with incredible aromas. As guests arrive, the chef might serve elegant canapés. Then, everyone sits down to beautifully plated courses. After the final birthday toast and coffee, the chef cleans the kitchen entirely before departing, leaving you to enjoy the rest of your night.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Planning Your Birthday Catering</h3>
+<p class="mb-6">Whether it is a 30th, 50th, or just an annual celebration, booking through HomeMade is simple. Tell us your date, group size, and favorite cuisines. We match you with top-rated chefs whose culinary style fits your vision perfectly.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Frequently Asked Questions</h3>
+<div itemscope itemtype="https://schema.org/FAQPage" class="mt-8 space-y-6">
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[#FDFBF7] p-6 rounded-xl border border-[#E8E6E1]">
+        <h4 itemprop="name" class="font-bold text-[#1A4D2E] text-lg mb-2">Can the chef bake a custom birthday cake?</h4>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-gray-700">Many of our chefs have excellent pastry skills and can create a custom birthday cake or a spectacular dessert course. Be sure to request this during the booking process!</p>
+        </div>
+    </div>
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[#FDFBF7] p-6 rounded-xl border border-[#E8E6E1]">
+        <h4 itemprop="name" class="font-bold text-[#1A4D2E] text-lg mb-2">What happens regarding plates, glasses, and silverware?</h4>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-gray-700">Chefs typically use your tableware to plate the food. If you are hosting a larger group and lack sufficient plates, let us know—options for renting tableware can be arranged.</p>
+        </div>
+    </div>
+</div>
+        `,
+        image: "https://images.unsplash.com/photo-1530103862676-de8892b07439?q=80&w=2670&auto=format&fit=crop",
+        author: {
+            name: "Alexander Filippov",
+            role: "Culinary Director",
+            avatar: "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=2568&auto=format&fit=crop"
+        }
+    },
+    {
+        title: "Best Home Chef Delivery in Haarlem: Culinary Excellence at Home",
+        slug: "best-home-chef-delivery-haarlem",
+        excerpt: "Haarlem is famous for its vibrant gastronomy. Discover how booking a private chef brings the city's finest culinary experiences directly into your own dining room.",
+        contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Haarlem’s Best Kept Secret: The Private Chef</h2>
+<p class="mb-4">With its historic cobblestone streets and a reputation as a true gastronomic city, Haarlem boasts an incredible array of restaurants. Yet, securing a table on a Friday night near the Grote Markt can be a challenge. That is why food lovers are discovering a more exclusive alternative: <strong><a href="/en/haarlem" class="text-[#D97757] font-semibold hover:underline">Booking a private chef in Haarlem</a></strong>.</p>
+<p class="mb-6">Whether you occupy a charming Herenhuis in the Vijfhoek or a modern apartment overlooking the Spaarne, a home cook allows you to experience Michelin-tier dining without leaving your front door.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">The Advantages of Dining In</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2">
+    <li><strong>Unmatched Comfort:</strong> Kick off your shoes, put on your own music, and enjoy premium food without the constraints of restaurant dress codes or closing times.</li>
+    <li><strong>Locally Sourced Ingredients:</strong> Our Haarlem-based chefs often source their ingredients from local markets and regional North Holland purveyors, ensuring the freshest flavors.</li>
+    <li><strong>Perfect for Families:</strong> If you have young children, getting a babysitter to go out for fine dining is a hassle. A private chef lets the kids sleep upstairs while you enjoy a 5-course dinner below.</li>
+</ul>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Crafting Your Bespoke Menu</h3>
+<p class="mb-4">The journey begins long before the chef turns on the stove. You collaborate directly with your culinary professional to design a menu that excites you. Love fresh seafood from the nearby coast? Prefer a hearty, modern take on European classics? The chef tailors every single dish to your specific palette and dietary needs.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">A Seamless Experience from Prep to Clean</h3>
+<p class="mb-6">The beauty of the HomeMade platform is the end-to-end luxury. The chef buys the ingredients, arrives early to prep, serves you course-by-course with an explanation of the culinary techniques used, and crucially, cleans your kitchen so thoroughly you wouldn't know a feast had just occurred.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Frequently Asked Questions</h3>
+<div itemscope itemtype="https://schema.org/FAQPage" class="mt-8 space-y-6">
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[#FDFBF7] p-6 rounded-xl border border-[#E8E6E1]">
+        <h4 itemprop="name" class="font-bold text-[#1A4D2E] text-lg mb-2">How far in advance should I book a chef in Haarlem?</h4>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-gray-700">We recommend booking at least two to three weeks in advance, especially for weekend dates or the holiday season, to ensure the best selection of available chefs.</p>
+        </div>
+    </div>
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[#FDFBF7] p-6 rounded-xl border border-[#E8E6E1]">
+        <h4 itemprop="name" class="font-bold text-[#1A4D2E] text-lg mb-2">Can the chef suggest paired wines?</h4>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-gray-700">Yes! Many of our private chefs have sommelier experience or work with local Haarlem wine merchants to suggest the perfect pairing for your bespoke menu.</p>
+        </div>
+    </div>
+</div>
+        `,
+        image: "https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?q=80&w=2574&auto=format&fit=crop",
+        author: {
+            name: "Alexander Filippov",
+            role: "Culinary Director",
+            avatar: "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=2568&auto=format&fit=crop"
+        }
+    },
+    {
+        title: "Best Home Chef Delivery in Hengelo: Twente Hospitality Reimagined",
+        slug: "best-home-chef-delivery-hengelo",
+        excerpt: "Experience the warm hospitality and rich agricultural heritage of Twente delivered straight to your dining table by a professional private chef in Hengelo.",
+        contentHtml: `
+<h2 class="text-3xl font-bold font-serif mb-6 text-[#1A4D2E]">Private Dining in Hengelo: A Twente Tradition</h2>
+<p class="mb-4">Hengelo and the wider Twente region are known for their warm hospitality and deep agricultural roots. While there are fantastic local eateries, there is something truly special about hosting an intimate gathering in your own home. By <strong><a href="/en/hengelo" class="text-[#D97757] font-semibold hover:underline">booking a private chef in Hengelo</a></strong>, you combine the luxury of fine dining with the comfort of your own space.</p>
+<p class="mb-6">Whether you are celebrating an anniversary, hosting business partners, or gathering family, a home chef provides an unforgettable culinary journey without the hassle of cooking or cleaning.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Showcasing Local Twente Ingredients</h3>
+<ul class="list-disc pl-6 mb-6 space-y-2">
+    <li><strong>Farm to Table:</strong> Our chefs frequently utilize the rich produce, artisanal cheeses, and high-quality meats sourced directly from local Twente farmers.</li>
+    <li><strong>Seasonal Menus:</strong> Menus are dynamically adjusted based on what is locally in season, ensuring every dish is vibrant, fresh, and sustainable.</li>
+    <li><strong>Personal Interaction:</strong> Discover the stories behind the food as the chef plates each course and explains the origins of the ingredients.</li>
+</ul>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">How the Service Works</h3>
+<p class="mb-4">It couldn't be simpler. Browse the profiles of our expert chefs operating in Overijssel. Select a menu style that appeals to you—be it a classic French 4-course dinner, a modern Asian fusion spread, or an elevated take on traditional Dutch cuisine. The chef will contact you to refine the details, handle all the shopping, cook in your kitchen, and execute a flawless dinner service.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">No Stress, Just Enjoyment</h3>
+<p class="mb-6">Hosting dinner parties usually means the host is trapped in the kitchen, checking the oven and missing out on the conversation. With HomeMade's private chefs, you become a guest at your own party. When the night is over, the chef cleans the kitchen, leaving it exactly as they found it.</p>
+
+<h3 class="text-2xl font-bold font-serif mb-4 text-[#1A4D2E]">Frequently Asked Questions</h3>
+<div itemscope itemtype="https://schema.org/FAQPage" class="mt-8 space-y-6">
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[#FDFBF7] p-6 rounded-xl border border-[#E8E6E1]">
+        <h4 itemprop="name" class="font-bold text-[#1A4D2E] text-lg mb-2">Does the chef provide the ingredients?</h4>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-gray-700">Yes, the cost of the standard menu includes all premium ingredients. The chef does the shopping and brings everything fresh to your kitchen.</p>
+        </div>
+    </div>
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[#FDFBF7] p-6 rounded-xl border border-[#E8E6E1]">
+        <h4 itemprop="name" class="font-bold text-[#1A4D2E] text-lg mb-2">Can I book a chef for a corporate dinner in Hengelo?</h4>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-gray-700">Absolutely. Private chefs offer the perfect discrete, high-quality environment for entertaining clients or holding team dinners without restaurant interruptions.</p>
+        </div>
+    </div>
+</div>
+        `,
+        image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2670&auto=format&fit=crop",
+        author: {
+            name: "Alexander Filippov",
+            role: "Culinary Director",
+            avatar: "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=2568&auto=format&fit=crop"
+        }
+    }
+];
+
+fs.writeFileSync('english_batch_1.json', JSON.stringify(posts, null, 2));
+console.log('Batch 1 complete');
