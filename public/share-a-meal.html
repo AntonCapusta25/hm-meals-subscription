@@ -55,7 +55,7 @@
             inset: 0 !important;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E") !important;
             pointer-events: none !important;
-            z-index: 10 !important;
+            z-index: 0 !important;
             opacity: 0.6 !important;
         }
 
@@ -882,12 +882,14 @@
             }
         }
 
-        #share-a-meal-wrapper .nft-amount {
+        #share-a-meal-wrapper .nft-amount,
+        #share-a-meal-wrapper .nft-amount span {
             font-family: 'NewSpirit', serif !important;
             font-size: 4rem !important;
             line-height: 1 !important;
             margin-bottom: 0.5rem !important;
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+            color: white !important;
         }
 
         #share-a-meal-wrapper .nft-impact {
@@ -1152,10 +1154,14 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="https://zol4dc90rf4.typeform.com/to/HdWoEkfx" class="btn-main"
-                            style="width:100%; margin-top:1.5rem; justify-content:center;">
+                        <button id="donate-btn" onclick="donateNow()" class="btn-main"
+                            style="width:100%; margin-top:1.5rem; justify-content:center; cursor:pointer;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
                             Donate Now
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1201,68 +1207,72 @@
             </div>
         </section>
     </div>
+    <script>
+        const COST_PER_MEAL = 0.70;
+        // Payment base URL — update with your Stripe Payment Link
+        // Amount is appended as ?prefilled_amount=<cents> so Stripe pre-fills it.
+        // Replace the URL below with your actual Stripe payment link.
+        var PAYMENT_BASE_URL = "https://buy.stripe.com/YOUR_LINK_HERE";
+
+        function initDonation() {
+            var input = document.getElementById("meal-input");
+            var slider = document.getElementById("meal-slider");
+            var sliderFill = document.getElementById("slider-fill");
+            var sliderThumb = document.getElementById("slider-thumb");
+            var btnMinus = document.getElementById("btn-minus");
+            var btnPlus = document.getElementById("btn-plus");
+            var countDisplay = document.getElementById("nft-count");
+            var priceDisplay = document.getElementById("nft-price");
+            var vizContainer = document.getElementById("nft-meal-viz");
+
+            if (!input || !slider) return; // not in DOM yet
+
+            function updateUI(val) {
+                var numeric = parseInt(val, 10);
+                if (isNaN(numeric) || numeric < 1) numeric = 1;
+                if (numeric > 500) numeric = 500;
+
+                input.value = numeric;
+
+                var percent = Math.min(numeric, 100);
+                slider.value = percent;
+                sliderFill.style.width = percent + "%";
+                sliderThumb.style.left = percent + "%";
+
+                countDisplay.textContent = numeric;
+                priceDisplay.textContent = "\u20ac" + (numeric * COST_PER_MEAL).toFixed(2);
+
+                var vizCount = Math.min(numeric, 100);
+                var html = "";
+                for (var i = 0; i < vizCount; i++) html += '<div class="viz-dot"></div>';
+                vizContainer.innerHTML = html;
+            }
+
+            input.addEventListener("input", function () { updateUI(input.value); });
+            slider.addEventListener("input", function () { updateUI(slider.value); });
+            btnMinus.addEventListener("click", function () { updateUI(parseInt(input.value || 1) - 1); });
+            btnPlus.addEventListener("click", function () { updateUI(parseInt(input.value || 1) + 1); });
+
+            updateUI(10);
+        }
+
+        // Works whether DOM is ready or not
+        function donateNow() {
+            var input = document.getElementById("meal-input");
+            var meals = parseInt(input ? input.value : 10, 10);
+            if (isNaN(meals) || meals < 1) meals = 1;
+            var totalCents = Math.round(meals * COST_PER_MEAL * 100);
+            // Stripe Payment Links accept ?prefilled_amount=<cents> to pre-fill the amount
+            var url = PAYMENT_BASE_URL + "?prefilled_amount=" + totalCents;
+            window.open(url, "_blank");
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", initDonation);
+        } else {
+            initDonation();
+        }
+    </script>
 </body>
 
 </html>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const COST_PER_MEAL = 0.70;
-
-        // Elements
-        const input = document.getElementById("meal-input");
-        const slider = document.getElementById("meal-slider");
-        const sliderFill = document.getElementById("slider-fill");
-        const sliderThumb = document.getElementById("slider-thumb");
-        const btnMinus = document.getElementById("btn-minus");
-        const btnPlus = document.getElementById("btn-plus");
-
-        const countDisplay = document.getElementById("nft-count");
-        const priceDisplay = document.getElementById("nft-price");
-        const vizContainer = document.getElementById("nft-meal-viz");
-
-        // Logic
-        function updateUI(val) {
-            let numeric = parseInt(val, 10);
-            if (isNaN(numeric) || numeric < 1) numeric = 1;
-            if (numeric > 500) numeric = 500;
-
-            // Update inputs without triggering loops
-            if (input.value != numeric) input.value = numeric;
-
-            // Slider visually syncs up to 100, but allows input > 100
-            let percent = numeric;
-            if (percent > 100) percent = 100;
-            if (slider.value != percent) slider.value = percent;
-
-            sliderFill.style.width = `${percent}%`;
-            sliderThumb.style.left = `${percent}%`;
-
-            // Update NFT
-            countDisplay.textContent = numeric;
-            priceDisplay.textContent = "€" + (numeric * COST_PER_MEAL).toFixed(2);
-
-            // Render dots (limit to 100 visually for performance/wrapping)
-            const vizCount = Math.min(numeric, 100);
-            let dotsHTML = '';
-            for (let i = 0; i < vizCount; i++) {
-                dotsHTML += '<div class="viz-dot"></div>';
-            }
-            vizContainer.innerHTML = dotsHTML;
-        }
-
-        // Listeners
-        input.addEventListener("input", (e) => updateUI(e.target.value));
-        slider.addEventListener("input", (e) => updateUI(e.target.value));
-
-        btnMinus.addEventListener("click", () => {
-            updateUI(parseInt(input.value || 1) - 1);
-        });
-
-        btnPlus.addEventListener("click", () => {
-            updateUI(parseInt(input.value || 1) + 1);
-        });
-
-        // Init
-        updateUI(10);
-    });
-</script>
