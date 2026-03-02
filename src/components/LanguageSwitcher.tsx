@@ -21,6 +21,9 @@ export default function LanguageSwitcher() {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
+    // Hide on blog pages while translations are being generated
+    if (pathname.includes("/blog")) return null;
+
     const selectedLanguage =
         languages.find((l) => l.code === currentLang) || languages[0];
 
