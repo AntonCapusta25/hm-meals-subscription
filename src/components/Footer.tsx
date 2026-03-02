@@ -21,7 +21,7 @@ export default function Footer() {
                         />
                     </div>
                     <p className="text-white/60 text-sm">
-                        {t.copyright || "© 2024 Savor the Magic. All rights reserved."}
+                        {t.copyright || "© 2026 Homemade. All rights reserved."}
                     </p>
                 </div>
 

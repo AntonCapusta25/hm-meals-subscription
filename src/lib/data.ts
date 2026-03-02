@@ -313,16 +313,6 @@ export interface Chef {
 
 export const chefs: Chef[] = [
     {
-        name: "Hans Van Wolde",
-        image: "/images/chefs/hans.png",
-        description: "Michelin Star Chef known for Brut172."
-    },
-    {
-        name: "Ron Blaauw",
-        image: "/images/chefs/ron.png",
-        description: "Famous for his gastrobar concept."
-    },
-    {
         name: "Bergpaviljoen",
         image: "/images/chefs/berg.png",
         description: "Bistronomique excellence."
