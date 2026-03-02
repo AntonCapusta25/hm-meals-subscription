@@ -206,28 +206,6 @@ export const menus: Menu[] = [
         soldOut: true
     },
     {
-        id: "brut172",
-        title: "Brut172 Exclusive Package",
-        chef: "Hans Van Wolde",
-        price: "€99,50 p.p.",
-        image: "/images/generated/hero-secondary.png",
-        badge: "Exclusive",
-        description: "An exclusive catering package curated by Hans Van Wolde, focusing on bold flavors and exquisite presentation.",
-        items: [],
-        soldOut: true
-    },
-    {
-        id: "ron-gastrobar",
-        title: "Ron Gastrobar",
-        chef: "Ron Blaauw",
-        price: "€31,00 p.p.",
-        image: "/images/generated/hero-social.png",
-        badge: "Signature",
-        description: "Accessible top-tier dining with Ron Blaauw's signature gastrobar style. Fun, tasty, and unpretentious.",
-        items: [],
-        soldOut: true
-    },
-    {
         id: "christmas-veggie",
         title: "Vegetarian Celebration Package",
         chef: "Green Leaf Kitchen",
