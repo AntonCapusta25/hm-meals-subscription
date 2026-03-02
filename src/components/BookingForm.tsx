@@ -4,7 +4,7 @@ import { useState, useEffect, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSearchParams } from "next/navigation";
 import { Calendar, Users, Utensils, ArrowRight, Star, Sparkles, ChefHat, BookOpen, CheckCircle2 } from "lucide-react";
-import { menus, chefs } from "@/lib/data";
+import { menus } from "@/lib/data";
 import confetti from "canvas-confetti";
 import { trackEvent } from "@/lib/analytics";
 import { useI18n } from "@/contexts/I18nContext";
@@ -22,13 +22,21 @@ function BookingFormContent() {
     const [selectedChefName, setSelectedChefName] = useState("");
     const [selectedCuisine, setSelectedCuisine] = useState("");
 
+    // Derive unique chef names from non-sold-out menus (single source of truth)
+    const availableMenus = menus.filter(m => !m.soldOut);
+    const uniqueChefs = Array.from(new Set(availableMenus.map(m => m.chef)));
+
+    // Menus filtered by selected chef (show all if no chef selected)
+    const filteredMenus = selectedChefName
+        ? availableMenus.filter(m => m.chef === selectedChefName)
+        : availableMenus;
+
     // Auto-fill logic from URL
     useEffect(() => {
         const menuTitleParam = searchParams.get('menu');
         if (menuTitleParam) {
             const decodedTitle = decodeURIComponent(menuTitleParam);
             const foundMenu = menus.find(m => m.title === decodedTitle);
-
             if (foundMenu) {
                 setSelectedMenuId(foundMenu.id);
                 setSelectedChefName(foundMenu.chef);
@@ -37,17 +45,23 @@ function BookingFormContent() {
         }
     }, [searchParams]);
 
-    // Handle Menu Selection Change
+    // When chef changes → clear menu selection (let user pick from filtered list)
+    const handleChefChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        const chef = e.target.value;
+        setSelectedChefName(chef);
+        setSelectedMenuId("");
+        setSelectedCuisine("");
+    };
+
+    // When menu changes → auto-fill matching chef and cuisine
     const handleMenuChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const menuId = e.target.value;
         setSelectedMenuId(menuId);
-
         const foundMenu = menus.find(m => m.id === menuId);
         if (foundMenu) {
             setSelectedChefName(foundMenu.chef);
             setSelectedCuisine(foundMenu.badge);
         } else {
-            // Reset if "Custom/None" selected
             setSelectedChefName("");
             setSelectedCuisine("");
         }
@@ -246,7 +260,7 @@ function BookingFormContent() {
                                             className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 pl-12 text-cream focus:outline-none focus:border-[#F27D42]/50 focus:bg-white/10 transition-all appearance-none cursor-pointer"
                                         >
                                             <option className="bg-[#2D2420]" value="">{t.customMenuOption || "-- I'll Customize My Own --"}</option>
-                                            {menus.filter(menu => !menu.soldOut).map(menu => (
+                                            {filteredMenus.map(menu => (
                                                 <option key={menu.id} value={menu.id} className="bg-[#2D2420]">
                                                     {menu.title}
                                                 </option>
@@ -261,26 +275,16 @@ function BookingFormContent() {
                                         <label className="text-xs font-medium uppercase tracking-wider text-gray-500 ml-1">{t.preferredChefLabel || "Preferred Chef"}</label>
                                         <div className="relative group">
                                             <ChefHat className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#F27D42] transition-colors" size={18} />
-                                            {selectedMenuId ? (
-                                                <input
-                                                    type="text"
-                                                    value={selectedChefName}
-                                                    readOnly
-                                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 pl-12 text-cream/70 focus:outline-none cursor-not-allowed"
-                                                />
-                                            ) : (
-                                                <select
-                                                    value={selectedChefName}
-                                                    onChange={(e) => setSelectedChefName(e.target.value)}
-                                                    required
-                                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 pl-12 text-cream focus:outline-none focus:border-[#F27D42]/50 focus:bg-white/10 transition-all appearance-none cursor-pointer"
-                                                >
-                                                    <option className="bg-[#2D2420]" value="">{t.anyChefOption || "Any Chef"}</option>
-                                                    {chefs.map(chef => (
-                                                        <option key={chef.name} value={chef.name} className="bg-[#2D2420]">{chef.name}</option>
-                                                    ))}
-                                                </select>
-                                            )}
+                                            <select
+                                                value={selectedChefName}
+                                                onChange={handleChefChange}
+                                                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 pl-12 text-cream focus:outline-none focus:border-[#F27D42]/50 focus:bg-white/10 transition-all appearance-none cursor-pointer"
+                                            >
+                                                <option className="bg-[#2D2420]" value="">{t.anyChefOption || "Any Chef"}</option>
+                                                {uniqueChefs.map(chef => (
+                                                    <option key={chef} value={chef} className="bg-[#2D2420]">{chef}</option>
+                                                ))}
+                                            </select>
                                         </div>
                                     </div>
 
