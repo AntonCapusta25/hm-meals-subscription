@@ -47,7 +47,7 @@ export default async function CateringAmsterdamPage({
 
                 <p className="text-dark/70 text-lg leading-relaxed mb-8 max-w-3xl">
                     {lang === "nl"
-                        ? "Vier jij binnenkort een feestje of organiseer je een event in Amsterdam? Met onze huisgemaakte catering in Amsterdam ben je verzekerd van ambachtelijke, verse gerechten. Van intieme diners tot grote borrels, wij verzorgen de catering op locatie zodat jij kunt genieten."
+                        ? "Vier jij binnenkort een feestje of organiseer je een event in Amsterdam? Met onze huisgemaakte catering in Amsterdam ben je verzekerd van ambachtelijke, verse gerechten. Van gezelige diners tot grote borrels, wij verzorgen de catering op locatie zodat jij kunt genieten."
                         : "Celebrating a party or organizing an event in Amsterdam soon? With our homemade catering in Amsterdam, you are assured of artisanal, fresh dishes. From intimate dinners to large drinks, we provide on-site catering so you can enjoy."}
                 </p>
 

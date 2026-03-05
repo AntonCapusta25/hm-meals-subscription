@@ -38,7 +38,7 @@ export default async function ThuiskokAmsterdamPage({
 
                 <div className="prose prose-lg text-dark/70 max-w-none">
                     <p>
-                        Op zoek naar een onvergetelijke culinaire ervaring in de hoofdstad? Een <strong>thuiskok in Amsterdam</strong> boeken via Homemade betekent dat je kunt genieten van restaurantkwaliteit, gewoon bij jou aan de keukentafel. Of je nu een intiem familiediner organiseert, een verjaardag viert, of een zakelijk diner host; onze geselecteerde privékoks in Amsterdam nemen al het werk uit handen.
+                        Op zoek naar een onvergetelijke culinaire ervaring in de hoofdstad? Een <strong>thuiskok in Amsterdam</strong> boeken via Homemade betekent dat je kunt genieten van restaurantkwaliteit, gewoon bij jou aan de keukentafel. Of je nu een gezelig familiediner organiseert, een verjaardag viert, of een zakelijk diner host; onze geselecteerde privékoks in Amsterdam nemen al het werk uit handen.
                     </p>
 
                     <h2 className="font-serif text-2xl text-dark mt-8 mb-4">Wat doet een thuiskok precies?</h2>

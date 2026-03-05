@@ -41,7 +41,7 @@ export default async function KokAanHuisPage({
 
                 <div className="prose prose-lg text-dark/70 max-w-none">
                     <p>
-                        Wilt u iets te vieren hebben zonder zelf dagen in de keuken te hoeven staan? Een <strong>kok aan huis inhuren</strong> biedt de perfecte balans tussen intieme thuisgezelligheid en de verfijning van een sterrenrestaurant. Van 21-diners en jubilea tot gezellige familiebrunches, onze <Link href={`/${lang}/thuiskok-inhuren`} className="text-orange hover:underline">prive chiefs</Link> zorgen voor een avond om niet te vergeten.
+                        Wilt u iets te vieren hebben zonder zelf dagen in de keuken te hoeven staan? Een <strong>kok aan huis inhuren</strong> biedt de perfecte balans tussen gezelige thuisgezelligheid en de verfijning van een sterrenrestaurant. Van 21-diners en jubilea tot gezellige familiebrunches, onze <Link href={`/${lang}/thuiskok-inhuren`} className="text-orange hover:underline">prive chiefs</Link> zorgen voor een avond om niet te vergeten.
                     </p>
 
                     <h2 className="font-serif text-2xl text-dark mt-8 mb-4">Stap-voor-stap een kok boeken</h2>

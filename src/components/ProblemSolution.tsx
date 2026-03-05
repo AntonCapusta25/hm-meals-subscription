@@ -38,9 +38,9 @@ export default function ProblemSolution() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-heading font-bold text-dark mb-4 leading-tight">
-                        {t.title1 || "Restaurant catering is expensive."}
+                        {t.title1 || "Why overpay at crowded restaurants"}
                         <br />
-                        {t.title2 || "Team bonding is hard."}
+                        {t.title2 || "when you can enjoy an exclusive private chef experience?"}
                     </h2>
                 </motion.div>
 

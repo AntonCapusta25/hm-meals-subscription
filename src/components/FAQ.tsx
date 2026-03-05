@@ -8,29 +8,26 @@ import { useI18n } from "@/contexts/I18nContext";
 
 const fallbackFaqs = [
     {
-        question: "What's included in each package?",
-        answer: "Each package includes professional chef service, all ingredients, table setup, and cleanup. The Starter package includes a 2-course menu and non-alcoholic beverages. Growth adds a 3-course menu, alcoholic beverages, and pre-event consultation. Premium features a 4-course menu, premium beverages, event coordinator, and optional professional photos."
+        question: "What's included in your service?",
+        answer: "Our service includes a professional chef, all premium ingredients, table setup, and complete cleanup after the event. We ensure a seamless dining experience."
     },
     {
         question: "Can we customize the menu?",
-        answer: "Absolutely! All packages allow menu customization. The Starter package offers standard adjustments, while Growth and Premium packages provide extensive customization options. We work with you to create a menu that matches your preferences, dietary needs, and event theme."
+        answer: "Absolutely! We work with you to create a menu that matches your preferences, dietary needs, and event theme."
     },
     {
         question: "What about dietary restrictions?",
-        answer: "We accommodate all dietary restrictions and preferences. The Starter package includes 1 dietary accommodation, while Growth and Premium packages offer unlimited accommodations. We handle vegetarian, vegan, gluten-free, halal, kosher, and all allergy-related requirements."
+        answer: "We accommodate all dietary restrictions and preferences. We handle vegetarian, vegan, gluten-free, halal, kosher, and all allergy-related requirements."
     },
     {
         question: "How many people can we accommodate?",
-        answer: "Our packages serve different group sizes: Starter (15-30 people), Growth (20-50 people), and Premium (30-100 people). For groups outside these ranges, contact us for a custom quote. We can scale our service to match your needs."
+        answer: "Our service serves a wide range of group sizes, from 15 to 100+ people. Contact us for a custom quote and we can scale our service to match your needs."
     },
     {
         question: "Can we choose our preferred date and time?",
         answer: "Yes! We work around your schedule. During booking, you'll select your preferred date and time. We recommend booking at least 2-3 weeks in advance for best availability, though we can sometimes accommodate shorter notice for smaller events."
     },
-    {
-        question: "Is alcohol included?",
-        answer: "Alcohol is included in the Growth (wine/beer) and Premium (full beverage package) tiers. The Starter package includes non-alcoholic beverages only. You can upgrade any package to include alcoholic beverages for an additional fee."
-    },
+
     {
         question: "What if our headcount changes?",
         answer: "We understand headcounts can fluctuate. You can adjust your guest count up to 5 days before the event without penalty. Changes within 5 days may incur additional fees. We'll work with you to ensure we're prepared for your final number."
@@ -43,10 +40,7 @@ const fallbackFaqs = [
         question: "What's your cancellation policy?",
         answer: "Cancellations made 14+ days before the event receive a full refund. Cancellations 7-13 days prior receive a 50% refund. Cancellations within 7 days are non-refundable, though we can reschedule based on availability. Weather-related cancellations are handled case-by-case."
     },
-    {
-        question: "Can we add wine pairing to our menu?",
-        answer: "Yes! Wine pairing is included in the Premium package and available as an add-on for Starter and Growth packages. Our sommelier will select wines that complement each course. Pricing varies based on wine selection and guest count."
-    },
+
     {
         question: "Do you work with our existing venue?",
         answer: "We can cater at most venues including offices, private homes, event spaces, and outdoor locations. We'll need basic kitchen access (or can bring portable equipment) and space for setup. During consultation, we'll discuss your venue's specific requirements."

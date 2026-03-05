@@ -46,6 +46,7 @@
             margin-right: -50vw !important;
             min-height: 100vh !important;
             z-index: 10 !important;
+            pointer-events: auto !important;
         }
 
         /* ── GRAIN OVERLAY ── */
@@ -698,6 +699,9 @@
             justify-content: center !important;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
             transition: all 0.2s ease !important;
+            pointer-events: auto !important;
+            position: relative !important;
+            z-index: 10 !important;
         }
 
         #share-a-meal-wrapper .qty-btn:hover {
@@ -736,11 +740,12 @@
             top: 10px !important;
             left: 0 !important;
             width: 100% !important;
-            height: 8px !important;
-            background: var(--warmer) !important;
-            border-radius: 4px !important;
+            height: 12px !important;
+            background: var(--border) !important;
+            border-radius: 6px !important;
             pointer-events: none !important;
             z-index: 1 !important;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05) !important;
         }
 
         #share-a-meal-wrapper .slider-fill {
@@ -748,51 +753,103 @@
             top: 0 !important;
             left: 0 !important;
             height: 100% !important;
-            background: var(--orange) !important;
-            border-radius: 4px !important;
+            background: linear-gradient(90deg, var(--orange) 0%, #ff9a62 100%) !important;
+            border-radius: 6px !important;
             transition: width 0.1s linear !important;
+            box-shadow: 0 2px 8px rgba(242, 125, 66, 0.3) !important;
         }
 
         #share-a-meal-wrapper .slider-thumb {
             position: absolute !important;
             top: 50% !important;
-            width: 24px !important;
-            height: 24px !important;
+            width: 32px !important;
+            height: 32px !important;
             background: white !important;
-            border: 3px solid var(--orange) !important;
+            border: 4px solid var(--orange) !important;
             border-radius: 50% !important;
             transform: translate(-50%, -50%) !important;
-            box-shadow: 0 4px 12px rgba(242, 125, 66, 0.4) !important;
-            transition: left 0.1s linear !important;
+            box-shadow: 0 4px 16px rgba(242, 125, 66, 0.5) !important;
+            transition: left 0.1s linear, transform 0.2s ease !important;
             z-index: 2 !important;
+        }
+
+        #share-a-meal-wrapper .slider-thumb:hover {
+            transform: translate(-50%, -50%) scale(1.1) !important;
         }
 
         #share-a-meal-wrapper .raw-slider {
             -webkit-appearance: none !important;
             width: 100% !important;
-            height: 28px !important;
+            height: 32px !important;
             background: transparent !important;
             position: relative !important;
-            z-index: 3 !important;
+            z-index: 10 !important;
             margin: 0 !important;
             cursor: pointer !important;
+            outline: none !important;
+            border: none !important;
+            pointer-events: auto !important;
+        }
+
+        #share-a-meal-wrapper .raw-slider:focus,
+        #share-a-meal-wrapper .raw-slider:focus-visible {
+            outline: none !important;
+            box-shadow: none !important;
         }
 
         #share-a-meal-wrapper .raw-slider::-webkit-slider-thumb {
             -webkit-appearance: none !important;
-            width: 30px !important;
-            height: 30px !important;
+            width: 32px !important;
+            height: 32px !important;
             background: transparent !important;
             cursor: grab !important;
+        }
+
+        #share-a-meal-wrapper .raw-slider::-webkit-slider-thumb:active {
+            cursor: grabbing !important;
         }
 
         #share-a-meal-wrapper .slider-labels {
             display: flex !important;
             justify-content: space-between !important;
-            margin-top: 1rem !important;
+            margin-top: 1.5rem !important;
             color: var(--muted) !important;
-            font-size: 0.9rem !important;
-            font-weight: 500 !important;
+            font-size: 0.95rem !important;
+            font-weight: 600 !important;
+        }
+
+        /* PRESET BUTTONS */
+        #share-a-meal-wrapper .preset-row {
+            display: flex !important;
+            gap: 0.75rem !important;
+            margin-bottom: 2rem !important;
+            flex-wrap: wrap !important;
+        }
+
+        #share-a-meal-wrapper .preset-btn {
+            background: white !important;
+            border: 1px solid var(--border) !important;
+            padding: 0.6rem 1.25rem !important;
+            border-radius: 100px !important;
+            color: var(--navy) !important;
+            font-weight: 600 !important;
+            font-size: 1rem !important;
+            cursor: pointer !important;
+            transition: all 0.2s ease !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02) !important;
+        }
+
+        #share-a-meal-wrapper .preset-btn:hover {
+            border-color: var(--orange) !important;
+            color: var(--orange) !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 4px 12px rgba(242, 125, 66, 0.15) !important;
+        }
+
+        #share-a-meal-wrapper .preset-btn.active {
+            background: var(--warmer) !important;
+            border-color: var(--orange) !important;
+            color: var(--orange) !important;
         }
 
         /* NFT DISPLAY */
@@ -955,18 +1012,63 @@
                             Not for profit, just for people. Because good food shouldn't go to waste.
                         </p>
                         <div class="hero-cta-wrap">
-                            <a href="https://zol4dc90rf4.typeform.com/to/HdWoEkfx" class="btn-main" target="_blank">
+                            <a href="#donate-section" class="btn-main">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                    <path
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                                 </svg>
-                                Get a free meal
+                                Donate a meal
+                            </a>
+                            <a href="https://zol4dc90rf4.typeform.com/to/HdWoEkfx" target="_blank" class="btn-main"
+                                style="background: white; color: var(--navy); box-shadow: 0 8px 28px rgba(0,0,0,0.08);">
+                                Request a meal
                             </a>
                         </div>
                     </div>
                     <div class="hero-image-wrapper">
                         <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1200&auto=format&fit=crop"
                             alt="Delicious home cooked meal sharing for charity">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── INTENT SPLIT ── -->
+        <section class="section" style="padding: 100px 0 60px;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span class="eyebrow">How can we help?</span>
+                    <h2 class="section-h">Choose your path today.</h2>
+                </div>
+
+                <div class="why-grid" style="gap: 3rem;">
+                    <!-- Option 1: Share/Donate -->
+                    <div class="how-card" style="text-align: center; padding: 4rem 3rem;">
+                        <div class="how-icon-wrapper"
+                            style="margin: 0 auto 2rem; width: 120px; height: 120px; border-radius: 50%; overflow: hidden; border: 4px solid var(--orange);">
+                            <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=300&auto=format&fit=crop"
+                                style="width: 100%; height: 100%; object-fit: cover;" alt="Sharing a meal">
+                        </div>
+                        <h3 style="font-size: 2rem;">I want to share</h3>
+                        <p style="margin-bottom: 2.5rem; font-size: 1.1rem;">Buy a wholesome, home-cooked meal for
+                            someone in your local community who needs it.</p>
+                        <a href="#donate-section" class="btn-main" style="width: 100%;">Donate a Meal</a>
+                    </div>
+
+                    <!-- Option 2: Receive -->
+                    <div class="how-card" style="text-align: center; padding: 4rem 3rem;">
+                        <div class="how-icon-wrapper"
+                            style="margin: 0 auto 2rem; width: 120px; height: 120px; border-radius: 50%; overflow: hidden; border: 4px solid var(--green);">
+                            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=300&auto=format&fit=crop"
+                                style="width: 100%; height: 100%; object-fit: cover;" alt="Receiving a meal">
+                        </div>
+                        <h3 style="font-size: 2rem;">I need a meal</h3>
+                        <p style="margin-bottom: 2.5rem; font-size: 1.1rem;">Times are tough, and we're here to help.
+                            Request a nutritious, home-cooked meal, no questions asked.</p>
+                        <a href="https://zol4dc90rf4.typeform.com/to/HdWoEkfx" target="_blank" class="btn-main"
+                            style="width: 100%; background: var(--green); box-shadow: 0 8px 28px rgba(26, 77, 46, 0.35);">Request
+                            a Meal</a>
                     </div>
                 </div>
             </div>
@@ -1094,7 +1196,7 @@
         </section>
 
         <!-- ── DONATION INTERACTIVE ── -->
-        <section class="section">
+        <section id="donate-section" class="section">
             <div class="container">
                 <div class="donation-grid">
                     <!-- Left: Controls -->
@@ -1106,6 +1208,15 @@
 
                         <div class="input-group">
                             <label for="meal-input">Number of Meals</label>
+
+                            <!-- Presets -->
+                            <div class="preset-row">
+                                <button type="button" class="preset-btn" data-val="5">5 Meals</button>
+                                <button type="button" class="preset-btn active" data-val="10">10 Meals</button>
+                                <button type="button" class="preset-btn" data-val="25">25 Meals</button>
+                                <button type="button" class="preset-btn" data-val="50">50 Meals</button>
+                            </div>
+
                             <div class="input-wrapper">
                                 <button class="qty-btn" id="btn-minus">−</button>
                                 <input type="number" id="meal-input" value="10" min="1" max="500">
@@ -1196,12 +1307,13 @@
                 <p>Join a growing community committed to eliminating waste and ensuring that everyone gets a seat at the
                     table. Fill out our form to get involved.</p>
                 <div class="hero-cta-wrap">
-                    <a href="https://zol4dc90rf4.typeform.com/to/HdWoEkfx" class="btn-main" target="_blank">
+                    <a href="#donate-section" class="btn-main">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                         </svg>
-                        Get a free meal
+                        Share a meal
                     </a>
                 </div>
             </div>
@@ -1212,8 +1324,7 @@
         // Payment base URL — update with your Stripe Payment Link
         // Amount is appended as ?prefilled_amount=<cents> so Stripe pre-fills it.
         // Replace the URL below with your actual Stripe payment link.
-        var PAYMENT_BASE_URL = "https://buy.stripe.com/YOUR_LINK_HERE";
-
+        var PAYMENT_BASE_URL = "https://donate.stripe.com/00w3cv7lg7Vj8lO9e84800b";
         function initDonation() {
             var input = document.getElementById("meal-input");
             var slider = document.getElementById("meal-slider");
@@ -1224,6 +1335,7 @@
             var countDisplay = document.getElementById("nft-count");
             var priceDisplay = document.getElementById("nft-price");
             var vizContainer = document.getElementById("nft-meal-viz");
+            var presetBtns = document.querySelectorAll(".preset-btn");
 
             if (!input || !slider) return; // not in DOM yet
 
@@ -1246,12 +1358,27 @@
                 var html = "";
                 for (var i = 0; i < vizCount; i++) html += '<div class="viz-dot"></div>';
                 vizContainer.innerHTML = html;
+
+                // Update preset buttons active state
+                presetBtns.forEach(function (btn) {
+                    if (parseInt(btn.getAttribute("data-val"), 10) === numeric) {
+                        btn.classList.add("active");
+                    } else {
+                        btn.classList.remove("active");
+                    }
+                });
             }
 
             input.addEventListener("input", function () { updateUI(input.value); });
             slider.addEventListener("input", function () { updateUI(slider.value); });
             btnMinus.addEventListener("click", function () { updateUI(parseInt(input.value || 1) - 1); });
             btnPlus.addEventListener("click", function () { updateUI(parseInt(input.value || 1) + 1); });
+
+            presetBtns.forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    updateUI(btn.getAttribute("data-val"));
+                });
+            });
 
             updateUI(10);
         }

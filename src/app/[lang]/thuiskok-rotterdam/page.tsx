@@ -43,7 +43,7 @@ export default async function ThuiskokRotterdamPage({
 
                     <h2 className="font-serif text-2xl text-dark mt-8 mb-4">De voordelen van een kok aan huis in Rotterdam</h2>
                     <p>
-                        Wanneer je een <Link href={`/${lang}/kok-aan-huis-inhuren`} className="text-orange hover:underline">kok aan huis inhuren</Link> via Homemade overweegt, kies je voor gemak en kwaliteit. Geen gedoe met reserveringen in een druk restaurant aan de Witte de Withstraat, maar intiem dineren. De kok verzorgt alles: van het zorgvuldig selecteren van verse ingrediënten tot aan de afwas.
+                        Wanneer je een <Link href={`/${lang}/kok-aan-huis-inhuren`} className="text-orange hover:underline">kok aan huis inhuren</Link> via Homemade overweegt, kies je voor gemak en kwaliteit. Geen gedoe met reserveringen in een druk restaurant aan de Witte de Withstraat, maar gezelig dineren. De kok verzorgt alles: van het zorgvuldig selecteren van verse ingrediënten tot aan de afwas.
                     </p>
 
                     <h2 className="font-serif text-2xl text-dark mt-8 mb-4">Ruim aanbod aan culinaire stijlen</h2>

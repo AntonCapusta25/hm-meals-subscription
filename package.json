@@ -9,7 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.2",
     "@sendgrid/mail": "^8.1.6",
     "@supabase/supabase-js": "^2.89.0",
@@ -29,11 +28,15 @@
   },
   "devDependencies": {
     "@formatjs/intl-localematcher": "^0.8.1",
+    "@google/genai": "^1.43.0",
+    "@google/generative-ai": "^0.24.1",
     "@tailwindcss/postcss": "^4",
     "@types/negotiator": "^0.6.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitalets/google-translate-api": "^9.2.1",
+    "deepl-node": "^1.24.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.10",
     "negotiator": "^1.0.0",

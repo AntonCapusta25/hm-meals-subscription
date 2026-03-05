@@ -11,20 +11,20 @@
         "titlePart1": "Uitzonderlijke Catering",
         "titlePart2": "voor Elke",
         "titleHighlight": "Gelegenheid",
-        "subtitle": "Van intieme diners tot grote vieringen, wij brengen culinair genot naar uw evenement.",
+        "subtitle": "Van gezelige diners tot grote vieringen, wij brengen culinair genot naar uw evenement.",
         "cta": "Vraag Offerte Aan"
     },
     "partners": {
-        "heading": "Met Trots Samenwerkend Met"
+        "heading": "In trotse samenwerking met"
     },
     "problemSolution": {
-        "title1": "Catering van een restaurant is duur.",
-        "title2": "Teambuilding is moeilijk.",
+        "title1": "Waarom te veel betalen bij drukke restaurants,",
+        "title2": "als u kunt genieten van een exclusieve privékok-ervaring?",
         "solutionTitle": "Privékok teamdiners tegen 40% lagere kosten",
         "solutionDesc": "Sla de te dure restaurants over. Krijg uitzonderlijk eten, echte connecties en aanzienlijke besparingen.",
         "benefit1Title": "Beter eten dan in restaurants",
         "benefit1Desc": "Door de chef-kok bereide maaltijden met hoogwaardige ingrediënten, afgestemd op uw voorkeuren",
-        "benefit2Title": "Intieme sfeer voor echte verbinding",
+        "benefit2Title": "Gezelige sfeer voor echte verbinding",
         "benefit2Desc": "Creëer betekenisvolle verbindingen in een comfortabele, privéomgeving",
         "benefit3Title": "Volledig aanpasbaar en flexibel",
         "benefit3Desc": "Pas de menu's, timing en service aan uw exacte behoeften aan"
@@ -94,7 +94,7 @@
             },
             "romantic": {
                 "title": "Privé Dineren",
-                "subtitle": "Intiem"
+                "subtitle": "Gezelig"
             }
         }
     },
@@ -212,28 +212,24 @@
         "contactTeam": "Neem Contact Op",
         "items": [
             {
-                "question": "Wat is inbegrepen in elk pakket?",
-                "answer": "Elk pakket is inclusief professionele chef-kok service, alle ingrediënten, tafelopstelling en opruimen. Het Starter pakket bevat een 2-gangen menu en non-alcoholische dranken. Growth voegt een 3-gangen menu, alcoholische dranken en pre-event overleg toe. Premium biedt een 4-gangen menu, premium dranken, een evenementencoördinator en optionele professionele foto's."
+                "question": "Wat is inbegrepen in uw service?",
+                "answer": "Onze service is inclusief een professionele chef-kok, alle premium ingrediënten, tafelopstelling en volledige opruiming na het evenement. Wij zorgen voor een naadloze dinerervaring."
             },
             {
                 "question": "Kunnen we het menu aanpassen?",
-                "answer": "Absoluut! Alle pakketten bieden de mogelijkheid om het menu aan te passen. Het Starter pakket biedt standaard aanpassingen, terwijl Growth en Premium pakketten uitgebreide aanpassingsmogelijkheden bieden. We werken met u samen om een menu samen te stellen dat past bij uw voorkeuren, dieetwensen en evenementthema."
+                "answer": "Absoluut! We werken met u samen om een menu samen te stellen dat past bij uw voorkeuren, dieetwensen en evenementthema."
             },
             {
                 "question": "Hoe zit het met dieetwensen?",
-                "answer": "We houden rekening met alle dieetbeperkingen en -voorkeuren. Het Starter pakket bevat 1 dieetaanpassing, terwijl Growth en Premium pakketten onbeperkte aanpassingen bieden. We behandelen vegetarische, veganistische, glutenvrije, halal, koosjere en alle allergiegerelateerde vereisten."
+                "answer": "We houden rekening met alle dieetbeperkingen en -voorkeuren. We behandelen vegetarische, veganistische, glutenvrije, halal, koosjere en alle allergiegerelateerde vereisten."
             },
             {
                 "question": "Hoeveel personen kunnen we ontvangen?",
-                "answer": "Onze pakketten bedienen verschillende groepsgroottes: Starter (15-30 personen), Growth (20-50 personen) en Premium (30-100 personen). Neem voor groepen buiten deze aantallen contact met ons op voor een offerte op maat. We kunnen onze service aanpassen aan uw behoeften."
+                "answer": "Onze service bedient een breed scala aan groepsgroottes, van 15 tot 100+ personen. Neem contact met ons op voor een offerte op maat en we kunnen onze service aanpassen aan uw behoeften."
             },
             {
                 "question": "Kunnen we onze gewenste datum en tijd kiezen?",
                 "answer": "Ja! Wij werken om uw schema heen. Tijdens het boeken kiest u de gewenste datum en tijd. We raden aan om minimaal 2-3 weken van tevoren te boeken voor de beste beschikbaarheid, hoewel we voor kleinere evenementen soms op kortere termijn kunnen plannen."
-            },
-            {
-                "question": "Is alcohol inbegrepen?",
-                "answer": "Alcohol is inbegrepen bij de Growth (wijn/bier) en Premium (volledig drankenpakket) niveaus. Het Starter pakket bevat uitsluitend alcoholvrije dranken. U kunt elk pakket tegen een meerprijs upgraden met alcoholische dranken."
             },
             {
                 "question": "Wat als ons aantal gasten verandert?",
@@ -246,10 +242,6 @@
             {
                 "question": "Wat is uw annuleringsbeleid?",
                 "answer": "Annuleringen die 14+ dagen voor het evenement zijn gemaakt, krijgen een volledige terugbetaling. Annuleringen 7-13 dagen vooraf krijgen 50%. Annuleringen binnen 7 dagen worden niet gerestitueerd, hoewel we kunnen verzetten op basis van beschikbaarheid. Weer gerelateerde annuleringen worden per geval behandeld."
-            },
-            {
-                "question": "Kunnen we wijnarrangementen toevoegen aan ons menu?",
-                "answer": "Ja! Wijnarrangement is inbegrepen in het Premium-pakket en beschikbaar als add-on voor Starter- en Growth-pakketten. Onze sommelier selecteert wijnen die bij elke gang passen. Prijzen variëren op basis van wijnselectie en aantal gasten."
             },
             {
                 "question": "Werken jullie met onze bestaande locatie?",
@@ -382,5 +374,35 @@
     "metadata": {
         "homeTitle": "Huisgemaakte Maaltijden Bezorgen | Thuiskok in Amsterdam & Nederland | Homemade",
         "homeDescription": "Bestel verse, huisgemaakte maaltijden van gecertificeerde thuiskoks bij jou in de buurt. Betaalbaar, lekker en altijd vers bereid. Bestel vandaag in Amsterdam, Rotterdam en Enschede."
+    },
+    "cateringCalculator": {
+        "badge": "💰 Besparingscalculator",
+        "title1": "Zie hoeveel uw team",
+        "title2": "kan besparen",
+        "subtitle": "Vergelijk de kosten van restaurant catering vs. Homemade catering. Gebruik de schuifregelaars.",
+        "configTitle": "Stel uw evenement in",
+        "eventTypeLabel": "Type evenement",
+        "guestsLabel": "Aantal gasten",
+        "guestsMin": "5 gasten",
+        "guestsMax": "200 gasten",
+        "eventsLabel": "Evenementen per jaar",
+        "eventsMin": "1x",
+        "eventsMax": "24x / jaar",
+        "noteRef": "💡 Gebaseerd op gemiddelde restaurant cateringtarieven vergeleken met Homemade. De werkelijke besparing kan variëren.",
+        "saveText": "U kunt besparen",
+        "perYearText": "per jaar",
+        "lessThanText": "minder dan restaurants",
+        "perEventSave": "Besparing per event",
+        "over5Years": "Over 5 jaar",
+        "costBreakdown": "Jaarlijks kostenoverzicht",
+        "restaurantCatering": "Restaurant catering",
+        "homemadeCatering": "Homemade catering",
+        "bookBtn": "Boek uw eerste evenement →",
+        "mealLabels": {
+            "lunch": "Team Lunch",
+            "dinner": "Team Diner",
+            "drinks": "Borrel & Snacks",
+            "breakfast": "Ontbijt Meeting"
+        }
     }
 }

@@ -18,8 +18,8 @@
         "heading": "Proudly Partnering With"
     },
     "problemSolution": {
-        "title1": "Restaurant catering is expensive.",
-        "title2": "Team bonding is hard.",
+        "title1": "Why overpay at crowded restaurants",
+        "title2": "when you can enjoy an exclusive private chef experience?",
         "solutionTitle": "Private chef team dinners at 40% less cost",
         "solutionDesc": "Skip the overpriced restaurants. Get exceptional food, real connections, and significant savings.",
         "benefit1Title": "Better food than restaurants",
@@ -212,28 +212,24 @@
         "contactTeam": "Contact Our Team",
         "items": [
             {
-                "question": "What's included in each package?",
-                "answer": "Each package includes professional chef service, all ingredients, table setup, and cleanup. The Starter package includes a 2-course menu and non-alcoholic beverages. Growth adds a 3-course menu, alcoholic beverages, and pre-event consultation. Premium features a 4-course menu, premium beverages, event coordinator, and optional professional photos."
+                "question": "What's included in your service?",
+                "answer": "Our service includes a professional chef, all premium ingredients, table setup, and complete cleanup after the event. We ensure a seamless dining experience."
             },
             {
                 "question": "Can we customize the menu?",
-                "answer": "Absolutely! All packages allow menu customization. The Starter package offers standard adjustments, while Growth and Premium packages provide extensive customization options. We work with you to create a menu that matches your preferences, dietary needs, and event theme."
+                "answer": "Absolutely! We work with you to create a menu that matches your preferences, dietary needs, and event theme."
             },
             {
                 "question": "What about dietary restrictions?",
-                "answer": "We accommodate all dietary restrictions and preferences. The Starter package includes 1 dietary accommodation, while Growth and Premium packages offer unlimited accommodations. We handle vegetarian, vegan, gluten-free, halal, kosher, and all allergy-related requirements."
+                "answer": "We accommodate all dietary restrictions and preferences. We handle vegetarian, vegan, gluten-free, halal, kosher, and all allergy-related requirements."
             },
             {
                 "question": "How many people can we accommodate?",
-                "answer": "Our packages serve different group sizes: Starter (15-30 people), Growth (20-50 people), and Premium (30-100 people). For groups outside these ranges, contact us for a custom quote. We can scale our service to match your needs."
+                "answer": "Our service serves a wide range of group sizes, from 15 to 100+ people. Contact us for a custom quote and we can scale our service to match your needs."
             },
             {
                 "question": "Can we choose our preferred date and time?",
                 "answer": "Yes! We work around your schedule. During booking, you'll select your preferred date and time. We recommend booking at least 2-3 weeks in advance for best availability, though we can sometimes accommodate shorter notice for smaller events."
-            },
-            {
-                "question": "Is alcohol included?",
-                "answer": "Alcohol is included in the Growth (wine/beer) and Premium (full beverage package) tiers. The Starter package includes non-alcoholic beverages only. You can upgrade any package to include alcoholic beverages for an additional fee."
             },
             {
                 "question": "What if our headcount changes?",
@@ -246,10 +242,6 @@
             {
                 "question": "What's your cancellation policy?",
                 "answer": "Cancellations made 14+ days before the event receive a full refund. Cancellations 7-13 days prior receive a 50% refund. Cancellations within 7 days are non-refundable, though we can reschedule based on availability. Weather-related cancellations are handled case-by-case."
-            },
-            {
-                "question": "Can we add wine pairing to our menu?",
-                "answer": "Yes! Wine pairing is included in the Premium package and available as an add-on for Starter and Growth packages. Our sommelier will select wines that complement each course. Pricing varies based on wine selection and guest count."
             },
             {
                 "question": "Do you work with our existing venue?",
@@ -382,5 +374,35 @@
     "metadata": {
         "homeTitle": "Homemade Meals Delivery | Private Chef in Amsterdam & Netherlands",
         "homeDescription": "Order fresh, homemade meals from certified private chefs near you. Affordable, delicious, and always freshly prepared. Order today in Amsterdam, Rotterdam, and Enschede."
+    },
+    "cateringCalculator": {
+        "badge": "💰 Savings Calculator",
+        "title1": "See how much your team",
+        "title2": "could save",
+        "subtitle": "Compare the cost of restaurant catering vs. Homemade catering. Adjust the sliders to match your setup.",
+        "configTitle": "Configure your event",
+        "eventTypeLabel": "Event type",
+        "guestsLabel": "Number of guests",
+        "guestsMin": "5 guests",
+        "guestsMax": "200 guests",
+        "eventsLabel": "Events per year",
+        "eventsMin": "1x",
+        "eventsMax": "24x / year",
+        "noteRef": "💡 Based on average Amsterdam restaurant catering rates vs. Homemade's transparent pricing. Actual savings may vary.",
+        "saveText": "You could save",
+        "perYearText": "per year",
+        "lessThanText": "less than restaurants",
+        "perEventSave": "Per event saving",
+        "over5Years": "Over 5 years",
+        "costBreakdown": "Annual cost breakdown",
+        "restaurantCatering": "Restaurant catering",
+        "homemadeCatering": "Homemade catering",
+        "bookBtn": "Book your first event →",
+        "mealLabels": {
+            "lunch": "Team Lunch",
+            "dinner": "Team Dinner",
+            "drinks": "Drinks & Snacks",
+            "breakfast": "Breakfast Meeting"
+        }
     }
 }

@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
+import { useI18n } from "@/contexts/I18nContext";
 
 // Average restaurant catering costs per person by meal type
 const RESTAURANT_PPP: Record<string, number> = {
@@ -31,9 +32,14 @@ function formatEur(value: number) {
 }
 
 export default function CateringSavingsCalculator() {
+    const { dictionary } = useI18n();
+    const t = (dictionary as any)?.cateringCalculator || {};
+
     const [guests, setGuests] = useState(25);
     const [mealType, setMealType] = useState<"lunch" | "dinner" | "drinks" | "breakfast">("lunch");
     const [events, setEvents] = useState(4); // per year
+
+    const mealLabels = t.mealLabels || MEAL_LABELS;
 
     const restaurantTotal = useMemo(() => guests * RESTAURANT_PPP[mealType] * events, [guests, mealType, events]);
     const homemadeTotal = useMemo(() => guests * HOMEMADE_PPP[mealType] * events, [guests, mealType, events]);
@@ -58,14 +64,14 @@ export default function CateringSavingsCalculator() {
                     className="text-center mb-16"
                 >
                     <div className="inline-flex items-center gap-2 bg-orange/10 text-orange border border-orange/20 rounded-full px-5 py-2 text-sm font-bold uppercase tracking-widest mb-6">
-                        💰 Savings Calculator
+                        {t.badge || "💰 Savings Calculator"}
                     </div>
                     <h2 className="text-4xl md:text-6xl font-heading font-bold text-dark mb-4 leading-tight">
-                        See how much your team<br />
-                        <span className="text-orange">could save</span>
+                        {t.title1 || "See how much your team"}<br />
+                        <span className="text-orange">{t.title2 || "could save"}</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Compare the cost of restaurant catering vs. Homemade catering. Adjust the sliders to match your setup.
+                        {t.subtitle || "Compare the cost of restaurant catering vs. Homemade catering. Adjust the sliders to match your setup."}
                     </p>
                 </motion.div>
 
@@ -80,31 +86,34 @@ export default function CateringSavingsCalculator() {
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100"
                     >
-                        <h3 className="text-2xl font-heading font-bold text-dark mb-8">Configure your event</h3>
+                        <h3 className="text-2xl font-heading font-bold text-dark mb-8">{t.configTitle || "Configure your event"}</h3>
 
                         {/* Meal type selector */}
                         <div className="mb-8">
-                            <label className="block text-sm font-bold text-gray-500 uppercase tracking-widest mb-3">Event type</label>
+                            <label className="block text-sm font-bold text-gray-500 uppercase tracking-widest mb-3">{t.eventTypeLabel || "Event type"}</label>
                             <div className="grid grid-cols-2 gap-2">
-                                {Object.entries(MEAL_LABELS).map(([key, label]) => (
-                                    <button
-                                        key={key}
-                                        onClick={() => setMealType(key as any)}
-                                        className={`py-3 px-4 rounded-xl text-sm font-bold transition-all border ${mealType === key
-                                            ? "bg-[#F27D42] text-white border-[#F27D42] shadow-lg shadow-orange/20"
-                                            : "bg-gray-50 text-gray-600 border-gray-200 hover:border-[#F27D42]/40 hover:text-[#F27D42]"
-                                            }`}
-                                    >
-                                        {label}
-                                    </button>
-                                ))}
+                                {Object.entries(MEAL_LABELS).map(([key, defaultLabel]) => {
+                                    const label = (t.mealLabels as Record<string, string>)?.[key] || defaultLabel;
+                                    return (
+                                        <button
+                                            key={key}
+                                            onClick={() => setMealType(key as any)}
+                                            className={`py-3 px-4 rounded-xl text-sm font-bold transition-all border ${mealType === key
+                                                ? "bg-[#F27D42] text-white border-[#F27D42] shadow-lg shadow-orange/20"
+                                                : "bg-gray-50 text-gray-600 border-gray-200 hover:border-[#F27D42]/40 hover:text-[#F27D42]"
+                                                }`}
+                                        >
+                                            {label}
+                                        </button>
+                                    );
+                                })}
                             </div>
                         </div>
 
                         {/* Guests slider */}
                         <div className="mb-8">
                             <div className="flex justify-between items-end mb-3">
-                                <label className="text-sm font-bold text-gray-500 uppercase tracking-widest">Number of guests</label>
+                                <label className="text-sm font-bold text-gray-500 uppercase tracking-widest">{t.guestsLabel || "Number of guests"}</label>
                                 <span className="text-2xl font-heading font-bold text-dark">{guests}</span>
                             </div>
                             <input
@@ -118,15 +127,15 @@ export default function CateringSavingsCalculator() {
                                 style={{ background: `linear-gradient(to right, #F27D42 ${((guests - 5) / 195) * 100}%, #e5e7eb ${((guests - 5) / 195) * 100}%)` }}
                             />
                             <div className="flex justify-between mt-2 text-xs text-gray-400 font-medium">
-                                <span>5 guests</span>
-                                <span>200 guests</span>
+                                <span>{t.guestsMin || "5 guests"}</span>
+                                <span>{t.guestsMax || "200 guests"}</span>
                             </div>
                         </div>
 
                         {/* Events per year */}
                         <div className="mb-2">
                             <div className="flex justify-between items-end mb-3">
-                                <label className="text-sm font-bold text-gray-500 uppercase tracking-widest">Events per year</label>
+                                <label className="text-sm font-bold text-gray-500 uppercase tracking-widest">{t.eventsLabel || "Events per year"}</label>
                                 <span className="text-2xl font-heading font-bold text-dark">{events}</span>
                             </div>
                             <input
@@ -140,14 +149,14 @@ export default function CateringSavingsCalculator() {
                                 style={{ background: `linear-gradient(to right, #F27D42 ${((events - 1) / 23) * 100}%, #e5e7eb ${((events - 1) / 23) * 100}%)` }}
                             />
                             <div className="flex justify-between mt-2 text-xs text-gray-400 font-medium">
-                                <span>1x</span>
-                                <span>24x / year</span>
+                                <span>{t.eventsMin || "1x"}</span>
+                                <span>{t.eventsMax || "24x / year"}</span>
                             </div>
                         </div>
 
                         {/* Comparison note */}
                         <div className="mt-8 p-4 rounded-2xl bg-gray-50 border border-gray-100 text-sm text-gray-500 leading-relaxed">
-                            <p>💡 Based on average Amsterdam restaurant catering rates vs. Homemade's transparent pricing. Actual savings may vary.</p>
+                            <p>{t.noteRef || "💡 Based on average Amsterdam restaurant catering rates vs. Homemade's transparent pricing. Actual savings may vary."}</p>
                         </div>
                     </motion.div>
 
@@ -163,7 +172,7 @@ export default function CateringSavingsCalculator() {
                         <div className="bg-[#1A2D20] rounded-3xl p-8 md:p-10 text-white relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-[#F27D42]/20 rounded-full blur-3xl pointer-events-none" />
                             <div className="relative z-10">
-                                <p className="text-white/70 font-medium mb-2 text-lg">You could save</p>
+                                <p className="text-white/70 font-medium mb-2 text-lg">{t.saveText || "You could save"}</p>
                                 <motion.div
                                     key={savings}
                                     initial={{ opacity: 0, scale: 0.95 }}
@@ -173,17 +182,17 @@ export default function CateringSavingsCalculator() {
                                 >
                                     {formatEur(savings)}
                                 </motion.div>
-                                <p className="text-white/70 font-medium mb-8 text-lg">per year · {savingsPct}% less than restaurants</p>
+                                <p className="text-white/70 font-medium mb-8 text-lg">{t.perYearText || "per year"} · {savingsPct}% {t.lessThanText || "less than restaurants"}</p>
 
                                 <div className="w-full h-px bg-white/10 mb-8" />
 
                                 <div className="grid grid-cols-2 gap-6">
                                     <div>
-                                        <p className="text-white/60 text-sm font-medium mb-1">Per event saving</p>
+                                        <p className="text-white/60 text-sm font-medium mb-1">{t.perEventSave || "Per event saving"}</p>
                                         <p className="font-heading font-bold text-2xl">{formatEur(perEventSaving)}</p>
                                     </div>
                                     <div>
-                                        <p className="text-white/60 text-sm font-medium mb-1">Over 5 years</p>
+                                        <p className="text-white/60 text-sm font-medium mb-1">{t.over5Years || "Over 5 years"}</p>
                                         <p className="font-heading font-bold text-2xl">{formatEur(savings * 5)}</p>
                                     </div>
                                 </div>
@@ -192,12 +201,12 @@ export default function CateringSavingsCalculator() {
 
                         {/* Cost breakdown */}
                         <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
-                            <h4 className="font-heading font-bold text-dark mb-6 text-lg">Annual cost breakdown</h4>
+                            <h4 className="font-heading font-bold text-dark mb-6 text-lg">{t.costBreakdown || "Annual cost breakdown"}</h4>
                             <div className="space-y-4">
                                 {/* Restaurant */}
                                 <div>
                                     <div className="flex justify-between items-center mb-1.5">
-                                        <span className="text-sm font-medium text-gray-500">Restaurant catering</span>
+                                        <span className="text-sm font-medium text-gray-500">{t.restaurantCatering || "Restaurant catering"}</span>
                                         <span className="font-bold text-dark">{formatEur(restaurantTotal)}</span>
                                     </div>
                                     <div className="w-full bg-gray-100 rounded-full h-2.5">
@@ -207,7 +216,7 @@ export default function CateringSavingsCalculator() {
                                 {/* Homemade */}
                                 <div>
                                     <div className="flex justify-between items-center mb-1.5">
-                                        <span className="text-sm font-medium text-gray-500">Homemade catering</span>
+                                        <span className="text-sm font-medium text-gray-500">{t.homemadeCatering || "Homemade catering"}</span>
                                         <span className="font-bold text-[#F27D42]">{formatEur(homemadeTotal)}</span>
                                     </div>
                                     <div className="w-full bg-gray-100 rounded-full h-2.5">
@@ -226,7 +235,7 @@ export default function CateringSavingsCalculator() {
                                 href="#booking"
                                 className="mt-8 block w-full text-center bg-[#F27D42] text-white font-heading font-bold text-lg py-4 rounded-2xl transition-all hover:bg-[#d66a35] shadow-lg hover:shadow-xl hover:scale-[1.02]"
                             >
-                                Book your first event →
+                                {t.bookBtn || "Book your first event →"}
                             </a>
                         </div>
                     </motion.div>
