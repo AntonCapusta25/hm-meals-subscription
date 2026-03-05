@@ -8,10 +8,13 @@ import { trackCTAClick } from "@/lib/analytics";
 import { useI18n } from "@/contexts/I18nContext";
 
 const HERO_IMAGES = [
-    "/images/hero-48.png",
-    "/images/private-dining-45.png",
-    "/images/hero-49.png",
-    "/images/hero-51.png"
+    "/images/hero-banners/1.png",
+    "/images/hero-banners/2.png",
+    "/images/hero-banners/3.png",
+    "/images/hero-banners/4.png",
+    "/images/hero-banners/5.png",
+    "/images/hero-banners/6.png",
+    "/images/hero-banners/7.png"
 ];
 
 interface HeroProps {

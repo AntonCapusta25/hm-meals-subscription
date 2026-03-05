@@ -82,7 +82,7 @@ export default function Navbar() {
                     {t.menu || "Menus"}
                 </Link>
                 <Link href={`/${i18n.lang || 'en'}#occasions`} className="hover:text-orange transition-colors">
-                    {(t as any).occasions || "Occasions"}
+                    {(i18n?.dictionary as any)?.occasions?.title || "Occasions"}
                 </Link>
                 <Link href={`/${i18n.lang || 'en'}/blog`} className="hover:text-orange transition-colors">
                     {(t as any).blog || "Blog"}
