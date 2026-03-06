@@ -42,6 +42,10 @@ export default function CateringSavingsCalculator() {
     const guestsRef = useRef(guests);
     const eventsRef = useRef(events);
     const mealTypeRef = useRef(mealType);
+    const guestsLabelRef = useRef<HTMLSpanElement>(null);
+    const eventsLabelRef = useRef<HTMLSpanElement>(null);
+    const guestsSliderRef = useRef<HTMLInputElement>(null);
+    const eventsSliderRef = useRef<HTMLInputElement>(null);
 
     // Derived calculations — only recalculate when state changes (not on every DOM event)
     const restaurantTotal = guests * RESTAURANT_PPP[mealType] * events;
@@ -57,8 +61,9 @@ export default function CateringSavingsCalculator() {
     const handleGuestsChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
         const val = Number(e.target.value);
         guestsRef.current = val;
-        // Update gradient live via inline style without React state
+        // Update gradient AND label live via DOM
         e.target.style.background = `linear-gradient(to right, #F27D42 ${((val - 5) / 195) * 100}%, #e5e7eb ${((val - 5) / 195) * 100}%)`;
+        if (guestsLabelRef.current) guestsLabelRef.current.textContent = String(val);
     }, []);
 
     const handleGuestsCommit = useCallback((e: React.ChangeEvent<HTMLInputElement> | React.PointerEvent<HTMLInputElement>) => {
@@ -69,6 +74,7 @@ export default function CateringSavingsCalculator() {
         const val = Number(e.target.value);
         eventsRef.current = val;
         e.target.style.background = `linear-gradient(to right, #F27D42 ${((val - 1) / 23) * 100}%, #e5e7eb ${((val - 1) / 23) * 100}%)`;
+        if (eventsLabelRef.current) eventsLabelRef.current.textContent = String(val);
     }, []);
 
     const handleEventsCommit = useCallback(() => {
@@ -127,7 +133,7 @@ export default function CateringSavingsCalculator() {
                         <div className="mb-8">
                             <div className="flex justify-between items-end mb-3">
                                 <label className="text-sm font-bold text-gray-500 uppercase tracking-widest">{t.guestsLabel || "Number of guests"}</label>
-                                <span className="text-2xl font-heading font-bold text-dark">{guests}</span>
+                                <span ref={guestsLabelRef} className="text-2xl font-heading font-bold text-dark">{guests}</span>
                             </div>
                             <input
                                 type="range"
@@ -151,7 +157,7 @@ export default function CateringSavingsCalculator() {
                         <div className="mb-2">
                             <div className="flex justify-between items-end mb-3">
                                 <label className="text-sm font-bold text-gray-500 uppercase tracking-widest">{t.eventsLabel || "Events per year"}</label>
-                                <span className="text-2xl font-heading font-bold text-dark">{events}</span>
+                                <span ref={eventsLabelRef} className="text-2xl font-heading font-bold text-dark">{events}</span>
                             </div>
                             <input
                                 type="range"
