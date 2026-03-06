@@ -39,7 +39,7 @@ export const cuisines: Cuisine[] = [
     {
         id: "asian",
         title: "Asian Fusion",
-        image: "/images/generated/cuisine-asian.png",
+        image: "/images/cuisine-asian.jpg",
         description: "A bold mix of Eastern flavors with modern culinary techniques."
     },
     {
@@ -232,7 +232,7 @@ export const menus: Menu[] = [
         title: "Asian Fusion Package",
         chef: "Kenji Moto",
         price: "€75,00 p.p.",
-        image: "/images/generated/cuisine-asian.png",
+        image: "/images/cuisine-asian.jpg",
         badge: "Fusion",
         description: "East meets West in this spectacular fusion menu. Unexpected flavors for a memorable event.",
         items: [],
