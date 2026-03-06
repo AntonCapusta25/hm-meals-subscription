@@ -118,14 +118,6 @@ export default function CateringSavingsCalculator() {
                                 <label className="text-sm font-bold text-gray-500 uppercase tracking-widest">{t.guestsLabel || "Number of guests"}</label>
                                 <span className="text-2xl font-heading font-bold text-dark">{guests}</span>
                             </div>
-                            {/* Custom track with DOM-updated fill bar */}
-                            <div className="relative h-2 bg-gray-200 rounded-full mb-1">
-                                <div
-                                    ref={guestsFillRef}
-                                    className="absolute left-0 top-0 h-2 bg-[#F27D42] rounded-full"
-                                    style={{ width: `${guestsPct}%` }}
-                                />
-                            </div>
                             <input
                                 type="range"
                                 min={5}
@@ -133,10 +125,10 @@ export default function CateringSavingsCalculator() {
                                 step={5}
                                 value={guests}
                                 onChange={handleGuestsChange}
-                                className="w-full h-4 rounded-full appearance-none cursor-pointer opacity-0 -mt-3 relative z-10"
-                                style={{ touchAction: "none" }}
+                                className="w-full h-2 rounded-full appearance-none cursor-pointer accent-[#F27D42]"
+                                style={{ background: `linear-gradient(to right, #F27D42 ${guestsPct}%, #e5e7eb ${guestsPct}%)` }}
                             />
-                            <div className="flex justify-between -mt-1 text-xs text-gray-400 font-medium">
+                            <div className="flex justify-between mt-2 text-xs text-gray-400 font-medium">
                                 <span>{t.guestsMin || "5 guests"}</span>
                                 <span>{t.guestsMax || "200 guests"}</span>
                             </div>
@@ -148,13 +140,6 @@ export default function CateringSavingsCalculator() {
                                 <label className="text-sm font-bold text-gray-500 uppercase tracking-widest">{t.eventsLabel || "Events per year"}</label>
                                 <span className="text-2xl font-heading font-bold text-dark">{events}</span>
                             </div>
-                            <div className="relative h-2 bg-gray-200 rounded-full mb-1">
-                                <div
-                                    ref={eventsFillRef}
-                                    className="absolute left-0 top-0 h-2 bg-[#F27D42] rounded-full"
-                                    style={{ width: `${eventsPct}%` }}
-                                />
-                            </div>
                             <input
                                 type="range"
                                 min={1}
@@ -162,10 +147,10 @@ export default function CateringSavingsCalculator() {
                                 step={1}
                                 value={events}
                                 onChange={handleEventsChange}
-                                className="w-full h-4 rounded-full appearance-none cursor-pointer opacity-0 -mt-3 relative z-10"
-                                style={{ touchAction: "none" }}
+                                className="w-full h-2 rounded-full appearance-none cursor-pointer accent-[#F27D42]"
+                                style={{ background: `linear-gradient(to right, #F27D42 ${eventsPct}%, #e5e7eb ${eventsPct}%)` }}
                             />
-                            <div className="flex justify-between -mt-1 text-xs text-gray-400 font-medium">
+                            <div className="flex justify-between mt-2 text-xs text-gray-400 font-medium">
                                 <span>{t.eventsMin || "1x"}</span>
                                 <span>{t.eventsMax || "24x / year"}</span>
                             </div>
