@@ -1,6 +1,5 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { trackFAQClick, trackCTAClick } from "@/lib/analytics";
@@ -27,7 +26,6 @@ const fallbackFaqs = [
         question: "Can we choose our preferred date and time?",
         answer: "Yes! We work around your schedule. During booking, you'll select your preferred date and time. We recommend booking at least 2-3 weeks in advance for best availability, though we can sometimes accommodate shorter notice for smaller events."
     },
-
     {
         question: "What if our headcount changes?",
         answer: "We understand headcounts can fluctuate. You can adjust your guest count up to 5 days before the event without penalty. Changes within 5 days may incur additional fees. We'll work with you to ensure we're prepared for your final number."
@@ -40,7 +38,6 @@ const fallbackFaqs = [
         question: "What's your cancellation policy?",
         answer: "Cancellations made 14+ days before the event receive a full refund. Cancellations 7-13 days prior receive a 50% refund. Cancellations within 7 days are non-refundable, though we can reschedule based on availability. Weather-related cancellations are handled case-by-case."
     },
-
     {
         question: "Do you work with our existing venue?",
         answer: "We can cater at most venues including offices, private homes, event spaces, and outdoor locations. We'll need basic kitchen access (or can bring portable equipment) and space for setup. During consultation, we'll discuss your venue's specific requirements."
@@ -73,8 +70,6 @@ export default function FAQ() {
     const toggleFAQ = (index: number) => {
         const isOpening = openIndex !== index;
         setOpenIndex(openIndex === index ? null : index);
-
-        // Track when FAQ is opened
         if (isOpening) {
             trackFAQClick(items[index].question);
         }
@@ -82,89 +77,61 @@ export default function FAQ() {
 
     return (
         <section className="relative py-32 bg-gradient-to-b from-white to-cream overflow-hidden">
-            {/* Background Elements */}
             <div className="absolute top-0 left-0 w-96 h-96 bg-[#F27D42]/5 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl" />
 
             <div className="container mx-auto px-5 relative z-10">
                 {/* Section Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
-                >
+                <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark mb-4">
                         {t.title || "Frequently Asked Questions"}
                     </h2>
                     <p className="text-gray-600 text-lg max-w-2xl mx-auto">
                         {t.subtitle || "Everything you need to know about our catering services. Can't find your answer? Contact us directly."}
                     </p>
-                </motion.div>
+                </div>
 
-                {/* FAQ Accordion */}
+                {/* FAQ Accordion — CSS-only transitions, no Framer Motion */}
                 <div className="max-w-3xl mx-auto space-y-4">
-                    {items.map((faq: any, index: number) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.4, delay: 0.05 * index }}
-                        >
+                    {items.map((faq: any, index: number) => {
+                        const isOpen = openIndex === index;
+                        return (
                             <div
-                                className={`bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 ${openIndex === index ? 'shadow-lg' : 'hover:shadow-lg'
-                                    }`}
+                                key={index}
+                                className={`bg-white rounded-2xl shadow-md overflow-hidden transition-shadow duration-200 ${isOpen ? 'shadow-lg' : 'hover:shadow-lg'}`}
                             >
                                 <button
                                     onClick={() => toggleFAQ(index)}
                                     className="w-full flex items-center justify-between p-6 text-left focus:outline-none group"
+                                    aria-expanded={isOpen}
                                 >
                                     <span className="text-lg font-heading font-bold text-dark pr-8 group-hover:text-[#F27D42] transition-colors">
                                         {faq.question}
                                     </span>
-                                    <motion.div
-                                        animate={{ rotate: openIndex === index ? 180 : 0 }}
-                                        transition={{ duration: 0.3 }}
-                                        className="flex-shrink-0"
-                                    >
-                                        <ChevronDown
-                                            className={`transition-colors ${openIndex === index ? 'text-[#F27D42]' : 'text-gray-400'
-                                                }`}
-                                            size={24}
-                                        />
-                                    </motion.div>
+                                    <ChevronDown
+                                        className={`flex-shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 text-[#F27D42]' : 'text-gray-400'}`}
+                                        size={24}
+                                    />
                                 </button>
 
-                                <AnimatePresence>
-                                    {openIndex === index && (
-                                        <motion.div
-                                            initial={{ height: 0, opacity: 0 }}
-                                            animate={{ height: "auto", opacity: 1 }}
-                                            exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.3 }}
-                                            className="overflow-hidden"
-                                        >
-                                            <div className="px-6 pb-6 text-gray-600 leading-relaxed">
-                                                {faq.answer}
-                                            </div>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
+                                {/* CSS grid trick for smooth height animation */}
+                                <div
+                                    className="grid transition-[grid-template-rows] duration-200 ease-out"
+                                    style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
+                                >
+                                    <div className="overflow-hidden">
+                                        <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                                            {faq.answer}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </motion.div>
-                    ))}
+                        );
+                    })}
                 </div>
 
                 {/* Contact CTA */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="text-center mt-12"
-                >
+                <div className="text-center mt-12">
                     <p className="text-gray-600 mb-4">{t.stillQuestions || "Still have questions?"}</p>
                     <a
                         href="#booking"
@@ -173,7 +140,7 @@ export default function FAQ() {
                     >
                         {t.contactTeam || "Contact Our Team"}
                     </a>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

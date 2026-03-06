@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useRef, useCallback } from "react";
 import { useI18n } from "@/contexts/I18nContext";
 
 // Average restaurant catering costs per person by meal type
@@ -36,21 +36,47 @@ export default function CateringSavingsCalculator() {
 
     const [guests, setGuests] = useState(25);
     const [mealType, setMealType] = useState<"lunch" | "dinner" | "drinks" | "breakfast">("lunch");
-    const [events, setEvents] = useState(4); // per year
+    const [events, setEvents] = useState(4);
 
-    const restaurantTotal = useMemo(() => guests * RESTAURANT_PPP[mealType] * events, [guests, mealType, events]);
-    const homemadeTotal = useMemo(() => guests * HOMEMADE_PPP[mealType] * events, [guests, mealType, events]);
-    const savings = useMemo(() => restaurantTotal - homemadeTotal, [restaurantTotal, homemadeTotal]);
-    const savingsPct = useMemo(() => Math.round((savings / restaurantTotal) * 100), [savings, restaurantTotal]);
-    const perEventSaving = useMemo(() => savings / events, [savings, events]);
+    // Refs for reading current values during drag without re-render dependency
+    const guestsRef = useRef(guests);
+    const eventsRef = useRef(events);
+    const mealTypeRef = useRef(mealType);
 
+    // Derived calculations — only recalculate when state changes (not on every DOM event)
+    const restaurantTotal = guests * RESTAURANT_PPP[mealType] * events;
+    const homemadeTotal = guests * HOMEMADE_PPP[mealType] * events;
+    const savings = restaurantTotal - homemadeTotal;
+    const savingsPct = Math.round((savings / restaurantTotal) * 100);
+    const perEventSaving = savings / events;
     const barPct = (homemadeTotal / restaurantTotal) * 100;
     const guestsPct = ((guests - 5) / 195) * 100;
     const eventsPct = ((events - 1) / 23) * 100;
 
+    // Use pointer up / change end to commit to state (avoids re-render on every tick)
+    const handleGuestsChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+        const val = Number(e.target.value);
+        guestsRef.current = val;
+        // Update gradient live via inline style without React state
+        e.target.style.background = `linear-gradient(to right, #F27D42 ${((val - 5) / 195) * 100}%, #e5e7eb ${((val - 5) / 195) * 100}%)`;
+    }, []);
+
+    const handleGuestsCommit = useCallback((e: React.ChangeEvent<HTMLInputElement> | React.PointerEvent<HTMLInputElement>) => {
+        setGuests(guestsRef.current);
+    }, []);
+
+    const handleEventsChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+        const val = Number(e.target.value);
+        eventsRef.current = val;
+        e.target.style.background = `linear-gradient(to right, #F27D42 ${((val - 1) / 23) * 100}%, #e5e7eb ${((val - 1) / 23) * 100}%)`;
+    }, []);
+
+    const handleEventsCommit = useCallback(() => {
+        setEvents(eventsRef.current);
+    }, []);
+
     return (
         <section className="relative py-32 bg-gradient-to-b from-white to-cream overflow-hidden">
-            {/* Decorative blobs */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#F27D42]/8 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#F27D42]/6 rounded-full blur-[100px] pointer-events-none" />
 
@@ -69,7 +95,6 @@ export default function CateringSavingsCalculator() {
                     </p>
                 </div>
 
-                {/* Two-column layout */}
                 <div className="grid lg:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
 
                     {/* Left: Controls */}
@@ -85,7 +110,7 @@ export default function CateringSavingsCalculator() {
                                     return (
                                         <button
                                             key={key}
-                                            onClick={() => setMealType(key as any)}
+                                            onClick={() => { mealTypeRef.current = key as any; setMealType(key as any); }}
                                             className={`py-3 px-4 rounded-xl text-sm font-bold transition-colors border ${mealType === key
                                                 ? "bg-[#F27D42] text-white border-[#F27D42]"
                                                 : "bg-gray-50 text-gray-600 border-gray-200 hover:border-[#F27D42]/40 hover:text-[#F27D42]"
@@ -98,7 +123,7 @@ export default function CateringSavingsCalculator() {
                             </div>
                         </div>
 
-                        {/* Guests slider */}
+                        {/* Guests slider — updates live via DOM, commits to state on release */}
                         <div className="mb-8">
                             <div className="flex justify-between items-end mb-3">
                                 <label className="text-sm font-bold text-gray-500 uppercase tracking-widest">{t.guestsLabel || "Number of guests"}</label>
@@ -109,8 +134,10 @@ export default function CateringSavingsCalculator() {
                                 min={5}
                                 max={200}
                                 step={5}
-                                value={guests}
-                                onChange={(e) => setGuests(Number(e.target.value))}
+                                defaultValue={guests}
+                                onInput={handleGuestsChange as any}
+                                onPointerUp={handleGuestsCommit as any}
+                                onTouchEnd={handleGuestsCommit as any}
                                 className="w-full h-2 rounded-full appearance-none cursor-pointer accent-[#F27D42]"
                                 style={{ background: `linear-gradient(to right, #F27D42 ${guestsPct}%, #e5e7eb ${guestsPct}%)` }}
                             />
@@ -120,7 +147,7 @@ export default function CateringSavingsCalculator() {
                             </div>
                         </div>
 
-                        {/* Events per year */}
+                        {/* Events slider */}
                         <div className="mb-2">
                             <div className="flex justify-between items-end mb-3">
                                 <label className="text-sm font-bold text-gray-500 uppercase tracking-widest">{t.eventsLabel || "Events per year"}</label>
@@ -131,8 +158,10 @@ export default function CateringSavingsCalculator() {
                                 min={1}
                                 max={24}
                                 step={1}
-                                value={events}
-                                onChange={(e) => setEvents(Number(e.target.value))}
+                                defaultValue={events}
+                                onInput={handleEventsChange as any}
+                                onPointerUp={handleEventsCommit as any}
+                                onTouchEnd={handleEventsCommit as any}
                                 className="w-full h-2 rounded-full appearance-none cursor-pointer accent-[#F27D42]"
                                 style={{ background: `linear-gradient(to right, #F27D42 ${eventsPct}%, #e5e7eb ${eventsPct}%)` }}
                             />
@@ -142,15 +171,13 @@ export default function CateringSavingsCalculator() {
                             </div>
                         </div>
 
-                        {/* Comparison note */}
                         <div className="mt-8 p-4 rounded-2xl bg-gray-50 border border-gray-100 text-sm text-gray-500 leading-relaxed">
                             <p>{t.noteRef || "💡 Based on average Amsterdam restaurant catering rates vs. Homemade's transparent pricing. Actual savings may vary."}</p>
                         </div>
                     </div>
 
-                    {/* Right: Results card */}
+                    {/* Right: Results */}
                     <div className="flex flex-col gap-5">
-                        {/* Main savings card */}
                         <div className="bg-[#1A2D20] rounded-3xl p-8 md:p-10 text-white relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-[#F27D42]/20 rounded-full blur-3xl pointer-events-none" />
                             <div className="relative z-10">
@@ -175,11 +202,9 @@ export default function CateringSavingsCalculator() {
                             </div>
                         </div>
 
-                        {/* Cost breakdown */}
                         <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
                             <h4 className="font-heading font-bold text-dark mb-6 text-lg">{t.costBreakdown || "Annual cost breakdown"}</h4>
                             <div className="space-y-4">
-                                {/* Restaurant */}
                                 <div>
                                     <div className="flex justify-between items-center mb-1.5">
                                         <span className="text-sm font-medium text-gray-500">{t.restaurantCatering || "Restaurant catering"}</span>
@@ -189,7 +214,6 @@ export default function CateringSavingsCalculator() {
                                         <div className="bg-gray-300 h-2.5 rounded-full w-full" />
                                     </div>
                                 </div>
-                                {/* Homemade */}
                                 <div>
                                     <div className="flex justify-between items-center mb-1.5">
                                         <span className="text-sm font-medium text-gray-500">{t.homemadeCatering || "Homemade catering"}</span>
@@ -198,10 +222,7 @@ export default function CateringSavingsCalculator() {
                                     <div className="w-full bg-gray-100 rounded-full h-2.5">
                                         <div
                                             className="bg-[#F27D42] h-2.5 rounded-full"
-                                            style={{
-                                                width: `${barPct}%`,
-                                                transition: "width 0.2s ease-out"
-                                            }}
+                                            style={{ width: `${barPct}%`, transition: "width 0.15s ease-out" }}
                                         />
                                     </div>
                                 </div>
