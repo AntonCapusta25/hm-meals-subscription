@@ -58,7 +58,7 @@ export default function Hero({ city }: HeroProps) {
     }, []);
 
     return (
-        <header className="relative h-[90vh] md:h-[80vh] w-full flex items-center justify-center overflow-hidden text-white bg-black">
+        <header className="relative w-full flex items-center justify-center overflow-hidden text-white bg-black" style={{ height: '90svh', maxHeight: '90svh' }}>
             {/* Background Slideshow using Next.js Image for LCP Optimization */}
             <AnimatePresence>
                 <motion.div
@@ -74,7 +74,7 @@ export default function Hero({ city }: HeroProps) {
                         alt={`Hero Background ${currentImageIndex + 1}`}
                         fill
                         priority={currentImageIndex === 0}
-                        className="object-cover object-top"
+                        className="object-contain"
                         sizes="100vw"
                     />
                 </motion.div>
