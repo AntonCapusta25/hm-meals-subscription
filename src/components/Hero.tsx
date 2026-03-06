@@ -58,9 +58,9 @@ export default function Hero({ city }: HeroProps) {
     }, []);
 
     return (
-        <header className="relative h-[85vh] md:h-screen w-full flex items-center justify-center overflow-hidden text-white bg-black">
+        <header className="relative h-[65vh] md:h-[80vh] w-full flex items-center justify-center overflow-hidden text-white bg-black">
             {/* Background Slideshow using Next.js Image for LCP Optimization */}
-            <AnimatePresence mode="popLayout">
+            <AnimatePresence>
                 <motion.div
                     key={currentImageIndex}
                     initial={{ opacity: 0 }}
@@ -73,10 +73,9 @@ export default function Hero({ city }: HeroProps) {
                         src={HERO_IMAGES[currentImageIndex]}
                         alt={`Hero Background ${currentImageIndex + 1}`}
                         fill
-                        priority={true}
-                        quality={90}
+                        priority={currentImageIndex === 0}
                         className="object-cover"
-                        sizes="(max-width: 768px) 300vw, 100vw"
+                        sizes="100vw"
                     />
                 </motion.div>
             </AnimatePresence>
@@ -91,7 +90,7 @@ export default function Hero({ city }: HeroProps) {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-5xl md:text-7xl font-heading font-bold leading-tight mb-6 drop-shadow-lg"
+                    className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-6 drop-shadow-lg"
                 >
                     {t.titlePart1 || "Exceptional Catering"} {city && `in ${city.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}`}
                     <br />
@@ -102,7 +101,7 @@ export default function Hero({ city }: HeroProps) {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto drop-shadow-md"
+                    className="text-base md:text-lg text-white/90 mb-10 max-w-2xl mx-auto drop-shadow-md"
                 >
                     {t.subtitle || "From intimate gatherings to grand celebrations, we bring restaurant-quality cuisine to your event."}
                 </motion.p>
