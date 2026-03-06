@@ -174,7 +174,6 @@ export default function CateringSavingsCalculator() {
                             <div className="relative z-10">
                                 <p className="text-white/70 font-medium mb-2 text-lg">{t.saveText || "You could save"}</p>
                                 <motion.div
-                                    key={savings}
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.3 }}
