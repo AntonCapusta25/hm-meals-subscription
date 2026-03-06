@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { motion } from "framer-motion";
 import { useI18n } from "@/contexts/I18nContext";
 
 // Average restaurant catering costs per person by meal type
@@ -39,14 +38,15 @@ export default function CateringSavingsCalculator() {
     const [mealType, setMealType] = useState<"lunch" | "dinner" | "drinks" | "breakfast">("lunch");
     const [events, setEvents] = useState(4); // per year
 
-    const mealLabels = t.mealLabels || MEAL_LABELS;
-
     const restaurantTotal = useMemo(() => guests * RESTAURANT_PPP[mealType] * events, [guests, mealType, events]);
     const homemadeTotal = useMemo(() => guests * HOMEMADE_PPP[mealType] * events, [guests, mealType, events]);
     const savings = useMemo(() => restaurantTotal - homemadeTotal, [restaurantTotal, homemadeTotal]);
     const savingsPct = useMemo(() => Math.round((savings / restaurantTotal) * 100), [savings, restaurantTotal]);
-
     const perEventSaving = useMemo(() => savings / events, [savings, events]);
+
+    const barPct = (homemadeTotal / restaurantTotal) * 100;
+    const guestsPct = ((guests - 5) / 195) * 100;
+    const eventsPct = ((events - 1) / 23) * 100;
 
     return (
         <section className="relative py-32 bg-gradient-to-b from-white to-cream overflow-hidden">
@@ -56,13 +56,7 @@ export default function CateringSavingsCalculator() {
 
             <div className="container mx-auto px-5 relative z-10 max-w-7xl">
                 {/* Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
-                >
+                <div className="text-center mb-16">
                     <div className="inline-flex items-center gap-2 bg-orange/10 text-orange border border-orange/20 rounded-full px-5 py-2 text-sm font-bold uppercase tracking-widest mb-6">
                         {t.badge || "💰 Savings Calculator"}
                     </div>
@@ -73,19 +67,13 @@ export default function CateringSavingsCalculator() {
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         {t.subtitle || "Compare the cost of restaurant catering vs. Homemade catering. Adjust the sliders to match your setup."}
                     </p>
-                </motion.div>
+                </div>
 
                 {/* Two-column layout */}
                 <div className="grid lg:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
 
                     {/* Left: Controls */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
-                        className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100"
-                    >
+                    <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100">
                         <h3 className="text-2xl font-heading font-bold text-dark mb-8">{t.configTitle || "Configure your event"}</h3>
 
                         {/* Meal type selector */}
@@ -98,8 +86,8 @@ export default function CateringSavingsCalculator() {
                                         <button
                                             key={key}
                                             onClick={() => setMealType(key as any)}
-                                            className={`py-3 px-4 rounded-xl text-sm font-bold transition-all border ${mealType === key
-                                                ? "bg-[#F27D42] text-white border-[#F27D42] shadow-lg shadow-orange/20"
+                                            className={`py-3 px-4 rounded-xl text-sm font-bold transition-colors border ${mealType === key
+                                                ? "bg-[#F27D42] text-white border-[#F27D42]"
                                                 : "bg-gray-50 text-gray-600 border-gray-200 hover:border-[#F27D42]/40 hover:text-[#F27D42]"
                                                 }`}
                                         >
@@ -123,8 +111,8 @@ export default function CateringSavingsCalculator() {
                                 step={5}
                                 value={guests}
                                 onChange={(e) => setGuests(Number(e.target.value))}
-                                className="w-full h-2 rounded-full appearance-none cursor-pointer accent-[#F27D42] bg-gray-100"
-                                style={{ background: `linear-gradient(to right, #F27D42 ${((guests - 5) / 195) * 100}%, #e5e7eb ${((guests - 5) / 195) * 100}%)` }}
+                                className="w-full h-2 rounded-full appearance-none cursor-pointer accent-[#F27D42]"
+                                style={{ background: `linear-gradient(to right, #F27D42 ${guestsPct}%, #e5e7eb ${guestsPct}%)` }}
                             />
                             <div className="flex justify-between mt-2 text-xs text-gray-400 font-medium">
                                 <span>{t.guestsMin || "5 guests"}</span>
@@ -146,7 +134,7 @@ export default function CateringSavingsCalculator() {
                                 value={events}
                                 onChange={(e) => setEvents(Number(e.target.value))}
                                 className="w-full h-2 rounded-full appearance-none cursor-pointer accent-[#F27D42]"
-                                style={{ background: `linear-gradient(to right, #F27D42 ${((events - 1) / 23) * 100}%, #e5e7eb ${((events - 1) / 23) * 100}%)` }}
+                                style={{ background: `linear-gradient(to right, #F27D42 ${eventsPct}%, #e5e7eb ${eventsPct}%)` }}
                             />
                             <div className="flex justify-between mt-2 text-xs text-gray-400 font-medium">
                                 <span>{t.eventsMin || "1x"}</span>
@@ -158,29 +146,18 @@ export default function CateringSavingsCalculator() {
                         <div className="mt-8 p-4 rounded-2xl bg-gray-50 border border-gray-100 text-sm text-gray-500 leading-relaxed">
                             <p>{t.noteRef || "💡 Based on average Amsterdam restaurant catering rates vs. Homemade's transparent pricing. Actual savings may vary."}</p>
                         </div>
-                    </motion.div>
+                    </div>
 
                     {/* Right: Results card */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        className="flex flex-col gap-5"
-                    >
+                    <div className="flex flex-col gap-5">
                         {/* Main savings card */}
                         <div className="bg-[#1A2D20] rounded-3xl p-8 md:p-10 text-white relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-[#F27D42]/20 rounded-full blur-3xl pointer-events-none" />
                             <div className="relative z-10">
                                 <p className="text-white/70 font-medium mb-2 text-lg">{t.saveText || "You could save"}</p>
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.95 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 0.3 }}
-                                    className="font-heading text-7xl md:text-8xl font-bold mb-1 tracking-tight text-[#F27D42]"
-                                >
+                                <div className="font-heading text-7xl md:text-8xl font-bold mb-1 tracking-tight text-[#F27D42]">
                                     {formatEur(savings)}
-                                </motion.div>
+                                </div>
                                 <p className="text-white/70 font-medium mb-8 text-lg">{t.perYearText || "per year"} · {savingsPct}% {t.lessThanText || "less than restaurants"}</p>
 
                                 <div className="w-full h-px bg-white/10 mb-8" />
@@ -219,10 +196,12 @@ export default function CateringSavingsCalculator() {
                                         <span className="font-bold text-[#F27D42]">{formatEur(homemadeTotal)}</span>
                                     </div>
                                     <div className="w-full bg-gray-100 rounded-full h-2.5">
-                                        <motion.div
+                                        <div
                                             className="bg-[#F27D42] h-2.5 rounded-full"
-                                            animate={{ width: `${(homemadeTotal / restaurantTotal) * 100}%` }}
-                                            transition={{ duration: 0.2, ease: "easeOut" }}
+                                            style={{
+                                                width: `${barPct}%`,
+                                                transition: "width 0.2s ease-out"
+                                            }}
                                         />
                                     </div>
                                 </div>
@@ -230,12 +209,12 @@ export default function CateringSavingsCalculator() {
 
                             <a
                                 href="#booking"
-                                className="mt-8 block w-full text-center bg-[#F27D42] text-white font-heading font-bold text-lg py-4 rounded-2xl transition-all hover:bg-[#d66a35] shadow-lg hover:shadow-xl hover:scale-[1.02]"
+                                className="mt-8 block w-full text-center bg-[#F27D42] text-white font-heading font-bold text-lg py-4 rounded-2xl transition-colors hover:bg-[#d66a35]"
                             >
                                 {t.bookBtn || "Book your first event →"}
                             </a>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>

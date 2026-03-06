@@ -58,7 +58,7 @@ export default function Hero({ city }: HeroProps) {
     }, []);
 
     return (
-        <header className="relative h-[65vh] md:h-[80vh] w-full flex items-center justify-center overflow-hidden text-white bg-black">
+        <header className="relative h-[90vh] md:h-[80vh] w-full flex items-center justify-center overflow-hidden text-white bg-black">
             {/* Background Slideshow using Next.js Image for LCP Optimization */}
             <AnimatePresence>
                 <motion.div
@@ -123,22 +123,13 @@ export default function Hero({ city }: HeroProps) {
                 </motion.div>
             </div>
 
-            {/* Scroll Indicator */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 0.7 }}
-                transition={{ delay: 1, duration: 1 }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
-            >
+            {/* Scroll Indicator — hidden on mobile so it doesn't cover the CTA */}
+            <div className="hidden md:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 z-10 opacity-70">
                 <span className="text-xs uppercase tracking-[0.2em]">Scroll</span>
                 <div className="w-[26px] h-[40px] border-2 border-white rounded-full flex justify-center pt-2">
-                    <motion.div
-                        animate={{ y: [0, 10, 0] }}
-                        transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-                        className="w-1 h-1.5 bg-white rounded-full"
-                    />
+                    <div className="w-1 h-1.5 bg-white rounded-full animate-bounce" />
                 </div>
-            </motion.div>
+            </div>
         </header>
     );
 }
