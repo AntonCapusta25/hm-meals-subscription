@@ -79,7 +79,7 @@ export default function PackageTiers() {
     };
 
     return (
-        <section id="packages" className="relative py-32 bg-dark overflow-hidden">
+        <section id="packages" className="relative py-14 md:py-32 bg-dark overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-[#F27D42]/10 rounded-full blur-[120px]" />
@@ -93,7 +93,7 @@ export default function PackageTiers() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-center mb-8 md:mb-16"
                 >
                     <h2 className="text-4xl md:text-6xl font-heading font-bold text-cream mb-6">
                         {t.title || "Team Dinner Packages"}

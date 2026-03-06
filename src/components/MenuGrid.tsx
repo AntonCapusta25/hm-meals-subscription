@@ -54,7 +54,7 @@ export default function MenuGrid() {
     }, [selectedCity]);
 
     return (
-        <section id="menu-boxes" className="py-24 bg-transparent relative z-20 -mt-32">
+        <section id="menu-boxes" className="py-12 md:py-24 bg-transparent relative z-20 -mt-32">
             <div className="container mx-auto px-5 max-w-7xl">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-5">
                     <div>

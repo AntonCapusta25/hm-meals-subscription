@@ -76,13 +76,13 @@ export default function FAQ() {
     };
 
     return (
-        <section className="relative py-32 bg-gradient-to-b from-white to-cream overflow-hidden">
+        <section className="relative py-14 md:py-32 bg-gradient-to-b from-white to-cream overflow-hidden">
             <div className="absolute top-0 left-0 w-96 h-96 bg-[#F27D42]/5 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl" />
 
             <div className="container mx-auto px-5 relative z-10">
                 {/* Section Header */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-8 md:mb-16">
                     <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark mb-4">
                         {t.title || "Frequently Asked Questions"}
                     </h2>
@@ -114,15 +114,16 @@ export default function FAQ() {
                                     />
                                 </button>
 
-                                {/* CSS grid trick for smooth height animation */}
+                                {/* max-height trick — works on all mobile browsers */}
                                 <div
-                                    className="grid transition-[grid-template-rows] duration-200 ease-out"
-                                    style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
+                                    style={{
+                                        maxHeight: isOpen ? '600px' : '0',
+                                        overflow: 'hidden',
+                                        transition: 'max-height 0.25s ease-out',
+                                    }}
                                 >
-                                    <div className="overflow-hidden">
-                                        <div className="px-6 pb-6 text-gray-600 leading-relaxed">
-                                            {faq.answer}
-                                        </div>
+                                    <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                                        {faq.answer}
                                     </div>
                                 </div>
                             </div>

@@ -30,7 +30,7 @@ export default function HowItWorks() {
     ];
 
     return (
-        <section id="how-it-works" className="py-24 bg-white text-center">
+        <section id="how-it-works" className="py-12 md:py-24 bg-white text-center">
             <div className="container mx-auto px-5">
                 <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark mb-16">
                     {t.title || "How it Works"}

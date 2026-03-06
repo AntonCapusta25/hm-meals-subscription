@@ -19,7 +19,7 @@ export default function Partners() {
     const t = (dictionary as any)?.partners || {};
 
     return (
-        <section className="py-24 bg-[#FFF8F0] border-b border-gray-100 overflow-hidden">
+        <section className="py-12 md:py-24 bg-[#FFF8F0] border-b border-gray-100 overflow-hidden">
             <div className="container mx-auto px-5 mb-8 text-center">
                 <p className="text-light uppercase tracking-widest text-xs font-bold">
                     {t.heading || "Proudly Partnering With"}

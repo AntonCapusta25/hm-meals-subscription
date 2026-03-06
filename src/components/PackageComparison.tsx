@@ -43,7 +43,7 @@ export default function PackageComparison() {
     ];
 
     return (
-        <section className="relative py-24 bg-white overflow-hidden">
+        <section className="relative py-12 md:py-24 bg-white overflow-hidden">
             <div className="container mx-auto px-5">
                 {/* Section Header */}
                 <motion.div
@@ -51,7 +51,7 @@ export default function PackageComparison() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-center mb-8 md:mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark mb-4">
                         {t.title || "Compare Packages"}

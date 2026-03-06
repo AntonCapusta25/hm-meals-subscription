@@ -8,7 +8,7 @@ export default function ChefSignup() {
     const t = (dictionary as any)?.chefSignup || {};
 
     return (
-        <section id="chef-signup" className="py-24 bg-white text-center">
+        <section id="chef-signup" className="py-12 md:py-24 bg-white text-center">
             <div className="container mx-auto px-5">
                 <h2 className="text-3xl md:text-4xl font-heading font-bold text-dark mb-4 drop-shadow-sm">
                     {t.title || "Are You a Chef?"}

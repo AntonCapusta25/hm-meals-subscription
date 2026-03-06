@@ -54,7 +54,7 @@ export default function ChefCarousel() {
         : [];
 
     return (
-        <section className="relative w-full min-h-screen flex flex-col justify-center bg-cream overflow-hidden py-24">
+        <section className="relative w-full min-h-screen flex flex-col justify-center bg-cream overflow-hidden py-12 md:py-24">
             <div className="container mx-auto px-5 mb-10 text-center">
                 <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark mb-4">
                     {t.title1 || "Our "} <span className="text-orange">{t.title2 || "Featured"}</span> {t.title3 || " Restaurants"}

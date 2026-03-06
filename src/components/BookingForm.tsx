@@ -386,7 +386,7 @@ export default function BookingForm() {
     const t = (dictionary as any)?.bookingForm || {};
 
     return (
-        <section id="booking" className="relative py-32 overflow-hidden bg-dark">
+        <section id="booking" className="relative py-14 md:py-32 overflow-hidden bg-dark">
             {/* Ambient Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute -top-20 -right-20 w-[600px] h-[600px] bg-[#F27D42]/10 rounded-full blur-[120px]" />

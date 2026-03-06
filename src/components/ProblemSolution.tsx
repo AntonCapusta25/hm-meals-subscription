@@ -23,7 +23,7 @@ export default function ProblemSolution() {
     ];
 
     return (
-        <section className="relative py-32 bg-gradient-to-b from-cream to-white overflow-hidden">
+        <section className="relative py-14 md:py-32 bg-gradient-to-b from-cream to-white overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-orange/5 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#F27D42]/5 rounded-full blur-3xl" />
@@ -35,7 +35,7 @@ export default function ProblemSolution() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-center mb-8 md:mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-heading font-bold text-dark mb-4 leading-tight">
                         {t.title1 || "Why overpay at crowded restaurants"}
@@ -50,7 +50,7 @@ export default function ProblemSolution() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="text-center mb-16"
+                    className="text-center mb-8 md:mb-16"
                 >
                     <div className="inline-block px-8 py-4 rounded-2xl bg-gradient-to-r from-[#F27D42] to-[#FF9F6D] text-white mb-6">
                         <h3 className="text-2xl md:text-4xl font-heading font-bold">

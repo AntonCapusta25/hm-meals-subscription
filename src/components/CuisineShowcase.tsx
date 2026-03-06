@@ -12,7 +12,7 @@ export default function CuisineShowcase() {
     const t = (dictionary as any)?.cuisineShowcase || {};
 
     return (
-        <section id="menu-boxes" className="relative w-full py-32 bg-cream overflow-hidden">
+        <section id="menu-boxes" className="relative w-full py-14 md:py-32 bg-cream overflow-hidden">
             {/* Background Decorations */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-30">
                 <div className="absolute top-20 left-10 w-64 h-64 bg-orange/10 rounded-full blur-[80px]" />
@@ -20,7 +20,7 @@ export default function CuisineShowcase() {
             </div>
 
             <div className="container mx-auto px-5 relative z-10">
-                <div className="text-center mb-16">
+                <div className="text-center mb-8 md:mb-16">
                     <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark mb-4">
                         {t.title1 || "Explore Our"} <span className="text-orange">{t.title2 || "Cuisines"}</span>
                     </h2>

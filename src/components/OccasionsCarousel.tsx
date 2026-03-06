@@ -17,7 +17,7 @@ export default function OccasionsCarousel() {
     const t = (dictionary as any)?.occasions || {};
 
     return (
-        <section id="occasions" className="py-24 bg-white relative">
+        <section id="occasions" className="py-12 md:py-24 bg-white relative">
             <div className="container mx-auto px-5 mb-10 flex justify-between items-end">
                 <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark">
                     {t.title || "Occasions"}

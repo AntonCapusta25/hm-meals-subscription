@@ -64,7 +64,7 @@ export default function Testimonials() {
     const t = (dictionary as any)?.testimonials || {};
 
     return (
-        <section className="relative py-32 bg-white overflow-hidden">
+        <section className="relative py-14 md:py-32 bg-white overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-orange/5 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#F27D42]/5 rounded-full blur-3xl" />
@@ -76,7 +76,7 @@ export default function Testimonials() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-center mb-8 md:mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark mb-4">
                         {t.title || "What Our Customers Say"}
