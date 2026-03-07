@@ -165,7 +165,7 @@ export default function CateringSavingsCalculator() {
                             {/* Standard Native Slider */}
                             <input
                                 ref={guestsInputRef}
-                                onChange={(e) => setGuests(Number(e.target.value))}
+                                onPointerUp={(e) => setGuests(Number((e.target as HTMLInputElement).value))}
                                 type="range"
                                 min={5} max={200} step={5}
                                 defaultValue={guests}
@@ -186,7 +186,7 @@ export default function CateringSavingsCalculator() {
                             {/* Standard Native Slider */}
                             <input
                                 ref={eventsInputRef}
-                                onChange={(e) => setEvents(Number(e.target.value))}
+                                onPointerUp={(e) => setEvents(Number((e.target as HTMLInputElement).value))}
                                 type="range"
                                 min={1} max={24} step={1}
                                 defaultValue={events}

@@ -114,16 +114,18 @@ export default function FAQ() {
                                     />
                                 </button>
 
-                                {/* max-height trick — works on all mobile browsers */}
+                                {/* CSS grid trick for smooth height animation */}
                                 <div
+                                    className="grid transition-[grid-template-rows] duration-200 ease-out"
                                     style={{
-                                        maxHeight: isOpen ? '600px' : '0',
-                                        overflow: 'hidden',
-                                        transition: 'max-height 0.25s ease-out',
+                                        gridTemplateRows: isOpen ? '1fr' : '0fr',
+                                        willChange: 'grid-template-rows'
                                     }}
                                 >
-                                    <div className="px-6 pb-6 text-gray-600 leading-relaxed">
-                                        {faq.answer}
+                                    <div className="overflow-hidden">
+                                        <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                                            {faq.answer}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
