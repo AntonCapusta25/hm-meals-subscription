@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { trackCTAClick } from "@/lib/analytics";
 import { useI18n } from "@/contexts/I18nContext";
+import AnimatedHeroHeadline from "./AnimatedHeroHeadline";
 
 const HERO_IMAGES = [
     "/images/hero-banners/hero_main.jpg",
@@ -86,16 +87,10 @@ export default function Hero({ city }: HeroProps) {
 
             <div className="relative z-10 text-center max-w-4xl px-5">
 
-                <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-6 drop-shadow-lg"
-                >
-                    {t.titlePart1 || "Exceptional Catering"} {city && `in ${city.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}`}
-                    <br />
-                    {t.titlePart2 || "for Every"} <span className="text-orange italic font-serif">{t.titleHighlight || "Occasion"}</span>
-                </motion.h1>
+                <AnimatedHeroHeadline
+                    staticText={t.animatedTitleStatic || "Home Chefs. At Your Office. Delivering in "}
+                    words={t.animatedRotatingWords || ["Amsterdam", "Rotterdam", "Den Haag", "Haarlem", "Enschede"]}
+                />
 
                 <motion.p
                     initial={{ opacity: 0, y: 30 }}

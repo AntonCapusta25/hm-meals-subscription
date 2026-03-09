@@ -11,6 +11,14 @@
         "titlePart1": "Uitzonderlijke Catering",
         "titlePart2": "voor Elke",
         "titleHighlight": "Gelegenheid",
+        "animatedTitleStatic": "Thuiskoks. Op kantoor. Bezorging in ",
+        "animatedRotatingWords": [
+            "Amsterdam",
+            "Rotterdam",
+            "Den Haag",
+            "Haarlem",
+            "Enschede"
+        ],
         "subtitle": "Van gezelige diners tot grote vieringen, wij brengen culinair genot naar uw evenement.",
         "cta": "Vraag Offerte Aan"
     },

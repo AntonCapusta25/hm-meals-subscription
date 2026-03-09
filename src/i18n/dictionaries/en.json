@@ -11,6 +11,14 @@
         "titlePart1": "Exceptional Catering",
         "titlePart2": "for Every",
         "titleHighlight": "Occasion",
+        "animatedTitleStatic": "Home Chefs. At Your Office. Delivering in ",
+        "animatedRotatingWords": [
+            "Amsterdam",
+            "Rotterdam",
+            "Den Haag",
+            "Haarlem",
+            "Enschede"
+        ],
         "subtitle": "From intimate gatherings to grand celebrations, we bring restaurant-quality cuisine to your event.",
         "cta": "Request Quote"
     },
