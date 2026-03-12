@@ -8,7 +8,6 @@ import { trackEvent } from "@/lib/analytics";
 import { useI18n } from "@/contexts/I18nContext";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { supabase } from '@/lib/supabase';
 
 type FormData = {
     occasion: string;
@@ -96,52 +95,25 @@ function QuizFormContent() {
         if (e) e.preventDefault();
         setIsSubmitting(true);
 
-        const bookingData = {
-            name: formData.name,
-            email: formData.email,
-            selectedMenu: null,
-            selectedChef: null,
-            cuisine: formData.occasion, // Mapping occasion to cuisine for backend
-            eventDate: formData.eventDate,
-            guests: formData.guests,
-            message: `Occasion: ${formData.occasion}`,
-        };
-
         try {
-            // 1. Save booking to DB (booking_submissions table according to schema)
-            const { error: dbError } = await supabase
-                .from('booking_submissions')
-                .insert([{
+            const res = await fetch('/api/booking', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
                     name: formData.name,
                     email: formData.email,
+                    selectedMenu: null,
+                    selectedChef: null,
                     cuisine: formData.occasion,
-                    event_date: formData.eventDate,
+                    eventDate: formData.eventDate,
                     guests: formData.guests,
-                    message: `Occasion: ${formData.occasion}`
-                }]);
-
-            if (dbError) {
-                console.error("Supabase Database Error:", dbError);
-                throw new Error('Failed to save booking to database');
-            }
-
-            // 2. Invoke Edge Function for sending email
-            const emailPayload = {
-                customer_name: formData.name,
-                customer_email: formData.email,
-                occasion: formData.occasion,
-                event_date: formData.eventDate,
-                guests: formData.guests
-            };
-
-            const { error: emailError } = await supabase.functions.invoke('send-booking-email', {
-                body: emailPayload
+                    message: `Occasion: ${formData.occasion}`,
+                }),
             });
 
-            if (emailError) {
-                console.error("Supabase Edge Function Email Error:", emailError);
-                // We've saved the booking, we might want to continue even if email fails
-                // But for full visibility we log it
+            if (!res.ok) {
+                const data = await res.json().catch(() => ({}));
+                throw new Error(data?.error || `Request failed (${res.status})`);
             }
 
             trackEvent('form_submit', {

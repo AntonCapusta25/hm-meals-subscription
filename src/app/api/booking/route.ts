@@ -45,20 +45,19 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Store in Supabase - NEW catering_bookings table
+    // Store in Supabase - booking_submissions table
     const { data, error: dbError } = await supabaseAdmin
-      .from('catering_bookings')
+      .from('booking_submissions')
       .insert([
         {
-          client_name: name,
-          client_email: email,
-          selected_package: selectedMenu || null,
-          cuisine_preference: cuisine || null,
+          name: name,
+          email: email,
+          selected_menu: selectedMenu || null,
+          selected_chef: selectedChef || null,
+          cuisine: cuisine || null,
           event_date: eventDate || null,
-          guest_count: guests ? parseInt(guests.replace(/\D/g, '')) : null,
-          special_requests: message || null,
-          booking_status: 'pending',
-          created_at: new Date().toISOString(),
+          guests: guests || null,
+          message: message || null,
         },
       ])
       .select()
