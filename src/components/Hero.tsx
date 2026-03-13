@@ -86,7 +86,7 @@ export default function Hero({ city }: HeroProps) {
     }, [isMobile]);
 
     return (
-        <header className="relative w-full overflow-hidden text-white bg-black" style={{ height: isMobile ? '100svh' : '85vh', maxHeight: isMobile ? '100svh' : '85vh' }}>
+        <header className="relative w-full overflow-hidden text-white bg-black" style={{ height: '100svh', maxHeight: '100svh' }}>
             {/* Background Slideshow using Next.js Image for LCP Optimization */}
             <AnimatePresence>
                 <motion.div
