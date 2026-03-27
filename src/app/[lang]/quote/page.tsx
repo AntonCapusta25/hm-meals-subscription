@@ -12,11 +12,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     return {
         title: lang === 'nl'
-            ? 'Vraag een Offerte Aan | Homemade Catering'
-            : 'Request a Quote | Homemade Catering',
+            ? 'Start je Abonnement | Homemade'
+            : 'Start Your Subscription | Homemade',
         description: lang === 'nl'
-            ? 'Ontvang binnen 24 uur een gepersonaliseerde offerte voor uw volgende evenement.'
-            : 'Get a customized quote for your next event within 24 hours.',
+            ? 'Beantwoord een paar korte vragen en start je wekelijkse meal subscription.'
+            : 'Answer a few quick questions and start your weekly meal subscription.',
         robots: {
             index: false, // Prevents SEO indexing of the pure form page (optional but common practice)
             follow: true,
@@ -35,12 +35,12 @@ export default async function QuotePage({ params }: Props) {
                 <div className="w-full max-w-4xl mx-auto">
                     <div className="text-center mb-12">
                         <h1 className="text-4xl md:text-6xl font-heading font-bold mb-4">
-                            {lang === 'nl' ? 'Plan Uw Evenement' : 'Plan Your Event'}
+                            {lang === 'nl' ? 'Start Je Abonnement' : 'Start Your Subscription'}
                         </h1>
                         <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
                             {lang === 'nl'
-                                ? 'Beantwoord een paar snelle vragen en wij sturen u een gepersonaliseerde offerte met de perfecte chef voor uw gelegenheid.'
-                                : 'Answer a few quick questions and we\'ll send you a customized quote with the perfect chef for your occasion.'}
+                                ? 'Beantwoord een paar snelle vragen en wij sturen je de juiste meal plan details.'
+                                : 'Answer a few quick questions and we\'ll send you the right meal plan details.'}
                         </p>
                     </div>
 

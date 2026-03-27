@@ -27,8 +27,8 @@ export async function generateMetadata(
 
   return {
     metadataBase: new URL('https://homemademeals.net'),
-    title: m.homeTitle || "Homemade Catering - Premium Event Catering Services",
-    description: m.homeDescription || "Professional catering services for corporate events, weddings, parties, and special occasions. Custom menus crafted by expert chefs.",
+    title: m.homeTitle || "Homemade Meal Subscriptions",
+    description: m.homeDescription || "Fresh, chef-made meals delivered weekly across the Netherlands. Choose a plan that fits your routine.",
     alternates: {
       languages: {
         'en': '/en',

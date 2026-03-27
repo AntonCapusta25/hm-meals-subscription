@@ -17,46 +17,46 @@ const testimonialConfig = [
 
 const fallbackItems = [
     {
-        company: "Birthday Celebration",
-        eventType: "Custom Tiramisu Order",
-        quote: "Ordered Tiramisú for my Bday instead of the regular Bday cake!!! What to say... Best choice ever!!! All my friends loved it and Domenico fulfilled my order with only 48 hours to go before my party! Ordered 3 trays and we finished all of it!! Thanks Dome, I knew I could count on you!"
+        company: "Family Plan",
+        eventType: "Weekly Dinners",
+        quote: "Our kids actually eat the meals. The portions are perfect and we save hours every week."
     },
     {
-        company: "Private Dinner",
-        eventType: "Steak & Empanadas",
-        quote: "The food was amazing, steak was cooked perfectly with tasty chimichurri, and the empanada was exactly how authentic empanadas should taste!"
+        company: "Healthy Routine",
+        eventType: "Weekday Structure",
+        quote: "I stopped skipping lunch and ordering takeout. The protein options are solid and consistent."
     },
     {
-        company: "Special Occasion",
-        eventType: "Italian Dessert Catering",
-        quote: "This is by far one of the best Tiramisu I have tasted! It somehow melts inside the mouth! Super Good!!"
+        company: "Plant-Forward",
+        eventType: "Flexitarian",
+        quote: "We wanted more plant-based meals without going fully vegan. These are flavorful and filling."
     },
     {
-        company: "Family Gathering",
-        eventType: "Private Chef Service",
-        quote: "Delicious!! Approved by my tiramisu loved boyfriend. He said it's the best he's ever had!"
+        company: "Comfort & Care",
+        eventType: "Easy Reheating",
+        quote: "Reliable, home-style meals that are easy to heat up. Exactly what I needed after a busy week."
     },
     {
-        company: "Direct Order",
-        eventType: "Recurring Client",
-        quote: "I ordered from Bottega da Dome a few times and they have hands down the best tiramisu! Will keep ordering from them again :)"
+        company: "Couple Plan",
+        eventType: "Portion-Controlled",
+        quote: "Great variety, no food waste, and the delivery window is always on time."
     },
     {
-        company: "Catering",
-        eventType: "Event Catering",
-        quote: "Delicious tiramisu! We all loved it. Very well made and Domenico is a very friendly chef. Will order again!"
+        company: "Busy Professional",
+        eventType: "No-Prep Meals",
+        quote: "I can finally keep my weekdays clean. The meals are fresh and taste like real food."
     },
     {
-        company: "Dinner Party",
-        eventType: "Authentic Biryani",
-        quote: "The biryani was very hearty and tasty! Good portion with chicken and potatoes. Definitely will order again."
+        company: "Family Plan",
+        eventType: "Kid-Friendly",
+        quote: "Less stress at dinner time. We just heat, plate, and enjoy."
     }
 ];
 
 const metricConfig = [
-    { value: "500+", key: "happyClients", color: "text-[#F27D42]" },
+    { value: "2,000+", key: "happyClients", color: "text-[#F27D42]" },
     { value: "4.8/5", key: "averageRating", color: "text-yellow-500" },
-    { value: "40%", key: "savings", color: "text-green-500" },
+    { value: "6 hrs/wk", key: "savings", color: "text-green-500" },
     { value: "100%", key: "guarantee", color: "text-[#F27D42]" }
 ];
 

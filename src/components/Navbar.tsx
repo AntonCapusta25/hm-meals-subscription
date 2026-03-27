@@ -20,8 +20,8 @@ export default function Navbar() {
     const i18n = useI18n();
     const t = i18n?.dictionary?.navigation || {
         howItWorks: "How it Works",
-        menu: "Menus",
-        occasions: "Occasions",
+        menu: "Plans",
+        occasions: "Who It's For",
         bookNow: "Book Now"
     };
 

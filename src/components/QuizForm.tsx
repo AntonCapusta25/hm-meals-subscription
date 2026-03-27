@@ -2,7 +2,7 @@
 
 import { useState, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, ArrowLeft, CheckCircle2, Utensils, Users, Calendar, Mail, User, Phone } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2, Utensils, Calendar, Mail, User, Phone } from "lucide-react";
 import confetti from "canvas-confetti";
 import { trackEvent } from "@/lib/analytics";
 import { useI18n } from "@/contexts/I18nContext";
@@ -10,27 +10,53 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 type FormData = {
-    occasion: string;
-    guests: string;
-    eventDate: string;
+    plan: string;
+    mealsPerWeek: string;
+    deliveryDays: string;
     name: string;
     email: string;
     phone: string;
 };
 
-const OCCASIONS = [
-    { id: "lunch", label: "Team Lunch", icon: Utensils },
-    { id: "dinner", label: "Company Dinner", icon: Utensils },
-    { id: "drinks", label: "Drinks & Bites", icon: Utensils },
-    { id: "party", label: "Corporate Party", icon: Utensils },
-    { id: "other", label: "Other", icon: Utensils },
+const PLANS = [
+    {
+        id: "family",
+        label: "Family Plan",
+        description: "Kid-friendly, mild flavors, and balanced meals for the whole household.",
+        icon: Utensils
+    },
+    {
+        id: "routine",
+        label: "Healthy Routine Plan",
+        description: "Protein-aware, portion-consistent meals for weekday structure.",
+        icon: Utensils
+    },
+    {
+        id: "plant",
+        label: "Plant-Forward Plan",
+        description: "Vegetable-first meals with legumes, whole grains, and bold flavor.",
+        icon: Utensils
+    },
+    {
+        id: "comfort",
+        label: "Comfort & Care Plan",
+        description: "Home-style classics that are easy to reheat and always satisfying.",
+        icon: Utensils
+    },
 ];
 
-const GUESTS_OPTIONS = [
-    { id: "small", label: "5-20 Guests" },
-    { id: "medium", label: "20-50 Guests" },
-    { id: "large", label: "50-100 Guests" },
-    { id: "xlarge", label: "100+ Guests" },
+const MEALS_OPTIONS = [
+    { id: "3", label: "3 meals / week" },
+    { id: "5", label: "5 meals / week" },
+    { id: "7", label: "7 meals / week" },
+    { id: "10", label: "10 meals / week" },
+];
+
+const DELIVERY_DAYS_OPTIONS = [
+    { id: "1", label: "1 delivery day" },
+    { id: "2", label: "2 delivery days" },
+    { id: "3", label: "3 delivery days" },
+    { id: "5", label: "5 delivery days" },
 ];
 
 function QuizFormContent() {
@@ -41,9 +67,9 @@ function QuizFormContent() {
 
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState<FormData>({
-        occasion: "",
-        guests: "",
-        eventDate: "",
+        plan: "",
+        mealsPerWeek: "",
+        deliveryDays: "",
         name: "",
         email: "",
         phone: "",
@@ -105,12 +131,12 @@ function QuizFormContent() {
                     name: formData.name,
                     email: formData.email,
                     phone: formData.phone,
-                    selectedMenu: null,
-                    selectedChef: null,
-                    cuisine: formData.occasion,
-                    eventDate: formData.eventDate,
-                    guests: formData.guests,
-                    message: `Occasion: ${formData.occasion}`,
+                    plan: formData.plan,
+                    mealsPerWeek: formData.mealsPerWeek,
+                    deliveryDays: formData.deliveryDays,
+                    message: `Plan: ${formData.plan}; Meals per week: ${formData.mealsPerWeek}; Delivery days: ${formData.deliveryDays}`,
+                    locale: lang,
+                    source: "quiz-form",
                 }),
             });
 
@@ -130,8 +156,8 @@ function QuizFormContent() {
                 event_label: 'Quiz Form',
                 value: 1,
                 currency: 'EUR',
-                occasion: formData.occasion,
-                guests: formData.guests,
+                occasion: formData.plan,
+                guests: formData.mealsPerWeek,
             });
 
             if (typeof (window as any).lintrk === 'function') {
@@ -152,9 +178,9 @@ function QuizFormContent() {
     const handleKeyDown = (e: React.KeyboardEvent) => {
         if (e.key === 'Enter') {
             e.preventDefault();
-            if (step === 1 && formData.occasion) nextStep();
-            if (step === 2 && formData.guests) nextStep();
-            if (step === 3 && formData.eventDate) nextStep();
+            if (step === 1 && formData.plan) nextStep();
+            if (step === 2 && formData.mealsPerWeek) nextStep();
+            if (step === 3 && formData.deliveryDays) nextStep();
             if (step === 4 && formData.name && formData.email && formData.phone) handleSubmit();
         }
     };
@@ -176,9 +202,9 @@ function QuizFormContent() {
                         <CheckCircle2 size={56} />
                     </motion.div>
 
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-cream mb-6">{t.successTitle || "You're Booked!"}</h2>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-cream mb-6">{t.successTitle || "You're In!"}</h2>
                     <p className="text-gray-400 text-base md:text-lg mb-8 md:mb-10 max-w-md mx-auto leading-relaxed">
-                        {t.successMessage || "Thank you for your request. Our catering team will contact you shortly to finalize your event details!"}
+                        {t.successMessage || "Thanks for your request. We’ll contact you shortly to confirm your subscription details."}
                     </p>
 
                     <Link href={`/${lang}`} className="inline-block px-10 py-4 bg-[#F27D42] text-white rounded-2xl font-bold hover:bg-[#d66a35] transition-colors text-lg">
@@ -210,7 +236,7 @@ function QuizFormContent() {
             {/* Form Container */}
             <div className="relative min-h-[320px] md:min-h-[400px]" onKeyDown={handleKeyDown}>
                 <AnimatePresence mode="wait">
-                    {/* STEP 1: Occasion */}
+                    {/* STEP 1: Plan */}
                     {step === 1 && (
                         <motion.div
                             key="step1"
@@ -220,28 +246,33 @@ function QuizFormContent() {
                             transition={{ duration: 0.3 }}
                             className="absolute inset-0"
                         >
-                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.occasionTitle || "What's the occasion?"}</h2>
-                            <p className="text-gray-400 text-base md:text-lg mb-6 md:mb-10">{t.occasionSubtitle || "Select the type of event you're planning."}</p>
+                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.occasionTitle || "Choose your plan"}</h2>
+                            <p className="text-gray-400 text-base md:text-lg mb-6 md:mb-10">{t.occasionSubtitle || "Pick the subscription that fits your routine."}</p>
  
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
-                                {OCCASIONS.map((occ) => (
+                                {PLANS.map((occ) => (
                                     <button
                                         key={occ.id}
-                                        onClick={() => { updateData({ occasion: occ.label }); setTimeout(nextStep, 300); }}
-                                        className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.occasion === occ.label
+                                        onClick={() => { updateData({ plan: occ.label }); setTimeout(nextStep, 300); }}
+                                        className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.plan === occ.label
                                             ? "bg-[#F27D42]/10 border-[#F27D42] text-[#F27D42]"
                                             : "bg-white/5 border-white/10 text-cream hover:bg-white/10"
                                             }`}
                                     >
-                                        <occ.icon size={18} className={`md:w-6 md:h-6 ${formData.occasion === occ.label ? "text-[#F27D42]" : "text-gray-400"}`} />
-                                        <span className="font-bold text-sm md:text-lg">{occ.label}</span>
+                                        <occ.icon size={18} className={`md:w-6 md:h-6 ${formData.plan === occ.label ? "text-[#F27D42]" : "text-gray-400"}`} />
+                                        <div className="flex flex-col">
+                                            <span className="font-bold text-sm md:text-lg">{occ.label}</span>
+                                            <span className={`text-xs md:text-sm mt-1 ${formData.plan === occ.label ? "text-[#F27D42]/90" : "text-gray-400"}`}>
+                                                {occ.description}
+                                            </span>
+                                        </div>
                                     </button>
                                 ))}
                             </div>
                         </motion.div>
                     )}
 
-                    {/* STEP 2: Guests */}
+                    {/* STEP 2: Meals per week */}
                     {step === 2 && (
                         <motion.div
                             key="step2"
@@ -251,28 +282,33 @@ function QuizFormContent() {
                             transition={{ duration: 0.3 }}
                             className="absolute inset-0"
                         >
-                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.guestsTitle || "How many guests?"}</h2>
-                            <p className="text-gray-400 text-base md:text-lg mb-6 md:mb-10">{t.guestsSubtitle || "Rough estimates are fine. Minimum 5 guests."}</p>
+                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.guestsTitle || "How many meals per week?"}</h2>
+                            <p className="text-gray-400 text-base md:text-lg mb-6 md:mb-10">{t.guestsSubtitle || "Choose the weekly quantity that fits your routine."}</p>
  
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4">
-                                {GUESTS_OPTIONS.map((opt) => (
+                                {MEALS_OPTIONS.map((opt) => (
                                     <button
                                         key={opt.id}
-                                        onClick={() => { updateData({ guests: opt.label }); setTimeout(nextStep, 300); }}
-                                        className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.guests === opt.label
+                                        onClick={() => { updateData({ mealsPerWeek: opt.label }); setTimeout(nextStep, 300); }}
+                                        className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.mealsPerWeek === opt.label
                                             ? "bg-[#F27D42]/10 border-[#F27D42] text-[#F27D42]"
                                             : "bg-white/5 border-white/10 text-cream hover:bg-white/10"
                                             }`}
                                     >
-                                        <Users size={18} className={`md:w-6 md:h-6 ${formData.guests === opt.label ? "text-[#F27D42]" : "text-gray-400"}`} />
-                                        <span className="font-bold text-sm md:text-lg">{opt.label}</span>
+                                        <Utensils size={18} className={`md:w-6 md:h-6 ${formData.mealsPerWeek === opt.label ? "text-[#F27D42]" : "text-gray-400"}`} />
+                                        <div className="flex flex-col">
+                                            <span className="font-bold text-sm md:text-lg">{opt.label}</span>
+                                            <span className={`text-xs md:text-sm mt-1 ${formData.mealsPerWeek === opt.label ? "text-[#F27D42]/90" : "text-gray-400"}`}>
+                                                {opt.id === "3" ? "Light support for busy weeks" : opt.id === "5" ? "Full workweek coverage" : opt.id === "7" ? "Everyday dinners" : "Maximum flexibility"}
+                                            </span>
+                                        </div>
                                     </button>
                                 ))}
                             </div>
                         </motion.div>
                     )}
 
-                    {/* STEP 3: Date */}
+                    {/* STEP 3: Delivery Days */}
                     {step === 3 && (
                         <motion.div
                             key="step3"
@@ -282,18 +318,28 @@ function QuizFormContent() {
                             transition={{ duration: 0.3 }}
                             className="absolute inset-0"
                         >
-                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.dateTitle || "When is the event?"}</h2>
-                            <p className="text-gray-400 text-base md:text-lg mb-6 md:mb-10">{t.dateSubtitle || "Select your preferred date."}</p>
+                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.dateTitle || "How many delivery days?"}</h2>
+                            <p className="text-gray-400 text-base md:text-lg mb-6 md:mb-10">{t.dateSubtitle || "Pick how many days you want deliveries each week."}</p>
 
-                            <div className="relative max-w-md">
-                                <Calendar className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" size={24} />
-                                <input
-                                    type="date"
-                                    value={formData.eventDate}
-                                    onChange={(e) => updateData({ eventDate: e.target.value })}
-                                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-4 md:px-6 md:py-6 pl-12 md:pl-16 text-lg md:text-xl text-cream focus:outline-none focus:border-[#F27D42] focus:bg-white/10 transition-all font-sans"
-                                    autoFocus
-                                />
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 max-w-2xl">
+                                {DELIVERY_DAYS_OPTIONS.map((opt) => (
+                                    <button
+                                        key={opt.id}
+                                        onClick={() => { updateData({ deliveryDays: opt.label }); setTimeout(nextStep, 300); }}
+                                        className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.deliveryDays === opt.label
+                                            ? "bg-[#F27D42]/10 border-[#F27D42] text-[#F27D42]"
+                                            : "bg-white/5 border-white/10 text-cream hover:bg-white/10"
+                                            }`}
+                                    >
+                                        <Calendar size={18} className={`md:w-6 md:h-6 ${formData.deliveryDays === opt.label ? "text-[#F27D42]" : "text-gray-400"}`} />
+                                        <div className="flex flex-col">
+                                            <span className="font-bold text-sm md:text-lg">{opt.label}</span>
+                                            <span className={`text-xs md:text-sm mt-1 ${formData.deliveryDays === opt.label ? "text-[#F27D42]/90" : "text-gray-400"}`}>
+                                                {opt.id === "1" ? "All meals in one drop" : opt.id === "2" ? "Midweek freshness" : opt.id === "3" ? "More frequent top-ups" : "Near-daily convenience"}
+                                            </span>
+                                        </div>
+                                    </button>
+                                ))}
                             </div>
                         </motion.div>
                     )}
@@ -309,7 +355,7 @@ function QuizFormContent() {
                             className="absolute inset-0"
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.contactTitle || "Your Details"}</h2>
-                            <p className="text-gray-400 text-base md:text-lg mb-6 md:mb-10">{t.contactSubtitle || "Where should we send the quote?"}</p>
+                            <p className="text-gray-400 text-base md:text-lg mb-6 md:mb-10">{t.contactSubtitle || "Where should we send your subscription details?"}</p>
 
                             <form onSubmit={handleSubmit} className="space-y-6 max-w-md">
                                 <div className="relative">
@@ -370,9 +416,9 @@ function QuizFormContent() {
                     <button
                         onClick={nextStep}
                         disabled={
-                            (step === 1 && !formData.occasion) ||
-                            (step === 2 && !formData.guests) ||
-                            (step === 3 && !formData.eventDate)
+                            (step === 1 && !formData.plan) ||
+                            (step === 2 && !formData.mealsPerWeek) ||
+                            (step === 3 && !formData.deliveryDays)
                         }
                         className="flex items-center gap-2 bg-[#F27D42] text-white px-6 py-3 md:px-8 md:py-3 rounded-xl font-bold hover:bg-[#d66a35] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >

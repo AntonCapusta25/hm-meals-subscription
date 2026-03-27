@@ -20,7 +20,7 @@ export default function OccasionsCarousel() {
         <section id="occasions" className="py-12 md:py-24 bg-white relative">
             <div className="container mx-auto px-5 mb-10 flex justify-between items-end">
                 <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark">
-                    {t.title || "Occasions"}
+                    {t.title || "Who It's For"}
                 </h2>
                 <div className="flex gap-4">
                     <button className="custom-prev w-12 h-12 rounded-full border border-dark/20 flex items-center justify-center hover:bg-dark hover:text-white transition-colors">

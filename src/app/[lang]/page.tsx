@@ -9,7 +9,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HowItWorks from "@/components/HowItWorks";
 import ProblemSolution from "@/components/ProblemSolution";
-import CateringSavingsCalculator from "@/components/CateringSavingsCalculator";
 import Testimonials from "@/components/Testimonials";
 import CitiesMarquee from "@/components/CitiesMarquee";
 import FAQ from "@/components/FAQ";
@@ -24,7 +23,6 @@ export default function Home() {
         <Hero />
         <Partners />
         <ProblemSolution />
-        <CateringSavingsCalculator />
         <CuisineShowcase />
         <OccasionsCarousel />
         <Testimonials />

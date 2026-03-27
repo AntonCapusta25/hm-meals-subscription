@@ -1,108 +1,95 @@
 {
     "navigation": {
         "howItWorks": "How It Works",
-        "menu": "Menus",
+        "menu": "Plans",
         "about": "About Us",
         "faq": "FAQ",
-        "bookNow": "Book Now",
+        "bookNow": "Choose Plan",
         "blog": "Blog"
     },
     "hero": {
-        "titlePart1": "Exceptional Catering",
-        "titlePart2": "for Every",
-        "titleHighlight": "Occasion",
-        "animatedTitleStatic": "Home Chefs. At Your Office. Delivering in ",
+        "titlePart1": "Homemade Meals",
+        "titlePart2": "for",
+        "titleHighlight": "Real Life",
+        "animatedTitleStatic": "Homemade Meal Subscriptions for ",
         "animatedRotatingWords": [
-            "Amsterdam",
-            "Rotterdam",
-            "Den Haag",
-            "Haarlem",
-            "Enschede"
+            "families",
+            "busy professionals",
+            "plant-forward living",
+            "comfort-first routines"
         ],
-        "subtitle": "From intimate gatherings to grand celebrations, we bring restaurant-quality cuisine to your event.",
-        "cta": "Request Quote"
+        "subtitle": "Fresh, chef-made meals delivered weekly. Choose a plan that fits your routine.",
+        "cta": "Choose Your Plan"
     },
     "partners": {
         "heading": "Proudly Partnering With"
     },
     "problemSolution": {
-        "title1": "Why overpay at crowded restaurants",
-        "title2": "when you can enjoy an exclusive private chef experience?",
-        "solutionTitle": "Private chef team dinners at 40% less cost",
-        "solutionDesc": "Skip the overpriced restaurants. Get exceptional food, real connections, and significant savings.",
-        "benefit1Title": "Better food than restaurants",
-        "benefit1Desc": "Chef-prepared meals with premium ingredients, tailored to your preferences",
-        "benefit2Title": "Intimate atmosphere for real bonding",
-        "benefit2Desc": "Create meaningful connections in a comfortable, private setting",
-        "benefit3Title": "Fully customizable & flexible",
-        "benefit3Desc": "Adapt menus, timing, and service to match your exact needs"
+        "title1": "Why spend your evenings",
+        "title2": "figuring out what to cook?",
+        "solutionTitle": "A weekly meal plan that actually works",
+        "solutionDesc": "Choose a plan, pick your meals, and let us handle the rest.",
+        "benefit1Title": "Consistent, balanced meals",
+        "benefit1Desc": "Chef-made dishes with real ingredients and clear nutrition focus",
+        "benefit2Title": "Zero planning, zero stress",
+        "benefit2Desc": "Skip the shopping, prepping, and cleanup on busy weekdays",
+        "benefit3Title": "Flexible by design",
+        "benefit3Desc": "Pause, skip, or switch plans anytime"
     },
     "howItWorks": {
         "title": "How it Works",
-        "step1Title": "Choose Your Menu",
-        "step1Desc": "Browse our curated catering packages or request custom options.",
-        "step2Title": "Confirm Details",
-        "step2Desc": "Select your date, guest count, and delivery preferences.",
-        "step3Title": "We Deliver Excellence",
-        "step3Desc": "Professional setup, premium service, and seamless cleanup."
+        "step1Title": "Pick Your Plan",
+        "step1Desc": "Choose the plan that matches your routine and preferences.",
+        "step2Title": "Select Weekly Meals",
+        "step2Desc": "Pick your meals and portion size for the week.",
+        "step3Title": "Delivered Fresh",
+        "step3Desc": "Heat, eat, and enjoy. Pause or skip anytime."
     },
     "cuisineShowcase": {
-        "title1": "Explore Our",
-        "title2": "Cuisines",
-        "subtitle": "From authentic classics to modern fusion, choose a culinary theme that perfectly matches your event's vibe.",
-        "requestQuote": "Request Quote",
-        "planMenu": "Plan Your Menu Now",
-        "customAlert": "Custom menus available upon request",
+        "title1": "Choose Your",
+        "title2": "Plan",
+        "subtitle": "Four cornerstone subscriptions designed for the way people eat in the Netherlands.",
+        "requestQuote": "Choose Plan",
+        "planMenu": "Start Your Subscription",
+        "customAlert": "Pause or skip anytime",
         "items": {
-            "surinami": {
-                "title": "Suriname Soul Food",
-                "description": "A vibrant fusion of Creole, Hindustani, and Javanese flavors."
+            "family": {
+                "title": "Family Plan",
+                "description": "Weeknight dinners built for families: mild flavors, balanced plates, and flexible portions."
             },
-            "asian": {
-                "title": "Asian Fusion",
-                "description": "A bold mix of Eastern flavors with modern culinary techniques."
+            "routine": {
+                "title": "Healthy Routine Plan",
+                "description": "Portion-consistent, protein-aware meals that keep your week on track."
             },
-            "indian": {
-                "title": "Authentic Indian",
-                "description": "Rich curries, aromatic spices, and traditional recipes."
+            "plant": {
+                "title": "Plant-Forward Plan",
+                "description": "Vegetable-first meals with legumes, whole grains, and bold flavor."
             },
-            "italian": {
-                "title": "Italian Gourmet",
-                "description": "Handcrafted pasta, premium sauces, and the true taste of Italy."
-            },
-            "vegetarian": {
-                "title": "Fresh Vegetarian",
-                "description": "Vibrant, plant-based dishes that celebrate seasonal produce."
-            },
-            "seafood": {
-                "title": "Ocean Treasures",
-                "description": "Fresh catches prepared to highlight their natural delicate flavors."
+            "comfort": {
+                "title": "Comfort & Care Plan",
+                "description": "Home-style classics that are easy to reheat and always satisfying."
             }
         }
     },
     "occasions": {
-        "title": "Occasions",
-        "exploreMenu": "Explore Menu",
+        "title": "Who It's For",
+        "exploreMenu": "See Details",
         "items": {
-            "kerst": {
-                "title": "Holiday Events",
-                "subtitle": "Seasonal"
+            "families": {
+                "title": "Busy Families",
+                "subtitle": "Weeknights"
             },
-            "shared": {
-                "title": "Family-Style Dining",
-                "subtitle": "Social"
+            "professionals": {
+                "title": "Busy Professionals",
+                "subtitle": "Routine"
             },
-            "newyear": {
-                "title": "Celebrations & Parties",
-                "subtitle": "Celebration"
+            "flexitarians": {
+                "title": "Flexitarians",
+                "subtitle": "Plant-forward"
             },
-            "corporate": {
-                "title": "Corporate Events",
-                "subtitle": "Professional"
-            },
-            "romantic": {
-                "title": "Private Dining",
-                "subtitle": "Intimate"
+            "comfort": {
+                "title": "Comfort Seekers",
+                "subtitle": "Care"
             }
         }
     },
@@ -164,112 +151,92 @@
         }
     },
     "testimonials": {
-        "title": "What Our Customers Say",
-        "subtitle": "Real experiences from clients who've enjoyed our private chef services.",
-        "joinText": "Join hundreds of satisfied clients",
-        "bookButton": "Book Your Team Dinner",
+        "title": "What Subscribers Say",
+        "subtitle": "Real stories from people using Homemade every week.",
+        "joinText": "Join thousands of subscribers",
+        "bookButton": "Choose Your Plan",
         "verifiedClient": "Verified Client",
         "metrics": {
             "happyClients": "Happy Clients",
             "averageRating": "Average Rating",
-            "savings": "Savings vs. Restaurants",
+            "savings": "Time Saved",
             "guarantee": "Satisfaction Guarantee"
         },
         "items": [
             {
-                "company": "Birthday Celebration",
-                "eventType": "Custom Tiramisu Order",
-                "quote": "Ordered Tiramisú for my Bday instead of the regular Bday cake!!! What to say... Best choice ever!!! All my friends loved it and Domenico fulfilled my order with only 48 hours to go before my party! Ordered 3 trays and we finished all of it!! Thanks Dome, I knew I could count on you!"
+                "company": "Family Plan",
+                "eventType": "Weekly Dinners",
+                "quote": "Our kids actually eat the meals. The portions are perfect and we save hours every week."
             },
             {
-                "company": "Private Dinner",
-                "eventType": "Steak & Empanadas",
-                "quote": "The food was amazing, steak was cooked perfectly with tasty chimichurri, and the empanada was exactly how authentic empanadas should taste!"
+                "company": "Healthy Routine",
+                "eventType": "Weekday Structure",
+                "quote": "I stopped skipping lunch and ordering takeout. The protein options are solid and consistent."
             },
             {
-                "company": "Special Occasion",
-                "eventType": "Italian Dessert Catering",
-                "quote": "This is by far one of the best Tiramisu I have tasted! It somehow melts inside the mouth! Super Good!!"
+                "company": "Plant-Forward",
+                "eventType": "Flexitarian",
+                "quote": "We wanted more plant-based meals without going fully vegan. These are flavorful and filling."
             },
             {
-                "company": "Family Gathering",
-                "eventType": "Private Chef Service",
-                "quote": "Delicious!! Approved by my tiramisu loved boyfriend. He said it's the best he's ever had!"
+                "company": "Comfort & Care",
+                "eventType": "Easy Reheating",
+                "quote": "Reliable, home-style meals that are easy to heat up. Exactly what I needed after a busy week."
             },
             {
-                "company": "Direct Order",
-                "eventType": "Recurring Client",
-                "quote": "I ordered from Bottega da Dome a few times and they have hands down the best tiramisu! Will keep ordering from them again :)"
+                "company": "Couple Plan",
+                "eventType": "Portion-Controlled",
+                "quote": "Great variety, no food waste, and the delivery window is always on time."
             },
             {
-                "company": "Catering",
-                "eventType": "Event Catering",
-                "quote": "Delicious tiramisu! We all loved it. Very well made and Domenico is a very friendly chef. Will order again!"
+                "company": "Busy Professional",
+                "eventType": "No-Prep Meals",
+                "quote": "I can finally keep my weekdays clean. The meals are fresh and taste like real food."
             },
             {
-                "company": "Dinner Party",
-                "eventType": "Authentic Biryani",
-                "quote": "The biryani was very hearty and tasty! Good portion with chicken and potatoes. Definitely will order again."
+                "company": "Family Plan",
+                "eventType": "Kid-Friendly",
+                "quote": "Less stress at dinner time. We just heat, plate, and enjoy."
             }
         ]
     },
     "faq": {
         "title": "Frequently Asked Questions",
-        "subtitle": "Everything you need to know about our catering services. Can't find your answer? Contact us directly.",
+        "subtitle": "Everything you need to know about meal subscriptions. Can't find your answer? Contact us directly.",
         "stillQuestions": "Still have questions?",
         "contactTeam": "Contact Our Team",
         "items": [
             {
-                "question": "What's included in your service?",
-                "answer": "Our service includes a professional chef, all premium ingredients, table setup, and complete cleanup after the event. We ensure a seamless dining experience."
+                "question": "What’s included in a subscription?",
+                "answer": "Fresh, chef-made meals delivered weekly. You choose your plan, portions, and meal preferences."
             },
             {
-                "question": "Can we customize the menu?",
-                "answer": "Absolutely! We work with you to create a menu that matches your preferences, dietary needs, and event theme."
+                "question": "Can I pause or skip weeks?",
+                "answer": "Yes. You can pause, skip, or change your plan before the weekly cutoff."
             },
             {
-                "question": "What about dietary restrictions?",
-                "answer": "We accommodate all dietary restrictions and preferences. We handle vegetarian, vegan, gluten-free, halal, kosher, and all allergy-related requirements."
+                "question": "Do you support dietary preferences?",
+                "answer": "We offer vegetarian, plant-forward, and protein-focused options, plus allergen-friendly selections."
             },
             {
-                "question": "How many people can we accommodate?",
-                "answer": "Our service serves a wide range of group sizes, from 15 to 100+ people. Contact us for a custom quote and we can scale our service to match your needs."
+                "question": "How do portions work?",
+                "answer": "Choose 2–4 portions per meal, or individual meals if you’re ordering for one."
             },
             {
-                "question": "Can we choose our preferred date and time?",
-                "answer": "Yes! We work around your schedule. During booking, you'll select your preferred date and time. We recommend booking at least 2-3 weeks in advance for best availability, though we can sometimes accommodate shorter notice for smaller events."
+                "question": "When do you deliver?",
+                "answer": "We deliver on fixed weekly routes by area. You’ll see available days at checkout."
             },
             {
-                "question": "What if our headcount changes?",
-                "answer": "We understand headcounts can fluctuate. You can adjust your guest count up to 5 days before the event without penalty. Changes within 5 days may incur additional fees. We'll work with you to ensure we're prepared for your final number."
+                "question": "How far in advance do I need to order?",
+                "answer": "Orders close 3–4 days before delivery so chefs can prep fresh meals."
             },
             {
-                "question": "How far in advance should we book?",
-                "answer": "We recommend booking 2-4 weeks in advance to ensure availability and allow time for menu planning. For large events (50+ people) or during peak seasons, 4-6 weeks is ideal. Rush bookings may be possible—contact us to check availability."
+                "question": "Can I cancel anytime?",
+                "answer": "Yes. Cancel or pause your subscription from your account with no long-term commitment."
             },
             {
-                "question": "What's your cancellation policy?",
-                "answer": "Cancellations made 14+ days before the event receive a full refund. Cancellations 7-13 days prior receive a 50% refund. Cancellations within 7 days are non-refundable, though we can reschedule based on availability. Weather-related cancellations are handled case-by-case."
-            },
-            {
-                "question": "Do you work with our existing venue?",
-                "answer": "We can cater at most venues including offices, private homes, event spaces, and outdoor locations. We'll need basic kitchen access (or can bring portable equipment) and space for setup. During consultation, we'll discuss your venue's specific requirements."
-            },
-            {
-                "question": "Can we see photos from past events?",
-                "answer": "Absolutely! We have a portfolio of past events showcasing our food presentation, table setups, and happy clients. Contact us or check our social media for recent event photos. We're proud to share our work!"
-            },
-            {
-                "question": "How do you handle dietary restrictions?",
-                "answer": "We take dietary restrictions very seriously. During booking, you'll specify all dietary needs. Our chefs prepare separate dishes or modify recipes to ensure everyone enjoys the meal safely. We're experienced with allergies, religious requirements, and lifestyle preferences."
-            },
-            {
-                "question": "What's the lead time for booking?",
-                "answer": "Minimum lead time is typically 1 week for small events (under 20 people) and 2 weeks for larger groups. However, we've accommodated last-minute requests when possible. Contact us immediately if you have an urgent need—we'll do our best to help."
-            },
-            {
-                "question": "Do you offer team building activities?",
-                "answer": "While our focus is exceptional catering, we can coordinate with team building partners for activities like cooking classes, wine tastings, or interactive dining experiences. Let us know your interests during consultation, and we'll help create a complete event experience."
+                "question": "Are meals fresh or frozen?",
+                "answer": "Meals are delivered fresh and are designed for easy reheating."
             }
         ]
     },
@@ -312,18 +279,18 @@
         "stepProgress": "Step {current} of {total}",
         "backButton": "Back",
         "nextButton": "Next",
-        "submitButton": "Submit Booking Request",
-        "occasionTitle": "What's the occasion?",
-        "occasionSubtitle": "Select the type of event you're planning.",
-        "guestsTitle": "How many guests?",
-        "guestsSubtitle": "Rough estimates are fine. Minimum 5 guests.",
-        "dateTitle": "When is the event?",
-        "dateSubtitle": "Select your preferred date.",
+        "submitButton": "Submit Request",
+        "occasionTitle": "Choose your plan",
+        "occasionSubtitle": "Pick the subscription that fits your routine.",
+        "guestsTitle": "How many meals per week?",
+        "guestsSubtitle": "Choose the weekly quantity that fits your routine.",
+        "dateTitle": "How many delivery days?",
+        "dateSubtitle": "Pick how many days you want deliveries each week.",
         "contactTitle": "Your Details",
-        "contactSubtitle": "Where should we send the quote?",
+        "contactSubtitle": "Where should we send your subscription details?",
         "submitting": "Submitting...",
-        "successTitle": "You're Booked!",
-        "successMessage": "Thank you for your request. Our catering team will contact you shortly to finalize your event details!",
+        "successTitle": "You're In!",
+        "successMessage": "Thanks for your request. We’ll contact you shortly to confirm your subscription details.",
         "backHome": "Back to Home"
     },
     "menuGrid": {
@@ -398,8 +365,8 @@
         "applyBtn": "Apply as Chef"
     },
     "metadata": {
-        "homeTitle": "Homemade Meals Delivery | Private Chef in Amsterdam & Netherlands",
-        "homeDescription": "Order fresh, homemade meals from certified private chefs near you. Affordable, delicious, and always freshly prepared. Order today in Amsterdam, Rotterdam, and Enschede."
+        "homeTitle": "Homemade Meal Subscriptions | Fresh Weekly Delivery",
+        "homeDescription": "Choose a meal subscription built for real life. Fresh, chef-made meals delivered weekly across the Netherlands."
     },
     "cateringCalculator": {
         "badge": "💰 Savings Calculator",

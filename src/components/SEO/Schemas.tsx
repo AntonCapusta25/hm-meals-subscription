@@ -2,7 +2,7 @@ export function LocalBusinessSchema({ city }: { city: string }) {
     const schema = {
         "@context": "https://schema.org",
         "@type": "CateringService",
-        "name": "Homemade Catering",
+        "name": "Homemade Meal Subscriptions",
         "image": "https://www.homemademeals.net/images/logo-new.png",
         "@id": "https://www.homemademeals.net",
         "url": "https://www.homemademeals.net",

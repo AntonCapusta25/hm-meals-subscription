@@ -9,16 +9,16 @@ export default function ProblemSolution() {
 
     const benefits = [
         {
-            title: t.benefit1Title || "Better food than restaurants",
-            description: t.benefit1Desc || "Chef-prepared meals with premium ingredients, tailored to your preferences"
+            title: t.benefit1Title || "Consistent, balanced meals",
+            description: t.benefit1Desc || "Chef-made dishes with real ingredients and clear nutrition focus"
         },
         {
-            title: t.benefit2Title || "Intimate atmosphere for real bonding",
-            description: t.benefit2Desc || "Create meaningful connections in a comfortable, private setting"
+            title: t.benefit2Title || "Zero planning, zero stress",
+            description: t.benefit2Desc || "Skip the shopping, prepping, and cleanup on busy weekdays"
         },
         {
-            title: t.benefit3Title || "Fully customizable & flexible",
-            description: t.benefit3Desc || "Adapt menus, timing, and service to match your exact needs"
+            title: t.benefit3Title || "Flexible by design",
+            description: t.benefit3Desc || "Pause, skip, or switch plans anytime"
         }
     ];
 
@@ -38,9 +38,9 @@ export default function ProblemSolution() {
                     className="text-center mb-8 md:mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-heading font-bold text-dark mb-4 leading-tight">
-                        {t.title1 || "Why overpay at crowded restaurants"}
+                        {t.title1 || "Why spend your evenings"}
                         <br />
-                        {t.title2 || "when you can enjoy an exclusive private chef experience?"}
+                        {t.title2 || "figuring out what to cook?"}
                     </h2>
                 </motion.div>
 
@@ -54,11 +54,11 @@ export default function ProblemSolution() {
                 >
                     <div className="inline-block px-8 py-4 rounded-2xl bg-gradient-to-r from-[#F27D42] to-[#FF9F6D] text-white mb-6">
                         <h3 className="text-2xl md:text-4xl font-heading font-bold">
-                            {t.solutionTitle || "Private chef team dinners at 40% less cost"}
+                            {t.solutionTitle || "A weekly meal plan that actually works"}
                         </h3>
                     </div>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        {t.solutionDesc || "Skip the overpriced restaurants. Get exceptional food, real connections, and significant savings."}
+                        {t.solutionDesc || "Choose a plan, pick your meals, and let us handle the rest."}
                     </p>
                 </motion.div>
 

@@ -25,10 +25,10 @@ export default function CuisineShowcase() {
             <div className="container mx-auto px-5 relative z-10">
                 <div className="text-center mb-8 md:mb-16">
                     <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark mb-4">
-                        {t.title1 || "Explore Our"} <span className="text-orange">{t.title2 || "Cuisines"}</span>
+                        {t.title1 || "Choose Your"} <span className="text-orange">{t.title2 || "Plan"}</span>
                     </h2>
                     <p className="text-light max-w-2xl mx-auto text-lg leading-relaxed">
-                        {t.subtitle || "From authentic classics to modern fusion, choose a culinary theme that perfectly matches your event's vibe."}
+                        {t.subtitle || "Four cornerstone subscriptions designed for the way people eat in the Netherlands."}
                     </p>
                 </div>
 
@@ -57,16 +57,29 @@ export default function CuisineShowcase() {
                                     <h3 className="text-2xl font-bold text-dark mb-3 group-hover:text-orange transition-colors">
                                         {translation.title || cuisine.title}
                                     </h3>
-                                    <p className="text-gray-600 mb-6 leading-relaxed">
+                                    <p className="text-gray-600 mb-4 leading-relaxed">
                                         {translation.description || cuisine.description}
                                     </p>
+
+                                    {cuisine.highlights && cuisine.highlights.length > 0 && (
+                                        <div className="flex flex-wrap gap-2 mb-6">
+                                            {cuisine.highlights.map((item) => (
+                                                <span
+                                                    key={item}
+                                                    className="text-[11px] md:text-xs uppercase tracking-widest font-semibold px-3 py-1 rounded-full bg-orange/10 text-orange border border-orange/20"
+                                                >
+                                                    {item}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    )}
 
                                     <Link
                                         href={`/${lang}/quote`}
                                         onClick={() => trackCuisineClick(cuisine.title)}
                                         className="inline-flex items-center gap-2 font-bold text-orange uppercase tracking-wider text-sm hover:gap-3 transition-all"
                                     >
-                                        {t.requestQuote || "Request Quote"}
+                                        {t.requestQuote || "Choose Plan"}
                                         <svg className="w-4 h-4 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                         </svg>
@@ -84,10 +97,10 @@ export default function CuisineShowcase() {
                         onClick={() => trackCTAClick("Plan Your Menu Now", "cuisine_section")}
                         className="inline-block bg-orange text-white text-lg font-bold uppercase tracking-wider py-4 px-10 rounded-full hover:bg-dark transition-colors shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
                     >
-                        {t.planMenu || "Plan Your Menu Now"}
+                        {t.planMenu || "Start Your Subscription"}
                     </Link>
                     <p className="mt-4 text-light text-sm">
-                        {t.customAlert || "Custom menus available upon request"}
+                        {t.customAlert || "Pause or skip anytime"}
                     </p>
                 </div>
             </div>

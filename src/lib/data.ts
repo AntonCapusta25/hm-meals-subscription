@@ -27,44 +27,37 @@ export interface Cuisine {
     title: string;
     image: string;
     description: string;
+    highlights?: string[];
 }
 
 export const cuisines: Cuisine[] = [
     {
-        id: "surinami",
-        title: "Suriname Soul Food",
-        image: "/images/suriname-new.jpg",
-        description: "A vibrant fusion of Creole, Hindustani, and Javanese flavors."
+        id: "family",
+        title: "Family Plan",
+        image: "/images/menu-kids.jpg",
+        description: "Healthy home dinners everyone will actually eat, built for weeknights.",
+        highlights: ["Kid-friendly flavors", "Balanced plates", "Flexible portions"]
     },
     {
-        id: "asian",
-        title: "Asian Fusion",
-        image: "/images/cuisine-asian.jpg",
-        description: "A bold mix of Eastern flavors with modern culinary techniques."
+        id: "routine",
+        title: "Healthy Routine Plan",
+        image: "/images/menu-ron.jpg",
+        description: "Balanced, protein-aware meals for weekday structure and consistency.",
+        highlights: ["Clear nutrition focus", "Portion consistency", "Reliable delivery"]
     },
     {
-        id: "indian",
-        title: "Authentic Indian",
-        image: "/images/indian-46.png",
-        description: "Rich curries, aromatic spices, and traditional recipes."
+        id: "plant",
+        title: "Plant-Forward Plan",
+        image: "/images/menu-veggie.jpg",
+        description: "Seasonal, veg-first meals with full flavor and variety.",
+        highlights: ["Vegetable-forward", "Legumes & whole grains", "Global spices"]
     },
     {
-        id: "italian",
-        title: "Italian Gourmet",
-        image: "/images/generated/cuisine-italian.png",
-        description: "Handcrafted pasta, premium sauces, and the true taste of Italy."
-    },
-    {
-        id: "vegetarian",
-        title: "Fresh Vegetarian",
-        image: "/images/veggie-new.png",
-        description: "Vibrant, plant-based dishes that celebrate seasonal produce."
-    },
-    {
-        id: "seafood",
-        title: "Ocean Treasures",
-        image: "/images/ocean-treasures-43.png",
-        description: "Fresh catches prepared to highlight their natural delicate flavors."
+        id: "comfort",
+        title: "Comfort & Care Plan",
+        image: "/images/menu-classic.png",
+        description: "Familiar, nourishing meals with zero effort and easy reheating.",
+        highlights: ["Home-style classics", "Gentle seasoning", "No-prep ease"]
     }
 ];
 
@@ -242,44 +235,36 @@ export const menus: Menu[] = [
 
 export const occasions: Occasion[] = [
     {
-        id: "kerst",
-        title: "Holiday Events",
-        subtitle: "Seasonal",
-        image: "/images/generated/occasion-holiday.png",
-        description: "Celebrate the magic of the holidays with our specially curated seasonal menus. From traditional favorites to modern gourmet experiences.",
-        features: ["Festive presentation styling", "Wine pairing options", "Dietary alternatives available"]
-    },
-    {
-        id: "shared",
-        title: "Family-Style Dining",
-        subtitle: "Social",
+        id: "families",
+        title: "Busy Families",
+        subtitle: "Weeknights",
         image: "/images/family-dining-44.png",
-        description: "Food is best when shared. Enjoy large platters and family-style serving for a warm, communal dining experience at your event.",
-        features: ["Large serving platters", "Interactive courses", "Casual atmosphere"]
+        description: "Make dinner happen without the stress. Kid-friendly, flexible, and consistent.",
+        features: ["Mild flavors", "Flexible portions", "Quick heat & eat"]
     },
     {
-        id: "newyear",
-        title: "Celebrations & Parties",
-        subtitle: "Celebration",
-        image: "/images/generated/occasion-party.png",
-        description: "Make your celebration unforgettable with sparkles and culinary excellence. A luxurious menu for any special occasion.",
-        features: ["Champagne service available", "Late-night snacks", "Festive dessert finale"]
+        id: "professionals",
+        title: "Busy Professionals",
+        subtitle: "Routine",
+        image: "/images/hero-49.png",
+        description: "Stay consistent during the workweek with balanced meals that keep you on track.",
+        features: ["Clear nutrition labels", "Reliable delivery", "No planning required"]
     },
     {
-        id: "corporate",
-        title: "Corporate Events",
-        subtitle: "Professional",
-        image: "/images/generated/occasion-corporate.png",
-        description: "Impress your colleagues and clients with a high-end culinary experience. Perfect for business meetings, conferences, and corporate gatherings.",
-        features: ["Branded menus available", "Professional service staff", "Dietary requirement handling"]
+        id: "flexitarians",
+        title: "Flexitarians",
+        subtitle: "Plant-forward",
+        image: "/images/menu-veggie.jpg",
+        description: "Eat more plant-based meals without compromising taste or comfort.",
+        features: ["Seasonal vegetables", "Legumes & whole grains", "Global flavors"]
     },
     {
-        id: "romantic",
-        title: "Private Dining",
-        subtitle: "Intimate",
-        image: "/images/private-dining-45.png",
-        description: "Create the perfect intimate setting with our private dining service. Exceptional food in the comfort of your chosen venue.",
-        features: ["Elegant setup", "Premium beverage selection", "Discreet service"]
+        id: "comfort",
+        title: "Comfort Seekers",
+        subtitle: "Care",
+        image: "/images/hero-51.png",
+        description: "Warm, familiar meals for people who want ease and reliability.",
+        features: ["Home-style classics", "Gentle seasoning", "Easy reheating"]
     }
 ];
 

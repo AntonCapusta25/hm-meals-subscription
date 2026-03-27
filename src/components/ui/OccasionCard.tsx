@@ -35,7 +35,7 @@ export default function OccasionCard({ occasion }: OccasionCardProps) {
                     {translation.title || occasion.title}
                 </h3>
                 <span className="text-sm font-semibold border-b border-white/50 pb-1 hover:text-orange hover:border-orange transition-colors">
-                    {t.exploreMenu || "Explore Menu"} &rarr;
+                    {t.exploreMenu || "See Details"} &rarr;
                 </span>
             </div>
         </motion.div>

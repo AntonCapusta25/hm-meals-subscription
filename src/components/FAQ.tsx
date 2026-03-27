@@ -8,56 +8,36 @@ import { usePathname } from 'next/navigation';
 
 const fallbackFaqs = [
     {
-        question: "What's included in your service?",
-        answer: "Our service includes a professional chef, all premium ingredients, table setup, and complete cleanup after the event. We ensure a seamless dining experience."
+        question: "What’s included in a subscription?",
+        answer: "Fresh, chef-made meals delivered weekly. You choose your plan, portions, and meal preferences."
     },
     {
-        question: "Can we customize the menu?",
-        answer: "Absolutely! We work with you to create a menu that matches your preferences, dietary needs, and event theme."
+        question: "Can I pause or skip weeks?",
+        answer: "Yes. You can pause, skip, or change your plan before the weekly cutoff."
     },
     {
-        question: "What about dietary restrictions?",
-        answer: "We accommodate all dietary restrictions and preferences. We handle vegetarian, vegan, gluten-free, halal, kosher, and all allergy-related requirements."
+        question: "Do you support dietary preferences?",
+        answer: "We offer vegetarian, plant-forward, and protein-focused options, plus allergen-friendly selections."
     },
     {
-        question: "How many people can we accommodate?",
-        answer: "Our service serves a wide range of group sizes, from 15 to 100+ people. Contact us for a custom quote and we can scale our service to match your needs."
+        question: "How do portions work?",
+        answer: "Choose 2–4 portions per meal, or individual meals if you’re ordering for one."
     },
     {
-        question: "Can we choose our preferred date and time?",
-        answer: "Yes! We work around your schedule. During booking, you'll select your preferred date and time. We recommend booking at least 2-3 weeks in advance for best availability, though we can sometimes accommodate shorter notice for smaller events."
+        question: "When do you deliver?",
+        answer: "We deliver on fixed weekly routes by area. You’ll see available days at checkout."
     },
     {
-        question: "What if our headcount changes?",
-        answer: "We understand headcounts can fluctuate. You can adjust your guest count up to 5 days before the event without penalty. Changes within 5 days may incur additional fees. We'll work with you to ensure we're prepared for your final number."
+        question: "How far in advance do I need to order?",
+        answer: "Orders close 3–4 days before delivery so chefs can prep fresh meals."
     },
     {
-        question: "How far in advance should we book?",
-        answer: "We recommend booking 2-4 weeks in advance to ensure availability and allow time for menu planning. For large events (50+ people) or during peak seasons, 4-6 weeks is ideal. Rush bookings may be possible—contact us to check availability."
+        question: "Can I cancel anytime?",
+        answer: "Yes. Cancel or pause your subscription from your account with no long-term commitment."
     },
     {
-        question: "What's your cancellation policy?",
-        answer: "Cancellations made 14+ days before the event receive a full refund. Cancellations 7-13 days prior receive a 50% refund. Cancellations within 7 days are non-refundable, though we can reschedule based on availability. Weather-related cancellations are handled case-by-case."
-    },
-    {
-        question: "Do you work with our existing venue?",
-        answer: "We can cater at most venues including offices, private homes, event spaces, and outdoor locations. We'll need basic kitchen access (or can bring portable equipment) and space for setup. During consultation, we'll discuss your venue's specific requirements."
-    },
-    {
-        question: "Can we see photos from past events?",
-        answer: "Absolutely! We have a portfolio of past events showcasing our food presentation, table setups, and happy clients. Contact us or check our social media for recent event photos. We're proud to share our work!"
-    },
-    {
-        question: "How do you handle dietary restrictions?",
-        answer: "We take dietary restrictions very seriously. During booking, you'll specify all dietary needs. Our chefs prepare separate dishes or modify recipes to ensure everyone enjoys the meal safely. We're experienced with allergies, religious requirements, and lifestyle preferences."
-    },
-    {
-        question: "What's the lead time for booking?",
-        answer: "Minimum lead time is typically 1 week for small events (under 20 people) and 2 weeks for larger groups. However, we've accommodated last-minute requests when possible. Contact us immediately if you have an urgent need—we'll do our best to help."
-    },
-    {
-        question: "Do you offer team building activities?",
-        answer: "While our focus is exceptional catering, we can coordinate with team building partners for activities like cooking classes, wine tastings, or interactive dining experiences. Let us know your interests during consultation, and we'll help create a complete event experience."
+        question: "Are meals fresh or frozen?",
+        answer: "Meals are delivered fresh and are designed for easy reheating."
     }
 ];
 

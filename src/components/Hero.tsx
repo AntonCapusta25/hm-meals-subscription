@@ -114,8 +114,8 @@ export default function Hero({ city }: HeroProps) {
             <div className="relative z-10 w-full h-full flex flex-col justify-start md:justify-center items-center pt-36 md:pt-0 py-12 md:py-20 px-5">
                 <div className="text-center max-w-4xl w-full flex flex-col items-center">
                     <AnimatedHeroHeadline
-                        staticText={t.animatedTitleStatic || "Home Chefs. At Your Office. Delivering in "}
-                        words={t.animatedRotatingWords || ["Amsterdam", "Rotterdam", "Den Haag", "Haarlem", "Enschede"]}
+                        staticText={t.animatedTitleStatic || "Homemade Meal Subscriptions for "}
+                        words={t.animatedRotatingWords || ["families", "busy professionals", "plant-forward living", "comfort-first routines"]}
                     />
 
                     <motion.p
@@ -124,7 +124,7 @@ export default function Hero({ city }: HeroProps) {
                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                         className="text-lg md:text-xl lg:text-2xl text-white/90 mt-6 mb-0 max-w-2xl mx-auto drop-shadow-md font-medium"
                     >
-                        {t.subtitle || "From intimate gatherings to grand celebrations, we bring restaurant-quality cuisine to your event."}
+                        {t.subtitle || "Fresh, chef-made meals delivered weekly. Choose a plan that fits your routine."}
                     </motion.p>
                 </div>
 
@@ -140,7 +140,7 @@ export default function Hero({ city }: HeroProps) {
                         onClick={() => trackCTAClick("Request Quote", "hero_section")}
                         className="bg-orange/90 hover:bg-orange text-white px-8 py-3.5 md:px-12 md:py-5 rounded-full font-bold text-base md:text-lg uppercase tracking-wider backdrop-blur-sm border-2 border-white/20 shadow-2xl hover:shadow-orange/40 hover:-translate-y-1 transition-all duration-300"
                     >
-                        {t.cta || "Request Quote"}
+                        {t.cta || "Choose Your Plan"}
                     </Link>
                 </motion.div>
             </div>

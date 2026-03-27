@@ -23,7 +23,7 @@ export default function OccasionDetailPage({ params }: { params: Promise<{ lang:
                 href="/#occasions"
                 className="fixed top-6 left-6 z-50 bg-white/20 backdrop-blur-md border border-white/30 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-white hover:text-dark transition-all flex items-center gap-2 shadow-lg"
             >
-                &larr; All Occasions
+                &larr; All Use Cases
             </Link>
 
             {/* Immersive Header */}
@@ -63,7 +63,7 @@ export default function OccasionDetailPage({ params }: { params: Promise<{ lang:
                             href={`/${lang}/quote`}
                             className="bg-orange text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-orange transition-all shadow-xl hover:shadow-2xl"
                         >
-                            Start Planning
+                            Choose Your Plan
                         </Link>
                     </motion.div>
                 </div>
@@ -72,7 +72,7 @@ export default function OccasionDetailPage({ params }: { params: Promise<{ lang:
             {/* Content */}
             <section className="py-24 container mx-auto px-5 max-w-4xl text-center">
                 <h2 className="text-3xl font-heading font-bold text-dark mb-8">
-                    Experience The Vibe
+                    Why It Works
                 </h2>
                 <p className="text-xl md:text-2xl text-light leading-relaxed mb-16">
                     {occasion.description}

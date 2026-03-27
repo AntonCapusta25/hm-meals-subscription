@@ -11,20 +11,20 @@ export default function HowItWorks() {
     const steps = [
         {
             number: "01",
-            title: t.step1Title || "Choose Your Menu",
-            description: t.step1Desc || "Browse our curated catering packages or request custom options.",
+            title: t.step1Title || "Pick Your Plan",
+            description: t.step1Desc || "Choose the plan that matches your routine and preferences.",
             image: "/images/select-menu-47.png",
         },
         {
             number: "02",
-            title: t.step2Title || "Confirm Details",
-            description: t.step2Desc || "Select your date, guest count, and delivery preferences.",
+            title: t.step2Title || "Select Weekly Meals",
+            description: t.step2Desc || "Pick your meals and portion size for the week.",
             image: "/images/step-confirm.jpg",
         },
         {
             number: "03",
-            title: t.step3Title || "We Deliver Excellence",
-            description: t.step3Desc || "Professional setup, premium service, and seamless cleanup.",
+            title: t.step3Title || "Delivered Fresh",
+            description: t.step3Desc || "Heat, eat, and enjoy. Pause or skip anytime.",
             image: "/images/step-enjoy.jpg",
         },
     ];
