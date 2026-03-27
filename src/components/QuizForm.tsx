@@ -218,7 +218,7 @@ function QuizFormContent() {
     return (
         <div className="w-full max-w-3xl mx-auto">
             {/* Progress Bar */}
-            <div className="mb-6 md:mb-12">
+            <div className="mb-4 md:mb-12">
                 <div className="flex justify-between text-[10px] md:text-sm font-medium text-gray-500 mb-2 md:mb-4 tracking-widest uppercase">
                     <span>{t.stepProgress?.replace('{current}', step.toString()).replace('{total}', totalSteps.toString()) || `Step ${step} of ${totalSteps}`}</span>
                     <span>{Math.round((step / totalSteps) * 100)}%</span>
@@ -234,7 +234,7 @@ function QuizFormContent() {
             </div>
 
             {/* Form Container */}
-            <div className="relative min-h-[320px] md:min-h-[400px]" onKeyDown={handleKeyDown}>
+            <div className="relative min-h-[380px] md:min-h-[420px]" onKeyDown={handleKeyDown}>
                 <AnimatePresence mode="wait">
                     {/* STEP 1: Plan */}
                     {step === 1 && (
@@ -247,7 +247,7 @@ function QuizFormContent() {
                             className="absolute inset-0"
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.occasionTitle || "Choose your plan"}</h2>
-                            <p className="text-gray-400 text-base md:text-lg mb-6 md:mb-10">{t.occasionSubtitle || "Pick the subscription that fits your routine."}</p>
+                            <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-10">{t.occasionSubtitle || "Pick the subscription that fits your routine."}</p>
  
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
                                 {PLANS.map((occ) => (
@@ -262,7 +262,7 @@ function QuizFormContent() {
                                         <occ.icon size={18} className={`md:w-6 md:h-6 ${formData.plan === occ.label ? "text-[#F27D42]" : "text-gray-400"}`} />
                                         <div className="flex flex-col">
                                             <span className="font-bold text-sm md:text-lg">{occ.label}</span>
-                                            <span className={`text-xs md:text-sm mt-1 ${formData.plan === occ.label ? "text-[#F27D42]/90" : "text-gray-400"}`}>
+                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.plan === occ.label ? "text-[#F27D42]/90" : "text-gray-400"}`}>
                                                 {occ.description}
                                             </span>
                                         </div>
@@ -283,7 +283,7 @@ function QuizFormContent() {
                             className="absolute inset-0"
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.guestsTitle || "How many meals per week?"}</h2>
-                            <p className="text-gray-400 text-base md:text-lg mb-6 md:mb-10">{t.guestsSubtitle || "Choose the weekly quantity that fits your routine."}</p>
+                            <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-10">{t.guestsSubtitle || "Choose the weekly quantity that fits your routine."}</p>
  
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4">
                                 {MEALS_OPTIONS.map((opt) => (
@@ -298,7 +298,7 @@ function QuizFormContent() {
                                         <Utensils size={18} className={`md:w-6 md:h-6 ${formData.mealsPerWeek === opt.label ? "text-[#F27D42]" : "text-gray-400"}`} />
                                         <div className="flex flex-col">
                                             <span className="font-bold text-sm md:text-lg">{opt.label}</span>
-                                            <span className={`text-xs md:text-sm mt-1 ${formData.mealsPerWeek === opt.label ? "text-[#F27D42]/90" : "text-gray-400"}`}>
+                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.mealsPerWeek === opt.label ? "text-[#F27D42]/90" : "text-gray-400"}`}>
                                                 {opt.id === "3" ? "Light support for busy weeks" : opt.id === "5" ? "Full workweek coverage" : opt.id === "7" ? "Everyday dinners" : "Maximum flexibility"}
                                             </span>
                                         </div>
@@ -319,7 +319,7 @@ function QuizFormContent() {
                             className="absolute inset-0"
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.dateTitle || "How many delivery days?"}</h2>
-                            <p className="text-gray-400 text-base md:text-lg mb-6 md:mb-10">{t.dateSubtitle || "Pick how many days you want deliveries each week."}</p>
+                            <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-10">{t.dateSubtitle || "Pick how many days you want deliveries each week."}</p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 max-w-2xl">
                                 {DELIVERY_DAYS_OPTIONS.map((opt) => (
@@ -334,7 +334,7 @@ function QuizFormContent() {
                                         <Calendar size={18} className={`md:w-6 md:h-6 ${formData.deliveryDays === opt.label ? "text-[#F27D42]" : "text-gray-400"}`} />
                                         <div className="flex flex-col">
                                             <span className="font-bold text-sm md:text-lg">{opt.label}</span>
-                                            <span className={`text-xs md:text-sm mt-1 ${formData.deliveryDays === opt.label ? "text-[#F27D42]/90" : "text-gray-400"}`}>
+                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.deliveryDays === opt.label ? "text-[#F27D42]/90" : "text-gray-400"}`}>
                                                 {opt.id === "1" ? "All meals in one drop" : opt.id === "2" ? "Midweek freshness" : opt.id === "3" ? "More frequent top-ups" : "Near-daily convenience"}
                                             </span>
                                         </div>
@@ -355,7 +355,7 @@ function QuizFormContent() {
                             className="absolute inset-0"
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.contactTitle || "Your Details"}</h2>
-                            <p className="text-gray-400 text-base md:text-lg mb-6 md:mb-10">{t.contactSubtitle || "Where should we send your subscription details?"}</p>
+                            <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-10">{t.contactSubtitle || "Where should we send your subscription details?"}</p>
 
                             <form onSubmit={handleSubmit} className="space-y-6 max-w-md">
                                 <div className="relative">
@@ -402,7 +402,7 @@ function QuizFormContent() {
             </div>
 
             {/* Navigation Controls */}
-            <div className="mt-8 md:mt-16 flex items-center justify-between border-t border-white/10 pt-4 md:pt-8">
+            <div className="mt-4 md:mt-16 flex items-center justify-between border-t border-white/10 pt-4 md:pt-8">
                 <button
                     onClick={prevStep}
                     className={`flex items-center gap-2 font-bold transition-colors ${step === 1 ? 'text-gray-600 cursor-not-allowed' : 'text-gray-400 hover:text-white'}`}
