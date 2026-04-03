@@ -37,3 +37,30 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.bill-rip {
+  position: relative;
+  background-color: #fff;
+}
+
+.bill-rip::before,
+.bill-rip::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 16px;
+  background: radial-gradient(circle at 10px 0, transparent 9px, #fff 10px) repeat-x;
+  background-size: 20px 16px;
+  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.05));
+  pointer-events: none;
+}
+
+.bill-rip::before {
+  top: -8px;
+  transform: rotate(180deg);
+}
+
+.bill-rip::after {
+  bottom: -8px;
+}

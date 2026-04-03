@@ -712,7 +712,7 @@ function QuizFormContent() {
                                 </div>
 
                                 <div className="lg:pl-4">
-                                    <div className="bg-white rounded-lg border border-dark/10 shadow-soft p-5 space-y-4">
+                                    <div className="bill-rip bg-white rounded-lg border border-dark/10 shadow-soft p-5 space-y-4">
                                         <h3 className="font-display text-lg text-dark">Order summary</h3>
                                         <div className="space-y-2 text-sm">
                                             <div className="flex justify-between">
