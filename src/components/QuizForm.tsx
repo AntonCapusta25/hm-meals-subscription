@@ -2,7 +2,7 @@
 
 import { useState, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, ArrowLeft, CheckCircle2, Utensils, Calendar, Mail, User, Phone } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2, Utensils, Calendar, Mail, User, Phone, Flame } from "lucide-react";
 import confetti from "canvas-confetti";
 import { trackEvent } from "@/lib/analytics";
 import { useI18n } from "@/contexts/I18nContext";
@@ -63,19 +63,19 @@ const DELIVERY_DAYS_OPTIONS = [
 const MEAL_FILTERS = ["All", "Chicken", "Beef", "Fish", "Vegetarian"];
 
 const MEAL_ITEMS = [
-    { id: "chicken-teriyaki", title: "Chicken Teriyaki Rice Bowl", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-chicken-rice-DEPY1R_S.jpg" },
-    { id: "chicken-satay", title: "Chicken Satay Rice Bowl", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-thai-curry-5VDOicbi.jpg" },
-    { id: "chicken-shawarma", title: "Chicken Shawarma Rice Bowl", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-beef-teriyaki-DLHQuq9R.jpg" },
-    { id: "butter-chicken", title: "Butter Chicken with Rice", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-protein-pasta-VjvFlOyP.jpg" },
-    { id: "chicken-pesto", title: "Chicken Pesto Pasta", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-protein-pasta-VjvFlOyP.jpg" },
-    { id: "chili-chicken", title: "Chili Chicken Noodles", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-chicken-rice-DEPY1R_S.jpg" },
-    { id: "beef-bolognese", title: "Beef Bolognese Pasta", category: "Beef", image: "https://homemadeco.lovable.app/assets/meal-protein-pasta-VjvFlOyP.jpg" },
-    { id: "beef-shawarma", title: "Beef Shawarma Rice Bowl", category: "Beef", image: "https://homemadeco.lovable.app/assets/meal-beef-teriyaki-DLHQuq9R.jpg" },
-    { id: "pulled-beef", title: "Mexican Pulled Beef Bowl", category: "Beef", image: "https://homemadeco.lovable.app/assets/meal-mediterranean-UXFkxguD.jpg" },
-    { id: "salmon-teriyaki", title: "Salmon Teriyaki Rice Bowl", category: "Fish", image: "https://homemadeco.lovable.app/assets/meal-salmon-potato-oKfzZJQt.jpg" },
-    { id: "grilled-salmon", title: "Grilled Salmon with Rice & Vegetables", category: "Fish", image: "https://homemadeco.lovable.app/assets/meal-salmon-potato-oKfzZJQt.jpg" },
-    { id: "veg-bowl", title: "Vegetable Bowl", category: "Vegetarian", image: "https://homemadeco.lovable.app/assets/meal-vegan-bowl-ApS1bKK0.jpg" },
-    { id: "veg-risotto", title: "Vegetable Risotto", category: "Vegetarian", image: "https://homemadeco.lovable.app/assets/meal-vegan-bowl-ApS1bKK0.jpg" },
+    { id: "chicken-teriyaki", title: "Chicken Teriyaki Rice Bowl", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-chicken-rice-DEPY1R_S.jpg", calories: 520, grams: 420, protein: 40, fat: 14, carbs: 55, price: 6.49 },
+    { id: "chicken-satay", title: "Chicken Satay Rice Bowl", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-thai-curry-5VDOicbi.jpg", calories: 540, grams: 430, protein: 38, fat: 16, carbs: 58, price: 6.49 },
+    { id: "chicken-shawarma", title: "Chicken Shawarma Rice Bowl", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-beef-teriyaki-DLHQuq9R.jpg", calories: 500, grams: 410, protein: 36, fat: 13, carbs: 54, price: 6.49 },
+    { id: "butter-chicken", title: "Butter Chicken with Rice", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-protein-pasta-VjvFlOyP.jpg", calories: 560, grams: 440, protein: 42, fat: 18, carbs: 58, price: 6.99 },
+    { id: "chicken-pesto", title: "Chicken Pesto Pasta", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-protein-pasta-VjvFlOyP.jpg", calories: 590, grams: 450, protein: 41, fat: 19, carbs: 62, price: 6.99 },
+    { id: "chili-chicken", title: "Chili Chicken Noodles", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-chicken-rice-DEPY1R_S.jpg", calories: 530, grams: 420, protein: 39, fat: 15, carbs: 57, price: 6.49 },
+    { id: "beef-bolognese", title: "Beef Bolognese Pasta", category: "Beef", image: "https://homemadeco.lovable.app/assets/meal-protein-pasta-VjvFlOyP.jpg", calories: 610, grams: 460, protein: 36, fat: 20, carbs: 68, price: 6.99 },
+    { id: "beef-shawarma", title: "Beef Shawarma Rice Bowl", category: "Beef", image: "https://homemadeco.lovable.app/assets/meal-beef-teriyaki-DLHQuq9R.jpg", calories: 580, grams: 440, protein: 35, fat: 18, carbs: 60, price: 6.99 },
+    { id: "pulled-beef", title: "Mexican Pulled Beef Bowl", category: "Beef", image: "https://homemadeco.lovable.app/assets/meal-mediterranean-UXFkxguD.jpg", calories: 560, grams: 430, protein: 34, fat: 16, carbs: 58, price: 6.99 },
+    { id: "salmon-teriyaki", title: "Salmon Teriyaki Rice Bowl", category: "Fish", image: "https://homemadeco.lovable.app/assets/meal-salmon-potato-oKfzZJQt.jpg", calories: 540, grams: 400, protein: 35, fat: 18, carbs: 48, price: 7.49 },
+    { id: "grilled-salmon", title: "Grilled Salmon with Rice & Vegetables", category: "Fish", image: "https://homemadeco.lovable.app/assets/meal-salmon-potato-oKfzZJQt.jpg", calories: 520, grams: 400, protein: 33, fat: 17, carbs: 46, price: 7.49 },
+    { id: "veg-bowl", title: "Vegetable Bowl", category: "Vegetarian", image: "https://homemadeco.lovable.app/assets/meal-vegan-bowl-ApS1bKK0.jpg", calories: 430, grams: 380, protein: 18, fat: 14, carbs: 58, price: 5.99 },
+    { id: "veg-risotto", title: "Vegetable Risotto", category: "Vegetarian", image: "https://homemadeco.lovable.app/assets/meal-vegan-bowl-ApS1bKK0.jpg", calories: 460, grams: 390, protein: 16, fat: 12, carbs: 62, price: 5.99 },
 ];
 
 function QuizFormContent() {
@@ -107,6 +107,13 @@ function QuizFormContent() {
 
     const targetMeals = Number(formData.mealsPerWeek.match(/\d+/)?.[0] || 0);
     const filteredMeals = MEAL_ITEMS.filter((m) => mealFilter === "All" || m.category === mealFilter);
+    const selectedMealItems = MEAL_ITEMS.filter((meal) => formData.selectedMeals.includes(meal.id));
+    const defaultPricePerMeal = 6.49;
+    const pricePerMeal = selectedMealItems.length
+        ? Number((selectedMealItems.reduce((sum, meal) => sum + meal.price, 0) / selectedMealItems.length).toFixed(2))
+        : defaultPricePerMeal;
+    const subtotal = targetMeals > 0 ? Number((pricePerMeal * targetMeals).toFixed(2)) : 0;
+    const discountedTotal = Number((subtotal * 0.5).toFixed(2));
 
     const toggleMeal = (id: string) => {
         setFormData((prev) => {
@@ -362,55 +369,131 @@ function QuizFormContent() {
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-dark mb-2 md:mb-4">{t.mealsTitle || "Pick your meals"}</h2>
                             <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-8">{t.mealsSubtitle || "Choose your meals for the week."}</p>
+                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                                <div className="lg:col-span-2 space-y-6">
+                                    <div className="flex gap-2 flex-wrap">
+                                        {MEAL_FILTERS.map((filter) => (
+                                            <button
+                                                key={filter}
+                                                onClick={() => setMealFilter(filter)}
+                                                className={`px-3 py-2 rounded-full text-xs md:text-sm font-medium transition-all ${mealFilter === filter
+                                                    ? "bg-orange text-white"
+                                                    : "bg-white text-dark hover:bg-orange/5 border border-dark/10"
+                                                    }`}
+                                            >
+                                                {filter}
+                                            </button>
+                                        ))}
+                                    </div>
 
-                            <div className="flex gap-2 flex-wrap mb-4">
-                                {MEAL_FILTERS.map((filter) => (
-                                    <button
-                                        key={filter}
-                                        onClick={() => setMealFilter(filter)}
-                                        className={`px-3 py-2 rounded-full text-xs md:text-sm font-medium transition-all ${mealFilter === filter
-                                            ? "bg-orange text-white"
-                                            : "bg-white text-dark hover:bg-orange/5 border border-dark/10"
-                                            }`}
-                                    >
-                                        {filter}
-                                    </button>
-                                ))}
-                            </div>
+                                    <div className="flex items-center justify-between text-sm text-gray-600">
+                                        <span>{formData.selectedMeals.length}/{targetMeals || 0} meals selected</span>
+                                        {selectionError && <span className="text-orange">{selectionError}</span>}
+                                    </div>
 
-                            <div className="flex items-center justify-between mb-4 text-sm text-gray-600">
-                                <span>{formData.selectedMeals.length}/{targetMeals || 0} meals selected</span>
-                                {selectionError && <span className="text-orange">{selectionError}</span>}
-                            </div>
+                                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
+                                        {filteredMeals.map((meal) => {
+                                            const selected = formData.selectedMeals.includes(meal.id);
+                                            return (
+                                                <button
+                                                    key={meal.id}
+                                                    onClick={() => toggleMeal(meal.id)}
+                                                    className={`group rounded-2xl overflow-hidden border transition-all text-left bg-white ${selected
+                                                        ? "border-orange ring-1 ring-orange"
+                                                        : "border-dark/10 hover:border-dark/30"
+                                                        }`}
+                                                >
+                                                    <div className="aspect-square overflow-hidden">
+                                                        <img
+                                                            src={meal.image}
+                                                            alt={meal.title}
+                                                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                                            loading="lazy"
+                                                        />
+                                                    </div>
+                                                    <div className="p-3 pb-1">
+                                                        <div className="text-[10px] md:text-xs text-orange font-semibold mb-1">{meal.category}</div>
+                                                        <div className="text-sm md:text-base font-semibold text-dark leading-tight">{meal.title}</div>
+                                                        <div className="flex items-center gap-1 mt-1 text-gray-500">
+                                                            <Flame className="w-3 h-3" />
+                                                            <span className="text-xs font-medium">{meal.calories} kcal</span>
+                                                            <span className="text-[10px] mx-0.5">·</span>
+                                                            <span className="text-xs">{meal.grams}g</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="px-3 pb-2 pt-1">
+                                                        <div className="flex justify-between items-center bg-orange/10 rounded-lg px-2 py-1.5">
+                                                            <div className="flex flex-col items-center">
+                                                                <span className="text-xs font-bold text-dark">{meal.protein}g</span>
+                                                                <span className="text-[10px] text-gray-500">Protein</span>
+                                                            </div>
+                                                            <div className="w-px h-5 bg-dark/10"></div>
+                                                            <div className="flex flex-col items-center">
+                                                                <span className="text-xs font-bold text-dark">{meal.fat}g</span>
+                                                                <span className="text-[10px] text-gray-500">Fat</span>
+                                                            </div>
+                                                            <div className="w-px h-5 bg-dark/10"></div>
+                                                            <div className="flex flex-col items-center">
+                                                                <span className="text-xs font-bold text-dark">{meal.carbs}g</span>
+                                                                <span className="text-[10px] text-gray-500">Carbs</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="px-3 pb-3 flex items-center justify-between">
+                                                        <span className="text-xs font-semibold text-orange">€{meal.price.toFixed(2)}</span>
+                                                        {selected && <span className="text-[10px] md:text-xs text-orange font-semibold">Selected</span>}
+                                                    </div>
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
 
-                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
-                                {filteredMeals.map((meal) => {
-                                    const selected = formData.selectedMeals.includes(meal.id);
-                                    return (
-                                        <button
-                                            key={meal.id}
-                                            onClick={() => toggleMeal(meal.id)}
-                                            className={`group rounded-2xl overflow-hidden border transition-all text-left ${selected
-                                                ? "border-orange ring-1 ring-orange"
-                                                : "border-dark/10 hover:border-dark/30"
-                                                }`}
-                                        >
-                                            <div className="aspect-square overflow-hidden">
-                                                <img
-                                                    src={meal.image}
-                                                    alt={meal.title}
-                                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                                    loading="lazy"
-                                                />
+                                <div>
+                                    <div className="bg-white rounded-lg border border-dark/10 shadow-soft p-5 space-y-4">
+                                        <h3 className="font-display text-lg text-dark">Order summary</h3>
+                                        <div className="space-y-2 text-sm">
+                                            <div className="flex justify-between">
+                                                <span className="text-gray-500">Meals per week</span>
+                                                <span className="font-semibold text-dark">{targetMeals || 0}</span>
                                             </div>
-                                            <div className="p-3">
-                                                <div className="text-[10px] md:text-xs text-orange font-semibold mb-1">{meal.category}</div>
-                                                <div className="text-sm md:text-base font-semibold text-dark leading-tight">{meal.title}</div>
-                                                {selected && <div className="text-[10px] md:text-xs text-orange mt-2">Selected</div>}
+                                            <div className="flex justify-between">
+                                                <span className="text-gray-500">Price per meal</span>
+                                                <span className="font-semibold text-dark">€{pricePerMeal.toFixed(2)}</span>
                                             </div>
-                                        </button>
-                                    );
-                                })}
+                                            <div className="flex justify-between">
+                                                <span className="text-gray-500">Delivery</span>
+                                                <span className="font-semibold text-green-600">Free</span>
+                                            </div>
+                                            <div className="border-t border-dark/10 pt-2 mt-2">
+                                                <div className="flex justify-between items-baseline">
+                                                    <span className="font-semibold text-dark">Total</span>
+                                                    <div className="text-right">
+                                                        <span className="text-gray-500 line-through text-sm mr-2">€{subtotal.toFixed(2)}</span>
+                                                        <span className="text-xl font-bold text-orange">€{discountedTotal.toFixed(2)}</span>
+                                                    </div>
+                                                </div>
+                                                <div className="mt-2 bg-orange/10 rounded-md px-3 py-2 text-center">
+                                                    <span className="text-sm font-semibold text-orange">Launch offer applied — 50% OFF</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="space-y-2 pt-2 border-t border-dark/10">
+                                            <div className="flex items-center gap-2 text-xs text-gray-500">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="w-3.5 h-3.5 text-orange"><rect x="14" y="4" width="4" height="16" rx="1"></rect><rect x="6" y="4" width="4" height="16" rx="1"></rect></svg>
+                                                Pause anytime
+                                            </div>
+                                            <div className="flex items-center gap-2 text-xs text-gray-500">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="w-3.5 h-3.5 text-orange"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                                                No commitment
+                                            </div>
+                                            <div className="flex items-center gap-2 text-xs text-gray-500">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="w-3.5 h-3.5 text-orange"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
+                                                Fresh meals, weekly
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
                     )}
