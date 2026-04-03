@@ -21,27 +21,27 @@ type FormData = {
 
 const PLANS = [
     {
-        id: "family",
-        label: "Family Plan",
-        description: "Kid-friendly, mild flavors, and balanced meals for the whole household.",
+        id: "balanced",
+        label: "Balanced",
+        description: "Everyday meals with a good balance of protein, carbs, and vegetables.",
         icon: Utensils
     },
     {
-        id: "routine",
-        label: "Healthy Routine Plan",
-        description: "Protein-aware, portion-consistent meals for weekday structure.",
+        id: "high-protein",
+        label: "High Protein",
+        description: "Protein-forward meals built for active, on-the-go schedules.",
         icon: Utensils
     },
     {
-        id: "plant",
-        label: "Plant-Forward Plan",
-        description: "Vegetable-first meals with legumes, whole grains, and bold flavor.",
+        id: "vegan",
+        label: "Vegan",
+        description: "Plant-based meals with bold flavor and satisfying portions.",
         icon: Utensils
     },
     {
-        id: "comfort",
-        label: "Comfort & Care Plan",
-        description: "Home-style classics that are easy to reheat and always satisfying.",
+        id: "low-calorie",
+        label: "Low Calorie",
+        description: "Lighter meals with smart portions and clean ingredients.",
         icon: Utensils
     },
 ];
