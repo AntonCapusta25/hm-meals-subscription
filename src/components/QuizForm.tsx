@@ -234,22 +234,22 @@ function QuizFormContent() {
                 animate={{ opacity: 1, scale: 1 }}
                 className="w-full max-w-2xl mx-auto text-center"
             >
-                <div className="bg-[#2D2420]/95 rounded-[32px] p-8 md:p-12 lg:p-20 border border-white/10 shadow-2xl backdrop-blur-xl flex flex-col items-center">
+                <div className="bg-white rounded-[32px] p-8 md:p-12 lg:p-20 border border-dark/10 shadow-xl flex flex-col items-center">
                     <motion.div
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{ type: "spring", stiffness: 200, damping: 10, delay: 0.2 }}
-                        className="w-28 h-28 bg-green-500/20 rounded-full flex items-center justify-center mb-8 text-green-500"
+                        className="w-28 h-28 bg-green-500/20 rounded-full flex items-center justify-center mb-8 text-green-600"
                     >
                         <CheckCircle2 size={56} />
                     </motion.div>
 
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-cream mb-6">{t.successTitle || "You're In!"}</h2>
-                    <p className="text-gray-400 text-base md:text-lg mb-8 md:mb-10 max-w-md mx-auto leading-relaxed">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark mb-6">{t.successTitle || "You're In!"}</h2>
+                    <p className="text-gray-600 text-base md:text-lg mb-8 md:mb-10 max-w-md mx-auto leading-relaxed">
                         {t.successMessage || "Thanks for your request. We’ll contact you shortly to confirm your subscription details."}
                     </p>
 
-                    <Link href={`/${lang}`} className="inline-block px-10 py-4 bg-[#F27D42] text-white rounded-2xl font-bold hover:bg-[#d66a35] transition-colors text-lg">
+                    <Link href={`/${lang}`} className="inline-block px-10 py-4 bg-orange text-white rounded-2xl font-bold hover:bg-orange/90 transition-colors text-lg">
                         {t.backHome || "Back to Home"}
                     </Link>
                 </div>
@@ -265,9 +265,9 @@ function QuizFormContent() {
                     <span>{t.stepProgress?.replace('{current}', step.toString()).replace('{total}', totalSteps.toString()) || `Step ${step} of ${totalSteps}`}</span>
                     <span>{Math.round((step / totalSteps) * 100)}%</span>
                 </div>
-                <div className="w-full bg-white/5 rounded-full h-2 overflow-hidden">
+                <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
                     <motion.div
-                        className="bg-[#F27D42] h-full"
+                        className="bg-orange h-full"
                         initial={{ width: `${((step - 1) / totalSteps) * 100}%` }}
                         animate={{ width: `${(step / totalSteps) * 100}%` }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -288,8 +288,8 @@ function QuizFormContent() {
                             transition={{ duration: 0.3 }}
                             className="w-full"
                         >
-                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.occasionTitle || "Choose your plan"}</h2>
-                            <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-10">{t.occasionSubtitle || "Pick the subscription that fits your routine."}</p>
+                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-dark mb-2 md:mb-4">{t.occasionTitle || "Choose your plan"}</h2>
+                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10">{t.occasionSubtitle || "Pick the subscription that fits your routine."}</p>
  
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
                                 {PLANS.map((occ) => (
@@ -297,14 +297,14 @@ function QuizFormContent() {
                                         key={occ.id}
                                         onClick={() => { updateData({ plan: occ.label }); setTimeout(nextStep, 300); }}
                                         className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.plan === occ.label
-                                            ? "bg-[#F27D42]/10 border-[#F27D42] text-[#F27D42]"
-                                            : "bg-white/5 border-white/10 text-cream hover:bg-white/10"
+                                            ? "bg-orange/10 border-orange text-orange"
+                                            : "bg-white border-dark/10 text-dark hover:bg-orange/5"
                                             }`}
                                     >
-                                        <occ.icon size={18} className={`md:w-6 md:h-6 ${formData.plan === occ.label ? "text-[#F27D42]" : "text-gray-400"}`} />
+                                        <occ.icon size={18} className={`md:w-6 md:h-6 ${formData.plan === occ.label ? "text-orange" : "text-gray-400"}`} />
                                         <div className="flex flex-col">
                                             <span className="font-bold text-sm md:text-lg">{occ.label}</span>
-                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.plan === occ.label ? "text-[#F27D42]/90" : "text-gray-400"}`}>
+                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.plan === occ.label ? "text-orange/90" : "text-gray-500"}`}>
                                                 {occ.description}
                                             </span>
                                         </div>
@@ -324,8 +324,8 @@ function QuizFormContent() {
                             transition={{ duration: 0.3 }}
                             className="w-full"
                         >
-                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.guestsTitle || "How many meals per week?"}</h2>
-                            <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-10">{t.guestsSubtitle || "Choose the weekly quantity that fits your routine."}</p>
+                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-dark mb-2 md:mb-4">{t.guestsTitle || "How many meals per week?"}</h2>
+                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10">{t.guestsSubtitle || "Choose the weekly quantity that fits your routine."}</p>
  
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4">
                                 {MEALS_OPTIONS.map((opt) => (
@@ -333,14 +333,14 @@ function QuizFormContent() {
                                         key={opt.id}
                                         onClick={() => { updateData({ mealsPerWeek: opt.label, selectedMeals: [] }); setSelectionError(""); setTimeout(nextStep, 300); }}
                                         className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.mealsPerWeek === opt.label
-                                            ? "bg-[#F27D42]/10 border-[#F27D42] text-[#F27D42]"
-                                            : "bg-white/5 border-white/10 text-cream hover:bg-white/10"
+                                            ? "bg-orange/10 border-orange text-orange"
+                                            : "bg-white border-dark/10 text-dark hover:bg-orange/5"
                                             }`}
                                     >
-                                        <Utensils size={18} className={`md:w-6 md:h-6 ${formData.mealsPerWeek === opt.label ? "text-[#F27D42]" : "text-gray-400"}`} />
+                                        <Utensils size={18} className={`md:w-6 md:h-6 ${formData.mealsPerWeek === opt.label ? "text-orange" : "text-gray-400"}`} />
                                         <div className="flex flex-col">
                                             <span className="font-bold text-sm md:text-lg">{opt.label}</span>
-                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.mealsPerWeek === opt.label ? "text-[#F27D42]/90" : "text-gray-400"}`}>
+                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.mealsPerWeek === opt.label ? "text-orange/90" : "text-gray-500"}`}>
                                                 {opt.id === "3" ? "Light support for busy weeks" : opt.id === "5" ? "Full workweek coverage" : opt.id === "7" ? "Everyday dinners" : "Maximum flexibility"}
                                             </span>
                                         </div>
@@ -360,8 +360,8 @@ function QuizFormContent() {
                             transition={{ duration: 0.3 }}
                             className="w-full"
                         >
-                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.mealsTitle || "Pick your meals"}</h2>
-                            <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-8">{t.mealsSubtitle || "Choose your meals for the week."}</p>
+                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-dark mb-2 md:mb-4">{t.mealsTitle || "Pick your meals"}</h2>
+                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-8">{t.mealsSubtitle || "Choose your meals for the week."}</p>
 
                             <div className="flex gap-2 flex-wrap mb-4">
                                 {MEAL_FILTERS.map((filter) => (
@@ -369,8 +369,8 @@ function QuizFormContent() {
                                         key={filter}
                                         onClick={() => setMealFilter(filter)}
                                         className={`px-3 py-2 rounded-full text-xs md:text-sm font-medium transition-all ${mealFilter === filter
-                                            ? "bg-[#F27D42] text-white"
-                                            : "bg-white/5 text-cream hover:bg-white/10 border border-white/10"
+                                            ? "bg-orange text-white"
+                                            : "bg-white text-dark hover:bg-orange/5 border border-dark/10"
                                             }`}
                                     >
                                         {filter}
@@ -378,9 +378,9 @@ function QuizFormContent() {
                                 ))}
                             </div>
 
-                            <div className="flex items-center justify-between mb-4 text-sm text-gray-400">
+                            <div className="flex items-center justify-between mb-4 text-sm text-gray-600">
                                 <span>{formData.selectedMeals.length}/{targetMeals || 0} meals selected</span>
-                                {selectionError && <span className="text-[#F27D42]">{selectionError}</span>}
+                                {selectionError && <span className="text-orange">{selectionError}</span>}
                             </div>
 
                             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
@@ -391,8 +391,8 @@ function QuizFormContent() {
                                             key={meal.id}
                                             onClick={() => toggleMeal(meal.id)}
                                             className={`group rounded-2xl overflow-hidden border transition-all text-left ${selected
-                                                ? "border-[#F27D42] ring-1 ring-[#F27D42]"
-                                                : "border-white/10 hover:border-white/30"
+                                                ? "border-orange ring-1 ring-orange"
+                                                : "border-dark/10 hover:border-dark/30"
                                                 }`}
                                         >
                                             <div className="aspect-square overflow-hidden">
@@ -404,9 +404,9 @@ function QuizFormContent() {
                                                 />
                                             </div>
                                             <div className="p-3">
-                                                <div className="text-[10px] md:text-xs text-[#F27D42] font-semibold mb-1">{meal.category}</div>
-                                                <div className="text-sm md:text-base font-semibold text-cream leading-tight">{meal.title}</div>
-                                                {selected && <div className="text-[10px] md:text-xs text-[#F27D42] mt-2">Selected</div>}
+                                                <div className="text-[10px] md:text-xs text-orange font-semibold mb-1">{meal.category}</div>
+                                                <div className="text-sm md:text-base font-semibold text-dark leading-tight">{meal.title}</div>
+                                                {selected && <div className="text-[10px] md:text-xs text-orange mt-2">Selected</div>}
                                             </div>
                                         </button>
                                     );
@@ -425,8 +425,8 @@ function QuizFormContent() {
                             transition={{ duration: 0.3 }}
                             className="w-full"
                         >
-                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.dateTitle || "How many delivery days?"}</h2>
-                            <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-10">{t.dateSubtitle || "Pick how many days you want deliveries each week."}</p>
+                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-dark mb-2 md:mb-4">{t.dateTitle || "How many delivery days?"}</h2>
+                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10">{t.dateSubtitle || "Pick how many days you want deliveries each week."}</p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 max-w-2xl">
                                 {DELIVERY_DAYS_OPTIONS.map((opt) => (
@@ -434,14 +434,14 @@ function QuizFormContent() {
                                         key={opt.id}
                                         onClick={() => { updateData({ deliveryDays: opt.label }); setTimeout(nextStep, 300); }}
                                         className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.deliveryDays === opt.label
-                                            ? "bg-[#F27D42]/10 border-[#F27D42] text-[#F27D42]"
-                                            : "bg-white/5 border-white/10 text-cream hover:bg-white/10"
+                                            ? "bg-orange/10 border-orange text-orange"
+                                            : "bg-white border-dark/10 text-dark hover:bg-orange/5"
                                             }`}
                                     >
-                                        <Calendar size={18} className={`md:w-6 md:h-6 ${formData.deliveryDays === opt.label ? "text-[#F27D42]" : "text-gray-400"}`} />
+                                        <Calendar size={18} className={`md:w-6 md:h-6 ${formData.deliveryDays === opt.label ? "text-orange" : "text-gray-400"}`} />
                                         <div className="flex flex-col">
                                             <span className="font-bold text-sm md:text-lg">{opt.label}</span>
-                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.deliveryDays === opt.label ? "text-[#F27D42]/90" : "text-gray-400"}`}>
+                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.deliveryDays === opt.label ? "text-orange/90" : "text-gray-500"}`}>
                                                 {opt.id === "1" ? "All meals in one drop" : opt.id === "2" ? "Midweek freshness" : opt.id === "3" ? "More frequent top-ups" : "Near-daily convenience"}
                                             </span>
                                         </div>
@@ -461,8 +461,8 @@ function QuizFormContent() {
                             transition={{ duration: 0.3 }}
                             className="w-full"
                         >
-                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.contactTitle || "Your Details"}</h2>
-                            <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-10">{t.contactSubtitle || "Where should we send your subscription details?"}</p>
+                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-dark mb-2 md:mb-4">{t.contactTitle || "Your Details"}</h2>
+                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10">{t.contactSubtitle || "Where should we send your subscription details?"}</p>
 
                             <form onSubmit={handleSubmit} className="space-y-6 max-w-md">
                                 <div className="relative">
@@ -473,7 +473,7 @@ function QuizFormContent() {
                                         required
                                         value={formData.name}
                                         onChange={(e) => updateData({ name: e.target.value })}
-                                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-4 md:px-6 md:py-5 pl-12 md:pl-16 text-base md:text-lg text-cream placeholder-gray-500 focus:outline-none focus:border-[#F27D42] focus:bg-white/10 transition-all"
+                                        className="w-full bg-white border border-dark/10 rounded-2xl px-4 py-4 md:px-6 md:py-5 pl-12 md:pl-16 text-base md:text-lg text-dark placeholder-gray-400 focus:outline-none focus:border-orange focus:bg-white transition-all"
                                     />
                                 </div>
                                 <div className="relative">
@@ -484,7 +484,7 @@ function QuizFormContent() {
                                         required
                                         value={formData.email}
                                         onChange={(e) => updateData({ email: e.target.value })}
-                                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-4 md:px-6 md:py-5 pl-12 md:pl-16 text-base md:text-lg text-cream placeholder-gray-500 focus:outline-none focus:border-[#F27D42] focus:bg-white/10 transition-all"
+                                        className="w-full bg-white border border-dark/10 rounded-2xl px-4 py-4 md:px-6 md:py-5 pl-12 md:pl-16 text-base md:text-lg text-dark placeholder-gray-400 focus:outline-none focus:border-orange focus:bg-white transition-all"
                                     />
                                 </div>
                                 <div className="relative">
@@ -495,7 +495,7 @@ function QuizFormContent() {
                                         required
                                         value={formData.phone}
                                         onChange={(e) => updateData({ phone: e.target.value })}
-                                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-4 md:px-6 md:py-5 pl-12 md:pl-16 text-base md:text-lg text-cream placeholder-gray-500 focus:outline-none focus:border-[#F27D42] focus:bg-white/10 transition-all"
+                                        className="w-full bg-white border border-dark/10 rounded-2xl px-4 py-4 md:px-6 md:py-5 pl-12 md:pl-16 text-base md:text-lg text-dark placeholder-gray-400 focus:outline-none focus:border-orange focus:bg-white transition-all"
                                     />
                                 </div>
 
@@ -509,10 +509,10 @@ function QuizFormContent() {
             </div>
 
             {/* Navigation Controls */}
-            <div className="mt-4 md:mt-16 flex items-center justify-between border-t border-white/10 pt-4 md:pt-8">
+            <div className="mt-4 md:mt-16 flex items-center justify-between border-t border-dark/10 pt-4 md:pt-8">
                 <button
                     onClick={prevStep}
-                    className={`flex items-center gap-2 font-bold transition-colors ${step === 1 ? 'text-gray-600 cursor-not-allowed' : 'text-gray-400 hover:text-white'}`}
+                    className={`flex items-center gap-2 font-bold transition-colors ${step === 1 ? 'text-gray-400 cursor-not-allowed' : 'text-gray-600 hover:text-dark'}`}
                     disabled={step === 1 || isSubmitting}
                 >
                     <ArrowLeft size={20} />
@@ -528,7 +528,7 @@ function QuizFormContent() {
                             (step === 3 && (targetMeals === 0 || formData.selectedMeals.length !== targetMeals)) ||
                             (step === 4 && !formData.deliveryDays)
                         }
-                        className="flex items-center gap-2 bg-[#F27D42] text-white px-6 py-3 md:px-8 md:py-3 rounded-xl font-bold hover:bg-[#d66a35] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="flex items-center gap-2 bg-orange text-white px-6 py-3 md:px-8 md:py-3 rounded-xl font-bold hover:bg-orange/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                         {t.nextButton || "Next"}
                         <ArrowRight size={20} />
@@ -537,7 +537,7 @@ function QuizFormContent() {
                     <button
                         onClick={() => handleSubmit()}
                         disabled={!formData.name || !formData.email || !formData.phone || isSubmitting}
-                        className="flex items-center gap-2 bg-[#F27D42] text-white px-6 py-3 md:px-8 md:py-3 rounded-xl font-bold hover:bg-[#d66a35] transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm md:text-base whitespace-nowrap"
+                        className="flex items-center gap-2 bg-orange text-white px-6 py-3 md:px-8 md:py-3 rounded-xl font-bold hover:bg-orange/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm md:text-base whitespace-nowrap"
                     >
                         {isSubmitting ? t.submitting || "Submitting..." : t.submitButton || "Submit Request"}
                         {!isSubmitting && <CheckCircle2 size={20} />}

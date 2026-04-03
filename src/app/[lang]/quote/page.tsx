@@ -28,7 +28,7 @@ export default async function QuotePage({ params }: Props) {
     const { lang } = await params;
 
     return (
-        <main className="min-h-screen bg-dark flex flex-col font-sans text-cream">
+        <main className="min-h-screen bg-white flex flex-col font-sans text-dark">
             <Navbar />
 
             <div className="flex-1 flex items-center justify-center pt-24 pb-10 md:pt-32 md:pb-20 px-5">
@@ -37,14 +37,14 @@ export default async function QuotePage({ params }: Props) {
                         <h1 className="text-3xl md:text-6xl font-heading font-bold mb-3 md:mb-4">
                             {lang === 'nl' ? 'Word Lid van de Wachtlijst' : 'Join the Waitlist'}
                         </h1>
-                        <p className="text-gray-400 text-sm md:text-lg max-w-2xl mx-auto">
+                        <p className="text-gray-600 text-sm md:text-lg max-w-2xl mx-auto">
                             {lang === 'nl'
                                 ? 'Beantwoord een paar snelle vragen en wij zetten je op de wachtlijst.'
                                 : 'Answer a few quick questions and we’ll add you to the waitlist.'}
                         </p>
                     </div>
 
-                    <div className="bg-white/5 border border-white/10 rounded-[28px] p-4 sm:p-6 md:p-12 shadow-2xl backdrop-blur-md">
+                    <div className="bg-white border border-dark/10 rounded-[28px] p-4 sm:p-6 md:p-12 shadow-xl">
                         <QuizForm />
                     </div>
                 </div>
