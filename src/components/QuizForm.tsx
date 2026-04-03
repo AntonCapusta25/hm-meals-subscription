@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, Suspense } from "react";
+import { useState, Suspense, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ArrowLeft, CheckCircle2, Utensils, Calendar, Mail, User, Phone, Flame } from "lucide-react";
 import confetti from "canvas-confetti";
@@ -66,6 +66,10 @@ const MEAL_BADGES: Record<string, { label: string; emoji: string; className: str
     Beef: { label: "Beef", emoji: "🐄", className: "bg-red-500/90 text-white" },
     Fish: { label: "Fish", emoji: "🐟", className: "bg-sky-500/90 text-white" },
     Vegetarian: { label: "Veg", emoji: "🥗", className: "bg-green-500/90 text-white" }
+};
+const EXTRA_BADGES = {
+    highProtein: { label: "High Protein", emoji: "💪", className: "bg-indigo-500/90 text-white" },
+    light: { label: "Light", emoji: "✨", className: "bg-emerald-500/90 text-white" }
 };
 
 const MEAL_ITEMS = [
@@ -329,6 +333,23 @@ function QuizFormContent() {
         : defaultPricePerMeal;
     const subtotal = targetMeals > 0 ? Number((pricePerMeal * targetMeals).toFixed(2)) : 0;
     const discountedTotal = Number((subtotal * 0.5).toFixed(2));
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            window.scrollTo({ top: 0, behavior: "auto" });
+        }
+    }, []);
+
+    const getMealBadges = (meal: (typeof MEAL_ITEMS)[number]) => {
+        const base = MEAL_BADGES[meal.category];
+        if (!base) return [];
+        if (meal.category === "Vegetarian") return [base];
+        const extra =
+            meal.protein >= 38 ? EXTRA_BADGES.highProtein :
+            meal.calories <= 500 ? EXTRA_BADGES.light :
+            null;
+        return extra ? [base, extra] : [base];
+    };
 
     const toggleMeal = (id: string) => {
         setFormData((prev) => {
@@ -620,15 +641,17 @@ function QuizFormContent() {
                                                         }`}
                                                 >
                                                     <div className="aspect-square overflow-hidden relative">
-                                                        {MEAL_BADGES[meal.category] && (
-                                                            <div
-                                                                className={`absolute top-2 right-2 z-10 rounded-full px-2 py-1 text-[10px] font-bold shadow-md ${MEAL_BADGES[meal.category].className}`}
-                                                                title={MEAL_BADGES[meal.category].label}
-                                                            >
-                                                                <span className="mr-1">{MEAL_BADGES[meal.category].emoji}</span>
-                                                                {MEAL_BADGES[meal.category].label}
-                                                            </div>
-                                                        )}
+                                                        <div className="absolute top-2 right-2 z-10">
+                                                            {getMealBadges(meal).map((badge, index) => (
+                                                                <div
+                                                                    key={`${meal.id}-${badge.label}`}
+                                                                    title={badge.label}
+                                                                    className={`absolute flex items-center justify-center w-8 h-8 rounded-full text-xs font-bold shadow-md transition-transform duration-300 ${badge.className} ${index === 0 ? "z-20" : "z-10 translate-x-1 translate-y-1"} ${index === 0 ? "group-hover:-translate-x-2 group-hover:-translate-y-1" : "group-hover:translate-x-3 group-hover:translate-y-2"}`}
+                                                                >
+                                                                    {badge.emoji}
+                                                                </div>
+                                                            ))}
+                                                        </div>
                                                         <button type="button" onClick={() => toggleMeal(meal.id)} className="w-full h-full text-left">
                                                             <img
                                                                 src={meal.image}
