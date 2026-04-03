@@ -111,7 +111,7 @@ const MEAL_ITEMS = [
         id: "chicken-shawarma",
         title: "Chicken Shawarma Rice Bowl",
         category: "Chicken",
-        image: "https://homemadeco.lovable.app/assets/meal-beef-teriyaki-DLHQuq9R.jpg",
+        image: "/images/meal-chicken-shawarma.png",
         calories: 500,
         grams: 410,
         protein: 36,
