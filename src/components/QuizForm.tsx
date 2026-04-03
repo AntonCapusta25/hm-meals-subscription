@@ -641,12 +641,12 @@ function QuizFormContent() {
                                                         }`}
                                                 >
                                                     <div className="aspect-square overflow-hidden relative">
-                                                        <div className="absolute top-2 right-2 z-10">
+                                                        <div className="absolute top-2 right-2 z-10 flex items-center pointer-events-none">
                                                             {getMealBadges(meal).map((badge, index) => (
                                                                 <div
                                                                     key={`${meal.id}-${badge.label}`}
                                                                     title={badge.label}
-                                                                    className={`absolute flex items-center justify-center w-8 h-8 rounded-full text-xs font-bold shadow-md transition-transform duration-300 ${badge.className} ${index === 0 ? "z-20" : "z-10 translate-x-1 translate-y-1"} ${index === 0 ? "group-hover:-translate-x-2 group-hover:-translate-y-1" : "group-hover:translate-x-3 group-hover:translate-y-2"}`}
+                                                                    className={`flex items-center justify-center w-7 h-7 rounded-full text-[11px] font-bold shadow-md transition-transform duration-300 ${badge.className} ${index > 0 ? "-ml-2" : ""} ${index === 0 ? "group-hover:-translate-x-1" : "group-hover:translate-x-2"}`}
                                                                 >
                                                                     {badge.emoji}
                                                                 </div>
