@@ -265,7 +265,7 @@ function QuizFormContent() {
     }
 
     return (
-        <div className="w-full">
+        <div className="w-full max-w-6xl mx-auto">
             {/* Progress Bar */}
             <div className="mb-4 md:mb-12">
                 <div className="flex justify-between text-[10px] md:text-sm font-medium text-gray-500 mb-2 md:mb-4 tracking-widest uppercase">
