@@ -19,7 +19,9 @@
             "comfort-first routines"
         ],
         "subtitle": "Fresh, chef-made meals delivered weekly. Choose a plan that fits your routine.",
-        "cta": "Choose Your Plan"
+        "cta": "Choose Your Plan",
+        "launchOfferTitle": "Launch offer",
+        "launchOfferText": "50% off when you join the waitlist"
     },
     "partners": {
         "heading": "Proudly Partnering With"
@@ -282,6 +284,16 @@
         "submitButton": "Join the Waitlist",
         "occasionTitle": "Choose your plan",
         "occasionSubtitle": "Pick the subscription that fits your routine.",
+        "step1Header": "Create your first box",
+        "step1Subheader": "Choose your plan and how many meals you want each week.",
+        "planSectionTitle": "Plan",
+        "mealsSectionTitle": "Meals per week",
+        "summaryTitle": "Order summary",
+        "summaryPlan": "Plan",
+        "summaryMeals": "Meals per week",
+        "summaryDelivery": "Delivery days",
+        "summaryOffer": "Waitlist bonus — 50% off at launch",
+        "summaryNote": "You’ll unlock the offer after joining the waitlist.",
         "guestsTitle": "How many meals per week?",
         "guestsSubtitle": "Choose the weekly quantity that fits your routine.",
         "dateTitle": "How many delivery days?",

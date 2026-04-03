@@ -246,28 +246,87 @@ function QuizFormContent() {
                             transition={{ duration: 0.3 }}
                             className="absolute inset-0"
                         >
-                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.occasionTitle || "Choose your plan"}</h2>
-                            <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-10">{t.occasionSubtitle || "Pick the subscription that fits your routine."}</p>
- 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
-                                {PLANS.map((occ) => (
-                                    <button
-                                        key={occ.id}
-                                        onClick={() => { updateData({ plan: occ.label }); setTimeout(nextStep, 300); }}
-                                        className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.plan === occ.label
-                                            ? "bg-[#F27D42]/10 border-[#F27D42] text-[#F27D42]"
-                                            : "bg-white/5 border-white/10 text-cream hover:bg-white/10"
-                                            }`}
-                                    >
-                                        <occ.icon size={18} className={`md:w-6 md:h-6 ${formData.plan === occ.label ? "text-[#F27D42]" : "text-gray-400"}`} />
-                                        <div className="flex flex-col">
-                                            <span className="font-bold text-sm md:text-lg">{occ.label}</span>
-                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.plan === occ.label ? "text-[#F27D42]/90" : "text-gray-400"}`}>
-                                                {occ.description}
+                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-3 md:mb-4 text-center">
+                                {t.step1Header || "Create your first box"}
+                            </h2>
+                            <p className="text-gray-400 text-sm md:text-lg mb-6 md:mb-10 text-center">
+                                {t.step1Subheader || "Choose your plan and how many meals you want each week."}
+                            </p>
+
+                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+                                <div className="lg:col-span-2 space-y-6 md:space-y-8">
+                                    <div>
+                                        <h3 className="text-sm md:text-base font-semibold text-cream mb-3">{t.planSectionTitle || "Plan"}</h3>
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4">
+                                            {PLANS.map((occ) => (
+                                                <button
+                                                    key={occ.id}
+                                                    onClick={() => updateData({ plan: occ.label })}
+                                                    className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.plan === occ.label
+                                                        ? "bg-[#F27D42]/10 border-[#F27D42] text-[#F27D42]"
+                                                        : "bg-white/5 border-white/10 text-cream hover:bg-white/10"
+                                                        }`}
+                                                >
+                                                    <occ.icon size={18} className={`md:w-6 md:h-6 ${formData.plan === occ.label ? "text-[#F27D42]" : "text-gray-400"}`} />
+                                                    <div className="flex flex-col">
+                                                        <span className="font-bold text-sm md:text-lg">{occ.label}</span>
+                                                        <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.plan === occ.label ? "text-[#F27D42]/90" : "text-gray-400"}`}>
+                                                            {occ.description}
+                                                        </span>
+                                                    </div>
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h3 className="text-sm md:text-base font-semibold text-cream mb-3">{t.mealsSectionTitle || "Meals per week"}</h3>
+                                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 md:gap-3">
+                                            {MEALS_OPTIONS.map((opt) => (
+                                                <button
+                                                    key={opt.id}
+                                                    onClick={() => updateData({ mealsPerWeek: opt.label })}
+                                                    className={`py-4 rounded-xl text-center transition-all ${formData.mealsPerWeek === opt.label
+                                                        ? "bg-[#F27D42] text-white shadow-lg"
+                                                        : "bg-white/5 text-cream hover:bg-white/10 border border-white/10"
+                                                        }`}
+                                                >
+                                                    <div className="text-2xl font-bold">{opt.id}</div>
+                                                    <div className="text-xs mt-1 opacity-80">meals</div>
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="bg-white/5 border border-white/10 rounded-2xl p-4 md:p-5 shadow-lg space-y-4">
+                                    <h3 className="text-base md:text-lg font-heading text-cream">{t.summaryTitle || "Order summary"}</h3>
+                                    <div className="space-y-2 text-sm">
+                                        <div className="flex justify-between">
+                                            <span className="text-gray-400">{t.summaryPlan || "Plan"}</span>
+                                            <span className="font-semibold text-cream">{formData.plan || "—"}</span>
+                                        </div>
+                                        <div className="flex justify-between">
+                                            <span className="text-gray-400">{t.summaryMeals || "Meals per week"}</span>
+                                            <span className="font-semibold text-cream">{formData.mealsPerWeek || "—"}</span>
+                                        </div>
+                                        <div className="flex justify-between">
+                                            <span className="text-gray-400">{t.summaryDelivery || "Delivery days"}</span>
+                                            <span className="font-semibold text-cream">{formData.deliveryDays || "Choose next step"}</span>
+                                        </div>
+                                    </div>
+
+                                    <div className="pt-3 border-t border-white/10">
+                                        <div className="bg-orange/15 border border-orange/30 rounded-md px-3 py-2 text-center">
+                                            <span className="text-sm font-semibold text-orange">
+                                                {t.summaryOffer || "Waitlist bonus — 50% off at launch"}
                                             </span>
                                         </div>
-                                    </button>
-                                ))}
+                                        <p className="text-xs text-gray-400 mt-3">
+                                            {t.summaryNote || "You’ll unlock the offer after joining the waitlist."}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
                     )}

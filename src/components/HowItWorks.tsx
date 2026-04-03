@@ -11,20 +11,20 @@ export default function HowItWorks() {
     const steps = [
         {
             number: "01",
-            title: t.step1Title || "Pick Your Plan",
-            description: t.step1Desc || "Choose the plan that matches your routine and preferences.",
+            title: t.step1Title || "Choose your plan",
+            description: t.step1Desc || "Pick how many meals you want each week",
             image: "/images/select-menu-47.png",
         },
         {
             number: "02",
-            title: t.step2Title || "Select Weekly Meals",
-            description: t.step2Desc || "Pick your meals and portion size for the week.",
+            title: t.step2Title || "Pick your meals",
+            description: t.step2Desc || "Select from fresh weekly options",
             image: "/images/step-confirm.jpg",
         },
         {
             number: "03",
-            title: t.step3Title || "Delivered Fresh",
-            description: t.step3Desc || "Heat, eat, and enjoy. Pause or skip anytime.",
+            title: t.step3Title || "Heat & eat",
+            description: t.step3Desc || "Ready in minutes",
             image: "/images/step-enjoy.jpg",
         },
     ];
@@ -33,7 +33,7 @@ export default function HowItWorks() {
         <section id="how-it-works" className="py-12 md:py-24 bg-white text-center">
             <div className="container mx-auto px-5">
                 <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark mb-16">
-                    {t.title || "How it Works"}
+                    {t.title || "How it works"}
                 </h2>
 
                 <div className="relative">

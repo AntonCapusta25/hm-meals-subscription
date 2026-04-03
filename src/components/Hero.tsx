@@ -126,6 +126,20 @@ export default function Hero({ city }: HeroProps) {
                     >
                         {t.subtitle || "Fresh, chef-made meals delivered weekly. Choose a plan that fits your routine."}
                     </motion.p>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
+                        className="mt-5 inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-2 text-sm md:text-base text-white/90"
+                    >
+                        <span className="font-semibold text-white">
+                            {t.launchOfferTitle || "Launch offer"}
+                        </span>
+                        <span className="text-white/80">
+                            {t.launchOfferText || "50% off when you join the waitlist"}
+                        </span>
+                    </motion.div>
                 </div>
 
                 <motion.div
