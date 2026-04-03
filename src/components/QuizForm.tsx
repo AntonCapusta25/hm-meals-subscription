@@ -94,7 +94,7 @@ const MEAL_ITEMS = [
         id: "chicken-satay",
         title: "Chicken Satay Rice Bowl",
         category: "Chicken",
-        image: "https://homemadeco.lovable.app/assets/meal-thai-curry-5VDOicbi.jpg",
+        image: "/images/meal-chicken-satay.png",
         calories: 540,
         grams: 430,
         protein: 38,
