@@ -63,19 +63,227 @@ const DELIVERY_DAYS_OPTIONS = [
 const MEAL_FILTERS = ["All", "Chicken", "Beef", "Fish", "Vegetarian"];
 
 const MEAL_ITEMS = [
-    { id: "chicken-teriyaki", title: "Chicken Teriyaki Rice Bowl", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-chicken-rice-DEPY1R_S.jpg", calories: 520, grams: 420, protein: 40, fat: 14, carbs: 55, price: 6.49 },
-    { id: "chicken-satay", title: "Chicken Satay Rice Bowl", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-thai-curry-5VDOicbi.jpg", calories: 540, grams: 430, protein: 38, fat: 16, carbs: 58, price: 6.49 },
-    { id: "chicken-shawarma", title: "Chicken Shawarma Rice Bowl", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-beef-teriyaki-DLHQuq9R.jpg", calories: 500, grams: 410, protein: 36, fat: 13, carbs: 54, price: 6.49 },
-    { id: "butter-chicken", title: "Butter Chicken with Rice", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-protein-pasta-VjvFlOyP.jpg", calories: 560, grams: 440, protein: 42, fat: 18, carbs: 58, price: 6.99 },
-    { id: "chicken-pesto", title: "Chicken Pesto Pasta", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-protein-pasta-VjvFlOyP.jpg", calories: 590, grams: 450, protein: 41, fat: 19, carbs: 62, price: 6.99 },
-    { id: "chili-chicken", title: "Chili Chicken Noodles", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-chicken-rice-DEPY1R_S.jpg", calories: 530, grams: 420, protein: 39, fat: 15, carbs: 57, price: 6.49 },
-    { id: "beef-bolognese", title: "Beef Bolognese Pasta", category: "Beef", image: "https://homemadeco.lovable.app/assets/meal-protein-pasta-VjvFlOyP.jpg", calories: 610, grams: 460, protein: 36, fat: 20, carbs: 68, price: 6.99 },
-    { id: "beef-shawarma", title: "Beef Shawarma Rice Bowl", category: "Beef", image: "https://homemadeco.lovable.app/assets/meal-beef-teriyaki-DLHQuq9R.jpg", calories: 580, grams: 440, protein: 35, fat: 18, carbs: 60, price: 6.99 },
-    { id: "pulled-beef", title: "Mexican Pulled Beef Bowl", category: "Beef", image: "https://homemadeco.lovable.app/assets/meal-mediterranean-UXFkxguD.jpg", calories: 560, grams: 430, protein: 34, fat: 16, carbs: 58, price: 6.99 },
-    { id: "salmon-teriyaki", title: "Salmon Teriyaki Rice Bowl", category: "Fish", image: "https://homemadeco.lovable.app/assets/meal-salmon-potato-oKfzZJQt.jpg", calories: 540, grams: 400, protein: 35, fat: 18, carbs: 48, price: 7.49 },
-    { id: "grilled-salmon", title: "Grilled Salmon with Rice & Vegetables", category: "Fish", image: "https://homemadeco.lovable.app/assets/meal-salmon-potato-oKfzZJQt.jpg", calories: 520, grams: 400, protein: 33, fat: 17, carbs: 46, price: 7.49 },
-    { id: "veg-bowl", title: "Vegetable Bowl", category: "Vegetarian", image: "https://homemadeco.lovable.app/assets/meal-vegan-bowl-ApS1bKK0.jpg", calories: 430, grams: 380, protein: 18, fat: 14, carbs: 58, price: 5.99 },
-    { id: "veg-risotto", title: "Vegetable Risotto", category: "Vegetarian", image: "https://homemadeco.lovable.app/assets/meal-vegan-bowl-ApS1bKK0.jpg", calories: 460, grams: 390, protein: 16, fat: 12, carbs: 62, price: 5.99 },
+    {
+        id: "chicken-teriyaki",
+        title: "Chicken Teriyaki Rice Bowl",
+        category: "Chicken",
+        image: "https://homemadeco.lovable.app/assets/meal-chicken-rice-DEPY1R_S.jpg",
+        calories: 520,
+        grams: 420,
+        protein: 40,
+        fat: 14,
+        carbs: 55,
+        fiber: 6,
+        sugar: 8,
+        sodium: 520,
+        description: "Teriyaki-glazed chicken over steamed rice with broccoli and sesame.",
+        ingredients: "Chicken, rice, broccoli, teriyaki glaze, sesame, scallion",
+        price: 6.49
+    },
+    {
+        id: "chicken-satay",
+        title: "Chicken Satay Rice Bowl",
+        category: "Chicken",
+        image: "https://homemadeco.lovable.app/assets/meal-thai-curry-5VDOicbi.jpg",
+        calories: 540,
+        grams: 430,
+        protein: 38,
+        fat: 16,
+        carbs: 58,
+        fiber: 5,
+        sugar: 7,
+        sodium: 540,
+        description: "Grilled satay-style chicken with jasmine rice and crisp veggies.",
+        ingredients: "Chicken, jasmine rice, peanut sauce, cucumber, carrot",
+        price: 6.49
+    },
+    {
+        id: "chicken-shawarma",
+        title: "Chicken Shawarma Rice Bowl",
+        category: "Chicken",
+        image: "https://homemadeco.lovable.app/assets/meal-beef-teriyaki-DLHQuq9R.jpg",
+        calories: 500,
+        grams: 410,
+        protein: 36,
+        fat: 13,
+        carbs: 54,
+        fiber: 6,
+        sugar: 6,
+        sodium: 510,
+        description: "Spiced shawarma chicken with rice, herbs, and pickled onions.",
+        ingredients: "Chicken, rice, yogurt spice blend, pickled onion, herbs",
+        price: 6.49
+    },
+    {
+        id: "butter-chicken",
+        title: "Butter Chicken with Rice",
+        category: "Chicken",
+        image: "https://homemadeco.lovable.app/assets/meal-protein-pasta-VjvFlOyP.jpg",
+        calories: 560,
+        grams: 440,
+        protein: 42,
+        fat: 18,
+        carbs: 58,
+        fiber: 4,
+        sugar: 7,
+        sodium: 560,
+        description: "Creamy butter chicken served with fragrant basmati rice.",
+        ingredients: "Chicken, basmati rice, tomato cream sauce, spices",
+        price: 6.99
+    },
+    {
+        id: "chicken-pesto",
+        title: "Chicken Pesto Pasta",
+        category: "Chicken",
+        image: "https://homemadeco.lovable.app/assets/meal-protein-pasta-VjvFlOyP.jpg",
+        calories: 590,
+        grams: 450,
+        protein: 41,
+        fat: 19,
+        carbs: 62,
+        fiber: 5,
+        sugar: 5,
+        sodium: 520,
+        description: "Pesto chicken pasta with cherry tomatoes and spinach.",
+        ingredients: "Chicken, pasta, basil pesto, tomato, spinach",
+        price: 6.99
+    },
+    {
+        id: "chili-chicken",
+        title: "Chili Chicken Noodles",
+        category: "Chicken",
+        image: "https://homemadeco.lovable.app/assets/meal-chicken-rice-DEPY1R_S.jpg",
+        calories: 530,
+        grams: 420,
+        protein: 39,
+        fat: 15,
+        carbs: 57,
+        fiber: 4,
+        sugar: 6,
+        sodium: 590,
+        description: "Spicy chili chicken tossed with noodles and crunchy veg.",
+        ingredients: "Chicken, noodles, chili sauce, bell pepper, onion",
+        price: 6.49
+    },
+    {
+        id: "beef-bolognese",
+        title: "Beef Bolognese Pasta",
+        category: "Beef",
+        image: "https://homemadeco.lovable.app/assets/meal-protein-pasta-VjvFlOyP.jpg",
+        calories: 610,
+        grams: 460,
+        protein: 36,
+        fat: 20,
+        carbs: 68,
+        fiber: 5,
+        sugar: 7,
+        sodium: 620,
+        description: "Slow-cooked beef bolognese over al dente pasta.",
+        ingredients: "Beef, pasta, tomato, onion, garlic, herbs",
+        price: 6.99
+    },
+    {
+        id: "beef-shawarma",
+        title: "Beef Shawarma Rice Bowl",
+        category: "Beef",
+        image: "https://homemadeco.lovable.app/assets/meal-beef-teriyaki-DLHQuq9R.jpg",
+        calories: 580,
+        grams: 440,
+        protein: 35,
+        fat: 18,
+        carbs: 60,
+        fiber: 5,
+        sugar: 6,
+        sodium: 600,
+        description: "Tender beef shawarma with rice, herbs, and tahini drizzle.",
+        ingredients: "Beef, rice, shawarma spice, tahini, parsley",
+        price: 6.99
+    },
+    {
+        id: "pulled-beef",
+        title: "Mexican Pulled Beef Bowl",
+        category: "Beef",
+        image: "https://homemadeco.lovable.app/assets/meal-mediterranean-UXFkxguD.jpg",
+        calories: 560,
+        grams: 430,
+        protein: 34,
+        fat: 16,
+        carbs: 58,
+        fiber: 6,
+        sugar: 6,
+        sodium: 620,
+        description: "Slow pulled beef with rice, beans, and pico de gallo.",
+        ingredients: "Beef, rice, beans, tomato, lime, cilantro",
+        price: 6.99
+    },
+    {
+        id: "salmon-teriyaki",
+        title: "Salmon Teriyaki Rice Bowl",
+        category: "Fish",
+        image: "https://homemadeco.lovable.app/assets/meal-salmon-potato-oKfzZJQt.jpg",
+        calories: 540,
+        grams: 400,
+        protein: 35,
+        fat: 18,
+        carbs: 48,
+        fiber: 4,
+        sugar: 6,
+        sodium: 520,
+        description: "Teriyaki salmon with rice and steamed greens.",
+        ingredients: "Salmon, rice, teriyaki glaze, green beans",
+        price: 7.49
+    },
+    {
+        id: "grilled-salmon",
+        title: "Grilled Salmon with Rice & Vegetables",
+        category: "Fish",
+        image: "https://homemadeco.lovable.app/assets/meal-salmon-potato-oKfzZJQt.jpg",
+        calories: 520,
+        grams: 400,
+        protein: 33,
+        fat: 17,
+        carbs: 46,
+        fiber: 5,
+        sugar: 5,
+        sodium: 480,
+        description: "Oven-grilled salmon with rice and seasonal vegetables.",
+        ingredients: "Salmon, rice, broccoli, carrot, lemon, dill",
+        price: 7.49
+    },
+    {
+        id: "veg-bowl",
+        title: "Vegetable Bowl",
+        category: "Vegetarian",
+        image: "https://homemadeco.lovable.app/assets/meal-vegan-bowl-ApS1bKK0.jpg",
+        calories: 430,
+        grams: 380,
+        protein: 18,
+        fat: 14,
+        carbs: 58,
+        fiber: 8,
+        sugar: 7,
+        sodium: 420,
+        description: "Vegetable-forward bowl with grains and citrus dressing.",
+        ingredients: "Quinoa, chickpeas, mixed veg, lemon dressing",
+        price: 5.99
+    },
+    {
+        id: "veg-risotto",
+        title: "Vegetable Risotto",
+        category: "Vegetarian",
+        image: "https://homemadeco.lovable.app/assets/meal-vegan-bowl-ApS1bKK0.jpg",
+        calories: 460,
+        grams: 390,
+        protein: 16,
+        fat: 12,
+        carbs: 62,
+        fiber: 6,
+        sugar: 6,
+        sodium: 460,
+        description: "Creamy vegetable risotto with herbs and parmesan.",
+        ingredients: "Arborio rice, mushroom, zucchini, parmesan, herbs",
+        price: 5.99
+    }
 ];
 
 function QuizFormContent() {
@@ -98,6 +306,7 @@ function QuizFormContent() {
     const [selectionError, setSelectionError] = useState<string>("");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
+    const [activeMeal, setActiveMeal] = useState<(typeof MEAL_ITEMS)[number] | null>(null);
 
     const totalSteps = 5;
 
@@ -397,25 +606,28 @@ function QuizFormContent() {
                                         {filteredMeals.map((meal) => {
                                             const selected = formData.selectedMeals.includes(meal.id);
                                             return (
-                                                <button
+                                                <div
                                                     key={meal.id}
-                                                    onClick={() => toggleMeal(meal.id)}
                                                     className={`group rounded-2xl overflow-hidden border transition-all text-left bg-white ${selected
                                                         ? "border-orange ring-1 ring-orange"
                                                         : "border-dark/10 hover:border-dark/30"
                                                         }`}
                                                 >
                                                     <div className="aspect-square overflow-hidden">
-                                                        <img
-                                                            src={meal.image}
-                                                            alt={meal.title}
-                                                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                                            loading="lazy"
-                                                        />
+                                                        <button type="button" onClick={() => toggleMeal(meal.id)} className="w-full h-full text-left">
+                                                            <img
+                                                                src={meal.image}
+                                                                alt={meal.title}
+                                                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                                                loading="lazy"
+                                                            />
+                                                        </button>
                                                     </div>
                                                     <div className="p-3 pb-1">
                                                         <div className="text-[10px] md:text-xs text-orange font-semibold mb-1">{meal.category}</div>
-                                                        <div className="text-sm md:text-base font-semibold text-dark leading-tight">{meal.title}</div>
+                                                        <button type="button" onClick={() => toggleMeal(meal.id)} className="text-sm md:text-base font-semibold text-dark leading-tight text-left">
+                                                            {meal.title}
+                                                        </button>
                                                         <div className="flex items-center gap-1 mt-1 text-gray-500">
                                                             <Flame className="w-3 h-3" />
                                                             <span className="text-xs font-medium">{meal.calories} kcal</span>
@@ -443,9 +655,18 @@ function QuizFormContent() {
                                                     </div>
                                                     <div className="px-3 pb-3 flex items-center justify-between">
                                                         <span className="text-xs font-semibold text-orange">€{meal.price.toFixed(2)}</span>
-                                                        {selected && <span className="text-[10px] md:text-xs text-orange font-semibold">Selected</span>}
+                                                        <div className="flex items-center gap-2">
+                                                            <button
+                                                                type="button"
+                                                                onClick={() => setActiveMeal(meal)}
+                                                                className="text-[10px] md:text-xs text-orange font-semibold hover:underline"
+                                                            >
+                                                                View details
+                                                            </button>
+                                                            {selected && <span className="text-[10px] md:text-xs text-orange font-semibold">Selected</span>}
+                                                        </div>
                                                     </div>
-                                                </button>
+                                                </div>
                                             );
                                         })}
                                     </div>
@@ -594,6 +815,94 @@ function QuizFormContent() {
                     )}
                 </AnimatePresence>
             </div>
+
+            {activeMeal && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+                    <button
+                        type="button"
+                        className="absolute inset-0 bg-black/40"
+                        onClick={() => setActiveMeal(null)}
+                        aria-label="Close details"
+                    />
+                    <div
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby="meal-detail-title"
+                        className="relative w-full max-w-md max-h-[90vh] overflow-y-auto bg-white border border-dark/10 rounded-2xl p-6 shadow-2xl"
+                    >
+                        <button
+                            type="button"
+                            onClick={() => setActiveMeal(null)}
+                            className="absolute right-4 top-4 rounded-full p-1 text-gray-400 hover:text-dark"
+                            aria-label="Close"
+                        >
+                            ✕
+                        </button>
+                        <div className="rounded-xl overflow-hidden -mx-2 -mt-2 mb-4">
+                            <img
+                                src={activeMeal.image}
+                                alt={activeMeal.title}
+                                className="w-full aspect-[4/3] object-cover"
+                            />
+                        </div>
+                        <div className="flex flex-col space-y-1.5 text-center sm:text-left">
+                            <div className="flex items-center gap-2 mb-1">
+                                <span className="text-xs font-semibold text-orange bg-orange/10 px-2 py-0.5 rounded-full">
+                                    {activeMeal.category}
+                                </span>
+                                <span className="text-xs text-gray-500">{activeMeal.grams}g</span>
+                            </div>
+                            <h2 id="meal-detail-title" className="font-semibold tracking-tight font-display text-xl text-dark">
+                                {activeMeal.title}
+                            </h2>
+                            <p className="text-sm text-gray-500 mt-1">{activeMeal.description}</p>
+                        </div>
+                        <div className="grid grid-cols-4 gap-3 my-4">
+                            <div className="text-center p-2.5 rounded-xl bg-orange/10">
+                                <div className="text-base font-bold text-orange">{activeMeal.calories}</div>
+                                <div className="text-[10px] text-gray-500 uppercase tracking-wide">kcal</div>
+                                <div className="text-[10px] text-gray-500 mt-0.5">Calories</div>
+                            </div>
+                            <div className="text-center p-2.5 rounded-xl bg-gray-100">
+                                <div className="text-base font-bold text-dark">{activeMeal.protein}</div>
+                                <div className="text-[10px] text-gray-500 uppercase tracking-wide">g</div>
+                                <div className="text-[10px] text-gray-500 mt-0.5">Protein</div>
+                            </div>
+                            <div className="text-center p-2.5 rounded-xl bg-gray-100">
+                                <div className="text-base font-bold text-dark">{activeMeal.fat}</div>
+                                <div className="text-[10px] text-gray-500 uppercase tracking-wide">g</div>
+                                <div className="text-[10px] text-gray-500 mt-0.5">Fat</div>
+                            </div>
+                            <div className="text-center p-2.5 rounded-xl bg-gray-100">
+                                <div className="text-base font-bold text-dark">{activeMeal.carbs}</div>
+                                <div className="text-[10px] text-gray-500 uppercase tracking-wide">g</div>
+                                <div className="text-[10px] text-gray-500 mt-0.5">Carbs</div>
+                            </div>
+                        </div>
+                        <div className="space-y-2 border-t border-dark/10 pt-3">
+                            <h4 className="text-xs font-semibold text-dark uppercase tracking-wide">More Nutrition</h4>
+                            <div className="grid grid-cols-3 gap-2 text-center">
+                                <div className="bg-gray-100 rounded-lg p-2">
+                                    <div className="text-sm font-semibold text-dark">{activeMeal.fiber}g</div>
+                                    <div className="text-[10px] text-gray-500">Fiber</div>
+                                </div>
+                                <div className="bg-gray-100 rounded-lg p-2">
+                                    <div className="text-sm font-semibold text-dark">{activeMeal.sugar}g</div>
+                                    <div className="text-[10px] text-gray-500">Sugar</div>
+                                </div>
+                                <div className="bg-gray-100 rounded-lg p-2">
+                                    <div className="text-sm font-semibold text-dark">{activeMeal.sodium}mg</div>
+                                    <div className="text-[10px] text-gray-500">Sodium</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="space-y-2 border-t border-dark/10 pt-3 mt-3">
+                            <h4 className="text-xs font-semibold text-dark uppercase tracking-wide">Ingredients</h4>
+                            <p className="text-sm text-gray-500">{activeMeal.ingredients}</p>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* Navigation Controls */}
             <div className="mt-4 md:mt-16 flex items-center justify-between border-t border-dark/10 pt-4 md:pt-8">

@@ -17,27 +17,27 @@ const testimonialConfig = [
 
 const fallbackItems = [
     {
-        company: "Family Plan",
+        company: "Balanced",
         eventType: "Weekly Dinners",
         quote: "Our kids actually eat the meals. The portions are perfect and we save hours every week."
     },
     {
-        company: "Healthy Routine",
+        company: "High Protein",
         eventType: "Weekday Structure",
         quote: "I stopped skipping lunch and ordering takeout. The protein options are solid and consistent."
     },
     {
-        company: "Plant-Forward",
+        company: "Vegan",
         eventType: "Flexitarian",
         quote: "We wanted more plant-based meals without going fully vegan. These are flavorful and filling."
     },
     {
-        company: "Comfort & Care",
+        company: "Low Calorie",
         eventType: "Easy Reheating",
         quote: "Reliable, home-style meals that are easy to heat up. Exactly what I needed after a busy week."
     },
     {
-        company: "Couple Plan",
+        company: "Balanced",
         eventType: "Portion-Controlled",
         quote: "Great variety, no food waste, and the delivery window is always on time."
     },
@@ -47,7 +47,7 @@ const fallbackItems = [
         quote: "I can finally keep my weekdays clean. The meals are fresh and taste like real food."
     },
     {
-        company: "Family Plan",
+        company: "Balanced",
         eventType: "Kid-Friendly",
         quote: "Less stress at dinner time. We just heat, plate, and enjoy."
     }

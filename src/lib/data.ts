@@ -33,31 +33,31 @@ export interface Cuisine {
 export const cuisines: Cuisine[] = [
     {
         id: "family",
-        title: "Family Plan",
+        title: "Balanced",
         image: "/images/menu-kids.jpg",
-        description: "Healthy home dinners everyone will actually eat, built for weeknights.",
-        highlights: ["Kid-friendly flavors", "Balanced plates", "Flexible portions"]
+        description: "Everyday meals with a balanced mix of protein, carbs, and vegetables.",
+        highlights: ["Balanced plates", "Family-friendly", "Flexible portions"]
     },
     {
         id: "routine",
-        title: "Healthy Routine Plan",
+        title: "High Protein",
         image: "/images/menu-ron.jpg",
-        description: "Balanced, protein-aware meals for weekday structure and consistency.",
-        highlights: ["Clear nutrition focus", "Portion consistency", "Reliable delivery"]
+        description: "Protein-forward meals built for active, on-the-go schedules.",
+        highlights: ["High protein", "Portion consistency", "Weekday structure"]
     },
     {
         id: "plant",
-        title: "Plant-Forward Plan",
+        title: "Vegan",
         image: "/images/menu-veggie.jpg",
-        description: "Seasonal, veg-first meals with full flavor and variety.",
-        highlights: ["Vegetable-forward", "Legumes & whole grains", "Global spices"]
+        description: "Plant-based meals with bold flavor and satisfying portions.",
+        highlights: ["Plant-based", "Legumes & grains", "Global spices"]
     },
     {
         id: "comfort",
-        title: "Comfort & Care Plan",
+        title: "Low Calorie",
         image: "/images/menu-classic.png",
-        description: "Familiar, nourishing meals with zero effort and easy reheating.",
-        highlights: ["Home-style classics", "Gentle seasoning", "No-prep ease"]
+        description: "Lighter meals with smart portions and clean ingredients.",
+        highlights: ["Lighter meals", "Clean ingredients", "Easy reheating"]
     }
 ];
 
