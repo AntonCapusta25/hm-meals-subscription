@@ -529,12 +529,12 @@ function QuizFormContent() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -50 }}
                             transition={{ duration: 0.3 }}
-                            className="w-full"
+                            className="w-full text-center"
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-dark mb-2 md:mb-4">{t.occasionTitle || "Choose your plan"}</h2>
-                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10">{t.occasionSubtitle || "Pick the subscription that fits your routine."}</p>
+                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10 max-w-2xl mx-auto">{t.occasionSubtitle || "Pick the subscription that fits your routine."}</p>
  
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 max-w-4xl mx-auto text-left">
                                 {PLANS.map((occ) => (
                                     <button
                                         key={occ.id}
@@ -565,12 +565,12 @@ function QuizFormContent() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -50 }}
                             transition={{ duration: 0.3 }}
-                            className="w-full"
+                            className="w-full text-center"
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-dark mb-2 md:mb-4">{t.guestsTitle || "How many meals per week?"}</h2>
-                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10">{t.guestsSubtitle || "Choose the weekly quantity that fits your routine."}</p>
+                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10 max-w-2xl mx-auto">{t.guestsSubtitle || "Choose the weekly quantity that fits your routine."}</p>
  
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 max-w-4xl mx-auto text-left">
                                 {MEALS_OPTIONS.map((opt) => (
                                     <button
                                         key={opt.id}
@@ -601,11 +601,11 @@ function QuizFormContent() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -50 }}
                             transition={{ duration: 0.3 }}
-                            className="w-full"
+                            className="w-full text-center"
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-dark mb-2 md:mb-4">{t.mealsTitle || "Pick your meals"}</h2>
-                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-8">{t.mealsSubtitle || "Choose your meals for the week."}</p>
-                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
+                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-8 max-w-2xl mx-auto">{t.mealsSubtitle || "Choose your meals for the week."}</p>
+                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 text-left">
                                 <div className="lg:col-span-2">
                                     <div className="bg-white border border-dark/10 rounded-[28px] p-4 sm:p-6 md:p-12 shadow-xl">
                                         <div className="space-y-6">
