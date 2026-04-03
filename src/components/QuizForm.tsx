@@ -61,6 +61,12 @@ const DELIVERY_DAYS_OPTIONS = [
 ];
 
 const MEAL_FILTERS = ["All", "Chicken", "Beef", "Fish", "Vegetarian"];
+const MEAL_BADGES: Record<string, { label: string; emoji: string; className: string }> = {
+    Chicken: { label: "Chicken", emoji: "🐔", className: "bg-orange/90 text-white" },
+    Beef: { label: "Beef", emoji: "🐄", className: "bg-red-500/90 text-white" },
+    Fish: { label: "Fish", emoji: "🐟", className: "bg-sky-500/90 text-white" },
+    Vegetarian: { label: "Veg", emoji: "🥗", className: "bg-green-500/90 text-white" }
+};
 
 const MEAL_ITEMS = [
     {
@@ -613,7 +619,16 @@ function QuizFormContent() {
                                                         : "border-dark/10 hover:border-dark/30"
                                                         }`}
                                                 >
-                                                    <div className="aspect-square overflow-hidden">
+                                                    <div className="aspect-square overflow-hidden relative">
+                                                        {MEAL_BADGES[meal.category] && (
+                                                            <div
+                                                                className={`absolute top-2 right-2 z-10 rounded-full px-2 py-1 text-[10px] font-bold shadow-md ${MEAL_BADGES[meal.category].className}`}
+                                                                title={MEAL_BADGES[meal.category].label}
+                                                            >
+                                                                <span className="mr-1">{MEAL_BADGES[meal.category].emoji}</span>
+                                                                {MEAL_BADGES[meal.category].label}
+                                                            </div>
+                                                        )}
                                                         <button type="button" onClick={() => toggleMeal(meal.id)} className="w-full h-full text-left">
                                                             <img
                                                                 src={meal.image}
