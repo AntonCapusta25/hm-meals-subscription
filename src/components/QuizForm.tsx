@@ -370,7 +370,9 @@ function QuizFormContent() {
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-dark mb-2 md:mb-4">{t.mealsTitle || "Pick your meals"}</h2>
                             <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-8">{t.mealsSubtitle || "Choose your meals for the week."}</p>
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                                <div className="lg:col-span-2 space-y-6">
+                                <div className="lg:col-span-2">
+                                    <div className="bg-white border border-dark/10 rounded-2xl p-4 md:p-6 shadow-soft">
+                                        <div className="space-y-6">
                                     <div className="flex gap-2 flex-wrap">
                                         {MEAL_FILTERS.map((filter) => (
                                             <button
@@ -446,6 +448,8 @@ function QuizFormContent() {
                                                 </button>
                                             );
                                         })}
+                                    </div>
+                                        </div>
                                     </div>
                                 </div>
 
