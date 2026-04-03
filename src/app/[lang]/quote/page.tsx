@@ -44,7 +44,7 @@ export default async function QuotePage({ params }: Props) {
                         </p>
                     </div>
 
-                    <div className="bg-white border border-dark/10 rounded-[28px] p-4 sm:p-6 md:p-12 shadow-xl">
+                    <div className="w-full">
                         <QuizForm />
                     </div>
                 </div>

@@ -371,7 +371,7 @@ function QuizFormContent() {
                             <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-8">{t.mealsSubtitle || "Choose your meals for the week."}</p>
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                                 <div className="lg:col-span-2">
-                                    <div className="bg-white border border-dark/10 rounded-2xl p-4 md:p-6 shadow-soft">
+                                    <div className="bg-white border border-dark/10 rounded-[28px] p-4 sm:p-6 md:p-12 shadow-xl">
                                         <div className="space-y-6">
                                     <div className="flex gap-2 flex-wrap">
                                         {MEAL_FILTERS.map((filter) => (
