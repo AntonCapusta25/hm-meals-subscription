@@ -61,15 +61,15 @@ const DELIVERY_DAYS_OPTIONS = [
 ];
 
 const MEAL_FILTERS = ["All", "Chicken", "Beef", "Fish", "Vegetarian"];
-const MEAL_BADGES: Record<string, { label: string; emoji: string; className: string }> = {
-    Chicken: { label: "Chicken", emoji: "🐔", className: "bg-orange/90 text-white" },
-    Beef: { label: "Beef", emoji: "🐄", className: "bg-red-500/90 text-white" },
-    Fish: { label: "Fish", emoji: "🐟", className: "bg-sky-500/90 text-white" },
-    Vegetarian: { label: "Veg", emoji: "🥗", className: "bg-green-500/90 text-white" }
+const MEAL_BADGES: Record<string, { label: string; className: string }> = {
+    Chicken: { label: "Chicken", className: "bg-orange/90" },
+    Beef: { label: "Beef", className: "bg-red-500/90" },
+    Fish: { label: "Fish", className: "bg-sky-500/90" },
+    Vegetarian: { label: "Veg", className: "bg-green-500/90" }
 };
 const EXTRA_BADGES = {
-    highProtein: { label: "High Protein", emoji: "💪", className: "bg-indigo-500/90 text-white" },
-    light: { label: "Light", emoji: "✨", className: "bg-emerald-500/90 text-white" }
+    highProtein: { label: "High Protein", className: "bg-indigo-500/90" },
+    light: { label: "Light", className: "bg-emerald-500/90" }
 };
 
 const MEAL_ITEMS = [
@@ -646,9 +646,8 @@ function QuizFormContent() {
                                                                 <div
                                                                     key={`${meal.id}-${badge.label}`}
                                                                     title={badge.label}
-                                                                    className={`flex items-center justify-center w-7 h-7 rounded-full text-[11px] font-bold shadow-md transition-transform duration-300 ${badge.className} ${index > 0 ? "-ml-2" : ""} ${index === 0 ? "group-hover:-translate-x-1" : "group-hover:translate-x-2"}`}
+                                                                    className={`flex items-center justify-center w-3 h-3 rounded-full shadow-md transition-transform duration-300 ${badge.className} ${index > 0 ? "-ml-1" : ""} ${index === 0 ? "group-hover:-translate-x-1" : "group-hover:translate-x-2"}`}
                                                                 >
-                                                                    {badge.emoji}
                                                                 </div>
                                                             ))}
                                                         </div>
@@ -753,6 +752,29 @@ function QuizFormContent() {
                                             <div className="flex items-center gap-2 text-xs text-gray-500">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="w-3.5 h-3.5 text-orange"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
                                                 Fresh meals, weekly
+                                            </div>
+                                            <div className="pt-2">
+                                                <div className="text-[10px] font-semibold uppercase tracking-wide text-gray-500 mb-2">Legend</div>
+                                                <div className="flex flex-wrap gap-2 text-[11px] text-gray-600">
+                                                    <span className="inline-flex items-center gap-1">
+                                                        <span className="w-2 h-2 rounded-full bg-orange/90"></span>Chicken
+                                                    </span>
+                                                    <span className="inline-flex items-center gap-1">
+                                                        <span className="w-2 h-2 rounded-full bg-red-500/90"></span>Beef
+                                                    </span>
+                                                    <span className="inline-flex items-center gap-1">
+                                                        <span className="w-2 h-2 rounded-full bg-sky-500/90"></span>Fish
+                                                    </span>
+                                                    <span className="inline-flex items-center gap-1">
+                                                        <span className="w-2 h-2 rounded-full bg-green-500/90"></span>Veg
+                                                    </span>
+                                                    <span className="inline-flex items-center gap-1">
+                                                        <span className="w-2 h-2 rounded-full bg-indigo-500/90"></span>High Protein
+                                                    </span>
+                                                    <span className="inline-flex items-center gap-1">
+                                                        <span className="w-2 h-2 rounded-full bg-emerald-500/90"></span>Light
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
