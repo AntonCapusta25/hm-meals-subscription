@@ -12,6 +12,7 @@ import { usePathname } from 'next/navigation';
 type FormData = {
     plan: string;
     mealsPerWeek: string;
+    selectedMeals: string[];
     deliveryDays: string;
     name: string;
     email: string;
@@ -59,6 +60,24 @@ const DELIVERY_DAYS_OPTIONS = [
     { id: "5", label: "5 delivery days" },
 ];
 
+const MEAL_FILTERS = ["All", "Chicken", "Beef", "Fish", "Vegetarian"];
+
+const MEAL_ITEMS = [
+    { id: "chicken-teriyaki", title: "Chicken Teriyaki Rice Bowl", category: "Chicken", image: "/images/menu-classic.png" },
+    { id: "chicken-satay", title: "Chicken Satay Rice Bowl", category: "Chicken", image: "/images/menu-classic.png" },
+    { id: "chicken-shawarma", title: "Chicken Shawarma Rice Bowl", category: "Chicken", image: "/images/menu-classic.png" },
+    { id: "butter-chicken", title: "Butter Chicken with Rice", category: "Chicken", image: "/images/menu-classic.png" },
+    { id: "chicken-pesto", title: "Chicken Pesto Pasta", category: "Chicken", image: "/images/menu-classic.png" },
+    { id: "chili-chicken", title: "Chili Chicken Noodles", category: "Chicken", image: "/images/menu-classic.png" },
+    { id: "beef-bolognese", title: "Beef Bolognese Pasta", category: "Beef", image: "/images/menu-fusion.png" },
+    { id: "beef-shawarma", title: "Beef Shawarma Rice Bowl", category: "Beef", image: "/images/menu-fusion.png" },
+    { id: "pulled-beef", title: "Mexican Pulled Beef Bowl", category: "Beef", image: "/images/menu-fusion.png" },
+    { id: "salmon-teriyaki", title: "Salmon Teriyaki Rice Bowl", category: "Fish", image: "/images/menu-seafood.png" },
+    { id: "grilled-salmon", title: "Grilled Salmon with Rice & Vegetables", category: "Fish", image: "/images/menu-seafood.png" },
+    { id: "veg-bowl", title: "Vegetable Bowl", category: "Vegetarian", image: "/images/menu-veggie.png" },
+    { id: "veg-risotto", title: "Vegetable Risotto", category: "Vegetarian", image: "/images/menu-veggie.png" },
+];
+
 function QuizFormContent() {
     const { dictionary } = useI18n();
     const t = (dictionary as any)?.quizForm || {};
@@ -69,18 +88,40 @@ function QuizFormContent() {
     const [formData, setFormData] = useState<FormData>({
         plan: "",
         mealsPerWeek: "",
+        selectedMeals: [],
         deliveryDays: "",
         name: "",
         email: "",
         phone: "",
     });
+    const [mealFilter, setMealFilter] = useState<string>("All");
+    const [selectionError, setSelectionError] = useState<string>("");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
 
-    const totalSteps = 4;
+    const totalSteps = 5;
 
     const updateData = (fields: Partial<FormData>) => {
         setFormData(prev => ({ ...prev, ...fields }));
+    };
+
+    const targetMeals = Number(formData.mealsPerWeek.match(/\d+/)?.[0] || 0);
+    const filteredMeals = MEAL_ITEMS.filter((m) => mealFilter === "All" || m.category === mealFilter);
+
+    const toggleMeal = (id: string) => {
+        setFormData((prev) => {
+            const isSelected = prev.selectedMeals.includes(id);
+            if (isSelected) {
+                setSelectionError("");
+                return { ...prev, selectedMeals: prev.selectedMeals.filter((m) => m !== id) };
+            }
+            if (targetMeals > 0 && prev.selectedMeals.length >= targetMeals) {
+                setSelectionError(`You can select up to ${targetMeals} meals.`);
+                return prev;
+            }
+            setSelectionError("");
+            return { ...prev, selectedMeals: [...prev.selectedMeals, id] };
+        });
     };
 
     const nextStep = () => {
@@ -134,7 +175,7 @@ function QuizFormContent() {
                     plan: formData.plan,
                     mealsPerWeek: formData.mealsPerWeek,
                     deliveryDays: formData.deliveryDays,
-                    message: `Plan: ${formData.plan}; Meals per week: ${formData.mealsPerWeek}; Delivery days: ${formData.deliveryDays}`,
+                    message: `Plan: ${formData.plan}; Meals per week: ${formData.mealsPerWeek}; Delivery days: ${formData.deliveryDays}; Meals selected: ${formData.selectedMeals.join(", ")}`,
                     locale: lang,
                     source: "quiz-form",
                 }),
@@ -180,8 +221,9 @@ function QuizFormContent() {
             e.preventDefault();
             if (step === 1 && formData.plan) nextStep();
             if (step === 2 && formData.mealsPerWeek) nextStep();
-            if (step === 3 && formData.deliveryDays) nextStep();
-            if (step === 4 && formData.name && formData.email && formData.phone) handleSubmit();
+            if (step === 3 && formData.selectedMeals.length === targetMeals && targetMeals > 0) nextStep();
+            if (step === 4 && formData.deliveryDays) nextStep();
+            if (step === 5 && formData.name && formData.email && formData.phone) handleSubmit();
         }
     };
 
@@ -289,7 +331,7 @@ function QuizFormContent() {
                                 {MEALS_OPTIONS.map((opt) => (
                                     <button
                                         key={opt.id}
-                                        onClick={() => { updateData({ mealsPerWeek: opt.label }); setTimeout(nextStep, 300); }}
+                                        onClick={() => { updateData({ mealsPerWeek: opt.label, selectedMeals: [] }); setSelectionError(""); setTimeout(nextStep, 300); }}
                                         className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.mealsPerWeek === opt.label
                                             ? "bg-[#F27D42]/10 border-[#F27D42] text-[#F27D42]"
                                             : "bg-white/5 border-white/10 text-cream hover:bg-white/10"
@@ -308,10 +350,75 @@ function QuizFormContent() {
                         </motion.div>
                     )}
 
-                    {/* STEP 3: Delivery Days */}
+                    {/* STEP 3: Pick meals */}
                     {step === 3 && (
                         <motion.div
                             key="step3"
+                            initial={{ opacity: 0, x: 50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -50 }}
+                            transition={{ duration: 0.3 }}
+                            className="absolute inset-0"
+                        >
+                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.mealsTitle || "Pick your meals"}</h2>
+                            <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-8">{t.mealsSubtitle || "Choose your meals for the week."}</p>
+
+                            <div className="flex gap-2 flex-wrap mb-4">
+                                {MEAL_FILTERS.map((filter) => (
+                                    <button
+                                        key={filter}
+                                        onClick={() => setMealFilter(filter)}
+                                        className={`px-3 py-2 rounded-full text-xs md:text-sm font-medium transition-all ${mealFilter === filter
+                                            ? "bg-[#F27D42] text-white"
+                                            : "bg-white/5 text-cream hover:bg-white/10 border border-white/10"
+                                            }`}
+                                    >
+                                        {filter}
+                                    </button>
+                                ))}
+                            </div>
+
+                            <div className="flex items-center justify-between mb-4 text-sm text-gray-400">
+                                <span>{formData.selectedMeals.length}/{targetMeals || 0} meals selected</span>
+                                {selectionError && <span className="text-[#F27D42]">{selectionError}</span>}
+                            </div>
+
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
+                                {filteredMeals.map((meal) => {
+                                    const selected = formData.selectedMeals.includes(meal.id);
+                                    return (
+                                        <button
+                                            key={meal.id}
+                                            onClick={() => toggleMeal(meal.id)}
+                                            className={`group rounded-2xl overflow-hidden border transition-all text-left ${selected
+                                                ? "border-[#F27D42] ring-1 ring-[#F27D42]"
+                                                : "border-white/10 hover:border-white/30"
+                                                }`}
+                                        >
+                                            <div className="aspect-square overflow-hidden">
+                                                <img
+                                                    src={meal.image}
+                                                    alt={meal.title}
+                                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                            <div className="p-3">
+                                                <div className="text-[10px] md:text-xs text-[#F27D42] font-semibold mb-1">{meal.category}</div>
+                                                <div className="text-sm md:text-base font-semibold text-cream leading-tight">{meal.title}</div>
+                                                {selected && <div className="text-[10px] md:text-xs text-[#F27D42] mt-2">Selected</div>}
+                                            </div>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </motion.div>
+                    )}
+
+                    {/* STEP 4: Delivery Days */}
+                    {step === 4 && (
+                        <motion.div
+                            key="step4"
                             initial={{ opacity: 0, x: 50 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -50 }}
@@ -344,10 +451,10 @@ function QuizFormContent() {
                         </motion.div>
                     )}
 
-                    {/* STEP 4: Contact & Submit */}
-                    {step === 4 && (
+                    {/* STEP 5: Contact & Submit */}
+                    {step === 5 && (
                         <motion.div
-                            key="step4"
+                            key="step5"
                             initial={{ opacity: 0, x: 50 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -50 }}
@@ -418,7 +525,8 @@ function QuizFormContent() {
                         disabled={
                             (step === 1 && !formData.plan) ||
                             (step === 2 && !formData.mealsPerWeek) ||
-                            (step === 3 && !formData.deliveryDays)
+                            (step === 3 && (targetMeals === 0 || formData.selectedMeals.length !== targetMeals)) ||
+                            (step === 4 && !formData.deliveryDays)
                         }
                         className="flex items-center gap-2 bg-[#F27D42] text-white px-6 py-3 md:px-8 md:py-3 rounded-xl font-bold hover:bg-[#d66a35] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
