@@ -35,12 +35,12 @@ export default async function QuotePage({ params }: Props) {
                 <div className="w-full max-w-4xl mx-auto">
                     <div className="text-center mb-6 md:mb-12">
                         <h1 className="text-3xl md:text-6xl font-heading font-bold mb-3 md:mb-4">
-                            {lang === 'nl' ? 'Start Je Abonnement' : 'Start Your Subscription'}
+                            {lang === 'nl' ? 'Word Lid van de Wachtlijst' : 'Join the Waitlist'}
                         </h1>
                         <p className="text-gray-400 text-sm md:text-lg max-w-2xl mx-auto">
                             {lang === 'nl'
-                                ? 'Beantwoord een paar snelle vragen en wij sturen je de juiste meal plan details.'
-                                : 'Answer a few quick questions and we\'ll send you the right meal plan details.'}
+                                ? 'Beantwoord een paar snelle vragen en wij zetten je op de wachtlijst.'
+                                : 'Answer a few quick questions and we’ll add you to the waitlist.'}
                         </p>
                     </div>
 

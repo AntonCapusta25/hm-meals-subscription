@@ -279,7 +279,7 @@
         "stepProgress": "Step {current} of {total}",
         "backButton": "Back",
         "nextButton": "Next",
-        "submitButton": "Submit Request",
+        "submitButton": "Join the Waitlist",
         "occasionTitle": "Choose your plan",
         "occasionSubtitle": "Pick the subscription that fits your routine.",
         "guestsTitle": "How many meals per week?",
@@ -287,10 +287,10 @@
         "dateTitle": "How many delivery days?",
         "dateSubtitle": "Pick how many days you want deliveries each week.",
         "contactTitle": "Your Details",
-        "contactSubtitle": "Where should we send your subscription details?",
+        "contactSubtitle": "Where should we send your waitlist confirmation?",
         "submitting": "Submitting...",
-        "successTitle": "You're In!",
-        "successMessage": "Thanks for your request. We’ll contact you shortly to confirm your subscription details.",
+        "successTitle": "You're on the Waitlist!",
+        "successMessage": "Thanks! We’ve saved your spot and will email you as soon as we open new subscriptions.",
         "backHome": "Back to Home"
     },
     "menuGrid": {

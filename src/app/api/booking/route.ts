@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
     if (dbError) {
       console.error('Supabase error:', dbError)
       return NextResponse.json(
-        { error: 'Failed to save request' },
+        { error: 'Failed to save request', details: dbError },
         { status: 500 }
       )
     }
