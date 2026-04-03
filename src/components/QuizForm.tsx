@@ -2,7 +2,7 @@
 
 import { useState, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, ArrowLeft, CheckCircle2, Utensils, Calendar, Mail, User, Phone } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2, Calendar, Mail, User, Phone } from "lucide-react";
 import confetti from "canvas-confetti";
 import { trackEvent } from "@/lib/analytics";
 import { useI18n } from "@/contexts/I18nContext";
@@ -23,25 +23,25 @@ const PLANS = [
         id: "family",
         label: "Family Plan",
         description: "Kid-friendly, mild flavors, and balanced meals for the whole household.",
-        icon: Utensils
+        icon: undefined
     },
     {
         id: "routine",
         label: "Healthy Routine Plan",
         description: "Protein-aware, portion-consistent meals for weekday structure.",
-        icon: Utensils
+        icon: undefined
     },
     {
         id: "plant",
         label: "Plant-Forward Plan",
         description: "Vegetable-first meals with legumes, whole grains, and bold flavor.",
-        icon: Utensils
+        icon: undefined
     },
     {
         id: "comfort",
         label: "Comfort & Care Plan",
         description: "Home-style classics that are easy to reheat and always satisfying.",
-        icon: Utensils
+        icon: undefined
     },
 ];
 
@@ -77,7 +77,7 @@ function QuizFormContent() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
 
-    const totalSteps = 4;
+    const totalSteps = 3;
 
     const updateData = (fields: Partial<FormData>) => {
         setFormData(prev => ({ ...prev, ...fields }));
@@ -178,10 +178,9 @@ function QuizFormContent() {
     const handleKeyDown = (e: React.KeyboardEvent) => {
         if (e.key === 'Enter') {
             e.preventDefault();
-            if (step === 1 && formData.plan) nextStep();
-            if (step === 2 && formData.mealsPerWeek) nextStep();
-            if (step === 3 && formData.deliveryDays) nextStep();
-            if (step === 4 && formData.name && formData.email && formData.phone) handleSubmit();
+            if (step === 1 && formData.plan && formData.mealsPerWeek) nextStep();
+            if (step === 2 && formData.deliveryDays) nextStep();
+            if (step === 3 && formData.name && formData.email && formData.phone) handleSubmit();
         }
     };
 
@@ -267,7 +266,6 @@ function QuizFormContent() {
                                                         : "bg-white/5 border-white/10 text-cream hover:bg-white/10"
                                                         }`}
                                                 >
-                                                    <occ.icon size={18} className={`md:w-6 md:h-6 ${formData.plan === occ.label ? "text-[#F27D42]" : "text-gray-400"}`} />
                                                     <div className="flex flex-col">
                                                         <span className="font-bold text-sm md:text-lg">{occ.label}</span>
                                                         <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.plan === occ.label ? "text-[#F27D42]/90" : "text-gray-400"}`}>
@@ -331,46 +329,10 @@ function QuizFormContent() {
                         </motion.div>
                     )}
 
-                    {/* STEP 2: Meals per week */}
+                    {/* STEP 2: Delivery Days */}
                     {step === 2 && (
                         <motion.div
                             key="step2"
-                            initial={{ opacity: 0, x: 50 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: -50 }}
-                            transition={{ duration: 0.3 }}
-                            className="absolute inset-0"
-                        >
-                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.guestsTitle || "How many meals per week?"}</h2>
-                            <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-10">{t.guestsSubtitle || "Choose the weekly quantity that fits your routine."}</p>
- 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4">
-                                {MEALS_OPTIONS.map((opt) => (
-                                    <button
-                                        key={opt.id}
-                                        onClick={() => { updateData({ mealsPerWeek: opt.label }); setTimeout(nextStep, 300); }}
-                                        className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.mealsPerWeek === opt.label
-                                            ? "bg-[#F27D42]/10 border-[#F27D42] text-[#F27D42]"
-                                            : "bg-white/5 border-white/10 text-cream hover:bg-white/10"
-                                            }`}
-                                    >
-                                        <Utensils size={18} className={`md:w-6 md:h-6 ${formData.mealsPerWeek === opt.label ? "text-[#F27D42]" : "text-gray-400"}`} />
-                                        <div className="flex flex-col">
-                                            <span className="font-bold text-sm md:text-lg">{opt.label}</span>
-                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.mealsPerWeek === opt.label ? "text-[#F27D42]/90" : "text-gray-400"}`}>
-                                                {opt.id === "3" ? "Light support for busy weeks" : opt.id === "5" ? "Full workweek coverage" : opt.id === "7" ? "Everyday dinners" : "Maximum flexibility"}
-                                            </span>
-                                        </div>
-                                    </button>
-                                ))}
-                            </div>
-                        </motion.div>
-                    )}
-
-                    {/* STEP 3: Delivery Days */}
-                    {step === 3 && (
-                        <motion.div
-                            key="step3"
                             initial={{ opacity: 0, x: 50 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -50 }}
@@ -403,10 +365,10 @@ function QuizFormContent() {
                         </motion.div>
                     )}
 
-                    {/* STEP 4: Contact & Submit */}
-                    {step === 4 && (
+                    {/* STEP 3: Contact & Submit */}
+                    {step === 3 && (
                         <motion.div
-                            key="step4"
+                            key="step3"
                             initial={{ opacity: 0, x: 50 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -50 }}
@@ -475,9 +437,8 @@ function QuizFormContent() {
                     <button
                         onClick={nextStep}
                         disabled={
-                            (step === 1 && !formData.plan) ||
-                            (step === 2 && !formData.mealsPerWeek) ||
-                            (step === 3 && !formData.deliveryDays)
+                            (step === 1 && (!formData.plan || !formData.mealsPerWeek)) ||
+                            (step === 2 && !formData.deliveryDays)
                         }
                         className="flex items-center gap-2 bg-[#F27D42] text-white px-6 py-3 md:px-8 md:py-3 rounded-xl font-bold hover:bg-[#d66a35] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
