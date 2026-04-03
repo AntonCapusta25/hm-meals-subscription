@@ -369,7 +369,7 @@ function QuizFormContent() {
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-dark mb-2 md:mb-4">{t.mealsTitle || "Pick your meals"}</h2>
                             <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-8">{t.mealsSubtitle || "Choose your meals for the week."}</p>
-                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
                                 <div className="lg:col-span-2">
                                     <div className="bg-white border border-dark/10 rounded-[28px] p-4 sm:p-6 md:p-12 shadow-xl">
                                         <div className="space-y-6">
@@ -453,7 +453,7 @@ function QuizFormContent() {
                                     </div>
                                 </div>
 
-                                <div>
+                                <div className="lg:pl-4">
                                     <div className="bg-white rounded-lg border border-dark/10 shadow-soft p-5 space-y-4">
                                         <h3 className="font-display text-lg text-dark">Order summary</h3>
                                         <div className="space-y-2 text-sm">
