@@ -32,7 +32,7 @@ export default async function QuotePage({ params }: Props) {
             <Navbar />
 
             <div className="flex-1 flex items-center justify-center pt-24 pb-10 md:pt-32 md:pb-20 px-5">
-                <div className="w-full max-w-6xl mx-auto">
+                <div className="w-full">
                     <div className="text-center mb-6 md:mb-12">
                         <h1 className="text-3xl md:text-6xl font-heading font-bold mb-3 md:mb-4">
                             {lang === 'nl' ? 'Word Lid van de Wachtlijst' : 'Join the Waitlist'}
