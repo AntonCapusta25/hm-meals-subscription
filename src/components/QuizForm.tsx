@@ -128,7 +128,7 @@ const MEAL_ITEMS = [
         id: "butter-chicken",
         title: "Butter Chicken with Rice",
         category: "Chicken",
-        image: "https://homemadeco.lovable.app/assets/meal-protein-pasta-VjvFlOyP.jpg",
+        image: "/images/meal-butter-chicken.png",
         calories: 560,
         grams: 440,
         protein: 42,
