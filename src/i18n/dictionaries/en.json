@@ -410,4 +410,11 @@
             "breakfast": "Breakfast Meeting"
         }
     }
+    ,
+    "promoBanner": {
+        "badge": "Limited Spots",
+        "headline": "50% Off at Launch",
+        "subline": "Join the waitlist today",
+        "cta": "Join Waitlist"
+    }
 }

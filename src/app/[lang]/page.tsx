@@ -12,6 +12,7 @@ import ProblemSolution from "@/components/ProblemSolution";
 import Testimonials from "@/components/Testimonials";
 import CitiesMarquee from "@/components/CitiesMarquee";
 import FAQ from "@/components/FAQ";
+import FixedPromoBanner from "@/components/FixedPromoBanner";
 import { CityProvider } from "@/contexts/CityContext";
 
 
@@ -31,6 +32,7 @@ export default function Home() {
         <FAQ />
 
         <Footer />
+        <FixedPromoBanner />
       </main>
     </CityProvider>
   );
