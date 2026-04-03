@@ -646,7 +646,7 @@ function QuizFormContent() {
                                                                 <div
                                                                     key={`${meal.id}-${badge.label}`}
                                                                     title={badge.label}
-                                                                    className={`flex items-center justify-center w-3 h-3 rounded-full shadow-md transition-transform duration-300 ${badge.className} ${index > 0 ? "-ml-1" : ""} ${index === 0 ? "group-hover:-translate-x-1" : "group-hover:translate-x-2"}`}
+                                                                    className={`flex items-center justify-center w-4 h-4 rounded-full shadow-md transition-transform duration-300 ${badge.className} ${index > 0 ? "-ml-2" : ""} ${index === 0 ? "group-hover:-translate-x-1" : "group-hover:translate-x-2"}`}
                                                                 >
                                                                 </div>
                                                             ))}
@@ -754,25 +754,25 @@ function QuizFormContent() {
                                                 Fresh meals, weekly
                                             </div>
                                             <div className="pt-2">
-                                                <div className="text-[10px] font-semibold uppercase tracking-wide text-gray-500 mb-2">Legend</div>
-                                                <div className="flex flex-wrap gap-2 text-[11px] text-gray-600">
+                                                <div className="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-2">Legend</div>
+                                                <div className="flex flex-wrap gap-3 text-xs text-gray-600">
                                                     <span className="inline-flex items-center gap-1">
-                                                        <span className="w-2 h-2 rounded-full bg-orange/90"></span>Chicken
+                                                        <span className="w-3 h-3 rounded-full bg-orange/90"></span>Chicken
                                                     </span>
                                                     <span className="inline-flex items-center gap-1">
-                                                        <span className="w-2 h-2 rounded-full bg-red-500/90"></span>Beef
+                                                        <span className="w-3 h-3 rounded-full bg-red-500/90"></span>Beef
                                                     </span>
                                                     <span className="inline-flex items-center gap-1">
-                                                        <span className="w-2 h-2 rounded-full bg-sky-500/90"></span>Fish
+                                                        <span className="w-3 h-3 rounded-full bg-sky-500/90"></span>Fish
                                                     </span>
                                                     <span className="inline-flex items-center gap-1">
-                                                        <span className="w-2 h-2 rounded-full bg-green-500/90"></span>Veg
+                                                        <span className="w-3 h-3 rounded-full bg-green-500/90"></span>Veg
                                                     </span>
                                                     <span className="inline-flex items-center gap-1">
-                                                        <span className="w-2 h-2 rounded-full bg-indigo-500/90"></span>High Protein
+                                                        <span className="w-3 h-3 rounded-full bg-indigo-500/90"></span>High Protein
                                                     </span>
                                                     <span className="inline-flex items-center gap-1">
-                                                        <span className="w-2 h-2 rounded-full bg-emerald-500/90"></span>Light
+                                                        <span className="w-3 h-3 rounded-full bg-emerald-500/90"></span>Light
                                                     </span>
                                                 </div>
                                             </div>
