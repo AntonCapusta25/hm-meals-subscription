@@ -791,12 +791,12 @@ function QuizFormContent() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -50 }}
                             transition={{ duration: 0.3 }}
-                            className="w-full"
+                            className="w-full text-center"
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-dark mb-2 md:mb-4">{t.dateTitle || "How many delivery days?"}</h2>
-                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10">{t.dateSubtitle || "Pick how many days you want deliveries each week."}</p>
+                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10 max-w-2xl mx-auto">{t.dateSubtitle || "Pick how many days you want deliveries each week."}</p>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 max-w-2xl">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 max-w-2xl mx-auto">
                                 {DELIVERY_DAYS_OPTIONS.map((opt) => (
                                     <button
                                         key={opt.id}
@@ -827,12 +827,12 @@ function QuizFormContent() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -50 }}
                             transition={{ duration: 0.3 }}
-                            className="w-full"
+                            className="w-full text-center"
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-dark mb-2 md:mb-4">{t.contactTitle || "Your Details"}</h2>
-                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10">{t.contactSubtitle || "Where should we send your subscription details?"}</p>
+                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10 max-w-2xl mx-auto">{t.contactSubtitle || "Where should we send your subscription details?"}</p>
 
-                            <form onSubmit={handleSubmit} className="space-y-6 max-w-md">
+                            <form onSubmit={handleSubmit} className="space-y-6 max-w-md mx-auto text-left">
                                 <div className="relative">
                                     <User className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
                                     <input
