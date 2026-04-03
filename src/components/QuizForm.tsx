@@ -77,7 +77,7 @@ const MEAL_ITEMS = [
         id: "chicken-teriyaki",
         title: "Chicken Teriyaki Rice Bowl",
         category: "Chicken",
-        image: "https://homemadeco.lovable.app/assets/meal-chicken-rice-DEPY1R_S.jpg",
+        image: "/images/meal-chicken-teriyaki.png",
         calories: 520,
         grams: 420,
         protein: 40,
