@@ -63,19 +63,19 @@ const DELIVERY_DAYS_OPTIONS = [
 const MEAL_FILTERS = ["All", "Chicken", "Beef", "Fish", "Vegetarian"];
 
 const MEAL_ITEMS = [
-    { id: "chicken-teriyaki", title: "Chicken Teriyaki Rice Bowl", category: "Chicken", image: "/images/menu-japanese.png" },
-    { id: "chicken-satay", title: "Chicken Satay Rice Bowl", category: "Chicken", image: "/images/menu-suriname.png" },
-    { id: "chicken-shawarma", title: "Chicken Shawarma Rice Bowl", category: "Chicken", image: "/images/menu-korean.png" },
-    { id: "butter-chicken", title: "Butter Chicken with Rice", category: "Chicken", image: "/images/menu-indian-new.png" },
-    { id: "chicken-pesto", title: "Chicken Pesto Pasta", category: "Chicken", image: "/images/menu-italian-new.png" },
-    { id: "chili-chicken", title: "Chili Chicken Noodles", category: "Chicken", image: "/images/menu-south-indian.png" },
-    { id: "beef-bolognese", title: "Beef Bolognese Pasta", category: "Beef", image: "/images/menu-brut.png" },
-    { id: "beef-shawarma", title: "Beef Shawarma Rice Bowl", category: "Beef", image: "/images/menu-fusion.png" },
-    { id: "pulled-beef", title: "Mexican Pulled Beef Bowl", category: "Beef", image: "/images/menu-north-indian.png" },
-    { id: "salmon-teriyaki", title: "Salmon Teriyaki Rice Bowl", category: "Fish", image: "/images/menu-seafood.png" },
-    { id: "grilled-salmon", title: "Grilled Salmon with Rice & Vegetables", category: "Fish", image: "/images/menu-seafood-new.png" },
-    { id: "veg-bowl", title: "Vegetable Bowl", category: "Vegetarian", image: "/images/menu-veggie.png" },
-    { id: "veg-risotto", title: "Vegetable Risotto", category: "Vegetarian", image: "/images/menu-veggie-new.png" },
+    { id: "chicken-teriyaki", title: "Chicken Teriyaki Rice Bowl", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-chicken-rice-DEPY1R_S.jpg" },
+    { id: "chicken-satay", title: "Chicken Satay Rice Bowl", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-thai-curry-5VDOicbi.jpg" },
+    { id: "chicken-shawarma", title: "Chicken Shawarma Rice Bowl", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-beef-teriyaki-DLHQuq9R.jpg" },
+    { id: "butter-chicken", title: "Butter Chicken with Rice", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-protein-pasta-VjvFlOyP.jpg" },
+    { id: "chicken-pesto", title: "Chicken Pesto Pasta", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-protein-pasta-VjvFlOyP.jpg" },
+    { id: "chili-chicken", title: "Chili Chicken Noodles", category: "Chicken", image: "https://homemadeco.lovable.app/assets/meal-chicken-rice-DEPY1R_S.jpg" },
+    { id: "beef-bolognese", title: "Beef Bolognese Pasta", category: "Beef", image: "https://homemadeco.lovable.app/assets/meal-protein-pasta-VjvFlOyP.jpg" },
+    { id: "beef-shawarma", title: "Beef Shawarma Rice Bowl", category: "Beef", image: "https://homemadeco.lovable.app/assets/meal-beef-teriyaki-DLHQuq9R.jpg" },
+    { id: "pulled-beef", title: "Mexican Pulled Beef Bowl", category: "Beef", image: "https://homemadeco.lovable.app/assets/meal-mediterranean-UXFkxguD.jpg" },
+    { id: "salmon-teriyaki", title: "Salmon Teriyaki Rice Bowl", category: "Fish", image: "https://homemadeco.lovable.app/assets/meal-salmon-potato-oKfzZJQt.jpg" },
+    { id: "grilled-salmon", title: "Grilled Salmon with Rice & Vegetables", category: "Fish", image: "https://homemadeco.lovable.app/assets/meal-salmon-potato-oKfzZJQt.jpg" },
+    { id: "veg-bowl", title: "Vegetable Bowl", category: "Vegetarian", image: "https://homemadeco.lovable.app/assets/meal-vegan-bowl-ApS1bKK0.jpg" },
+    { id: "veg-risotto", title: "Vegetable Risotto", category: "Vegetarian", image: "https://homemadeco.lovable.app/assets/meal-vegan-bowl-ApS1bKK0.jpg" },
 ];
 
 function QuizFormContent() {
