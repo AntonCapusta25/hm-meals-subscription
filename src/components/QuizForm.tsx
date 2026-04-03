@@ -63,19 +63,19 @@ const DELIVERY_DAYS_OPTIONS = [
 const MEAL_FILTERS = ["All", "Chicken", "Beef", "Fish", "Vegetarian"];
 
 const MEAL_ITEMS = [
-    { id: "chicken-teriyaki", title: "Chicken Teriyaki Rice Bowl", category: "Chicken", image: "/images/menu-classic.png" },
-    { id: "chicken-satay", title: "Chicken Satay Rice Bowl", category: "Chicken", image: "/images/menu-classic.png" },
-    { id: "chicken-shawarma", title: "Chicken Shawarma Rice Bowl", category: "Chicken", image: "/images/menu-classic.png" },
-    { id: "butter-chicken", title: "Butter Chicken with Rice", category: "Chicken", image: "/images/menu-classic.png" },
-    { id: "chicken-pesto", title: "Chicken Pesto Pasta", category: "Chicken", image: "/images/menu-classic.png" },
-    { id: "chili-chicken", title: "Chili Chicken Noodles", category: "Chicken", image: "/images/menu-classic.png" },
-    { id: "beef-bolognese", title: "Beef Bolognese Pasta", category: "Beef", image: "/images/menu-fusion.png" },
+    { id: "chicken-teriyaki", title: "Chicken Teriyaki Rice Bowl", category: "Chicken", image: "/images/menu-japanese.png" },
+    { id: "chicken-satay", title: "Chicken Satay Rice Bowl", category: "Chicken", image: "/images/menu-suriname.png" },
+    { id: "chicken-shawarma", title: "Chicken Shawarma Rice Bowl", category: "Chicken", image: "/images/menu-korean.png" },
+    { id: "butter-chicken", title: "Butter Chicken with Rice", category: "Chicken", image: "/images/menu-indian-new.png" },
+    { id: "chicken-pesto", title: "Chicken Pesto Pasta", category: "Chicken", image: "/images/menu-italian-new.png" },
+    { id: "chili-chicken", title: "Chili Chicken Noodles", category: "Chicken", image: "/images/menu-south-indian.png" },
+    { id: "beef-bolognese", title: "Beef Bolognese Pasta", category: "Beef", image: "/images/menu-brut.png" },
     { id: "beef-shawarma", title: "Beef Shawarma Rice Bowl", category: "Beef", image: "/images/menu-fusion.png" },
-    { id: "pulled-beef", title: "Mexican Pulled Beef Bowl", category: "Beef", image: "/images/menu-fusion.png" },
+    { id: "pulled-beef", title: "Mexican Pulled Beef Bowl", category: "Beef", image: "/images/menu-north-indian.png" },
     { id: "salmon-teriyaki", title: "Salmon Teriyaki Rice Bowl", category: "Fish", image: "/images/menu-seafood.png" },
-    { id: "grilled-salmon", title: "Grilled Salmon with Rice & Vegetables", category: "Fish", image: "/images/menu-seafood.png" },
+    { id: "grilled-salmon", title: "Grilled Salmon with Rice & Vegetables", category: "Fish", image: "/images/menu-seafood-new.png" },
     { id: "veg-bowl", title: "Vegetable Bowl", category: "Vegetarian", image: "/images/menu-veggie.png" },
-    { id: "veg-risotto", title: "Vegetable Risotto", category: "Vegetarian", image: "/images/menu-veggie.png" },
+    { id: "veg-risotto", title: "Vegetable Risotto", category: "Vegetarian", image: "/images/menu-veggie-new.png" },
 ];
 
 function QuizFormContent() {
@@ -286,7 +286,7 @@ function QuizFormContent() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -50 }}
                             transition={{ duration: 0.3 }}
-                            className="absolute inset-0"
+                            className="w-full"
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.occasionTitle || "Choose your plan"}</h2>
                             <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-10">{t.occasionSubtitle || "Pick the subscription that fits your routine."}</p>
@@ -322,7 +322,7 @@ function QuizFormContent() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -50 }}
                             transition={{ duration: 0.3 }}
-                            className="absolute inset-0"
+                            className="w-full"
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.guestsTitle || "How many meals per week?"}</h2>
                             <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-10">{t.guestsSubtitle || "Choose the weekly quantity that fits your routine."}</p>
@@ -358,7 +358,7 @@ function QuizFormContent() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -50 }}
                             transition={{ duration: 0.3 }}
-                            className="absolute inset-0"
+                            className="w-full"
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.mealsTitle || "Pick your meals"}</h2>
                             <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-8">{t.mealsSubtitle || "Choose your meals for the week."}</p>
@@ -423,7 +423,7 @@ function QuizFormContent() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -50 }}
                             transition={{ duration: 0.3 }}
-                            className="absolute inset-0"
+                            className="w-full"
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.dateTitle || "How many delivery days?"}</h2>
                             <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-10">{t.dateSubtitle || "Pick how many days you want deliveries each week."}</p>
@@ -459,7 +459,7 @@ function QuizFormContent() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -50 }}
                             transition={{ duration: 0.3 }}
-                            className="absolute inset-0"
+                            className="w-full"
                         >
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-cream mb-2 md:mb-4">{t.contactTitle || "Your Details"}</h2>
                             <p className="text-gray-400 text-sm md:text-lg mb-5 md:mb-10">{t.contactSubtitle || "Where should we send your subscription details?"}</p>
