@@ -88,7 +88,7 @@ const MEAL_ITEMS = [
         sodium: 520,
         description: "Teriyaki-glazed chicken over steamed rice with broccoli and sesame.",
         ingredients: "Chicken, rice, broccoli, teriyaki glaze, sesame, scallion",
-        price: 6.49
+        price: 12.98
     },
     {
         id: "chicken-satay",
@@ -105,7 +105,7 @@ const MEAL_ITEMS = [
         sodium: 540,
         description: "Grilled satay-style chicken with jasmine rice and crisp veggies.",
         ingredients: "Chicken, jasmine rice, peanut sauce, cucumber, carrot",
-        price: 6.49
+        price: 12.98
     },
     {
         id: "chicken-shawarma",
@@ -122,7 +122,7 @@ const MEAL_ITEMS = [
         sodium: 510,
         description: "Spiced shawarma chicken with rice, herbs, and pickled onions.",
         ingredients: "Chicken, rice, yogurt spice blend, pickled onion, herbs",
-        price: 6.49
+        price: 12.98
     },
     {
         id: "butter-chicken",
@@ -139,7 +139,7 @@ const MEAL_ITEMS = [
         sodium: 560,
         description: "Creamy butter chicken served with fragrant basmati rice.",
         ingredients: "Chicken, basmati rice, tomato cream sauce, spices",
-        price: 6.99
+        price: 13.98
     },
     {
         id: "chicken-pesto",
@@ -156,7 +156,7 @@ const MEAL_ITEMS = [
         sodium: 520,
         description: "Pesto chicken pasta with cherry tomatoes and spinach.",
         ingredients: "Chicken, pasta, basil pesto, tomato, spinach",
-        price: 6.99
+        price: 13.98
     },
     {
         id: "chili-chicken",
@@ -173,7 +173,7 @@ const MEAL_ITEMS = [
         sodium: 590,
         description: "Spicy chili chicken tossed with noodles and crunchy veg.",
         ingredients: "Chicken, noodles, chili sauce, bell pepper, onion",
-        price: 6.49
+        price: 12.98
     },
     {
         id: "beef-bolognese",
@@ -190,7 +190,7 @@ const MEAL_ITEMS = [
         sodium: 620,
         description: "Slow-cooked beef bolognese over al dente pasta.",
         ingredients: "Beef, pasta, tomato, onion, garlic, herbs",
-        price: 6.99
+        price: 13.98
     },
     {
         id: "beef-shawarma",
@@ -207,7 +207,7 @@ const MEAL_ITEMS = [
         sodium: 600,
         description: "Tender beef shawarma with rice, herbs, and tahini drizzle.",
         ingredients: "Beef, rice, shawarma spice, tahini, parsley",
-        price: 6.99
+        price: 13.98
     },
     {
         id: "pulled-beef",
@@ -224,7 +224,7 @@ const MEAL_ITEMS = [
         sodium: 620,
         description: "Slow pulled beef with rice, beans, and pico de gallo.",
         ingredients: "Beef, rice, beans, tomato, lime, cilantro",
-        price: 6.99
+        price: 13.98
     },
     {
         id: "salmon-teriyaki",
@@ -241,7 +241,7 @@ const MEAL_ITEMS = [
         sodium: 520,
         description: "Teriyaki salmon with rice and steamed greens.",
         ingredients: "Salmon, rice, teriyaki glaze, green beans",
-        price: 7.49
+        price: 14.98
     },
     {
         id: "grilled-salmon",
@@ -258,7 +258,7 @@ const MEAL_ITEMS = [
         sodium: 480,
         description: "Oven-grilled salmon with rice and seasonal vegetables.",
         ingredients: "Salmon, rice, broccoli, carrot, lemon, dill",
-        price: 7.49
+        price: 14.98
     },
     {
         id: "veg-bowl",
@@ -275,7 +275,7 @@ const MEAL_ITEMS = [
         sodium: 420,
         description: "Vegetable-forward bowl with grains and citrus dressing.",
         ingredients: "Quinoa, chickpeas, mixed veg, lemon dressing",
-        price: 5.99
+        price: 11.98
     },
     {
         id: "veg-risotto",
@@ -292,7 +292,7 @@ const MEAL_ITEMS = [
         sodium: 460,
         description: "Creamy vegetable risotto with herbs and parmesan.",
         ingredients: "Arborio rice, mushroom, zucchini, parmesan, herbs",
-        price: 5.99
+        price: 11.98
     }
 ];
 
@@ -327,7 +327,7 @@ function QuizFormContent() {
     const targetMeals = Number(formData.mealsPerWeek.match(/\d+/)?.[0] || 0);
     const filteredMeals = MEAL_ITEMS.filter((m) => mealFilter === "All" || m.category === mealFilter);
     const selectedMealItems = MEAL_ITEMS.filter((meal) => formData.selectedMeals.includes(meal.id));
-    const defaultPricePerMeal = 6.49;
+    const defaultPricePerMeal = 12.98;
     const pricePerMeal = selectedMealItems.length
         ? Number((selectedMealItems.reduce((sum, meal) => sum + meal.price, 0) / selectedMealItems.length).toFixed(2))
         : defaultPricePerMeal;
