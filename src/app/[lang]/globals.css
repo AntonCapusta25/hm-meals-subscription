@@ -34,6 +34,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.font-arabic {
+  font-family: var(--font-arabic), var(--font-body);
+}
+
 html {
   scroll-behavior: smooth;
 }

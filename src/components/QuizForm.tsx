@@ -88,7 +88,7 @@ const MEAL_ITEMS = [
         sodium: 520,
         description: "Teriyaki-glazed chicken over steamed rice with broccoli and sesame.",
         ingredients: "Chicken, rice, broccoli, teriyaki glaze, sesame, scallion",
-        price: 12.98
+        price: 6.49
     },
     {
         id: "chicken-satay",
@@ -105,7 +105,7 @@ const MEAL_ITEMS = [
         sodium: 540,
         description: "Grilled satay-style chicken with jasmine rice and crisp veggies.",
         ingredients: "Chicken, jasmine rice, peanut sauce, cucumber, carrot",
-        price: 12.98
+        price: 6.49
     },
     {
         id: "chicken-shawarma",
@@ -122,7 +122,7 @@ const MEAL_ITEMS = [
         sodium: 510,
         description: "Spiced shawarma chicken with rice, herbs, and pickled onions.",
         ingredients: "Chicken, rice, yogurt spice blend, pickled onion, herbs",
-        price: 12.98
+        price: 6.49
     },
     {
         id: "butter-chicken",
@@ -139,7 +139,7 @@ const MEAL_ITEMS = [
         sodium: 560,
         description: "Creamy butter chicken served with fragrant basmati rice.",
         ingredients: "Chicken, basmati rice, tomato cream sauce, spices",
-        price: 13.98
+        price: 6.99
     },
     {
         id: "chicken-pesto",
@@ -156,7 +156,7 @@ const MEAL_ITEMS = [
         sodium: 520,
         description: "Pesto chicken pasta with cherry tomatoes and spinach.",
         ingredients: "Chicken, pasta, basil pesto, tomato, spinach",
-        price: 13.98
+        price: 6.99
     },
     {
         id: "chili-chicken",
@@ -173,7 +173,7 @@ const MEAL_ITEMS = [
         sodium: 590,
         description: "Spicy chili chicken tossed with noodles and crunchy veg.",
         ingredients: "Chicken, noodles, chili sauce, bell pepper, onion",
-        price: 12.98
+        price: 6.49
     },
     {
         id: "beef-bolognese",
@@ -190,7 +190,7 @@ const MEAL_ITEMS = [
         sodium: 620,
         description: "Slow-cooked beef bolognese over al dente pasta.",
         ingredients: "Beef, pasta, tomato, onion, garlic, herbs",
-        price: 13.98
+        price: 6.99
     },
     {
         id: "beef-shawarma",
@@ -207,7 +207,7 @@ const MEAL_ITEMS = [
         sodium: 600,
         description: "Tender beef shawarma with rice, herbs, and tahini drizzle.",
         ingredients: "Beef, rice, shawarma spice, tahini, parsley",
-        price: 13.98
+        price: 6.99
     },
     {
         id: "pulled-beef",
@@ -224,7 +224,7 @@ const MEAL_ITEMS = [
         sodium: 620,
         description: "Slow pulled beef with rice, beans, and pico de gallo.",
         ingredients: "Beef, rice, beans, tomato, lime, cilantro",
-        price: 13.98
+        price: 6.99
     },
     {
         id: "salmon-teriyaki",
@@ -241,7 +241,7 @@ const MEAL_ITEMS = [
         sodium: 520,
         description: "Teriyaki salmon with rice and steamed greens.",
         ingredients: "Salmon, rice, teriyaki glaze, green beans",
-        price: 14.98
+        price: 7.49
     },
     {
         id: "grilled-salmon",
@@ -258,7 +258,7 @@ const MEAL_ITEMS = [
         sodium: 480,
         description: "Oven-grilled salmon with rice and seasonal vegetables.",
         ingredients: "Salmon, rice, broccoli, carrot, lemon, dill",
-        price: 14.98
+        price: 7.49
     },
     {
         id: "veg-bowl",
@@ -275,7 +275,7 @@ const MEAL_ITEMS = [
         sodium: 420,
         description: "Vegetable-forward bowl with grains and citrus dressing.",
         ingredients: "Quinoa, chickpeas, mixed veg, lemon dressing",
-        price: 11.98
+        price: 5.99
     },
     {
         id: "veg-risotto",
@@ -292,7 +292,7 @@ const MEAL_ITEMS = [
         sodium: 460,
         description: "Creamy vegetable risotto with herbs and parmesan.",
         ingredients: "Arborio rice, mushroom, zucchini, parmesan, herbs",
-        price: 11.98
+        price: 5.99
     }
 ];
 
@@ -327,12 +327,19 @@ function QuizFormContent() {
     const targetMeals = Number(formData.mealsPerWeek.match(/\d+/)?.[0] || 0);
     const filteredMeals = MEAL_ITEMS.filter((m) => mealFilter === "All" || m.category === mealFilter);
     const selectedMealItems = MEAL_ITEMS.filter((meal) => formData.selectedMeals.includes(meal.id));
-    const defaultPricePerMeal = 12.98;
-    const pricePerMeal = selectedMealItems.length
+    const defaultPricePerMeal = 6.49;
+    const basePricePerMeal = selectedMealItems.length
         ? Number((selectedMealItems.reduce((sum, meal) => sum + meal.price, 0) / selectedMealItems.length).toFixed(2))
         : defaultPricePerMeal;
-    const subtotal = targetMeals > 0 ? Number((pricePerMeal * targetMeals).toFixed(2)) : 0;
-    const discountedTotal = Number((subtotal * 0.5).toFixed(2));
+    const marketingPricePerMeal = Number((basePricePerMeal * 1.2).toFixed(2));
+    const discountedPricePerMeal = Number((marketingPricePerMeal * 0.8).toFixed(2));
+    const subtotal = targetMeals > 0 ? Number((marketingPricePerMeal * targetMeals).toFixed(2)) : 0;
+    const discountedTotal = targetMeals > 0 ? Number((discountedPricePerMeal * targetMeals).toFixed(2)) : 0;
+
+    const mealCounts = formData.selectedMeals.reduce<Record<string, number>>((acc, id) => {
+        acc[id] = (acc[id] || 0) + 1;
+        return acc;
+    }, {});
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -351,19 +358,25 @@ function QuizFormContent() {
         return extra ? [base, extra] : [base];
     };
 
-    const toggleMeal = (id: string) => {
+    const addMeal = (id: string) => {
         setFormData((prev) => {
-            const isSelected = prev.selectedMeals.includes(id);
-            if (isSelected) {
-                setSelectionError("");
-                return { ...prev, selectedMeals: prev.selectedMeals.filter((m) => m !== id) };
-            }
             if (targetMeals > 0 && prev.selectedMeals.length >= targetMeals) {
                 setSelectionError(`You can select up to ${targetMeals} meals.`);
                 return prev;
             }
             setSelectionError("");
             return { ...prev, selectedMeals: [...prev.selectedMeals, id] };
+        });
+    };
+
+    const removeMeal = (id: string) => {
+        setFormData((prev) => {
+            const index = prev.selectedMeals.lastIndexOf(id);
+            if (index === -1) return prev;
+            const next = [...prev.selectedMeals];
+            next.splice(index, 1);
+            setSelectionError("");
+            return { ...prev, selectedMeals: next };
         });
     };
 
@@ -651,18 +664,20 @@ function QuizFormContent() {
                                                                 </div>
                                                             ))}
                                                         </div>
-                                                        <button type="button" onClick={() => toggleMeal(meal.id)} className="w-full h-full text-left">
+                                                        <button type="button" onClick={() => addMeal(meal.id)} className="w-full h-full text-left">
                                                             <img
                                                                 src={meal.image}
                                                                 alt={meal.title}
                                                                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                                                 loading="lazy"
+                                                                decoding="async"
+                                                                fetchPriority="low"
                                                             />
                                                         </button>
                                                     </div>
                                                     <div className="p-3 pb-1">
                                                         <div className="text-[10px] md:text-xs text-orange font-semibold mb-1">{meal.category}</div>
-                                                        <button type="button" onClick={() => toggleMeal(meal.id)} className="text-sm md:text-base font-semibold text-dark leading-tight text-left">
+                                                        <button type="button" onClick={() => addMeal(meal.id)} className="text-sm md:text-base font-semibold text-dark leading-tight text-left">
                                                             {meal.title}
                                                         </button>
                                                         <div className="flex items-center gap-1 mt-1 text-gray-500">
@@ -693,6 +708,27 @@ function QuizFormContent() {
                                                     <div className="px-3 pb-3 flex items-center justify-between">
                                                         <span className="text-xs font-semibold text-orange">€{meal.price.toFixed(2)}</span>
                                                         <div className="flex items-center gap-2">
+                                                            <div className="flex items-center gap-1 rounded-full border border-dark/10 px-1">
+                                                                <button
+                                                                    type="button"
+                                                                    onClick={() => removeMeal(meal.id)}
+                                                                    className="w-5 h-5 rounded-full text-xs text-dark hover:bg-orange/10"
+                                                                    aria-label="Remove one"
+                                                                >
+                                                                    −
+                                                                </button>
+                                                                <span className="min-w-[14px] text-center text-xs font-semibold text-dark">
+                                                                    {mealCounts[meal.id] || 0}
+                                                                </span>
+                                                                <button
+                                                                    type="button"
+                                                                    onClick={() => addMeal(meal.id)}
+                                                                    className="w-5 h-5 rounded-full text-xs text-dark hover:bg-orange/10"
+                                                                    aria-label="Add one"
+                                                                >
+                                                                    +
+                                                                </button>
+                                                            </div>
                                                             <button
                                                                 type="button"
                                                                 onClick={() => setActiveMeal(meal)}
@@ -721,7 +757,10 @@ function QuizFormContent() {
                                             </div>
                                             <div className="flex justify-between">
                                                 <span className="text-gray-500">Price per meal</span>
-                                                <span className="font-semibold text-dark">€{pricePerMeal.toFixed(2)}</span>
+                                                <div className="text-right">
+                                                    <span className="text-gray-500 line-through text-xs mr-2">€{marketingPricePerMeal.toFixed(2)}</span>
+                                                    <span className="font-semibold text-dark">€{discountedPricePerMeal.toFixed(2)}</span>
+                                                </div>
                                             </div>
                                             <div className="flex justify-between">
                                                 <span className="text-gray-500">Delivery</span>
@@ -736,7 +775,7 @@ function QuizFormContent() {
                                                     </div>
                                                 </div>
                                                 <div className="mt-2 bg-orange/10 rounded-md px-3 py-2 text-center">
-                                                    <span className="text-sm font-semibold text-orange">Launch offer applied — 50% OFF</span>
+                                                    <span className="text-sm font-semibold text-orange">Launch offer applied — 20% OFF</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -903,6 +942,8 @@ function QuizFormContent() {
                                 src={activeMeal.image}
                                 alt={activeMeal.title}
                                 className="w-full aspect-[4/3] object-cover"
+                                loading="lazy"
+                                decoding="async"
                             />
                         </div>
                         <div className="flex flex-col space-y-1.5 text-center sm:text-left">

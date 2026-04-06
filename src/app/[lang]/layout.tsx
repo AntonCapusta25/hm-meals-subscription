@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Inter, Noto_Naskh_Arabic } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { I18nProvider } from "@/contexts/I18nContext";
@@ -15,6 +15,12 @@ const fraunces = Fraunces({
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const notoNaskhArabic = Noto_Naskh_Arabic({
+  variable: "--font-arabic",
+  subsets: ["arabic"],
   display: "swap",
 });
 
@@ -63,7 +69,7 @@ export default async function RootLayout(props: {
         <link rel="preconnect" href="https://firebasestorage.googleapis.com" />
       </head>
       <body
-        className={`${fraunces.variable} ${inter.variable} antialiased bg-cream text-dark`}
+        className={`${fraunces.variable} ${inter.variable} ${notoNaskhArabic.variable} antialiased bg-cream text-dark ${lang === "ar" ? "font-arabic" : ""}`}
       >
         {/* Meta Pixel Code */}
         <Script
