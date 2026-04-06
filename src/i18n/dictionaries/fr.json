@@ -1,275 +1,244 @@
 {
     "navigation": {
         "howItWorks": "Comment ça marche",
-        "menu": "Menu",
-        "about": "À Propos",
+        "menu": "Plans",
+        "about": "À propos",
         "faq": "FAQ",
-        "bookNow": "Réserver",
+        "bookNow": "Choisir un plan",
         "blog": "Blog"
     },
     "hero": {
-        "titlePart1": "Un Service Traiteur Exceptionnel",
-        "titlePart2": "pour Chaque",
-        "titleHighlight": "Occasion",
-        "subtitle": "Des dîners intimes aux grandes célébrations, nous apportons une cuisine de qualité restaurant à votre événement.",
-        "cta": "Demander un Devis"
+        "titlePart1": "Repas Homemade",
+        "titlePart2": "pour",
+        "titleHighlight": "la vraie vie",
+        "animatedTitleStatic": "Abonnements repas Homemade pour ",
+        "animatedRotatingWords": [
+            "les familles",
+            "les pros occupés",
+            "une vie végétale",
+            "des routines réconfort"
+        ],
+        "subtitle": "Des repas frais préparés par des chefs, livrés chaque semaine. Choisissez un plan adapté à votre rythme.",
+        "cta": "Choisir votre plan",
+        "launchOfferTitle": "Offre de lancement",
+        "launchOfferText": "-50% en rejoignant la liste d'attente"
     },
     "partners": {
-        "heading": "Fiers De Nos Partenaires"
+        "heading": "Fiers de collaborer avec"
     },
     "problemSolution": {
-        "title1": "Le service traiteur de restaurant est cher.",
-        "title2": "La cohésion d'équipe est difficile.",
-        "solutionTitle": "Dîners d'équipe avec chef privé à 40 % de moins",
-        "solutionDesc": "Évitez les restaurants hors de prix. Obtenez une nourriture exceptionnelle, de vraies connexions et des économies importantes.",
-        "benefit1Title": "Meilleure nourriture que les restaurants",
-        "benefit1Desc": "Repas préparés par un chef avec des ingrédients de qualité supérieure, adaptés à vos préférences",
-        "benefit2Title": "Atmosphère intime pour de vrais liens",
-        "benefit2Desc": "Créez des connexions significatives dans un cadre privé et confortable",
-        "benefit3Title": "Entièrement personnalisable et flexible",
-        "benefit3Desc": "Adaptez les menus, le calendrier et le service pour répondre à vos besoins exacts"
+        "title1": "Pourquoi passer vos soirées",
+        "title2": "à décider quoi cuisiner ?",
+        "solutionTitle": "Un plan repas hebdo qui fonctionne vraiment",
+        "solutionDesc": "Choisissez un plan, sélectionnez vos repas et nous nous occupons du reste.",
+        "benefit1Title": "Repas réguliers et équilibrés",
+        "benefit1Desc": "Des plats cuisinés par des chefs avec de vrais ingrédients et un focus nutrition",
+        "benefit2Title": "Zéro planification, zéro stress",
+        "benefit2Desc": "Évitez les courses, la préparation et la vaisselle en semaine",
+        "benefit3Title": "Flexible par design",
+        "benefit3Desc": "Mettez en pause, sautez ou changez de plan à tout moment"
     },
     "howItWorks": {
         "title": "Comment ça marche",
-        "step1Title": "Choisissez votre Menu",
-        "step1Desc": "Parcourez nos forfaits traiteur ou demandez des options personnalisées.",
-        "step2Title": "Confirmez les détails",
-        "step2Desc": "Sélectionnez votre date, le nombre d'invités et vos préférences de livraison.",
-        "step3Title": "Nous livrons l'excellence",
-        "step3Desc": "Installation professionnelle, service premium et nettoyage impeccable."
+        "step1Title": "Choisissez votre plan",
+        "step1Desc": "Choisissez le plan qui correspond à votre rythme et à vos préférences.",
+        "step2Title": "Sélectionnez vos repas hebdo",
+        "step2Desc": "Choisissez vos repas et la taille des portions pour la semaine.",
+        "step3Title": "Livré frais",
+        "step3Desc": "Réchauffez, mangez et profitez. Pause ou skip quand vous voulez."
     },
     "cuisineShowcase": {
-        "title1": "Explorez Nos",
-        "title2": "Cuisines",
-        "subtitle": "Des classiques authentiques à la fusion moderne, choisissez un thème culinaire qui correspond parfaitement à l'ambiance de votre événement.",
-        "requestQuote": "Demander un Devis",
-        "planMenu": "Planifiez Votre Menu Maintenant",
-        "customAlert": "Menus personnalisés disponibles sur demande",
+        "title1": "Choisissez votre",
+        "title2": "plan",
+        "subtitle": "Quatre abonnements essentiels pensés pour la façon de manger aux Pays-Bas.",
+        "requestQuote": "Choisir un plan",
+        "planMenu": "Démarrer l'abonnement",
+        "customAlert": "Pause ou skip à tout moment",
         "items": {
-            "surinami": {
-                "title": "Cuisine de l'Âme Surinamaise",
-                "description": "Une fusion vibrante de saveurs créoles, hindoues et javanaises."
+            "family": {
+                "title": "Balanced",
+                "description": "Des repas du quotidien avec un bon équilibre protéines, glucides et légumes."
             },
-            "asian": {
-                "title": "Fusion Asiatique",
-                "description": "Un mélange audacieux de saveurs orientales avec des techniques culinaires modernes."
+            "routine": {
+                "title": "High Protein",
+                "description": "Repas riches en protéines pour un rythme actif et chargé."
             },
-            "indian": {
-                "title": "Indien Authentique",
-                "description": "Des currys riches, des épices aromatiques et des recettes traditionnelles."
+            "plant": {
+                "title": "Vegan",
+                "description": "Repas végétaux, savoureux et bien rassasiants."
             },
-            "italian": {
-                "title": "Gourmet Italien",
-                "description": "Des pâtes artisanales, des sauces haut de gamme et le vrai goût de l'Italie."
-            },
-            "vegetarian": {
-                "title": "Végétarien Frais",
-                "description": "Des plats vibrants à base de plantes qui célèbrent les produits de saison."
-            },
-            "seafood": {
-                "title": "Trésors de l'Océan",
-                "description": "Des prises fraîches préparées pour mettre en valeur leurs délicates saveurs naturelles."
+            "comfort": {
+                "title": "Low Calorie",
+                "description": "Repas plus légers avec portions maîtrisées et ingrédients propres."
             }
         }
     },
     "occasions": {
-        "title": "Occasions",
-        "exploreMenu": "Explorer le Menu",
+        "title": "Pour qui",
+        "exploreMenu": "Voir les détails",
         "items": {
-            "kerst": {
-                "title": "Événements de Fêtes",
-                "subtitle": "Saisonnier"
+            "families": {
+                "title": "Familles occupées",
+                "subtitle": "Soirs de semaine"
             },
-            "shared": {
-                "title": "Repas en Famille",
-                "subtitle": "Social"
+            "professionals": {
+                "title": "Pros occupés",
+                "subtitle": "Routine"
             },
-            "newyear": {
-                "title": "Célébrations et Fêtes",
-                "subtitle": "Célébration"
+            "flexitarians": {
+                "title": "Flexitariens",
+                "subtitle": "Végétal"
             },
-            "corporate": {
-                "title": "Événements d'Entreprise",
-                "subtitle": "Professionnel"
-            },
-            "romantic": {
-                "title": "Dîner Privé",
-                "subtitle": "Intime"
+            "comfort": {
+                "title": "Amateurs de réconfort",
+                "subtitle": "Bien-être"
             }
         }
     },
     "packageTiers": {
-        "title": "Forfaits Dîner d'Équipe",
-        "subtitle": "Prix transparents, valeur exceptionnelle. Tous les forfaits incluent un service professionnel et le nettoyage.",
-        "badgePopular": "Le Plus Populaire",
-        "groupLabel": "Groupe:",
-        "timeLabel": "Temps:",
+        "title": "Formules dîner d'équipe",
+        "subtitle": "Prix transparents, valeur exceptionnelle. Tous les packages incluent service pro et nettoyage.",
+        "badgePopular": "Le plus populaire",
+        "groupLabel": "Groupe :",
+        "timeLabel": "Durée :",
         "choosePackage": "Choisir ce forfait",
-        "note": "Tous les prix s'entendent hors TVA. Devis final fourni après consultation. Des tailles de groupe minimales s'appliquent.",
+        "note": "Tous les prix hors TVA. Devis final après consultation. Tailles minimales applicables.",
         "packages": {
             "starter": {
-                "name": "Dîner d'Équipe de Départ",
+                "name": "Dîner d'équipe Starter",
                 "priceUnit": "par personne",
                 "groupSize": "15-30 personnes",
-                "duration": "2.5-3 heures",
-                "description": "Équipes soucieuses de leur budget, premiers événements",
+                "duration": "2,5-3 h",
+                "description": "Équipes budget serré, premiers événements",
                 "features": [
                     "Menu 2 services",
-                    "Boissons non alcoolisées",
-                    "Mise en place et nettoyage de la table",
-                    "1 adaptation diététique"
+                    "Boissons sans alcool",
+                    "Mise en place & nettoyage",
+                    "1 régime spécifique"
                 ]
             },
             "growth": {
-                "name": "Dîner d'Équipe Croissance",
+                "name": "Dîner d'équipe Growth",
                 "priceUnit": "par personne",
                 "groupSize": "20-50 personnes",
-                "duration": "3-3.5 heures",
-                "description": "Équilibre parfait entre qualité et prix",
+                "duration": "3-3,5 h",
+                "description": "Le bon équilibre qualité / valeur",
                 "features": [
                     "Menu 3 services",
                     "Boissons alcoolisées (vin/bière)",
-                    "Mise en place de table premium",
-                    "Adaptations diététiques illimitées",
-                    "Consultation pré-événement (30 min)",
-                    "Ajustements de menu personnalisés",
+                    "Mise en place premium",
+                    "Régimes spécifiques illimités",
+                    "Consultation préalable (30 min)",
+                    "Ajustements du menu",
                     "5+ options de menu"
                 ]
             },
             "premium": {
-                "name": "Célébration d'Équipe Premium",
+                "name": "Célébration d'équipe Premium",
                 "priceUnit": "par personne",
                 "groupSize": "30-100 personnes",
-                "duration": "3.5-4 heures",
-                "description": "Expérience ultime pour des occasions spéciales",
+                "duration": "3,5-4 h",
+                "description": "Expérience ultime pour les occasions spéciales",
                 "features": [
                     "Menu 4 services",
-                    "Forfait boissons premium",
-                    "Linge de maison personnalisé et installation premium",
+                    "Pack boissons premium",
+                    "Linge & setup premium",
                     "Personnalisation culinaire complète",
-                    "Appel de planification d'une heure",
-                    "Commentaires post-événement",
-                    "Coordinateur/assistant d'événement",
-                    "Photos professionnelles en option"
+                    "Appel de planification d'1 h",
+                    "Feedback post-événement",
+                    "Coordinateur/assistant",
+                    "Photos pro en option"
                 ]
             }
         }
     },
     "testimonials": {
-        "title": "Ce Que Disent Nos Clients",
-        "subtitle": "De vraies expériences de clients qui ont profité de nos services de chef privé.",
-        "joinText": "Rejoignez des centaines de clients satisfaits",
-        "bookButton": "Réservez Votre Dîner d'Équipe",
-        "verifiedClient": "Client Vérifié",
+        "title": "Ce que disent nos abonnés",
+        "subtitle": "Des histoires réelles de personnes qui utilisent Homemade chaque semaine.",
+        "joinText": "Rejoignez des milliers d'abonnés",
+        "bookButton": "Choisir votre plan",
+        "verifiedClient": "Client vérifié",
         "metrics": {
-            "happyClients": "Clients Satisfaits",
-            "averageRating": "Note Moyenne",
-            "savings": "Économies vs. Restaurants",
-            "guarantee": "Garantie de Satisfaction"
+            "happyClients": "Clients satisfaits",
+            "averageRating": "Note moyenne",
+            "savings": "Temps gagné",
+            "guarantee": "Garantie satisfaction"
         },
         "items": [
             {
-                "company": "Fête d'Anniversaire",
-                "eventType": "Commande de Tiramisu Personnalisée",
-                "quote": "J'ai commandé un Tiramisu pour mon anniversaire au lieu du gâteau d'anniversaire habituel !!! Que dire... Le meilleur choix de tous les temps !!! Tous mes amis l'ont adoré et Domenico a honoré ma commande alors qu'il ne restait que 48 heures avant ma fête ! J'ai commandé 3 plateaux et nous avons tout fini !! Merci Dome, je savais que je pouvais compter sur toi !"
+                "company": "Balanced",
+                "eventType": "Dîners hebdo",
+                "quote": "Nos enfants mangent vraiment les repas. Les portions sont parfaites et on gagne des heures chaque semaine."
             },
             {
-                "company": "Dîner Privé",
-                "eventType": "Steak & Empanadas",
-                "quote": "La nourriture était incroyable, le steak était parfaitement cuit avec un délicieux chimichurri, et l'empanada avait exactement le goût que les authentiques empanadas devraient avoir !"
+                "company": "High Protein",
+                "eventType": "Structure de semaine",
+                "quote": "Je ne saute plus le déjeuner ni ne commande. Les options protéinées sont solides et constantes."
             },
             {
-                "company": "Occasion Spéciale",
-                "eventType": "Service de Traiteur de Desserts Italiens",
-                "quote": "C'est de loin l'un des meilleurs Tiramisu que j'aie jamais goûtés ! Il fond d'une manière ou d'une autre dans la bouche ! Super Bon !!"
+                "company": "Vegan",
+                "eventType": "Flexitarien",
+                "quote": "On voulait plus de repas végétaux sans devenir vegan. C'est savoureux et rassasiant."
             },
             {
-                "company": "Réunion de Famille",
-                "eventType": "Service de Chef Privé",
-                "quote": "Délicieux !! Approuvé par mon petit ami amateur de tiramisu. Il a dit que c'était le meilleur qu'il ait jamais mangé !"
+                "company": "Low Calorie",
+                "eventType": "Réchauffage facile",
+                "quote": "Des repas fiables et réconfortants, faciles à réchauffer. Exactement ce qu'il me fallait."
             },
             {
-                "company": "Commande Directe",
-                "eventType": "Client Fidèle",
-                "quote": "J'ai commandé chez Bottega da Dome à plusieurs reprises et ils ont de loin le meilleur tiramisu ! Je continuerai de commander chez eux :)"
+                "company": "Balanced",
+                "eventType": "Portions maîtrisées",
+                "quote": "Grande variété, zéro gaspillage, et la livraison est toujours à l'heure."
             },
             {
-                "company": "Traiteur",
-                "eventType": "Service Traiteur Événementiel",
-                "quote": "Délicieux tiramisu ! Nous avons tous adoré. Très bien préparé et Domenico est un chef très sympathique. Je commanderai à nouveau !"
+                "company": "Busy Professional",
+                "eventType": "Repas sans préparation",
+                "quote": "Je garde enfin mes semaines simples. Les repas sont frais et ont un vrai goût."
             },
             {
-                "company": "Dîner",
-                "eventType": "Biryani Authentique",
-                "quote": "Le biryani était très copieux et savoureux ! Bonne portion avec du poulet et des pommes de terre. Je commanderai certainement à nouveau."
+                "company": "Balanced",
+                "eventType": "Adapté aux enfants",
+                "quote": "Moins de stress au dîner. On réchauffe, on sert et on profite."
             }
         ]
     },
     "faq": {
-        "title": "Questions Fréquentes",
-        "subtitle": "Tout ce que vous devez savoir sur nos services de traiteur. Vous ne trouvez pas votre réponse ? Contactez-nous directement.",
-        "stillQuestions": "Vous avez encore des questions ?",
-        "contactTeam": "Contactez Notre Équipe",
+        "title": "Questions fréquentes",
+        "subtitle": "Tout ce qu'il faut savoir sur les abonnements repas. Besoin d'aide ? Contactez-nous.",
+        "stillQuestions": "Encore des questions ?",
+        "contactTeam": "Contacter l'équipe",
         "items": [
             {
-                "question": "Qu'est-ce qui est inclus dans chaque forfait ?",
-                "answer": "Chaque forfait comprend le service de chef professionnel, tous les ingrédients, la mise en place de la table et le nettoyage. Le forfait Starter comprend un menu de 2 plats et des boissons non alcoolisées. Growth ajoute un menu de 3 plats, des boissons alcoolisées et une consultation pré-événement. Premium comprend un menu de 4 plats, des boissons premium, un coordinateur d'événement et des photos professionnelles facultatives."
+                "question": "Que comprend l'abonnement ?",
+                "answer": "Des repas frais préparés par des chefs, livrés chaque semaine. Vous choisissez votre plan, portions et préférences."
             },
             {
-                "question": "Pouvons-nous personnaliser le menu ?",
-                "answer": "Absolument ! Tous les forfaits permettent la personnalisation du menu. Le forfait Starter propose des ajustements standards, tandis que les forfaits Growth et Premium offrent de nombreuses options de personnalisation. Nous travaillons avec vous pour créer un menu qui correspond à vos préférences, à vos besoins alimentaires et au thème de l'événement."
+                "question": "Puis-je mettre en pause ou sauter des semaines ?",
+                "answer": "Oui. Vous pouvez mettre en pause, sauter ou changer votre plan avant la date limite hebdo."
             },
             {
-                "question": "Qu'en est-il des restrictions alimentaires ?",
-                "answer": "Nous répondons à toutes les restrictions et préférences alimentaires. Le forfait Starter comprend 1 adaptation alimentaire, tandis que les forfaits Growth et Premium offrent des adaptations illimitées. Nous gérons les exigences végétariennes, végétaliennes, sans gluten, halal, casher et toutes les exigences liées aux allergies."
+                "question": "Proposez-vous des préférences alimentaires ?",
+                "answer": "Nous proposons des options végétariennes, végétales et riches en protéines, ainsi que des choix sans allergènes."
             },
             {
-                "question": "Combien de personnes pouvons-nous accueillir ?",
-                "answer": "Nos forfaits sont adaptés à différentes tailles de groupes : Starter (15-30 personnes), Growth (20-50 personnes) et Premium (30-100 personnes). Pour les groupes en dehors de ces plages, contactez-nous pour un devis personnalisé. Nous pouvons adapter notre service à vos besoins."
+                "question": "Comment fonctionnent les portions ?",
+                "answer": "Choisissez 2 à 4 portions par repas, ou des repas individuels si vous commandez pour une personne."
             },
             {
-                "question": "Pouvons-nous choisir la date et l'heure de notre préférence ?",
-                "answer": "Oui ! Nous nous adaptons à votre emploi du temps. Lors de la réservation, vous choisirez votre date et heure préférées. Nous vous recommandons de réserver au moins 2-3 semaines à l'avance pour une meilleure disponibilité, bien que nous puissions parfois accepter des délais plus courts pour des événements de petite taille."
+                "question": "Quand livrez-vous ?",
+                "answer": "Livraison hebdo par zone. Vous verrez les jours disponibles au checkout."
             },
             {
-                "question": "L'alcool est-il inclus ?",
-                "answer": "L'alcool est inclus dans les forfaits Growth (vin/bière) et Premium (forfait de boissons complet). Le forfait Starter ne comprend que des boissons non alcoolisées. Vous pouvez mettre à niveau n'importe quel forfait pour inclure des boissons alcoolisées moyennant des frais supplémentaires."
+                "question": "À quelle avance dois-je commander ?",
+                "answer": "Les commandes ferment 3 à 4 jours avant la livraison pour préparer du frais."
             },
             {
-                "question": "Et si le nombre d'invités change ?",
-                "answer": "Nous comprenons que le nombre d'invités peut fluctuer. Vous pouvez ajuster le nombre d'invités jusqu'à 5 jours avant l'événement sans pénalité. Les modifications dans les 5 jours peuvent entraîner des frais supplémentaires. Nous travaillerons avec vous pour nous assurer que nous sommes prêts pour votre nombre final."
+                "question": "Puis-je annuler à tout moment ?",
+                "answer": "Oui. Annulez ou mettez en pause depuis votre compte, sans engagement long terme."
             },
             {
-                "question": "Combien de temps à l'avance devons-nous réserver ?",
-                "answer": "Nous vous recommandons de réserver 2 à 4 semaines à l'avance pour garantir la disponibilité et laisser le temps de planifier le menu. Pour les grands événements (plus de 50 personnes) ou pendant les hautes saisons, 4 à 6 semaines sont idéales. Des réservations de dernière minute peuvent être possibles - contactez-nous pour vérifier la disponibilité."
-            },
-            {
-                "question": "Quelle est votre politique d'annulation ?",
-                "answer": "Les annulations effectuées plus de 14 jours avant l'événement sont intégralement remboursées. Les annulations effectuées de 7 à 13 jours avant donnent droit à un remboursement de 50 %. Les annulations dans les 7 jours ne sont pas remboursables, bien que nous puissions reporter la date en fonction des disponibilités. Les annulations liées à la météo sont traitées au cas par cas."
-            },
-            {
-                "question": "Pouvons-nous ajouter des accords mets et vins à notre menu ?",
-                "answer": "Oui ! Les accords mets et vins sont inclus dans le forfait Premium et disponibles en supplément pour les forfaits Starter et Growth. Notre sommelier sélectionnera des vins qui complètent chaque plat. Les prix varient en fonction de la sélection de vins et du nombre d'invités."
-            },
-            {
-                "question": "Travaillez-vous avec notre lieu existant ?",
-                "answer": "Nous pouvons assurer la restauration dans la plupart des lieux, y compris les bureaux, les maisons privées, les espaces événementiels et les espaces extérieurs. Nous aurons besoin d'un accès de base à la cuisine (ou pourrons apporter un équipement portable) et d'un espace pour l'installation. Lors de la consultation, nous discuterons des exigences spécifiques de votre lieu."
-            },
-            {
-                "question": "Pouvons-nous voir des photos d'événements passés ?",
-                "answer": "Absolument ! Nous avons un portfolio d'événements passés présentant la présentation de nos plats, les mises en place de table et les clients satisfaits. Contactez-nous ou consultez nos réseaux sociaux pour des photos d'événements récents. Nous sommes fiers de partager notre travail !"
-            },
-            {
-                "question": "Comment gérez-vous les restrictions alimentaires ?",
-                "answer": "Nous prenons les restrictions alimentaires très au sérieux. Lors de la réservation, vous préciserez tous vos besoins alimentaires. Nos chefs préparent des plats séparés ou modifient des recettes pour s'assurer que tout le monde puisse profiter du repas en toute sécurité. Nous avons de l'expérience avec les allergies, les exigences religieuses et les préférences de mode de vie."
-            },
-            {
-                "question": "Quel est le délai de réservation ?",
-                "answer": "Le délai de réservation minimum est généralement de 1 semaine pour les petits événements (moins de 20 personnes) et de 2 semaines pour les groupes plus importants. Toutefois, nous avons répondu à des demandes de dernière minute dans la mesure du possible. Contactez-nous immédiatement si vous avez un besoin urgent, nous ferons de notre mieux pour vous aider."
-            },
-            {
-                "question": "Offrez-vous des activités de team building ?",
-                "answer": "Bien que notre priorité soit la restauration exceptionnelle, nous pouvons coordonner des activités avec des partenaires de team building, telles que des cours de cuisine, des dégustations de vins ou des expériences culinaires interactives. Faites-nous part de vos intérêts lors de la consultation et nous vous aiderons à créer une expérience d'événement complète."
+                "question": "Repas frais ou surgelés ?",
+                "answer": "Les repas sont livrés frais et conçus pour un réchauffage facile."
             }
         ]
     },
@@ -280,91 +249,304 @@
         "contact": "Contact"
     },
     "bookingForm": {
-        "successTitle": "C'est Réservé !",
-        "successMessage": "Merci pour votre demande. Notre équipe de traiteurs vous contactera sous peu pour finaliser les détails de votre événement !",
-        "bookAnother": "Réserver un Autre",
-        "title1": "Réservez Votre",
-        "title2": "Service Traiteur",
-        "subtitle": "Des événements d'entreprise aux célébrations, nous offrons des expériences de traiteur exceptionnelles adaptées à vos besoins.",
-        "feature1": "Chefs 5 Étoiles",
-        "feature2": "Menus Sur Mesure",
-        "selectMenuLabel": "Sélectionner un Menu",
-        "customMenuOption": "-- Je Personnalise le Mien --",
-        "preferredChefLabel": "Chef Préféré",
-        "anyChefOption": "N'importe Quel Chef",
-        "cuisineStyleLabel": "Style de Cuisine",
+        "successTitle": "Réservé !",
+        "successMessage": "Merci pour votre demande. Notre équipe catering vous contactera rapidement pour finaliser les détails !",
+        "bookAnother": "Réserver à nouveau",
+        "title1": "Réservez votre",
+        "title2": "catering",
+        "subtitle": "Des événements d'entreprise aux célébrations, nous livrons une expérience sur mesure.",
+        "feature1": "Chefs 5 étoiles",
+        "feature2": "Menus sur mesure",
+        "selectMenuLabel": "Choisir un menu",
+        "customMenuOption": "-- Je personnalise mon menu --",
+        "preferredChefLabel": "Chef préféré",
+        "anyChefOption": "N'importe quel chef",
+        "cuisineStyleLabel": "Style de cuisine",
         "cuisinePlaceholder": "ex. Italien",
-        "eventDetailsLabel": "Détails de l'Événement",
+        "eventDetailsLabel": "Détails de l'événement",
         "guests": {
-            "g2": "2 Invités",
-            "g3_5": "3-5 Invités",
-            "g6_10": "6-10 Invités",
-            "g10plus": "10+ Invités"
+            "g2": "2 invités",
+            "g3_5": "3-5 invités",
+            "g6_10": "6-10 invités",
+            "g10plus": "10+ invités"
         },
-        "namePlaceholder": "Votre Nom",
-        "emailPlaceholder": "Adresse E-mail",
-        "bookNowBtn": "Réserver Maintenant",
-        "noPaymentText": "Aucun paiement instantané requis.",
-        "contactedText": "Vous serez contacté pour finaliser les détails.",
+        "namePlaceholder": "Votre nom",
+        "emailPlaceholder": "Adresse e-mail",
+        "bookNowBtn": "Réserver",
+        "noPaymentText": "Aucun paiement immédiat requis.",
+        "contactedText": "Nous vous contactons pour finaliser les détails.",
         "loadingText": "Chargement du formulaire..."
     },
+    "quizForm": {
+        "stepProgress": "Étape {current} sur {total}",
+        "backButton": "Retour",
+        "nextButton": "Suivant",
+        "submitButton": "Rejoindre la liste d'attente",
+        "occasionTitle": "Choisissez votre plan",
+        "occasionSubtitle": "Sélectionnez l'abonnement qui correspond à votre routine.",
+        "step1Header": "Créez votre première box",
+        "step1Subheader": "Choisissez votre plan et le nombre de repas par semaine.",
+        "planSectionTitle": "Plan",
+        "mealsSectionTitle": "Repas par semaine",
+        "summaryTitle": "Récapitulatif",
+        "summaryPlan": "Plan",
+        "summaryMeals": "Repas par semaine",
+        "summaryPricePerMeal": "Prix par repas",
+        "summaryDelivery": "Livraison",
+        "summaryDeliveryValue": "Gratuit",
+        "summaryTotal": "Total",
+        "summaryDiscountLabel": "Offre de lancement appliquée — 20% OFF",
+        "summaryOffer": "Bonus liste d'attente — 50% à la sortie",
+        "summaryNote": "Vous débloquerez l'offre après inscription à la liste d'attente.",
+        "summaryPause": "Pause à tout moment",
+        "summaryNoCommitment": "Sans engagement",
+        "summaryFreshMeals": "Repas frais, chaque semaine",
+        "summaryLegend": "Légende",
+        "legendLabels": {
+            "chicken": "Poulet",
+            "beef": "Bœuf",
+            "fish": "Poisson",
+            "vegetarian": "Veg",
+            "highProtein": "High Protein",
+            "light": "Light"
+        },
+        "guestsTitle": "Combien de repas par semaine ?",
+        "guestsSubtitle": "Choisissez la quantité hebdo qui vous convient.",
+        "dateTitle": "Combien de jours de livraison ?",
+        "dateSubtitle": "Choisissez le nombre de jours de livraison par semaine.",
+        "contactTitle": "Vos coordonnées",
+        "contactSubtitle": "Où envoyer votre confirmation de liste d'attente ?",
+        "mealsTitle": "Choisissez vos repas",
+        "mealsSubtitle": "Sélectionnez vos repas pour la semaine.",
+        "mealsSelected": "{selected}/{total} repas sélectionnés",
+        "mealSelectionError": "Vous pouvez sélectionner jusqu'à {count} repas.",
+        "viewDetails": "Voir les détails",
+        "selectedLabel": "Sélectionné",
+        "addOne": "Ajouter",
+        "removeOne": "Retirer",
+        "namePlaceholder": "Nom complet",
+        "emailPlaceholder": "Adresse e-mail",
+        "phonePlaceholder": "Numéro de téléphone",
+        "privacyNote": "Nous respectons votre vie privée. Aucun paiement immédiat requis.",
+        "submitting": "Envoi...",
+        "submitError": "Échec de l'envoi. Veuillez réessayer.",
+        "successTitle": "Vous êtes sur la liste d'attente !",
+        "successMessage": "Merci ! Votre place est réservée et nous vous écrirons dès l'ouverture des abonnements.",
+        "backHome": "Retour à l'accueil",
+        "loading": "Chargement...",
+        "mealFilters": {
+            "all": "Tous",
+            "chicken": "Poulet",
+            "beef": "Bœuf",
+            "fish": "Poisson",
+            "vegetarian": "Végétarien"
+        },
+        "mealCategoryLabels": {
+            "chicken": "Poulet",
+            "beef": "Bœuf",
+            "fish": "Poisson",
+            "vegetarian": "Végétarien"
+        },
+        "mealBadgeLabels": {
+            "chicken": "Poulet",
+            "beef": "Bœuf",
+            "fish": "Poisson",
+            "vegetarian": "Veg",
+            "highProtein": "High Protein",
+            "light": "Light"
+        },
+        "mealDetails": {
+            "kcal": "kcal",
+            "grams": "g",
+            "calories": "Calories",
+            "protein": "Protéines",
+            "fat": "Lipides",
+            "carbs": "Glucides",
+            "moreNutrition": "Infos nutritionnelles",
+            "fiber": "Fibres",
+            "sugar": "Sucre",
+            "sodium": "Sodium",
+            "ingredients": "Ingrédients"
+        },
+        "mealOptions": {
+            "3": {
+                "label": "3 repas / semaine",
+                "description": "Soutien léger pour les semaines chargées"
+            },
+            "5": {
+                "label": "5 repas / semaine",
+                "description": "Couverture complète de la semaine"
+            },
+            "7": {
+                "label": "7 repas / semaine",
+                "description": "Dîners quotidiens"
+            },
+            "10": {
+                "label": "10 repas / semaine",
+                "description": "Flexibilité maximale"
+            }
+        },
+        "deliveryOptions": {
+            "1": {
+                "label": "1 jour de livraison",
+                "description": "Tous les repas en une seule livraison"
+            },
+            "2": {
+                "label": "2 jours de livraison",
+                "description": "Fraîcheur en milieu de semaine"
+            },
+            "3": {
+                "label": "3 jours de livraison",
+                "description": "Réassorts plus fréquents"
+            },
+            "5": {
+                "label": "5 jours de livraison",
+                "description": "Confort quasi quotidien"
+            }
+        },
+        "plans": {
+            "balanced": {
+                "label": "Balanced",
+                "description": "Des repas quotidiens avec un bon équilibre protéines, glucides et légumes."
+            },
+            "high-protein": {
+                "label": "High Protein",
+                "description": "Repas riches en protéines pour un rythme actif et chargé."
+            },
+            "vegan": {
+                "label": "Vegan",
+                "description": "Repas végétaux, savoureux et bien rassasiants."
+            },
+            "low-calorie": {
+                "label": "Low Calorie",
+                "description": "Repas plus légers avec portions maîtrisées et ingrédients propres."
+            }
+        },
+        "mealItems": {
+            "chicken-teriyaki": {
+                "title": "Chicken Teriyaki Rice Bowl",
+                "description": "Poulet teriyaki sur riz vapeur avec brocoli et sésame.",
+                "ingredients": "Poulet, riz, brocoli, sauce teriyaki, sésame, ciboule"
+            },
+            "chicken-satay": {
+                "title": "Chicken Satay Rice Bowl",
+                "description": "Poulet satay grillé avec riz jasmin et légumes croquants.",
+                "ingredients": "Poulet, riz jasmin, sauce cacahuète, concombre, carotte"
+            },
+            "chicken-shawarma": {
+                "title": "Chicken Shawarma Rice Bowl",
+                "description": "Poulet shawarma épicé avec riz, herbes et oignons marinés.",
+                "ingredients": "Poulet, riz, mélange yaourt-épices, oignon mariné, herbes"
+            },
+            "butter-chicken": {
+                "title": "Butter Chicken with Rice",
+                "description": "Butter chicken crémeux avec riz basmati parfumé.",
+                "ingredients": "Poulet, riz basmati, sauce tomate-crème, épices"
+            },
+            "chicken-pesto": {
+                "title": "Chicken Pesto Pasta",
+                "description": "Pâtes au pesto et poulet avec tomates cerises et épinards.",
+                "ingredients": "Poulet, pâtes, pesto basilic, tomate, épinards"
+            },
+            "chili-chicken": {
+                "title": "Chili Chicken Noodles",
+                "description": "Poulet pimenté avec nouilles et légumes croquants.",
+                "ingredients": "Poulet, nouilles, sauce chili, poivron, oignon"
+            },
+            "beef-bolognese": {
+                "title": "Beef Bolognese Pasta",
+                "description": "Bolognaise de bœuf mijotée avec pâtes al dente.",
+                "ingredients": "Bœuf, pâtes, tomate, oignon, ail, herbes"
+            },
+            "beef-shawarma": {
+                "title": "Beef Shawarma Rice Bowl",
+                "description": "Bœuf shawarma tendre avec riz, herbes et tahini.",
+                "ingredients": "Bœuf, riz, épices shawarma, tahini, persil"
+            },
+            "pulled-beef": {
+                "title": "Mexican Pulled Beef Bowl",
+                "description": "Bœuf effiloché avec riz, haricots et pico de gallo.",
+                "ingredients": "Bœuf, riz, haricots, tomate, citron vert, coriandre"
+            },
+            "salmon-teriyaki": {
+                "title": "Salmon Teriyaki Rice Bowl",
+                "description": "Saumon teriyaki avec riz et légumes vapeur.",
+                "ingredients": "Saumon, riz, sauce teriyaki, haricots verts"
+            },
+            "grilled-salmon": {
+                "title": "Grilled Salmon with Rice & Vegetables",
+                "description": "Saumon grillé au four avec riz et légumes de saison.",
+                "ingredients": "Saumon, riz, brocoli, carotte, citron, aneth"
+            },
+            "veg-bowl": {
+                "title": "Vegetable Bowl",
+                "description": "Bowl végétal avec céréales et vinaigrette aux agrumes.",
+                "ingredients": "Quinoa, pois chiches, légumes variés, vinaigrette citron"
+            },
+            "veg-risotto": {
+                "title": "Vegetable Risotto",
+                "description": "Risotto crémeux aux légumes et parmesan.",
+                "ingredients": "Riz arborio, champignons, courgette, parmesan, herbes"
+            }
+        }
+    },
     "menuGrid": {
-        "title": "Restaurants Traiteurs",
-        "subtitle": "Explorez nos diverses options de restaurants. Chaque restaurant peut être personnalisé selon vos besoins.",
-        "detectingLocation": "Détection de votre emplacement...",
-        "selectCity": "📍 Sélectionnez la Ville",
-        "showingRestaurants": "Affichage de {count} restaurant(s) à {city}",
-        "loading": "Chargement des restaurants de {city}...",
+        "title": "Restaurants de catering",
+        "subtitle": "Découvrez nos options. Chaque restaurant est personnalisable.",
+        "detectingLocation": "Localisation en cours...",
+        "selectCity": "📍 Choisir une ville",
+        "showingRestaurants": "{count} restaurant(s) à {city}",
+        "loading": "Chargement des restaurants à {city}...",
         "failLoad": "Échec du chargement des restaurants",
         "noRestaurants": "Aucun restaurant trouvé à {city}",
-        "viewMenu": "Voir le Menu →"
+        "viewMenu": "Voir le menu →"
     },
     "chefCarousel": {
-        "title1": "Nos Restaurants ",
-        "title2": "En Vedette",
-        "title3": "",
-        "subtitle": "Découvrez d'incroyables chefs à domicile et restaurants prêts à organiser votre prochain événement.",
+        "title1": "Nos ",
+        "title2": "restaurants",
+        "title3": " à la une",
+        "subtitle": "Découvrez des chefs et restaurants prêts pour votre événement.",
         "loading": "Chargement des restaurants...",
         "failLoad": "Échec du chargement des restaurants",
         "noRestaurants": "Aucun restaurant trouvé."
     },
     "packageComparison": {
-        "title": "Comparez les Forfaits",
-        "subtitle": "Découvrez exactement ce qui est inclus dans chaque forfait pour trouver celui qui convient parfaitement à votre équipe.",
+        "title": "Comparer les formules",
+        "subtitle": "Comparez le contenu des formules pour trouver la meilleure option.",
         "featureCol": "Caractéristique",
         "starter": "Starter",
         "growth": "Growth",
         "premium": "Premium",
-        "mostPopular": "Le Plus Populaire",
+        "mostPopular": "Le plus populaire",
         "perPerson": "par personne",
         "select": "Sélectionner",
         "selectPkg": "Sélectionner",
         "features": {
-            "numberOfCourses": "Nombre de Plats",
-            "courses2": "2 plats",
-            "courses3": "3 plats",
-            "courses4": "4 plats",
-            "menuOptions": "Options de Menu",
+            "numberOfCourses": "Nombre de services",
+            "courses2": "2 services",
+            "courses3": "3 services",
+            "courses4": "4 services",
+            "menuOptions": "Options de menu",
             "standard": "Standard",
             "options5": "5+ options",
             "unlimited": "Illimité",
-            "customMenuAdjustments": "Ajustements de Menu Personnalisés",
-            "dietaryAccommodations": "Adaptations Alimentaires",
+            "customMenuAdjustments": "Ajustements du menu",
+            "dietaryAccommodations": "Régimes spécifiques",
             "type1": "1 type",
-            "nonAlcoholicDrinks": "Boissons Non Alcoolisées",
-            "wineBeer": "Vin & Bière",
-            "premiumBeverage": "Forfait Boissons Premium",
-            "tableSetup": "Mise en Place et Nettoyage",
-            "premiumTableSetup": "Mise en Place Premium",
-            "customLinens": "Linge sur Mesure",
-            "eventCoordinator": "Coordinateur d'Événement",
-            "preEventConsultation": "Consultation Pré-Événement",
+            "nonAlcoholicDrinks": "Boissons sans alcool",
+            "wineBeer": "Vin & bière",
+            "premiumBeverage": "Pack boissons premium",
+            "tableSetup": "Mise en place & nettoyage",
+            "premiumTableSetup": "Mise en place premium",
+            "customLinens": "Linge personnalisé",
+            "eventCoordinator": "Coordinateur d'événement",
+            "preEventConsultation": "Consultation préalable",
             "min30": "30 min",
             "hour1": "1 heure",
-            "postEventFeedback": "Feedback Post-Événement",
-            "professionalPhotos": "Photos Professionnelles",
+            "postEventFeedback": "Retour post-événement",
+            "professionalPhotos": "Photos professionnelles",
             "optional": "Optionnel",
-            "groupSize": "Taille du Groupe",
+            "groupSize": "Taille de groupe",
             "size1530": "15-30",
             "size2050": "20-50",
             "size30100": "30-100",
@@ -375,12 +557,54 @@
         }
     },
     "chefSignup": {
-        "title": "Êtes-vous un Chef ?",
-        "subtitle": "Rejoignez notre réseau exclusif de chefs privés haut de gamme et présentez vos menus de Noël.",
-        "applyBtn": "Devenir Chef"
+        "title": "Vous êtes chef ?",
+        "subtitle": "Rejoignez notre réseau exclusif de chefs et présentez vos menus de Noël.",
+        "applyBtn": "Postuler comme chef"
     },
     "metadata": {
-        "homeTitle": "Livraison de Repas Faits Maison | Chef Privé à Amsterdam & Pays-Bas",
-        "homeDescription": "Commandez des repas frais et faits maison auprès de chefs privés près de chez vous. Abordable, délicieux et préparé le jour même."
+        "homeTitle": "Abonnements repas Homemade | Livraison hebdomadaire fraîche",
+        "homeDescription": "Choisissez un abonnement repas pour la vraie vie. Repas frais, cuisinés par des chefs, livrés chaque semaine aux Pays-Bas.",
+        "quoteTitle": "Démarrer votre abonnement | Homemade",
+        "quoteDescription": "Répondez à quelques questions et démarrez votre abonnement repas hebdo."
+    },
+    "cateringCalculator": {
+        "badge": "💰 Calculateur d'économies",
+        "title1": "Voyez combien votre équipe",
+        "title2": "pourrait économiser",
+        "subtitle": "Comparez le coût d'un restaurant vs. Homemade. Ajustez les curseurs.",
+        "configTitle": "Configurer votre événement",
+        "eventTypeLabel": "Type d'événement",
+        "guestsLabel": "Nombre d'invités",
+        "guestsMin": "5 invités",
+        "guestsMax": "200 invités",
+        "eventsLabel": "Événements par an",
+        "eventsMin": "1x",
+        "eventsMax": "24x / an",
+        "noteRef": "💡 Basé sur les tarifs moyens d'Amsterdam vs. Homemade. Les économies réelles peuvent varier.",
+        "saveText": "Vous pourriez économiser",
+        "perYearText": "par an",
+        "lessThanText": "de moins que les restaurants",
+        "perEventSave": "Économie par événement",
+        "over5Years": "Sur 5 ans",
+        "costBreakdown": "Répartition annuelle",
+        "restaurantCatering": "Catering restaurant",
+        "homemadeCatering": "Catering Homemade",
+        "bookBtn": "Réserver votre premier événement →",
+        "mealLabels": {
+            "lunch": "Déjeuner d'équipe",
+            "dinner": "Dîner d'équipe",
+            "drinks": "Boissons & snacks",
+            "breakfast": "Réunion petit-déj"
+        }
+    },
+    "promoBanner": {
+        "badge": "Places limitées",
+        "headline": "-50% au lancement",
+        "subline": "Rejoignez la liste d'attente aujourd'hui",
+        "cta": "Rejoindre"
+    },
+    "quotePage": {
+        "title": "Rejoindre la liste d'attente",
+        "subtitle": "Répondez à quelques questions et nous vous ajouterons à la liste d'attente."
     }
 }

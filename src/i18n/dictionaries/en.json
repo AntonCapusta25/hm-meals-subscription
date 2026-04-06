@@ -291,19 +291,204 @@
         "summaryTitle": "Order summary",
         "summaryPlan": "Plan",
         "summaryMeals": "Meals per week",
-        "summaryDelivery": "Delivery days",
+        "summaryPricePerMeal": "Price per meal",
+        "summaryDelivery": "Delivery",
+        "summaryDeliveryValue": "Free",
+        "summaryTotal": "Total",
+        "summaryDiscountLabel": "Launch offer applied — 20% OFF",
         "summaryOffer": "Waitlist bonus — 50% off at launch",
         "summaryNote": "You’ll unlock the offer after joining the waitlist.",
+        "summaryPause": "Pause anytime",
+        "summaryNoCommitment": "No commitment",
+        "summaryFreshMeals": "Fresh meals, weekly",
+        "summaryLegend": "Legend",
+        "legendLabels": {
+            "chicken": "Chicken",
+            "beef": "Beef",
+            "fish": "Fish",
+            "vegetarian": "Veg",
+            "highProtein": "High Protein",
+            "light": "Light"
+        },
         "guestsTitle": "How many meals per week?",
         "guestsSubtitle": "Choose the weekly quantity that fits your routine.",
         "dateTitle": "How many delivery days?",
         "dateSubtitle": "Pick how many days you want deliveries each week.",
         "contactTitle": "Your Details",
         "contactSubtitle": "Where should we send your waitlist confirmation?",
+        "mealsTitle": "Pick your meals",
+        "mealsSubtitle": "Choose your meals for the week.",
+        "mealsSelected": "{selected}/{total} meals selected",
+        "mealSelectionError": "You can select up to {count} meals.",
+        "viewDetails": "View details",
+        "selectedLabel": "Selected",
+        "addOne": "Add one",
+        "removeOne": "Remove one",
+        "namePlaceholder": "Full Name",
+        "emailPlaceholder": "Email Address",
+        "phonePlaceholder": "Phone Number",
+        "privacyNote": "We respect your privacy. No immediate payment required.",
         "submitting": "Submitting...",
+        "submitError": "Submission failed. Please try again.",
         "successTitle": "You're on the Waitlist!",
         "successMessage": "Thanks! We’ve saved your spot and will email you as soon as we open new subscriptions.",
-        "backHome": "Back to Home"
+        "backHome": "Back to Home",
+        "loading": "Loading...",
+        "mealFilters": {
+            "all": "All",
+            "chicken": "Chicken",
+            "beef": "Beef",
+            "fish": "Fish",
+            "vegetarian": "Vegetarian"
+        },
+        "mealCategoryLabels": {
+            "chicken": "Chicken",
+            "beef": "Beef",
+            "fish": "Fish",
+            "vegetarian": "Vegetarian"
+        },
+        "mealBadgeLabels": {
+            "chicken": "Chicken",
+            "beef": "Beef",
+            "fish": "Fish",
+            "vegetarian": "Veg",
+            "highProtein": "High Protein",
+            "light": "Light"
+        },
+        "mealDetails": {
+            "kcal": "kcal",
+            "grams": "g",
+            "calories": "Calories",
+            "protein": "Protein",
+            "fat": "Fat",
+            "carbs": "Carbs",
+            "moreNutrition": "More Nutrition",
+            "fiber": "Fiber",
+            "sugar": "Sugar",
+            "sodium": "Sodium",
+            "ingredients": "Ingredients"
+        },
+        "mealOptions": {
+            "3": {
+                "label": "3 meals / week",
+                "description": "Light support for busy weeks"
+            },
+            "5": {
+                "label": "5 meals / week",
+                "description": "Full workweek coverage"
+            },
+            "7": {
+                "label": "7 meals / week",
+                "description": "Everyday dinners"
+            },
+            "10": {
+                "label": "10 meals / week",
+                "description": "Maximum flexibility"
+            }
+        },
+        "deliveryOptions": {
+            "1": {
+                "label": "1 delivery day",
+                "description": "All meals in one drop"
+            },
+            "2": {
+                "label": "2 delivery days",
+                "description": "Midweek freshness"
+            },
+            "3": {
+                "label": "3 delivery days",
+                "description": "More frequent top-ups"
+            },
+            "5": {
+                "label": "5 delivery days",
+                "description": "Near-daily convenience"
+            }
+        },
+        "plans": {
+            "balanced": {
+                "label": "Balanced",
+                "description": "Everyday meals with a good balance of protein, carbs, and vegetables."
+            },
+            "high-protein": {
+                "label": "High Protein",
+                "description": "Protein-forward meals built for active, on-the-go schedules."
+            },
+            "vegan": {
+                "label": "Vegan",
+                "description": "Plant-based meals with bold flavor and satisfying portions."
+            },
+            "low-calorie": {
+                "label": "Low Calorie",
+                "description": "Lighter meals with smart portions and clean ingredients."
+            }
+        },
+        "mealItems": {
+            "chicken-teriyaki": {
+                "title": "Chicken Teriyaki Rice Bowl",
+                "description": "Teriyaki-glazed chicken over steamed rice with broccoli and sesame.",
+                "ingredients": "Chicken, rice, broccoli, teriyaki glaze, sesame, scallion"
+            },
+            "chicken-satay": {
+                "title": "Chicken Satay Rice Bowl",
+                "description": "Grilled satay-style chicken with jasmine rice and crisp veggies.",
+                "ingredients": "Chicken, jasmine rice, peanut sauce, cucumber, carrot"
+            },
+            "chicken-shawarma": {
+                "title": "Chicken Shawarma Rice Bowl",
+                "description": "Spiced shawarma chicken with rice, herbs, and pickled onions.",
+                "ingredients": "Chicken, rice, yogurt spice blend, pickled onion, herbs"
+            },
+            "butter-chicken": {
+                "title": "Butter Chicken with Rice",
+                "description": "Creamy butter chicken served with fragrant basmati rice.",
+                "ingredients": "Chicken, basmati rice, tomato cream sauce, spices"
+            },
+            "chicken-pesto": {
+                "title": "Chicken Pesto Pasta",
+                "description": "Pesto chicken pasta with cherry tomatoes and spinach.",
+                "ingredients": "Chicken, pasta, basil pesto, tomato, spinach"
+            },
+            "chili-chicken": {
+                "title": "Chili Chicken Noodles",
+                "description": "Spicy chili chicken tossed with noodles and crunchy veg.",
+                "ingredients": "Chicken, noodles, chili sauce, bell pepper, onion"
+            },
+            "beef-bolognese": {
+                "title": "Beef Bolognese Pasta",
+                "description": "Slow-cooked beef bolognese over al dente pasta.",
+                "ingredients": "Beef, pasta, tomato, onion, garlic, herbs"
+            },
+            "beef-shawarma": {
+                "title": "Beef Shawarma Rice Bowl",
+                "description": "Tender beef shawarma with rice, herbs, and tahini drizzle.",
+                "ingredients": "Beef, rice, shawarma spice, tahini, parsley"
+            },
+            "pulled-beef": {
+                "title": "Mexican Pulled Beef Bowl",
+                "description": "Slow pulled beef with rice, beans, and pico de gallo.",
+                "ingredients": "Beef, rice, beans, tomato, lime, cilantro"
+            },
+            "salmon-teriyaki": {
+                "title": "Salmon Teriyaki Rice Bowl",
+                "description": "Teriyaki salmon with rice and steamed greens.",
+                "ingredients": "Salmon, rice, teriyaki glaze, green beans"
+            },
+            "grilled-salmon": {
+                "title": "Grilled Salmon with Rice & Vegetables",
+                "description": "Oven-grilled salmon with rice and seasonal vegetables.",
+                "ingredients": "Salmon, rice, broccoli, carrot, lemon, dill"
+            },
+            "veg-bowl": {
+                "title": "Vegetable Bowl",
+                "description": "Vegetable-forward bowl with grains and citrus dressing.",
+                "ingredients": "Quinoa, chickpeas, mixed veg, lemon dressing"
+            },
+            "veg-risotto": {
+                "title": "Vegetable Risotto",
+                "description": "Creamy vegetable risotto with herbs and parmesan.",
+                "ingredients": "Arborio rice, mushroom, zucchini, parmesan, herbs"
+            }
+        }
     },
     "menuGrid": {
         "title": "Catering Restaurants",
@@ -378,7 +563,9 @@
     },
     "metadata": {
         "homeTitle": "Homemade Meal Subscriptions | Fresh Weekly Delivery",
-        "homeDescription": "Choose a meal subscription built for real life. Fresh, chef-made meals delivered weekly across the Netherlands."
+        "homeDescription": "Choose a meal subscription built for real life. Fresh, chef-made meals delivered weekly across the Netherlands.",
+        "quoteTitle": "Start Your Subscription | Homemade",
+        "quoteDescription": "Answer a few quick questions and start your weekly meal subscription."
     },
     "cateringCalculator": {
         "badge": "💰 Savings Calculator",
@@ -409,12 +596,15 @@
             "drinks": "Drinks & Snacks",
             "breakfast": "Breakfast Meeting"
         }
-    }
-    ,
+    },
     "promoBanner": {
         "badge": "Limited Spots",
         "headline": "50% Off at Launch",
         "subline": "Join the waitlist today",
         "cta": "Join Waitlist"
+    },
+    "quotePage": {
+        "title": "Join the Waitlist",
+        "subtitle": "Answer a few quick questions and we’ll add you to the waitlist."
     }
 }

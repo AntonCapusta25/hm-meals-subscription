@@ -47,29 +47,36 @@ const PLANS = [
 ];
 
 const MEALS_OPTIONS = [
-    { id: "3", label: "3 meals / week" },
-    { id: "5", label: "5 meals / week" },
-    { id: "7", label: "7 meals / week" },
-    { id: "10", label: "10 meals / week" },
+    { id: "3", label: "3 meals / week", description: "Light support for busy weeks" },
+    { id: "5", label: "5 meals / week", description: "Full workweek coverage" },
+    { id: "7", label: "7 meals / week", description: "Everyday dinners" },
+    { id: "10", label: "10 meals / week", description: "Maximum flexibility" },
 ];
 
 const DELIVERY_DAYS_OPTIONS = [
-    { id: "1", label: "1 delivery day" },
-    { id: "2", label: "2 delivery days" },
-    { id: "3", label: "3 delivery days" },
-    { id: "5", label: "5 delivery days" },
+    { id: "1", label: "1 delivery day", description: "All meals in one drop" },
+    { id: "2", label: "2 delivery days", description: "Midweek freshness" },
+    { id: "3", label: "3 delivery days", description: "More frequent top-ups" },
+    { id: "5", label: "5 delivery days", description: "Near-daily convenience" },
 ];
 
-const MEAL_FILTERS = ["All", "Chicken", "Beef", "Fish", "Vegetarian"];
-const MEAL_BADGES: Record<string, { label: string; className: string }> = {
-    Chicken: { label: "Chicken", className: "bg-orange/90" },
-    Beef: { label: "Beef", className: "bg-red-500/90" },
-    Fish: { label: "Fish", className: "bg-sky-500/90" },
-    Vegetarian: { label: "Veg", className: "bg-green-500/90" }
+const MEAL_FILTERS = [
+    { key: "all", category: "all", fallback: "All" },
+    { key: "chicken", category: "Chicken", fallback: "Chicken" },
+    { key: "beef", category: "Beef", fallback: "Beef" },
+    { key: "fish", category: "Fish", fallback: "Fish" },
+    { key: "vegetarian", category: "Vegetarian", fallback: "Vegetarian" },
+];
+
+const MEAL_BADGES: Record<string, { key: string; fallback: string; className: string }> = {
+    Chicken: { key: "chicken", fallback: "Chicken", className: "bg-orange/90" },
+    Beef: { key: "beef", fallback: "Beef", className: "bg-red-500/90" },
+    Fish: { key: "fish", fallback: "Fish", className: "bg-sky-500/90" },
+    Vegetarian: { key: "vegetarian", fallback: "Veg", className: "bg-green-500/90" }
 };
 const EXTRA_BADGES = {
-    highProtein: { label: "High Protein", className: "bg-indigo-500/90" },
-    light: { label: "Light", className: "bg-emerald-500/90" }
+    highProtein: { key: "highProtein", fallback: "High Protein", className: "bg-indigo-500/90" },
+    light: { key: "light", fallback: "Light", className: "bg-emerald-500/90" }
 };
 
 const MEAL_ITEMS = [
@@ -301,6 +308,15 @@ function QuizFormContent() {
     const t = (dictionary as any)?.quizForm || {};
     const pathname = usePathname();
     const lang = pathname?.split('/')[1] || 'en';
+    const planCopy = t.plans || {};
+    const mealOptionsCopy = t.mealOptions || {};
+    const deliveryOptionsCopy = t.deliveryOptions || {};
+    const mealFiltersCopy = t.mealFilters || {};
+    const mealCategoryLabels = t.mealCategoryLabels || {};
+    const badgeLabels = t.mealBadgeLabels || {};
+    const legendLabels = t.legendLabels || {};
+    const mealTexts = t.mealItems || {};
+    const mealDetailCopy = t.mealDetails || {};
 
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState<FormData>({
@@ -312,7 +328,7 @@ function QuizFormContent() {
         email: "",
         phone: "",
     });
-    const [mealFilter, setMealFilter] = useState<string>("All");
+    const [mealFilter, setMealFilter] = useState<string>("all");
     const [selectionError, setSelectionError] = useState<string>("");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
@@ -325,7 +341,7 @@ function QuizFormContent() {
     };
 
     const targetMeals = Number(formData.mealsPerWeek.match(/\d+/)?.[0] || 0);
-    const filteredMeals = MEAL_ITEMS.filter((m) => mealFilter === "All" || m.category === mealFilter);
+    const filteredMeals = MEAL_ITEMS.filter((m) => mealFilter === "all" || m.category === mealFilter);
     const selectedMealItems = MEAL_ITEMS.filter((meal) => formData.selectedMeals.includes(meal.id));
     const defaultPricePerMeal = 6.49;
     const basePricePerMeal = selectedMealItems.length
@@ -347,6 +363,12 @@ function QuizFormContent() {
         }
     }, []);
 
+    const getLabelForBadge = (key: string, fallback: string) => badgeLabels[key] || fallback;
+    const getCategoryLabel = (category: string) => {
+        const key = category.toLowerCase();
+        return mealCategoryLabels[key] || category;
+    };
+
     const getMealBadges = (meal: (typeof MEAL_ITEMS)[number]) => {
         const base = MEAL_BADGES[meal.category];
         if (!base) return [];
@@ -361,7 +383,8 @@ function QuizFormContent() {
     const addMeal = (id: string) => {
         setFormData((prev) => {
             if (targetMeals > 0 && prev.selectedMeals.length >= targetMeals) {
-                setSelectionError(`You can select up to ${targetMeals} meals.`);
+                const msgTemplate = t.mealSelectionError || "You can select up to {count} meals.";
+                setSelectionError(msgTemplate.replace("{count}", targetMeals.toString()));
                 return prev;
             }
             setSelectionError("");
@@ -467,7 +490,7 @@ function QuizFormContent() {
         } catch (error) {
             console.error(error);
             setIsSubmitting(false);
-            alert('Submission failed. Please try again.');
+            alert(t.submitError || "Submission failed. Please try again.");
         }
     };
 
@@ -548,24 +571,28 @@ function QuizFormContent() {
                             <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10 max-w-2xl mx-auto">{t.occasionSubtitle || "Pick the subscription that fits your routine."}</p>
  
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 max-w-4xl mx-auto text-left">
-                                {PLANS.map((occ) => (
+                                {PLANS.map((occ) => {
+                                    const copy = planCopy[occ.id] || {};
+                                    const label = copy.label || occ.label;
+                                    const description = copy.description || occ.description;
+                                    return (
                                     <button
                                         key={occ.id}
-                                        onClick={() => { updateData({ plan: occ.label }); setTimeout(nextStep, 300); }}
-                                        className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.plan === occ.label
+                                        onClick={() => { updateData({ plan: label }); setTimeout(nextStep, 300); }}
+                                        className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.plan === label
                                             ? "bg-orange/10 border-orange text-orange"
                                             : "bg-white border-dark/10 text-dark hover:bg-orange/5"
                                             }`}
                                     >
-                                        <occ.icon size={18} className={`md:w-6 md:h-6 ${formData.plan === occ.label ? "text-orange" : "text-gray-400"}`} />
+                                        <occ.icon size={18} className={`md:w-6 md:h-6 ${formData.plan === label ? "text-orange" : "text-gray-400"}`} />
                                         <div className="flex flex-col">
-                                            <span className="font-bold text-sm md:text-lg">{occ.label}</span>
-                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.plan === occ.label ? "text-orange/90" : "text-gray-500"}`}>
-                                                {occ.description}
+                                            <span className="font-bold text-sm md:text-lg">{label}</span>
+                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.plan === label ? "text-orange/90" : "text-gray-500"}`}>
+                                                {description}
                                             </span>
                                         </div>
                                     </button>
-                                ))}
+                                )})}
                             </div>
                         </motion.div>
                     )}
@@ -584,24 +611,28 @@ function QuizFormContent() {
                             <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10 max-w-2xl mx-auto">{t.guestsSubtitle || "Choose the weekly quantity that fits your routine."}</p>
  
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 max-w-4xl mx-auto text-left">
-                                {MEALS_OPTIONS.map((opt) => (
+                                {MEALS_OPTIONS.map((opt) => {
+                                    const copy = mealOptionsCopy[opt.id] || {};
+                                    const label = copy.label || opt.label;
+                                    const description = copy.description || opt.description;
+                                    return (
                                     <button
                                         key={opt.id}
-                                        onClick={() => { updateData({ mealsPerWeek: opt.label, selectedMeals: [] }); setSelectionError(""); setTimeout(nextStep, 300); }}
-                                        className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.mealsPerWeek === opt.label
+                                        onClick={() => { updateData({ mealsPerWeek: label, selectedMeals: [] }); setSelectionError(""); setTimeout(nextStep, 300); }}
+                                        className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.mealsPerWeek === label
                                             ? "bg-orange/10 border-orange text-orange"
                                             : "bg-white border-dark/10 text-dark hover:bg-orange/5"
                                             }`}
                                     >
-                                        <Utensils size={18} className={`md:w-6 md:h-6 ${formData.mealsPerWeek === opt.label ? "text-orange" : "text-gray-400"}`} />
+                                        <Utensils size={18} className={`md:w-6 md:h-6 ${formData.mealsPerWeek === label ? "text-orange" : "text-gray-400"}`} />
                                         <div className="flex flex-col">
-                                            <span className="font-bold text-sm md:text-lg">{opt.label}</span>
-                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.mealsPerWeek === opt.label ? "text-orange/90" : "text-gray-500"}`}>
-                                                {opt.id === "3" ? "Light support for busy weeks" : opt.id === "5" ? "Full workweek coverage" : opt.id === "7" ? "Everyday dinners" : "Maximum flexibility"}
+                                            <span className="font-bold text-sm md:text-lg">{label}</span>
+                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.mealsPerWeek === label ? "text-orange/90" : "text-gray-500"}`}>
+                                                {description}
                                             </span>
                                         </div>
                                     </button>
-                                ))}
+                                )})}
                             </div>
                         </motion.div>
                     )}
@@ -625,25 +656,31 @@ function QuizFormContent() {
                                     <div className="flex gap-2 flex-wrap">
                                         {MEAL_FILTERS.map((filter) => (
                                             <button
-                                                key={filter}
-                                                onClick={() => setMealFilter(filter)}
-                                                className={`px-3 py-2 rounded-full text-xs md:text-sm font-medium transition-all ${mealFilter === filter
+                                                key={filter.key}
+                                                onClick={() => setMealFilter(filter.category)}
+                                                className={`px-3 py-2 rounded-full text-xs md:text-sm font-medium transition-all ${mealFilter === filter.category
                                                     ? "bg-orange text-white"
                                                     : "bg-white text-dark hover:bg-orange/5 border border-dark/10"
                                                     }`}
                                             >
-                                                {filter}
+                                                {mealFiltersCopy[filter.key] || filter.fallback}
                                             </button>
                                         ))}
                                     </div>
 
                                     <div className="flex items-center justify-between text-sm text-gray-600">
-                                        <span>{formData.selectedMeals.length}/{targetMeals || 0} meals selected</span>
+                                        <span>
+                                            {(t.mealsSelected || "{selected}/{total} meals selected")
+                                                .replace("{selected}", formData.selectedMeals.length.toString())
+                                                .replace("{total}", (targetMeals || 0).toString())}
+                                        </span>
                                         {selectionError && <span className="text-orange">{selectionError}</span>}
                                     </div>
 
                                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
                                         {filteredMeals.map((meal) => {
+                                            const mealCopy = mealTexts[meal.id] || {};
+                                            const title = mealCopy.title || meal.title;
                                             const selected = formData.selectedMeals.includes(meal.id);
                                             return (
                                                 <div
@@ -657,8 +694,8 @@ function QuizFormContent() {
                                                         <div className="absolute top-2 right-2 z-10 flex items-center pointer-events-none">
                                                             {getMealBadges(meal).map((badge, index) => (
                                                                 <div
-                                                                    key={`${meal.id}-${badge.label}`}
-                                                                    title={badge.label}
+                                                                    key={`${meal.id}-${badge.key}`}
+                                                                    title={getLabelForBadge(badge.key, badge.fallback)}
                                                                     className={`flex items-center justify-center w-4 h-4 rounded-full shadow-md transition-transform duration-300 ${badge.className} ${index > 0 ? "-ml-2" : ""} ${index === 0 ? "group-hover:-translate-x-1" : "group-hover:translate-x-2"}`}
                                                                 >
                                                                 </div>
@@ -676,32 +713,32 @@ function QuizFormContent() {
                                                         </button>
                                                     </div>
                                                     <div className="p-3 pb-1">
-                                                        <div className="text-[10px] md:text-xs text-orange font-semibold mb-1">{meal.category}</div>
+                                                        <div className="text-[10px] md:text-xs text-orange font-semibold mb-1">{getCategoryLabel(meal.category)}</div>
                                                         <button type="button" onClick={() => addMeal(meal.id)} className="text-sm md:text-base font-semibold text-dark leading-tight text-left">
-                                                            {meal.title}
+                                                            {title}
                                                         </button>
                                                         <div className="flex items-center gap-1 mt-1 text-gray-500">
                                                             <Flame className="w-3 h-3" />
-                                                            <span className="text-xs font-medium">{meal.calories} kcal</span>
+                                                            <span className="text-xs font-medium">{meal.calories} {mealDetailCopy.kcal || "kcal"}</span>
                                                             <span className="text-[10px] mx-0.5">·</span>
-                                                            <span className="text-xs">{meal.grams}g</span>
+                                                            <span className="text-xs">{meal.grams}{mealDetailCopy.grams || "g"}</span>
                                                         </div>
                                                     </div>
                                                     <div className="px-3 pb-2 pt-1">
                                                         <div className="flex justify-between items-center bg-orange/10 rounded-lg px-2 py-1.5">
                                                             <div className="flex flex-col items-center">
                                                                 <span className="text-xs font-bold text-dark">{meal.protein}g</span>
-                                                                <span className="text-[10px] text-gray-500">Protein</span>
+                                                                <span className="text-[10px] text-gray-500">{mealDetailCopy.protein || "Protein"}</span>
                                                             </div>
                                                             <div className="w-px h-5 bg-dark/10"></div>
                                                             <div className="flex flex-col items-center">
                                                                 <span className="text-xs font-bold text-dark">{meal.fat}g</span>
-                                                                <span className="text-[10px] text-gray-500">Fat</span>
+                                                                <span className="text-[10px] text-gray-500">{mealDetailCopy.fat || "Fat"}</span>
                                                             </div>
                                                             <div className="w-px h-5 bg-dark/10"></div>
                                                             <div className="flex flex-col items-center">
                                                                 <span className="text-xs font-bold text-dark">{meal.carbs}g</span>
-                                                                <span className="text-[10px] text-gray-500">Carbs</span>
+                                                                <span className="text-[10px] text-gray-500">{mealDetailCopy.carbs || "Carbs"}</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -713,7 +750,7 @@ function QuizFormContent() {
                                                                     type="button"
                                                                     onClick={() => removeMeal(meal.id)}
                                                                     className="w-5 h-5 rounded-full text-xs text-dark hover:bg-orange/10"
-                                                                    aria-label="Remove one"
+                                                                    aria-label={t.removeOne || "Remove one"}
                                                                 >
                                                                     −
                                                                 </button>
@@ -724,7 +761,7 @@ function QuizFormContent() {
                                                                     type="button"
                                                                     onClick={() => addMeal(meal.id)}
                                                                     className="w-5 h-5 rounded-full text-xs text-dark hover:bg-orange/10"
-                                                                    aria-label="Add one"
+                                                                    aria-label={t.addOne || "Add one"}
                                                                 >
                                                                     +
                                                                 </button>
@@ -734,9 +771,9 @@ function QuizFormContent() {
                                                                 onClick={() => setActiveMeal(meal)}
                                                                 className="text-[10px] md:text-xs text-orange font-semibold hover:underline"
                                                             >
-                                                                View details
+                                                                {t.viewDetails || "View details"}
                                                             </button>
-                                                            {selected && <span className="text-[10px] md:text-xs text-orange font-semibold">Selected</span>}
+                                                            {selected && <span className="text-[10px] md:text-xs text-orange font-semibold">{t.selectedLabel || "Selected"}</span>}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -749,69 +786,69 @@ function QuizFormContent() {
 
                                 <div className="lg:pl-4">
                                     <div className="bill-rip bg-white rounded-lg border border-dark/10 shadow-soft p-5 space-y-4">
-                                        <h3 className="font-display text-lg text-dark">Order summary</h3>
+                                        <h3 className="font-display text-lg text-dark">{t.summaryTitle || "Order summary"}</h3>
                                         <div className="space-y-2 text-sm">
                                             <div className="flex justify-between">
-                                                <span className="text-gray-500">Meals per week</span>
+                                                <span className="text-gray-500">{t.summaryMeals || "Meals per week"}</span>
                                                 <span className="font-semibold text-dark">{targetMeals || 0}</span>
                                             </div>
                                             <div className="flex justify-between">
-                                                <span className="text-gray-500">Price per meal</span>
+                                                <span className="text-gray-500">{t.summaryPricePerMeal || "Price per meal"}</span>
                                                 <div className="text-right">
                                                     <span className="text-gray-500 line-through text-xs mr-2">€{marketingPricePerMeal.toFixed(2)}</span>
                                                     <span className="font-semibold text-dark">€{discountedPricePerMeal.toFixed(2)}</span>
                                                 </div>
                                             </div>
                                             <div className="flex justify-between">
-                                                <span className="text-gray-500">Delivery</span>
-                                                <span className="font-semibold text-green-600">Free</span>
+                                                <span className="text-gray-500">{t.summaryDelivery || "Delivery"}</span>
+                                                <span className="font-semibold text-green-600">{t.summaryDeliveryValue || "Free"}</span>
                                             </div>
                                             <div className="border-t border-dark/10 pt-2 mt-2">
                                                 <div className="flex justify-between items-baseline">
-                                                    <span className="font-semibold text-dark">Total</span>
+                                                    <span className="font-semibold text-dark">{t.summaryTotal || "Total"}</span>
                                                     <div className="text-right">
                                                         <span className="text-gray-500 line-through text-sm mr-2">€{subtotal.toFixed(2)}</span>
                                                         <span className="text-xl font-bold text-orange">€{discountedTotal.toFixed(2)}</span>
                                                     </div>
                                                 </div>
                                                 <div className="mt-2 bg-orange/10 rounded-md px-3 py-2 text-center">
-                                                    <span className="text-sm font-semibold text-orange">Launch offer applied — 20% OFF</span>
+                                                    <span className="text-sm font-semibold text-orange">{t.summaryDiscountLabel || "Launch offer applied — 20% OFF"}</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="space-y-2 pt-2 border-t border-dark/10">
                                             <div className="flex items-center gap-2 text-xs text-gray-500">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="w-3.5 h-3.5 text-orange"><rect x="14" y="4" width="4" height="16" rx="1"></rect><rect x="6" y="4" width="4" height="16" rx="1"></rect></svg>
-                                                Pause anytime
+                                                {t.summaryPause || "Pause anytime"}
                                             </div>
                                             <div className="flex items-center gap-2 text-xs text-gray-500">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="w-3.5 h-3.5 text-orange"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
-                                                No commitment
+                                                {t.summaryNoCommitment || "No commitment"}
                                             </div>
                                             <div className="flex items-center gap-2 text-xs text-gray-500">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="w-3.5 h-3.5 text-orange"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
-                                                Fresh meals, weekly
+                                                {t.summaryFreshMeals || "Fresh meals, weekly"}
                                             </div>
                                             <div className="pt-2">
-                                                <div className="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-2">Legend</div>
+                                                <div className="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-2">{t.summaryLegend || "Legend"}</div>
                                                 <div className="flex flex-wrap gap-3 text-xs text-gray-600">
                                                     <span className="inline-flex items-center gap-1">
-                                                        <span className="w-3 h-3 rounded-full bg-orange/90"></span>Chicken
+                                                        <span className="w-3 h-3 rounded-full bg-orange/90"></span>{legendLabels.chicken || "Chicken"}
                                                     </span>
                                                     <span className="inline-flex items-center gap-1">
-                                                        <span className="w-3 h-3 rounded-full bg-red-500/90"></span>Beef
+                                                        <span className="w-3 h-3 rounded-full bg-red-500/90"></span>{legendLabels.beef || "Beef"}
                                                     </span>
                                                     <span className="inline-flex items-center gap-1">
-                                                        <span className="w-3 h-3 rounded-full bg-sky-500/90"></span>Fish
+                                                        <span className="w-3 h-3 rounded-full bg-sky-500/90"></span>{legendLabels.fish || "Fish"}
                                                     </span>
                                                     <span className="inline-flex items-center gap-1">
-                                                        <span className="w-3 h-3 rounded-full bg-green-500/90"></span>Veg
+                                                        <span className="w-3 h-3 rounded-full bg-green-500/90"></span>{legendLabels.vegetarian || "Veg"}
                                                     </span>
                                                     <span className="inline-flex items-center gap-1">
-                                                        <span className="w-3 h-3 rounded-full bg-indigo-500/90"></span>High Protein
+                                                        <span className="w-3 h-3 rounded-full bg-indigo-500/90"></span>{legendLabels.highProtein || "High Protein"}
                                                     </span>
                                                     <span className="inline-flex items-center gap-1">
-                                                        <span className="w-3 h-3 rounded-full bg-emerald-500/90"></span>Light
+                                                        <span className="w-3 h-3 rounded-full bg-emerald-500/90"></span>{legendLabels.light || "Light"}
                                                     </span>
                                                 </div>
                                             </div>
@@ -836,24 +873,28 @@ function QuizFormContent() {
                             <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10 max-w-2xl mx-auto">{t.dateSubtitle || "Pick how many days you want deliveries each week."}</p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 max-w-2xl mx-auto">
-                                {DELIVERY_DAYS_OPTIONS.map((opt) => (
+                                {DELIVERY_DAYS_OPTIONS.map((opt) => {
+                                    const copy = deliveryOptionsCopy[opt.id] || {};
+                                    const label = copy.label || opt.label;
+                                    const description = copy.description || opt.description;
+                                    return (
                                     <button
                                         key={opt.id}
-                                        onClick={() => { updateData({ deliveryDays: opt.label }); setTimeout(nextStep, 300); }}
-                                        className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.deliveryDays === opt.label
+                                        onClick={() => { updateData({ deliveryDays: label }); setTimeout(nextStep, 300); }}
+                                        className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.deliveryDays === label
                                             ? "bg-orange/10 border-orange text-orange"
                                             : "bg-white border-dark/10 text-dark hover:bg-orange/5"
                                             }`}
                                     >
-                                        <Calendar size={18} className={`md:w-6 md:h-6 ${formData.deliveryDays === opt.label ? "text-orange" : "text-gray-400"}`} />
+                                        <Calendar size={18} className={`md:w-6 md:h-6 ${formData.deliveryDays === label ? "text-orange" : "text-gray-400"}`} />
                                         <div className="flex flex-col">
-                                            <span className="font-bold text-sm md:text-lg">{opt.label}</span>
-                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.deliveryDays === opt.label ? "text-orange/90" : "text-gray-500"}`}>
-                                                {opt.id === "1" ? "All meals in one drop" : opt.id === "2" ? "Midweek freshness" : opt.id === "3" ? "More frequent top-ups" : "Near-daily convenience"}
+                                            <span className="font-bold text-sm md:text-lg">{label}</span>
+                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.deliveryDays === label ? "text-orange/90" : "text-gray-500"}`}>
+                                                {description}
                                             </span>
                                         </div>
                                     </button>
-                                ))}
+                                )})}
                             </div>
                         </motion.div>
                     )}
@@ -876,7 +917,7 @@ function QuizFormContent() {
                                     <User className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
                                     <input
                                         type="text"
-                                        placeholder="Full Name"
+                                        placeholder={t.namePlaceholder || "Full Name"}
                                         required
                                         value={formData.name}
                                         onChange={(e) => updateData({ name: e.target.value })}
@@ -887,7 +928,7 @@ function QuizFormContent() {
                                     <Mail className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
                                     <input
                                         type="email"
-                                        placeholder="Email Address"
+                                        placeholder={t.emailPlaceholder || "Email Address"}
                                         required
                                         value={formData.email}
                                         onChange={(e) => updateData({ email: e.target.value })}
@@ -898,7 +939,7 @@ function QuizFormContent() {
                                     <Phone className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
                                     <input
                                         type="tel"
-                                        placeholder="Phone Number"
+                                        placeholder={t.phonePlaceholder || "Phone Number"}
                                         required
                                         value={formData.phone}
                                         onChange={(e) => updateData({ phone: e.target.value })}
@@ -907,7 +948,7 @@ function QuizFormContent() {
                                 </div>
 
                                 <p className="text-sm text-gray-500 py-2">
-                                    We respect your privacy. No immediate payment required.
+                                    {t.privacyNote || "We respect your privacy. No immediate payment required."}
                                 </p>
                             </form>
                         </motion.div>
@@ -949,57 +990,57 @@ function QuizFormContent() {
                         <div className="flex flex-col space-y-1.5 text-center sm:text-left">
                             <div className="flex items-center gap-2 mb-1">
                                 <span className="text-xs font-semibold text-orange bg-orange/10 px-2 py-0.5 rounded-full">
-                                    {activeMeal.category}
+                                    {getCategoryLabel(activeMeal.category)}
                                 </span>
                                 <span className="text-xs text-gray-500">{activeMeal.grams}g</span>
                             </div>
                             <h2 id="meal-detail-title" className="font-semibold tracking-tight font-display text-xl text-dark">
-                                {activeMeal.title}
+                                {(mealTexts[activeMeal.id]?.title || activeMeal.title)}
                             </h2>
-                            <p className="text-sm text-gray-500 mt-1">{activeMeal.description}</p>
+                            <p className="text-sm text-gray-500 mt-1">{(mealTexts[activeMeal.id]?.description || activeMeal.description)}</p>
                         </div>
                         <div className="grid grid-cols-4 gap-3 my-4">
                             <div className="text-center p-2.5 rounded-xl bg-orange/10">
                                 <div className="text-base font-bold text-orange">{activeMeal.calories}</div>
-                                <div className="text-[10px] text-gray-500 uppercase tracking-wide">kcal</div>
-                                <div className="text-[10px] text-gray-500 mt-0.5">Calories</div>
+                                <div className="text-[10px] text-gray-500 uppercase tracking-wide">{mealDetailCopy.kcal || "kcal"}</div>
+                                <div className="text-[10px] text-gray-500 mt-0.5">{mealDetailCopy.calories || "Calories"}</div>
                             </div>
                             <div className="text-center p-2.5 rounded-xl bg-gray-100">
                                 <div className="text-base font-bold text-dark">{activeMeal.protein}</div>
-                                <div className="text-[10px] text-gray-500 uppercase tracking-wide">g</div>
-                                <div className="text-[10px] text-gray-500 mt-0.5">Protein</div>
+                                <div className="text-[10px] text-gray-500 uppercase tracking-wide">{mealDetailCopy.grams || "g"}</div>
+                                <div className="text-[10px] text-gray-500 mt-0.5">{mealDetailCopy.protein || "Protein"}</div>
                             </div>
                             <div className="text-center p-2.5 rounded-xl bg-gray-100">
                                 <div className="text-base font-bold text-dark">{activeMeal.fat}</div>
-                                <div className="text-[10px] text-gray-500 uppercase tracking-wide">g</div>
-                                <div className="text-[10px] text-gray-500 mt-0.5">Fat</div>
+                                <div className="text-[10px] text-gray-500 uppercase tracking-wide">{mealDetailCopy.grams || "g"}</div>
+                                <div className="text-[10px] text-gray-500 mt-0.5">{mealDetailCopy.fat || "Fat"}</div>
                             </div>
                             <div className="text-center p-2.5 rounded-xl bg-gray-100">
                                 <div className="text-base font-bold text-dark">{activeMeal.carbs}</div>
-                                <div className="text-[10px] text-gray-500 uppercase tracking-wide">g</div>
-                                <div className="text-[10px] text-gray-500 mt-0.5">Carbs</div>
+                                <div className="text-[10px] text-gray-500 uppercase tracking-wide">{mealDetailCopy.grams || "g"}</div>
+                                <div className="text-[10px] text-gray-500 mt-0.5">{mealDetailCopy.carbs || "Carbs"}</div>
                             </div>
                         </div>
                         <div className="space-y-2 border-t border-dark/10 pt-3">
-                            <h4 className="text-xs font-semibold text-dark uppercase tracking-wide">More Nutrition</h4>
+                            <h4 className="text-xs font-semibold text-dark uppercase tracking-wide">{mealDetailCopy.moreNutrition || "More Nutrition"}</h4>
                             <div className="grid grid-cols-3 gap-2 text-center">
                                 <div className="bg-gray-100 rounded-lg p-2">
                                     <div className="text-sm font-semibold text-dark">{activeMeal.fiber}g</div>
-                                    <div className="text-[10px] text-gray-500">Fiber</div>
+                                    <div className="text-[10px] text-gray-500">{mealDetailCopy.fiber || "Fiber"}</div>
                                 </div>
                                 <div className="bg-gray-100 rounded-lg p-2">
                                     <div className="text-sm font-semibold text-dark">{activeMeal.sugar}g</div>
-                                    <div className="text-[10px] text-gray-500">Sugar</div>
+                                    <div className="text-[10px] text-gray-500">{mealDetailCopy.sugar || "Sugar"}</div>
                                 </div>
                                 <div className="bg-gray-100 rounded-lg p-2">
                                     <div className="text-sm font-semibold text-dark">{activeMeal.sodium}mg</div>
-                                    <div className="text-[10px] text-gray-500">Sodium</div>
+                                    <div className="text-[10px] text-gray-500">{mealDetailCopy.sodium || "Sodium"}</div>
                                 </div>
                             </div>
                         </div>
                         <div className="space-y-2 border-t border-dark/10 pt-3 mt-3">
-                            <h4 className="text-xs font-semibold text-dark uppercase tracking-wide">Ingredients</h4>
-                            <p className="text-sm text-gray-500">{activeMeal.ingredients}</p>
+                            <h4 className="text-xs font-semibold text-dark uppercase tracking-wide">{mealDetailCopy.ingredients || "Ingredients"}</h4>
+                            <p className="text-sm text-gray-500">{(mealTexts[activeMeal.id]?.ingredients || activeMeal.ingredients)}</p>
                         </div>
                     </div>
                 </div>
@@ -1045,9 +1086,15 @@ function QuizFormContent() {
     );
 }
 
+function QuizFormFallback() {
+    const { dictionary } = useI18n();
+    const t = (dictionary as any)?.quizForm || {};
+    return <div className="text-white text-center">{t.loading || "Loading..."}</div>;
+}
+
 export default function QuizForm() {
     return (
-        <Suspense fallback={<div className="text-white text-center">Loading...</div>}>
+        <Suspense fallback={<QuizFormFallback />}>
             <QuizFormContent />
         </Suspense>
     );
