@@ -137,7 +137,7 @@ export default function Hero({ city }: HeroProps) {
                             {t.launchOfferTitle || "Launch offer"}
                         </span>
                         <span className="text-white/80">
-                            {t.launchOfferText || "50% off when you join the waitlist"}
+                            {t.launchOfferText || "20% off when you join the waitlist"}
                         </span>
                     </motion.div>
                 </div>
@@ -146,7 +146,7 @@ export default function Hero({ city }: HeroProps) {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                    className="w-full flex justify-center mt-12"
+                    className="w-full flex flex-col sm:flex-row justify-center gap-3 mt-12"
                 >
                     <Link
                         href={bookingLink}
@@ -155,6 +155,13 @@ export default function Hero({ city }: HeroProps) {
                         className="bg-orange/90 hover:bg-orange text-white px-8 py-3.5 md:px-12 md:py-5 rounded-full font-bold text-base md:text-lg uppercase tracking-wider backdrop-blur-sm border-2 border-white/20 shadow-2xl hover:shadow-orange/40 hover:-translate-y-1 transition-all duration-300"
                     >
                         {t.cta || "Choose Your Plan"}
+                    </Link>
+                    <Link
+                        href={`/${lang}/quote?mode=trial`}
+                        onClick={() => trackCTAClick("Try First", "hero_section")}
+                        className="bg-white/90 hover:bg-white text-dark px-8 py-3.5 md:px-10 md:py-5 rounded-full font-bold text-base md:text-lg uppercase tracking-wider border-2 border-white/60 shadow-xl hover:-translate-y-1 transition-all duration-300"
+                    >
+                        {t.ctaSecondary || "Try First — No Subscription"}
                     </Link>
                 </motion.div>
             </div>

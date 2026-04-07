@@ -1,610 +1,618 @@
 {
-    "navigation": {
-        "howItWorks": "كيف يعمل",
-        "menu": "الخطط",
-        "about": "من نحن",
-        "faq": "الأسئلة الشائعة",
-        "bookNow": "اختر الخطة",
-        "blog": "المدونة"
-    },
-    "hero": {
-        "titlePart1": "وجبات Homemade",
-        "titlePart2": "لـ",
-        "titleHighlight": "الحياة الواقعية",
-        "animatedTitleStatic": "اشتراكات وجبات Homemade لـ ",
-        "animatedRotatingWords": [
-            "العائلات",
-            "المهنيين المشغولين",
-            "العيش النباتي",
-            "روتين مريح"
-        ],
-        "subtitle": "وجبات طازجة من إعداد الطهاة تُسلَّم أسبوعيًا. اختر خطة تناسب روتينك.",
-        "cta": "اختر خطتك",
-        "launchOfferTitle": "عرض الإطلاق",
-        "launchOfferText": "خصم 50% عند الانضمام لقائمة الانتظار"
-    },
-    "partners": {
-        "heading": "بفخر نتعاون مع"
-    },
-    "problemSolution": {
-        "title1": "لماذا تقضي أمسياتك",
-        "title2": "في التفكير بما ستطبخ؟",
-        "solutionTitle": "خطة وجبات أسبوعية تعمل فعلاً",
-        "solutionDesc": "اختر خطة، حدّد وجباتك، ودعنا نتكفل بالباقي.",
-        "benefit1Title": "وجبات متوازنة وثابتة",
-        "benefit1Desc": "أطباق من إعداد طهاة بمكونات حقيقية وتركيز غذائي واضح",
-        "benefit2Title": "بدون تخطيط وبدون توتر",
-        "benefit2Desc": "تجاوز التسوق والتحضير والتنظيف في أيام الأسبوع المزدحمة",
-        "benefit3Title": "مرونة في التصميم",
-        "benefit3Desc": "أوقف أو تخطَّ أو غيّر الخطة في أي وقت"
-    },
-    "howItWorks": {
-        "title": "كيف يعمل",
-        "step1Title": "اختر خطتك",
-        "step1Desc": "اختر الخطة التي تناسب روتينك وتفضيلاتك.",
-        "step2Title": "حدّد وجبات الأسبوع",
-        "step2Desc": "اختر وجباتك وحجم الحصص للأسبوع.",
-        "step3Title": "توصيل طازج",
-        "step3Desc": "سخّن وتناول واستمتع. أوقف أو تخطَّ متى شئت."
-    },
-    "cuisineShowcase": {
-        "title1": "اختر",
-        "title2": "خطتك",
-        "subtitle": "أربعة اشتراكات أساسية مصممة لطريقة الأكل في هولندا.",
-        "requestQuote": "اختر خطة",
-        "planMenu": "ابدأ اشتراكك",
-        "customAlert": "يمكن الإيقاف أو التخطي في أي وقت",
-        "items": {
-            "family": {
-                "title": "Balanced",
-                "description": "وجبات يومية بتوازن جيد بين البروتين والكربوهيدرات والخضار."
-            },
-            "routine": {
-                "title": "High Protein",
-                "description": "وجبات غنية بالبروتين لروتين نشط ومزدحم."
-            },
-            "plant": {
-                "title": "Vegan",
-                "description": "وجبات نباتية بنكهات قوية وحصص مشبعة."
-            },
-            "comfort": {
-                "title": "Low Calorie",
-                "description": "وجبات أخف مع حصص ذكية ومكونات نظيفة."
-            }
-        }
-    },
-    "occasions": {
-        "title": "لمن هي",
-        "exploreMenu": "عرض التفاصيل",
-        "items": {
-            "families": {
-                "title": "عائلات مشغولة",
-                "subtitle": "ليالي الأسبوع"
-            },
-            "professionals": {
-                "title": "مهنيون مشغولون",
-                "subtitle": "روتين"
-            },
-            "flexitarians": {
-                "title": "مرنون غذائيًا",
-                "subtitle": "نباتي أكثر"
-            },
-            "comfort": {
-                "title": "محبّو الراحة",
-                "subtitle": "رعاية"
-            }
-        }
-    },
-    "packageTiers": {
-        "title": "باقات عشاء الفريق",
-        "subtitle": "أسعار شفافة وقيمة استثنائية. تشمل جميع الباقات الخدمة والتنظيف.",
-        "badgePopular": "الأكثر شعبية",
-        "groupLabel": "المجموعة:",
-        "timeLabel": "المدة:",
-        "choosePackage": "اختر هذه الباقة",
-        "note": "جميع الأسعار بدون ضريبة القيمة المضافة. يتم تقديم السعر النهائي بعد الاستشارة.",
-        "packages": {
-            "starter": {
-                "name": "عشاء فريق Starter",
-                "priceUnit": "لكل شخص",
-                "groupSize": "15-30 شخصًا",
-                "duration": "2.5-3 ساعات",
-                "description": "فرق بميزانية محدودة، أحداث أولى",
-                "features": [
-                    "قائمة من طبقين",
-                    "مشروبات غير كحولية",
-                    "ترتيب الطاولة والتنظيف",
-                    "تلبية نظام غذائي واحد"
-                ]
-            },
-            "growth": {
-                "name": "عشاء فريق Growth",
-                "priceUnit": "لكل شخص",
-                "groupSize": "20-50 شخصًا",
-                "duration": "3-3.5 ساعات",
-                "description": "توازن مثالي بين الجودة والقيمة",
-                "features": [
-                    "قائمة من 3 أطباق",
-                    "مشروبات كحولية (نبيذ/بيرة)",
-                    "إعداد طاولة مميز",
-                    "تلبية غير محدودة للأنظمة الغذائية",
-                    "استشارة قبل الحدث (30 دقيقة)",
-                    "تعديلات على القائمة",
-                    "أكثر من 5 خيارات"
-                ]
-            },
-            "premium": {
-                "name": "احتفال فريق Premium",
-                "priceUnit": "لكل شخص",
-                "groupSize": "30-100 شخص",
-                "duration": "3.5-4 ساعات",
-                "description": "تجربة فاخرة للمناسبات الخاصة",
-                "features": [
-                    "قائمة من 4 أطباق",
-                    "باقة مشروبات مميزة",
-                    "أقمشة وتجهيز فاخر",
-                    "تخصيص كامل للطعام",
-                    "مكالمة تخطيط لمدة ساعة",
-                    "ملاحظات بعد الحدث",
-                    "منسق/مساعد للحدث",
-                    "صور احترافية اختيارية"
-                ]
-            }
-        }
-    },
-    "testimonials": {
-        "title": "ماذا يقول المشتركون",
-        "subtitle": "قصص حقيقية من أشخاص يستخدمون Homemade أسبوعيًا.",
-        "joinText": "انضم إلى آلاف المشتركين",
-        "bookButton": "اختر خطتك",
-        "verifiedClient": "عميل موثّق",
-        "metrics": {
-            "happyClients": "عملاء سعداء",
-            "averageRating": "متوسط التقييم",
-            "savings": "وقت مُوفَّر",
-            "guarantee": "ضمان الرضا"
-        },
-        "items": [
-            {
-                "company": "Balanced",
-                "eventType": "عشاء أسبوعي",
-                "quote": "أطفالنا يأكلون الوجبات فعلًا. الحصص مثالية ونوفر ساعات كل أسبوع."
-            },
-            {
-                "company": "High Protein",
-                "eventType": "هيكلة الأسبوع",
-                "quote": "توقفت عن تخطي الغداء أو طلب الوجبات السريعة. خيارات البروتين قوية وثابتة."
-            },
-            {
-                "company": "Vegan",
-                "eventType": "مرن غذائيًا",
-                "quote": "أردنا المزيد من الوجبات النباتية دون أن نكون نباتيين بالكامل. الطعم رائع ومشبع."
-            },
-            {
-                "company": "Low Calorie",
-                "eventType": "تسخين سهل",
-                "quote": "وجبات منزلية موثوقة وسهلة التسخين. هذا تمامًا ما أحتاجه."
-            },
-            {
-                "company": "Balanced",
-                "eventType": "حصص مضبوطة",
-                "quote": "تنوع رائع، بلا هدر، وموعد التوصيل دائمًا دقيق."
-            },
-            {
-                "company": "Busy Professional",
-                "eventType": "وجبات بدون تجهيز",
-                "quote": "أخيرًا أصبحت أيام الأسبوع منظمة. الوجبات طازجة بطعم حقيقي."
-            },
-            {
-                "company": "Balanced",
-                "eventType": "مناسبة للأطفال",
-                "quote": "توتر أقل في وقت العشاء. نسخّن ونقدّم ونستمتع."
-            }
-        ]
-    },
-    "faq": {
-        "title": "الأسئلة الشائعة",
-        "subtitle": "كل ما تحتاج معرفته عن اشتراكات الوجبات. لم تجد إجابتك؟ تواصل معنا.",
-        "stillQuestions": "ما زلت لديك أسئلة؟",
-        "contactTeam": "تواصل مع الفريق",
-        "items": [
-            {
-                "question": "ماذا يتضمن الاشتراك؟",
-                "answer": "وجبات طازجة من إعداد طهاة تُسلَّم أسبوعيًا. تختار الخطة والحصص والتفضيلات."
-            },
-            {
-                "question": "هل يمكنني الإيقاف أو تخطي الأسابيع؟",
-                "answer": "نعم. يمكنك الإيقاف أو التخطي أو تغيير الخطة قبل الموعد الأسبوعي."
-            },
-            {
-                "question": "هل تدعمون التفضيلات الغذائية؟",
-                "answer": "لدينا خيارات نباتية وغنية بالبروتين وخيارات مناسبة للحساسية."
-            },
-            {
-                "question": "كيف تعمل الحصص؟",
-                "answer": "اختر 2–4 حصص لكل وجبة، أو وجبات فردية إذا كنت تطلب لشخص واحد."
-            },
-            {
-                "question": "متى يتم التوصيل؟",
-                "answer": "نوصّل عبر مسارات أسبوعية حسب المنطقة. سترى الأيام المتاحة عند الدفع."
-            },
-            {
-                "question": "كم وقتًا مسبقًا يجب أن أطلب؟",
-                "answer": "تغلق الطلبات قبل 3–4 أيام من التوصيل لضمان التحضير الطازج."
-            },
-            {
-                "question": "هل يمكنني الإلغاء في أي وقت؟",
-                "answer": "نعم. يمكنك الإلغاء أو الإيقاف من حسابك دون التزام طويل."
-            },
-            {
-                "question": "هل الوجبات طازجة أم مجمّدة؟",
-                "answer": "تصل الوجبات طازجة ومصممة لتكون سهلة التسخين."
-            }
-        ]
-    },
-    "footer": {
-        "copyright": "© 2026 Homemade. جميع الحقوق محفوظة.",
-        "terms": "الشروط",
-        "privacy": "الخصوصية",
-        "contact": "اتصل بنا"
-    },
-    "bookingForm": {
-        "successTitle": "تم الحجز!",
-        "successMessage": "شكرًا لطلبك. سيتواصل فريقنا قريبًا لإتمام تفاصيل الحدث.",
-        "bookAnother": "احجز مرة أخرى",
-        "title1": "احجز",
-        "title2": "خدمة التموين",
-        "subtitle": "من فعاليات الشركات إلى الاحتفالات، نوفر تجربة تموين استثنائية.",
-        "feature1": "طهاة بتقييم 5 نجوم",
-        "feature2": "قوائم مخصصة",
-        "selectMenuLabel": "اختر القائمة",
-        "customMenuOption": "-- سأخصص قائمتي --",
-        "preferredChefLabel": "الطاهي المفضل",
-        "anyChefOption": "أي طاهٍ",
-        "cuisineStyleLabel": "نوع المطبخ",
-        "cuisinePlaceholder": "مثل: إيطالي",
-        "eventDetailsLabel": "تفاصيل الحدث",
-        "guests": {
-            "g2": "ضيفان",
-            "g3_5": "3-5 ضيوف",
-            "g6_10": "6-10 ضيوف",
-            "g10plus": "أكثر من 10 ضيوف"
-        },
-        "namePlaceholder": "اسمك",
-        "emailPlaceholder": "البريد الإلكتروني",
-        "bookNowBtn": "احجز الآن",
-        "noPaymentText": "لا يلزم دفع فوري.",
-        "contactedText": "سنتواصل لتأكيد التفاصيل.",
-        "loadingText": "جارٍ تحميل النموذج..."
-    },
-    "quizForm": {
-        "stepProgress": "الخطوة {current} من {total}",
-        "backButton": "رجوع",
-        "nextButton": "التالي",
-        "submitButton": "انضم إلى قائمة الانتظار",
-        "occasionTitle": "اختر خطتك",
-        "occasionSubtitle": "اختر الاشتراك الذي يناسب روتينك.",
-        "step1Header": "أنشئ صندوقك الأول",
-        "step1Subheader": "اختر خطتك وعدد الوجبات الأسبوعية.",
-        "planSectionTitle": "الخطة",
-        "mealsSectionTitle": "وجبات في الأسبوع",
-        "summaryTitle": "ملخص الطلب",
-        "summaryPlan": "الخطة",
-        "summaryMeals": "وجبات في الأسبوع",
-        "summaryPricePerMeal": "سعر الوجبة",
-        "summaryDelivery": "التوصيل",
-        "summaryDeliveryValue": "مجاني",
-        "summaryTotal": "الإجمالي",
-        "summaryDiscountLabel": "تم تطبيق عرض الإطلاق — خصم 20%",
-        "summaryOffer": "مكافأة قائمة الانتظار — خصم 50% عند الإطلاق",
-        "summaryNote": "ستحصل على العرض بعد الانضمام لقائمة الانتظار.",
-        "summaryPause": "إيقاف في أي وقت",
-        "summaryNoCommitment": "بدون التزام",
-        "summaryFreshMeals": "وجبات طازجة أسبوعيًا",
-        "summaryLegend": "الأسطورة",
-        "legendLabels": {
-            "chicken": "دجاج",
-            "beef": "لحم",
-            "fish": "سمك",
-            "vegetarian": "نباتي",
-            "highProtein": "High Protein",
-            "light": "Light"
-        },
-        "guestsTitle": "كم عدد الوجبات أسبوعيًا؟",
-        "guestsSubtitle": "اختر الكمية الأسبوعية المناسبة لروتينك.",
-        "dateTitle": "كم عدد أيام التوصيل؟",
-        "dateSubtitle": "اختر عدد أيام التوصيل في الأسبوع.",
-        "contactTitle": "بياناتك",
-        "contactSubtitle": "أين نرسل تأكيد قائمة الانتظار؟",
-        "mealsTitle": "اختر وجباتك",
-        "mealsSubtitle": "حدّد وجباتك للأسبوع.",
-        "mealsSelected": "تم اختيار {selected} من {total} وجبة",
-        "mealSelectionError": "يمكنك اختيار حتى {count} وجبة.",
-        "viewDetails": "عرض التفاصيل",
-        "selectedLabel": "محدد",
-        "addOne": "أضف",
-        "removeOne": "أزل",
-        "namePlaceholder": "الاسم الكامل",
-        "emailPlaceholder": "البريد الإلكتروني",
-        "phonePlaceholder": "رقم الهاتف",
-        "privacyNote": "نحترم خصوصيتك. لا يلزم دفع فوري.",
-        "submitting": "جارٍ الإرسال...",
-        "submitError": "فشل الإرسال. حاول مرة أخرى.",
-        "successTitle": "تمت إضافتك لقائمة الانتظار!",
-        "successMessage": "شكرًا! حجزنا مكانك وسنراسلك عند فتح الاشتراكات.",
-        "backHome": "العودة للرئيسية",
-        "loading": "جارٍ التحميل...",
-        "mealFilters": {
-            "all": "الكل",
-            "chicken": "دجاج",
-            "beef": "لحم",
-            "fish": "سمك",
-            "vegetarian": "نباتي"
-        },
-        "mealCategoryLabels": {
-            "chicken": "دجاج",
-            "beef": "لحم",
-            "fish": "سمك",
-            "vegetarian": "نباتي"
-        },
-        "mealBadgeLabels": {
-            "chicken": "دجاج",
-            "beef": "لحم",
-            "fish": "سمك",
-            "vegetarian": "نباتي",
-            "highProtein": "High Protein",
-            "light": "Light"
-        },
-        "mealDetails": {
-            "kcal": "kcal",
-            "grams": "g",
-            "calories": "السعرات",
-            "protein": "بروتين",
-            "fat": "دهون",
-            "carbs": "كربوهيدرات",
-            "moreNutrition": "مزيد من القيم الغذائية",
-            "fiber": "ألياف",
-            "sugar": "سكر",
-            "sodium": "صوديوم",
-            "ingredients": "المكونات"
-        },
-        "mealOptions": {
-            "3": {
-                "label": "3 وجبات / أسبوع",
-                "description": "دعم خفيف للأسابيع المزدحمة"
-            },
-            "5": {
-                "label": "5 وجبات / أسبوع",
-                "description": "تغطية كاملة لأيام العمل"
-            },
-            "7": {
-                "label": "7 وجبات / أسبوع",
-                "description": "عشاء يومي"
-            },
-            "10": {
-                "label": "10 وجبات / أسبوع",
-                "description": "مرونة قصوى"
-            }
-        },
-        "deliveryOptions": {
-            "1": {
-                "label": "يوم توصيل واحد",
-                "description": "كل الوجبات في تسليم واحد"
-            },
-            "2": {
-                "label": "يومان توصيل",
-                "description": "نضارة منتصف الأسبوع"
-            },
-            "3": {
-                "label": "3 أيام توصيل",
-                "description": "إعادة تزويد أكثر تكرارًا"
-            },
-            "5": {
-                "label": "5 أيام توصيل",
-                "description": "راحة شبه يومية"
-            }
-        },
-        "plans": {
-            "balanced": {
-                "label": "Balanced",
-                "description": "وجبات يومية بتوازن جيد بين البروتين والكربوهيدرات والخضار."
-            },
-            "high-protein": {
-                "label": "High Protein",
-                "description": "وجبات غنية بالبروتين لروتين نشط ومزدحم."
-            },
-            "vegan": {
-                "label": "Vegan",
-                "description": "وجبات نباتية بنكهات قوية وحصص مشبعة."
-            },
-            "low-calorie": {
-                "label": "Low Calorie",
-                "description": "وجبات أخف مع حصص ذكية ومكونات نظيفة."
-            }
-        },
-        "mealItems": {
-            "chicken-teriyaki": {
-                "title": "Chicken Teriyaki Rice Bowl",
-                "description": "دجاج ترياكي على أرز مطهو مع بروكلي وسمسم.",
-                "ingredients": "دجاج، أرز، بروكلي، صلصة ترياكي، سمسم، بصل أخضر"
-            },
-            "chicken-satay": {
-                "title": "Chicken Satay Rice Bowl",
-                "description": "دجاج ساتاي مشوي مع أرز ياسمين وخضار مقرمشة.",
-                "ingredients": "دجاج، أرز ياسمين، صلصة فول سوداني، خيار، جزر"
-            },
-            "chicken-shawarma": {
-                "title": "Chicken Shawarma Rice Bowl",
-                "description": "دجاج شاورما متبل مع أرز وأعشاب وبصل مخلل.",
-                "ingredients": "دجاج، أرز، خليط زبادي وتوابل، بصل مخلل، أعشاب"
-            },
-            "butter-chicken": {
-                "title": "Butter Chicken with Rice",
-                "description": "دجاج بالزبدة كريمي مع أرز بسمتي عطري.",
-                "ingredients": "دجاج، أرز بسمتي، صلصة طماطم كريمية، توابل"
-            },
-            "chicken-pesto": {
-                "title": "Chicken Pesto Pasta",
-                "description": "باستا بيستو مع دجاج وطماطم كرزية وسبانخ.",
-                "ingredients": "دجاج، باستا، بيستو ريحان، طماطم، سبانخ"
-            },
-            "chili-chicken": {
-                "title": "Chili Chicken Noodles",
-                "description": "دجاج حار مع نودلز وخضار مقرمشة.",
-                "ingredients": "دجاج، نودلز، صلصة فلفل حار، فلفل رومي، بصل"
-            },
-            "beef-bolognese": {
-                "title": "Beef Bolognese Pasta",
-                "description": "بولونيز لحم مطهو ببطء مع باستا أل دينتي.",
-                "ingredients": "لحم، باستا، طماطم، بصل، ثوم، أعشاب"
-            },
-            "beef-shawarma": {
-                "title": "Beef Shawarma Rice Bowl",
-                "description": "شاورما لحم طرية مع أرز وأعشاب ورشة طحينة.",
-                "ingredients": "لحم، أرز، بهارات شاورما، طحينة، بقدونس"
-            },
-            "pulled-beef": {
-                "title": "Mexican Pulled Beef Bowl",
-                "description": "لحم مبشور بطيء الطهي مع أرز وفاصولياء وبيكو دي غايو.",
-                "ingredients": "لحم، أرز، فاصولياء، طماطم، ليمون أخضر، كزبرة"
-            },
-            "salmon-teriyaki": {
-                "title": "Salmon Teriyaki Rice Bowl",
-                "description": "سلمون ترياكي مع أرز وخضار مطهوة على البخار.",
-                "ingredients": "سلمون، أرز، صلصة ترياكي، فاصولياء خضراء"
-            },
-            "grilled-salmon": {
-                "title": "Grilled Salmon with Rice & Vegetables",
-                "description": "سلمون مشوي بالفرن مع أرز وخضار موسمية.",
-                "ingredients": "سلمون، أرز، بروكلي، جزر، ليمون، شبت"
-            },
-            "veg-bowl": {
-                "title": "Vegetable Bowl",
-                "description": "وعاء نباتي مع حبوب وصلصة حمضيات.",
-                "ingredients": "كينوا، حمص، خضار مشكلة، صلصة ليمون"
-            },
-            "veg-risotto": {
-                "title": "Vegetable Risotto",
-                "description": "ريزوتو خضار كريمي مع أعشاب وبارميزان.",
-                "ingredients": "أرز أربوريو، فطر، كوسا، بارميزان، أعشاب"
-            }
-        }
-    },
-    "menuGrid": {
-        "title": "مطاعم التموين",
-        "subtitle": "اكتشف خيارات مطاعمنا المتنوعة. يمكن تخصيص كل مطعم حسب احتياجاتك.",
-        "detectingLocation": "جارٍ تحديد موقعك...",
-        "selectCity": "📍 اختر المدينة",
-        "showingRestaurants": "عرض {count} مطعم/مطاعم في {city}",
-        "loading": "جارٍ تحميل المطاعم في {city}...",
-        "failLoad": "فشل تحميل المطاعم",
-        "noRestaurants": "لا توجد مطاعم في {city}",
-        "viewMenu": "عرض القائمة →"
-    },
-    "chefCarousel": {
-        "title1": "مطاعمنا ",
-        "title2": "المميزة",
-        "title3": "",
-        "subtitle": "اكتشف طهاة ومطاعم جاهزة لتموين حدثك القادم.",
-        "loading": "جارٍ تحميل المطاعم...",
-        "failLoad": "فشل تحميل المطاعم",
-        "noRestaurants": "لم يتم العثور على مطاعم."
-    },
-    "packageComparison": {
-        "title": "قارن الباقات",
-        "subtitle": "اطّلع على ما تتضمنه كل باقة لاختيار الأنسب لفريقك.",
-        "featureCol": "الميزة",
-        "starter": "Starter",
-        "growth": "Growth",
-        "premium": "Premium",
-        "mostPopular": "الأكثر شعبية",
-        "perPerson": "لكل شخص",
-        "select": "اختر",
-        "selectPkg": "اختر",
-        "features": {
-            "numberOfCourses": "عدد الأطباق",
-            "courses2": "طبقان",
-            "courses3": "3 أطباق",
-            "courses4": "4 أطباق",
-            "menuOptions": "خيارات القائمة",
-            "standard": "قياسي",
-            "options5": "5+ خيارات",
-            "unlimited": "غير محدود",
-            "customMenuAdjustments": "تعديلات القائمة",
-            "dietaryAccommodations": "الأنظمة الغذائية",
-            "type1": "نوع واحد",
-            "nonAlcoholicDrinks": "مشروبات غير كحولية",
-            "wineBeer": "نبيذ وبيرة",
-            "premiumBeverage": "باقة مشروبات مميزة",
-            "tableSetup": "تجهيز الطاولة والتنظيف",
-            "premiumTableSetup": "تجهيز طاولة مميز",
-            "customLinens": "أقمشة مخصصة",
-            "eventCoordinator": "منسق الحدث",
-            "preEventConsultation": "استشارة قبل الحدث",
-            "min30": "30 دقيقة",
-            "hour1": "ساعة واحدة",
-            "postEventFeedback": "ملاحظات بعد الحدث",
-            "professionalPhotos": "صور احترافية",
-            "optional": "اختياري",
-            "groupSize": "حجم المجموعة",
-            "size1530": "15-30",
-            "size2050": "20-50",
-            "size30100": "30-100",
-            "duration": "المدة",
-            "dur253": "2.5-3س",
-            "dur335": "3-3.5س",
-            "dur354": "3.5-4س"
-        }
-    },
-    "chefSignup": {
-        "title": "هل أنت طاهٍ؟",
-        "subtitle": "انضم إلى شبكتنا الحصرية من الطهاة وشارك قوائمك الموسمية.",
-        "applyBtn": "قدّم كطاهٍ"
-    },
-    "metadata": {
-        "homeTitle": "اشتراكات وجبات Homemade | توصيل أسبوعي طازج",
-        "homeDescription": "اختر اشتراك وجبات لحياة واقعية. وجبات طازجة من إعداد الطهاة تُسلَّم أسبوعيًا في هولندا.",
-        "quoteTitle": "ابدأ اشتراكك | Homemade",
-        "quoteDescription": "أجب عن بضعة أسئلة سريعة وابدأ اشتراك الوجبات الأسبوعي."
-    },
-    "cateringCalculator": {
-        "badge": "💰 حاسبة التوفير",
-        "title1": "اعرف كم يمكن لفريقك",
-        "title2": "أن يوفر",
-        "subtitle": "قارن تكلفة تموين المطاعم بـ Homemade. عدّل الأشرطة حسب وضعك.",
-        "configTitle": "اضبط إعدادات الحدث",
-        "eventTypeLabel": "نوع الحدث",
-        "guestsLabel": "عدد الضيوف",
-        "guestsMin": "5 ضيوف",
-        "guestsMax": "200 ضيف",
-        "eventsLabel": "الأحداث سنويًا",
-        "eventsMin": "1x",
-        "eventsMax": "24x / سنة",
-        "noteRef": "💡 استنادًا إلى متوسط أسعار أمستردام مقارنة بـ Homemade. قد يختلف التوفير الفعلي.",
-        "saveText": "يمكنك توفير",
-        "perYearText": "سنوياً",
-        "lessThanText": "أقل من المطاعم",
-        "perEventSave": "توفير لكل حدث",
-        "over5Years": "خلال 5 سنوات",
-        "costBreakdown": "تفصيل التكلفة السنوية",
-        "restaurantCatering": "تموين المطاعم",
-        "homemadeCatering": "تموين Homemade",
-        "bookBtn": "احجز أول حدث →",
-        "mealLabels": {
-            "lunch": "غداء الفريق",
-            "dinner": "عشاء الفريق",
-            "drinks": "مشروبات ووجبات خفيفة",
-            "breakfast": "اجتماع إفطار"
-        }
-    },
-    "promoBanner": {
-        "badge": "أماكن محدودة",
-        "headline": "خصم 50% عند الإطلاق",
-        "subline": "انضم إلى قائمة الانتظار اليوم",
-        "cta": "انضم الآن"
-    },
-    "quotePage": {
-        "title": "انضم إلى قائمة الانتظار",
-        "subtitle": "أجب عن بعض الأسئلة وسنضيفك إلى قائمة الانتظار."
+  "navigation": {
+    "howItWorks": "كيف يعمل",
+    "menu": "الخطط",
+    "about": "من نحن",
+    "faq": "الأسئلة الشائعة",
+    "bookNow": "اختر الخطة",
+    "blog": "المدونة"
+  },
+  "hero": {
+    "titlePart1": "وجبات Homemade",
+    "titlePart2": "لـ",
+    "titleHighlight": "الحياة الواقعية",
+    "animatedTitleStatic": "اشتراكات وجبات Homemade لـ ",
+    "animatedRotatingWords": [
+      "العائلات",
+      "المهنيين المشغولين",
+      "العيش النباتي",
+      "روتين مريح"
+    ],
+    "subtitle": "وجبات طازجة من إعداد الطهاة تُسلَّم أسبوعيًا. اختر خطة تناسب روتينك.",
+    "cta": "اختر خطتك",
+    "launchOfferTitle": "عرض الإطلاق",
+    "launchOfferText": "خصم 20% عند الانضمام لقائمة الانتظار",
+    "ctaSecondary": "جرّب أولًا — بدون اشتراك"
+  },
+  "partners": {
+    "heading": "بفخر نتعاون مع"
+  },
+  "problemSolution": {
+    "title1": "لماذا تقضي أمسياتك",
+    "title2": "في التفكير بما ستطبخ؟",
+    "solutionTitle": "خطة وجبات أسبوعية تعمل فعلاً",
+    "solutionDesc": "اختر خطة، حدّد وجباتك، ودعنا نتكفل بالباقي.",
+    "benefit1Title": "وجبات متوازنة وثابتة",
+    "benefit1Desc": "أطباق من إعداد طهاة بمكونات حقيقية وتركيز غذائي واضح",
+    "benefit2Title": "بدون تخطيط وبدون توتر",
+    "benefit2Desc": "تجاوز التسوق والتحضير والتنظيف في أيام الأسبوع المزدحمة",
+    "benefit3Title": "مرونة في التصميم",
+    "benefit3Desc": "أوقف أو تخطَّ أو غيّر الخطة في أي وقت"
+  },
+  "howItWorks": {
+    "title": "كيف يعمل",
+    "step1Title": "اختر خطتك",
+    "step1Desc": "اختر الخطة التي تناسب روتينك وتفضيلاتك.",
+    "step2Title": "حدّد وجبات الأسبوع",
+    "step2Desc": "اختر وجباتك وحجم الحصص للأسبوع.",
+    "step3Title": "توصيل طازج",
+    "step3Desc": "سخّن وتناول واستمتع. أوقف أو تخطَّ متى شئت."
+  },
+  "cuisineShowcase": {
+    "title1": "اختر",
+    "title2": "خطتك",
+    "subtitle": "أربعة اشتراكات أساسية مصممة لطريقة الأكل في هولندا.",
+    "requestQuote": "اختر خطة",
+    "planMenu": "ابدأ اشتراكك",
+    "customAlert": "يمكن الإيقاف أو التخطي في أي وقت",
+    "items": {
+      "family": {
+        "title": "Balanced",
+        "description": "وجبات يومية بتوازن جيد بين البروتين والكربوهيدرات والخضار."
+      },
+      "routine": {
+        "title": "High Protein",
+        "description": "وجبات غنية بالبروتين لروتين نشط ومزدحم."
+      },
+      "plant": {
+        "title": "Vegan",
+        "description": "وجبات نباتية بنكهات قوية وحصص مشبعة."
+      },
+      "comfort": {
+        "title": "Low Calorie",
+        "description": "وجبات أخف مع حصص ذكية ومكونات نظيفة."
+      }
     }
+  },
+  "occasions": {
+    "title": "لمن هي",
+    "exploreMenu": "عرض التفاصيل",
+    "items": {
+      "families": {
+        "title": "عائلات مشغولة",
+        "subtitle": "ليالي الأسبوع"
+      },
+      "professionals": {
+        "title": "مهنيون مشغولون",
+        "subtitle": "روتين"
+      },
+      "flexitarians": {
+        "title": "مرنون غذائيًا",
+        "subtitle": "نباتي أكثر"
+      },
+      "comfort": {
+        "title": "محبّو الراحة",
+        "subtitle": "رعاية"
+      }
+    }
+  },
+  "packageTiers": {
+    "title": "باقات عشاء الفريق",
+    "subtitle": "أسعار شفافة وقيمة استثنائية. تشمل جميع الباقات الخدمة والتنظيف.",
+    "badgePopular": "الأكثر شعبية",
+    "groupLabel": "المجموعة:",
+    "timeLabel": "المدة:",
+    "choosePackage": "اختر هذه الباقة",
+    "note": "جميع الأسعار بدون ضريبة القيمة المضافة. يتم تقديم السعر النهائي بعد الاستشارة.",
+    "packages": {
+      "starter": {
+        "name": "عشاء فريق Starter",
+        "priceUnit": "لكل شخص",
+        "groupSize": "15-30 شخصًا",
+        "duration": "2.5-3 ساعات",
+        "description": "فرق بميزانية محدودة، أحداث أولى",
+        "features": [
+          "قائمة من طبقين",
+          "مشروبات غير كحولية",
+          "ترتيب الطاولة والتنظيف",
+          "تلبية نظام غذائي واحد"
+        ]
+      },
+      "growth": {
+        "name": "عشاء فريق Growth",
+        "priceUnit": "لكل شخص",
+        "groupSize": "20-50 شخصًا",
+        "duration": "3-3.5 ساعات",
+        "description": "توازن مثالي بين الجودة والقيمة",
+        "features": [
+          "قائمة من 3 أطباق",
+          "مشروبات كحولية (نبيذ/بيرة)",
+          "إعداد طاولة مميز",
+          "تلبية غير محدودة للأنظمة الغذائية",
+          "استشارة قبل الحدث (30 دقيقة)",
+          "تعديلات على القائمة",
+          "أكثر من 5 خيارات"
+        ]
+      },
+      "premium": {
+        "name": "احتفال فريق Premium",
+        "priceUnit": "لكل شخص",
+        "groupSize": "30-100 شخص",
+        "duration": "3.5-4 ساعات",
+        "description": "تجربة فاخرة للمناسبات الخاصة",
+        "features": [
+          "قائمة من 4 أطباق",
+          "باقة مشروبات مميزة",
+          "أقمشة وتجهيز فاخر",
+          "تخصيص كامل للطعام",
+          "مكالمة تخطيط لمدة ساعة",
+          "ملاحظات بعد الحدث",
+          "منسق/مساعد للحدث",
+          "صور احترافية اختيارية"
+        ]
+      }
+    }
+  },
+  "testimonials": {
+    "title": "ماذا يقول المشتركون",
+    "subtitle": "قصص حقيقية من أشخاص يستخدمون Homemade أسبوعيًا.",
+    "joinText": "انضم إلى آلاف المشتركين",
+    "bookButton": "اختر خطتك",
+    "verifiedClient": "عميل موثّق",
+    "metrics": {
+      "happyClients": "عملاء سعداء",
+      "averageRating": "متوسط التقييم",
+      "savings": "وقت مُوفَّر",
+      "guarantee": "ضمان الرضا"
+    },
+    "items": [
+      {
+        "company": "Balanced",
+        "eventType": "عشاء أسبوعي",
+        "quote": "أطفالنا يأكلون الوجبات فعلًا. الحصص مثالية ونوفر ساعات كل أسبوع."
+      },
+      {
+        "company": "High Protein",
+        "eventType": "هيكلة الأسبوع",
+        "quote": "توقفت عن تخطي الغداء أو طلب الوجبات السريعة. خيارات البروتين قوية وثابتة."
+      },
+      {
+        "company": "Vegan",
+        "eventType": "مرن غذائيًا",
+        "quote": "أردنا المزيد من الوجبات النباتية دون أن نكون نباتيين بالكامل. الطعم رائع ومشبع."
+      },
+      {
+        "company": "Low Calorie",
+        "eventType": "تسخين سهل",
+        "quote": "وجبات منزلية موثوقة وسهلة التسخين. هذا تمامًا ما أحتاجه."
+      },
+      {
+        "company": "Balanced",
+        "eventType": "حصص مضبوطة",
+        "quote": "تنوع رائع، بلا هدر، وموعد التوصيل دائمًا دقيق."
+      },
+      {
+        "company": "Busy Professional",
+        "eventType": "وجبات بدون تجهيز",
+        "quote": "أخيرًا أصبحت أيام الأسبوع منظمة. الوجبات طازجة بطعم حقيقي."
+      },
+      {
+        "company": "Balanced",
+        "eventType": "مناسبة للأطفال",
+        "quote": "توتر أقل في وقت العشاء. نسخّن ونقدّم ونستمتع."
+      }
+    ]
+  },
+  "faq": {
+    "title": "الأسئلة الشائعة",
+    "subtitle": "كل ما تحتاج معرفته عن اشتراكات الوجبات. لم تجد إجابتك؟ تواصل معنا.",
+    "stillQuestions": "ما زلت لديك أسئلة؟",
+    "contactTeam": "تواصل مع الفريق",
+    "items": [
+      {
+        "question": "ماذا يتضمن الاشتراك؟",
+        "answer": "وجبات طازجة من إعداد طهاة تُسلَّم أسبوعيًا. تختار الخطة والحصص والتفضيلات."
+      },
+      {
+        "question": "هل يمكنني الإيقاف أو تخطي الأسابيع؟",
+        "answer": "نعم. يمكنك الإيقاف أو التخطي أو تغيير الخطة قبل الموعد الأسبوعي."
+      },
+      {
+        "question": "هل تدعمون التفضيلات الغذائية؟",
+        "answer": "لدينا خيارات نباتية وغنية بالبروتين وخيارات مناسبة للحساسية."
+      },
+      {
+        "question": "كيف تعمل الحصص؟",
+        "answer": "اختر 2–4 حصص لكل وجبة، أو وجبات فردية إذا كنت تطلب لشخص واحد."
+      },
+      {
+        "question": "متى يتم التوصيل؟",
+        "answer": "نوصّل عبر مسارات أسبوعية حسب المنطقة. سترى الأيام المتاحة عند الدفع."
+      },
+      {
+        "question": "كم وقتًا مسبقًا يجب أن أطلب؟",
+        "answer": "تغلق الطلبات قبل 3–4 أيام من التوصيل لضمان التحضير الطازج."
+      },
+      {
+        "question": "هل يمكنني الإلغاء في أي وقت؟",
+        "answer": "نعم. يمكنك الإلغاء أو الإيقاف من حسابك دون التزام طويل."
+      },
+      {
+        "question": "هل الوجبات طازجة أم مجمّدة؟",
+        "answer": "تصل الوجبات طازجة ومصممة لتكون سهلة التسخين."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Homemade. جميع الحقوق محفوظة.",
+    "terms": "الشروط",
+    "privacy": "الخصوصية",
+    "contact": "اتصل بنا"
+  },
+  "bookingForm": {
+    "successTitle": "تم الحجز!",
+    "successMessage": "شكرًا لطلبك. سيتواصل فريقنا قريبًا لإتمام تفاصيل الحدث.",
+    "bookAnother": "احجز مرة أخرى",
+    "title1": "احجز",
+    "title2": "خدمة التموين",
+    "subtitle": "من فعاليات الشركات إلى الاحتفالات، نوفر تجربة تموين استثنائية.",
+    "feature1": "طهاة بتقييم 5 نجوم",
+    "feature2": "قوائم مخصصة",
+    "selectMenuLabel": "اختر القائمة",
+    "customMenuOption": "-- سأخصص قائمتي --",
+    "preferredChefLabel": "الطاهي المفضل",
+    "anyChefOption": "أي طاهٍ",
+    "cuisineStyleLabel": "نوع المطبخ",
+    "cuisinePlaceholder": "مثل: إيطالي",
+    "eventDetailsLabel": "تفاصيل الحدث",
+    "guests": {
+      "g2": "ضيفان",
+      "g3_5": "3-5 ضيوف",
+      "g6_10": "6-10 ضيوف",
+      "g10plus": "أكثر من 10 ضيوف"
+    },
+    "namePlaceholder": "اسمك",
+    "emailPlaceholder": "البريد الإلكتروني",
+    "bookNowBtn": "احجز الآن",
+    "noPaymentText": "لا يلزم دفع فوري.",
+    "contactedText": "سنتواصل لتأكيد التفاصيل.",
+    "loadingText": "جارٍ تحميل النموذج..."
+  },
+  "quizForm": {
+    "stepProgress": "الخطوة {current} من {total}",
+    "backButton": "رجوع",
+    "nextButton": "التالي",
+    "submitButton": "انضم إلى قائمة الانتظار",
+    "occasionTitle": "اختر خطتك",
+    "occasionSubtitle": "اختر الاشتراك الذي يناسب روتينك.",
+    "step1Header": "أنشئ صندوقك الأول",
+    "step1Subheader": "اختر خطتك وعدد الوجبات الأسبوعية.",
+    "planSectionTitle": "الخطة",
+    "mealsSectionTitle": "وجبات في الأسبوع",
+    "summaryTitle": "ملخص الطلب",
+    "summaryPlan": "الخطة",
+    "summaryMeals": "وجبات في الأسبوع",
+    "summaryPricePerMeal": "سعر الوجبة (بعد الخصم)",
+    "summaryDelivery": "التوصيل",
+    "summaryDeliveryValue": "مجاني",
+    "summaryTotal": "الإجمالي",
+    "summaryDiscountLabel": "تم تطبيق عرض الإطلاق — خصم 20%",
+    "summaryOffer": "مكافأة قائمة الانتظار — خصم 20% عند الإطلاق",
+    "summaryNote": "ستحصل على العرض بعد الانضمام لقائمة الانتظار.",
+    "summaryPause": "إيقاف في أي وقت",
+    "summaryNoCommitment": "بدون التزام",
+    "summaryFreshMeals": "وجبات طازجة أسبوعيًا",
+    "summaryLegend": "الأسطورة",
+    "legendLabels": {
+      "chicken": "دجاج",
+      "beef": "لحم",
+      "fish": "سمك",
+      "vegetarian": "نباتي",
+      "highProtein": "High Protein",
+      "light": "Light"
+    },
+    "guestsTitle": "كم عدد الوجبات أسبوعيًا؟",
+    "guestsSubtitle": "اختر الكمية الأسبوعية المناسبة لروتينك.",
+    "dateTitle": "كم عدد أيام التوصيل؟",
+    "dateSubtitle": "اختر عدد أيام التوصيل في الأسبوع.",
+    "contactTitle": "بياناتك",
+    "contactSubtitle": "أين نرسل تأكيد قائمة الانتظار؟",
+    "mealsTitle": "اختر وجباتك",
+    "mealsSubtitle": "حدّد وجباتك للأسبوع.",
+    "mealsSelected": "تم اختيار {selected} من {total} وجبة",
+    "mealSelectionError": "يمكنك اختيار حتى {count} وجبة.",
+    "viewDetails": "عرض التفاصيل",
+    "selectedLabel": "محدد",
+    "addOne": "أضف",
+    "removeOne": "أزل",
+    "namePlaceholder": "الاسم الكامل",
+    "emailPlaceholder": "البريد الإلكتروني",
+    "phonePlaceholder": "رقم الهاتف",
+    "privacyNote": "نحترم خصوصيتك. لا يلزم دفع فوري.",
+    "submitting": "جارٍ الإرسال...",
+    "submitError": "فشل الإرسال. حاول مرة أخرى.",
+    "successTitle": "تمت إضافتك لقائمة الانتظار!",
+    "successMessage": "شكرًا! حجزنا مكانك وسنراسلك عند فتح الاشتراكات.",
+    "backHome": "العودة للرئيسية",
+    "loading": "جارٍ التحميل...",
+    "mealFilters": {
+      "all": "الكل",
+      "chicken": "دجاج",
+      "beef": "لحم",
+      "fish": "سمك",
+      "vegetarian": "نباتي"
+    },
+    "mealCategoryLabels": {
+      "chicken": "دجاج",
+      "beef": "لحم",
+      "fish": "سمك",
+      "vegetarian": "نباتي"
+    },
+    "mealBadgeLabels": {
+      "chicken": "دجاج",
+      "beef": "لحم",
+      "fish": "سمك",
+      "vegetarian": "نباتي",
+      "highProtein": "High Protein",
+      "light": "Light"
+    },
+    "mealDetails": {
+      "kcal": "kcal",
+      "grams": "g",
+      "calories": "السعرات",
+      "protein": "بروتين",
+      "fat": "دهون",
+      "carbs": "كربوهيدرات",
+      "moreNutrition": "مزيد من القيم الغذائية",
+      "fiber": "ألياف",
+      "sugar": "سكر",
+      "sodium": "صوديوم",
+      "ingredients": "المكونات"
+    },
+    "mealOptions": {
+      "3": {
+        "label": "3 وجبات / أسبوع",
+        "description": "دعم خفيف للأسابيع المزدحمة"
+      },
+      "5": {
+        "label": "5 وجبات / أسبوع",
+        "description": "تغطية كاملة لأيام العمل"
+      },
+      "7": {
+        "label": "7 وجبات / أسبوع",
+        "description": "عشاء يومي"
+      },
+      "10": {
+        "label": "10 وجبات / أسبوع",
+        "description": "مرونة قصوى"
+      }
+    },
+    "deliveryOptions": {
+      "1": {
+        "label": "يوم توصيل واحد",
+        "description": "كل الوجبات في تسليم واحد"
+      },
+      "2": {
+        "label": "يومان توصيل",
+        "description": "نضارة منتصف الأسبوع"
+      },
+      "3": {
+        "label": "3 أيام توصيل",
+        "description": "إعادة تزويد أكثر تكرارًا"
+      },
+      "5": {
+        "label": "5 أيام توصيل",
+        "description": "راحة شبه يومية"
+      }
+    },
+    "plans": {
+      "balanced": {
+        "label": "Balanced",
+        "description": "وجبات يومية بتوازن جيد بين البروتين والكربوهيدرات والخضار."
+      },
+      "high-protein": {
+        "label": "High Protein",
+        "description": "وجبات غنية بالبروتين لروتين نشط ومزدحم."
+      },
+      "vegan": {
+        "label": "Vegan",
+        "description": "وجبات نباتية بنكهات قوية وحصص مشبعة."
+      },
+      "low-calorie": {
+        "label": "Low Calorie",
+        "description": "وجبات أخف مع حصص ذكية ومكونات نظيفة."
+      }
+    },
+    "mealItems": {
+      "chicken-teriyaki": {
+        "title": "Chicken Teriyaki Rice Bowl",
+        "description": "دجاج ترياكي على أرز مطهو مع بروكلي وسمسم.",
+        "ingredients": "دجاج، أرز، بروكلي، صلصة ترياكي، سمسم، بصل أخضر"
+      },
+      "chicken-satay": {
+        "title": "Chicken Satay Rice Bowl",
+        "description": "دجاج ساتاي مشوي مع أرز ياسمين وخضار مقرمشة.",
+        "ingredients": "دجاج، أرز ياسمين، صلصة فول سوداني، خيار، جزر"
+      },
+      "chicken-shawarma": {
+        "title": "Chicken Shawarma Rice Bowl",
+        "description": "دجاج شاورما متبل مع أرز وأعشاب وبصل مخلل.",
+        "ingredients": "دجاج، أرز، خليط زبادي وتوابل، بصل مخلل، أعشاب"
+      },
+      "butter-chicken": {
+        "title": "Butter Chicken with Rice",
+        "description": "دجاج بالزبدة كريمي مع أرز بسمتي عطري.",
+        "ingredients": "دجاج، أرز بسمتي، صلصة طماطم كريمية، توابل"
+      },
+      "chicken-pesto": {
+        "title": "Chicken Pesto Pasta",
+        "description": "باستا بيستو مع دجاج وطماطم كرزية وسبانخ.",
+        "ingredients": "دجاج، باستا، بيستو ريحان، طماطم، سبانخ"
+      },
+      "chili-chicken": {
+        "title": "Chili Chicken Noodles",
+        "description": "دجاج حار مع نودلز وخضار مقرمشة.",
+        "ingredients": "دجاج، نودلز، صلصة فلفل حار، فلفل رومي، بصل"
+      },
+      "beef-bolognese": {
+        "title": "Beef Bolognese Pasta",
+        "description": "بولونيز لحم مطهو ببطء مع باستا أل دينتي.",
+        "ingredients": "لحم، باستا، طماطم، بصل، ثوم، أعشاب"
+      },
+      "beef-shawarma": {
+        "title": "Beef Shawarma Rice Bowl",
+        "description": "شاورما لحم طرية مع أرز وأعشاب ورشة طحينة.",
+        "ingredients": "لحم، أرز، بهارات شاورما، طحينة، بقدونس"
+      },
+      "pulled-beef": {
+        "title": "Mexican Pulled Beef Bowl",
+        "description": "لحم مبشور بطيء الطهي مع أرز وفاصولياء وبيكو دي غايو.",
+        "ingredients": "لحم، أرز، فاصولياء، طماطم، ليمون أخضر، كزبرة"
+      },
+      "salmon-teriyaki": {
+        "title": "Salmon Teriyaki Rice Bowl",
+        "description": "سلمون ترياكي مع أرز وخضار مطهوة على البخار.",
+        "ingredients": "سلمون، أرز، صلصة ترياكي، فاصولياء خضراء"
+      },
+      "grilled-salmon": {
+        "title": "Grilled Salmon with Rice & Vegetables",
+        "description": "سلمون مشوي بالفرن مع أرز وخضار موسمية.",
+        "ingredients": "سلمون، أرز، بروكلي، جزر، ليمون، شبت"
+      },
+      "veg-bowl": {
+        "title": "Vegetable Bowl",
+        "description": "وعاء نباتي مع حبوب وصلصة حمضيات.",
+        "ingredients": "كينوا، حمص، خضار مشكلة، صلصة ليمون"
+      },
+      "veg-risotto": {
+        "title": "Vegetable Risotto",
+        "description": "ريزوتو خضار كريمي مع أعشاب وبارميزان.",
+        "ingredients": "أرز أربوريو، فطر، كوسا، بارميزان، أعشاب"
+      }
+    },
+    "tryFirstTitle": "جرّب أولًا — بدون اشتراك",
+    "tryFirstSubtitle": "طلب لمرة واحدة مع يوم توصيل واحد.",
+    "tryFirstPlanLabel": "جرّب أولًا",
+    "tryFirstPointOne": "بدون اشتراك — طلب لمرة واحدة.",
+    "tryFirstPointTwo": "يوم توصيل واحد، اختر عدة وجبات.",
+    "tryFirstPointThree": "رسوم التوصيل 4.99–5€ تطبق.",
+    "summaryPricePerMealNoDiscount": "سعر الوجبة"
+  },
+  "menuGrid": {
+    "title": "مطاعم التموين",
+    "subtitle": "اكتشف خيارات مطاعمنا المتنوعة. يمكن تخصيص كل مطعم حسب احتياجاتك.",
+    "detectingLocation": "جارٍ تحديد موقعك...",
+    "selectCity": "📍 اختر المدينة",
+    "showingRestaurants": "عرض {count} مطعم/مطاعم في {city}",
+    "loading": "جارٍ تحميل المطاعم في {city}...",
+    "failLoad": "فشل تحميل المطاعم",
+    "noRestaurants": "لا توجد مطاعم في {city}",
+    "viewMenu": "عرض القائمة →"
+  },
+  "chefCarousel": {
+    "title1": "مطاعمنا ",
+    "title2": "المميزة",
+    "title3": "",
+    "subtitle": "اكتشف طهاة ومطاعم جاهزة لتموين حدثك القادم.",
+    "loading": "جارٍ تحميل المطاعم...",
+    "failLoad": "فشل تحميل المطاعم",
+    "noRestaurants": "لم يتم العثور على مطاعم."
+  },
+  "packageComparison": {
+    "title": "قارن الباقات",
+    "subtitle": "اطّلع على ما تتضمنه كل باقة لاختيار الأنسب لفريقك.",
+    "featureCol": "الميزة",
+    "starter": "Starter",
+    "growth": "Growth",
+    "premium": "Premium",
+    "mostPopular": "الأكثر شعبية",
+    "perPerson": "لكل شخص",
+    "select": "اختر",
+    "selectPkg": "اختر",
+    "features": {
+      "numberOfCourses": "عدد الأطباق",
+      "courses2": "طبقان",
+      "courses3": "3 أطباق",
+      "courses4": "4 أطباق",
+      "menuOptions": "خيارات القائمة",
+      "standard": "قياسي",
+      "options5": "5+ خيارات",
+      "unlimited": "غير محدود",
+      "customMenuAdjustments": "تعديلات القائمة",
+      "dietaryAccommodations": "الأنظمة الغذائية",
+      "type1": "نوع واحد",
+      "nonAlcoholicDrinks": "مشروبات غير كحولية",
+      "wineBeer": "نبيذ وبيرة",
+      "premiumBeverage": "باقة مشروبات مميزة",
+      "tableSetup": "تجهيز الطاولة والتنظيف",
+      "premiumTableSetup": "تجهيز طاولة مميز",
+      "customLinens": "أقمشة مخصصة",
+      "eventCoordinator": "منسق الحدث",
+      "preEventConsultation": "استشارة قبل الحدث",
+      "min30": "30 دقيقة",
+      "hour1": "ساعة واحدة",
+      "postEventFeedback": "ملاحظات بعد الحدث",
+      "professionalPhotos": "صور احترافية",
+      "optional": "اختياري",
+      "groupSize": "حجم المجموعة",
+      "size1530": "15-30",
+      "size2050": "20-50",
+      "size30100": "30-100",
+      "duration": "المدة",
+      "dur253": "2.5-3س",
+      "dur335": "3-3.5س",
+      "dur354": "3.5-4س"
+    }
+  },
+  "chefSignup": {
+    "title": "هل أنت طاهٍ؟",
+    "subtitle": "انضم إلى شبكتنا الحصرية من الطهاة وشارك قوائمك الموسمية.",
+    "applyBtn": "قدّم كطاهٍ"
+  },
+  "metadata": {
+    "homeTitle": "اشتراكات وجبات Homemade | توصيل أسبوعي طازج",
+    "homeDescription": "اختر اشتراك وجبات لحياة واقعية. وجبات طازجة من إعداد الطهاة تُسلَّم أسبوعيًا في هولندا.",
+    "quoteTitle": "ابدأ اشتراكك | Homemade",
+    "quoteDescription": "أجب عن بضعة أسئلة سريعة وابدأ اشتراك الوجبات الأسبوعي."
+  },
+  "cateringCalculator": {
+    "badge": "💰 حاسبة التوفير",
+    "title1": "اعرف كم يمكن لفريقك",
+    "title2": "أن يوفر",
+    "subtitle": "قارن تكلفة تموين المطاعم بـ Homemade. عدّل الأشرطة حسب وضعك.",
+    "configTitle": "اضبط إعدادات الحدث",
+    "eventTypeLabel": "نوع الحدث",
+    "guestsLabel": "عدد الضيوف",
+    "guestsMin": "5 ضيوف",
+    "guestsMax": "200 ضيف",
+    "eventsLabel": "الأحداث سنويًا",
+    "eventsMin": "1x",
+    "eventsMax": "24x / سنة",
+    "noteRef": "💡 استنادًا إلى متوسط أسعار أمستردام مقارنة بـ Homemade. قد يختلف التوفير الفعلي.",
+    "saveText": "يمكنك توفير",
+    "perYearText": "سنوياً",
+    "lessThanText": "أقل من المطاعم",
+    "perEventSave": "توفير لكل حدث",
+    "over5Years": "خلال 5 سنوات",
+    "costBreakdown": "تفصيل التكلفة السنوية",
+    "restaurantCatering": "تموين المطاعم",
+    "homemadeCatering": "تموين Homemade",
+    "bookBtn": "احجز أول حدث →",
+    "mealLabels": {
+      "lunch": "غداء الفريق",
+      "dinner": "عشاء الفريق",
+      "drinks": "مشروبات ووجبات خفيفة",
+      "breakfast": "اجتماع إفطار"
+    }
+  },
+  "promoBanner": {
+    "badge": "أماكن محدودة",
+    "headline": "خصم 20% عند الإطلاق",
+    "subline": "انضم إلى قائمة الانتظار اليوم",
+    "cta": "انضم الآن"
+  },
+  "quotePage": {
+    "title": "انضم إلى قائمة الانتظار",
+    "subtitle": "أجب عن بعض الأسئلة وسنضيفك إلى قائمة الانتظار."
+  }
 }

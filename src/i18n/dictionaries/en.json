@@ -1,610 +1,618 @@
 {
-    "navigation": {
-        "howItWorks": "How It Works",
-        "menu": "Plans",
-        "about": "About Us",
-        "faq": "FAQ",
-        "bookNow": "Choose Plan",
-        "blog": "Blog"
-    },
-    "hero": {
-        "titlePart1": "Homemade Meals",
-        "titlePart2": "for",
-        "titleHighlight": "Real Life",
-        "animatedTitleStatic": "Homemade Meal Subscriptions for ",
-        "animatedRotatingWords": [
-            "families",
-            "busy professionals",
-            "plant-forward living",
-            "comfort-first routines"
-        ],
-        "subtitle": "Fresh, chef-made meals delivered weekly. Choose a plan that fits your routine.",
-        "cta": "Choose Your Plan",
-        "launchOfferTitle": "Launch offer",
-        "launchOfferText": "50% off when you join the waitlist"
-    },
-    "partners": {
-        "heading": "Proudly Partnering With"
-    },
-    "problemSolution": {
-        "title1": "Why spend your evenings",
-        "title2": "figuring out what to cook?",
-        "solutionTitle": "A weekly meal plan that actually works",
-        "solutionDesc": "Choose a plan, pick your meals, and let us handle the rest.",
-        "benefit1Title": "Consistent, balanced meals",
-        "benefit1Desc": "Chef-made dishes with real ingredients and clear nutrition focus",
-        "benefit2Title": "Zero planning, zero stress",
-        "benefit2Desc": "Skip the shopping, prepping, and cleanup on busy weekdays",
-        "benefit3Title": "Flexible by design",
-        "benefit3Desc": "Pause, skip, or switch plans anytime"
-    },
-    "howItWorks": {
-        "title": "How it Works",
-        "step1Title": "Pick Your Plan",
-        "step1Desc": "Choose the plan that matches your routine and preferences.",
-        "step2Title": "Select Weekly Meals",
-        "step2Desc": "Pick your meals and portion size for the week.",
-        "step3Title": "Delivered Fresh",
-        "step3Desc": "Heat, eat, and enjoy. Pause or skip anytime."
-    },
-    "cuisineShowcase": {
-        "title1": "Choose Your",
-        "title2": "Plan",
-        "subtitle": "Four cornerstone subscriptions designed for the way people eat in the Netherlands.",
-        "requestQuote": "Choose Plan",
-        "planMenu": "Start Your Subscription",
-        "customAlert": "Pause or skip anytime",
-        "items": {
-            "family": {
-                "title": "Balanced",
-                "description": "Everyday meals with a good balance of protein, carbs, and vegetables."
-            },
-            "routine": {
-                "title": "High Protein",
-                "description": "Protein-forward meals built for active, on-the-go schedules."
-            },
-            "plant": {
-                "title": "Vegan",
-                "description": "Plant-based meals with bold flavor and satisfying portions."
-            },
-            "comfort": {
-                "title": "Low Calorie",
-                "description": "Lighter meals with smart portions and clean ingredients."
-            }
-        }
-    },
-    "occasions": {
-        "title": "Who It's For",
-        "exploreMenu": "See Details",
-        "items": {
-            "families": {
-                "title": "Busy Families",
-                "subtitle": "Weeknights"
-            },
-            "professionals": {
-                "title": "Busy Professionals",
-                "subtitle": "Routine"
-            },
-            "flexitarians": {
-                "title": "Flexitarians",
-                "subtitle": "Plant-forward"
-            },
-            "comfort": {
-                "title": "Comfort Seekers",
-                "subtitle": "Care"
-            }
-        }
-    },
-    "packageTiers": {
-        "title": "Team Dinner Packages",
-        "subtitle": "Transparent pricing, exceptional value. All packages include professional service and cleanup.",
-        "badgePopular": "Most Popular",
-        "groupLabel": "Group:",
-        "timeLabel": "Time:",
-        "choosePackage": "Choose this package",
-        "note": "All prices exclude VAT. Final quote provided after consultation. Minimum group sizes apply.",
-        "packages": {
-            "starter": {
-                "name": "Starter Team Dinner",
-                "priceUnit": "per person",
-                "groupSize": "15-30 people",
-                "duration": "2.5-3 hours",
-                "description": "Budget-conscious teams, first events",
-                "features": [
-                    "2-course menu",
-                    "Non-alcoholic beverages",
-                    "Table setup & cleanup",
-                    "1 dietary accommodation"
-                ]
-            },
-            "growth": {
-                "name": "Growth Team Dinner",
-                "priceUnit": "per person",
-                "groupSize": "20-50 people",
-                "duration": "3-3.5 hours",
-                "description": "Perfect balance of quality and value",
-                "features": [
-                    "3-course menu",
-                    "Alcoholic beverages (wine/beer)",
-                    "Premium table setup",
-                    "Unlimited dietary accommodations",
-                    "Pre-event consultation (30 min)",
-                    "Custom menu adjustments",
-                    "5+ menu options"
-                ]
-            },
-            "premium": {
-                "name": "Premium Team Celebration",
-                "priceUnit": "per person",
-                "groupSize": "30-100 people",
-                "duration": "3.5-4 hours",
-                "description": "Ultimate experience for special occasions",
-                "features": [
-                    "4-course menu",
-                    "Premium beverage package",
-                    "Custom linens & premium setup",
-                    "Full culinary customization",
-                    "1-hour planning call",
-                    "Post-event feedback",
-                    "Event coordinator/assistant",
-                    "Optional professional photos"
-                ]
-            }
-        }
-    },
-    "testimonials": {
-        "title": "What Subscribers Say",
-        "subtitle": "Real stories from people using Homemade every week.",
-        "joinText": "Join thousands of subscribers",
-        "bookButton": "Choose Your Plan",
-        "verifiedClient": "Verified Client",
-        "metrics": {
-            "happyClients": "Happy Clients",
-            "averageRating": "Average Rating",
-            "savings": "Time Saved",
-            "guarantee": "Satisfaction Guarantee"
-        },
-        "items": [
-            {
-                "company": "Balanced",
-                "eventType": "Weekly Dinners",
-                "quote": "Our kids actually eat the meals. The portions are perfect and we save hours every week."
-            },
-            {
-                "company": "High Protein",
-                "eventType": "Weekday Structure",
-                "quote": "I stopped skipping lunch and ordering takeout. The protein options are solid and consistent."
-            },
-            {
-                "company": "Vegan",
-                "eventType": "Flexitarian",
-                "quote": "We wanted more plant-based meals without going fully vegan. These are flavorful and filling."
-            },
-            {
-                "company": "Low Calorie",
-                "eventType": "Easy Reheating",
-                "quote": "Reliable, home-style meals that are easy to heat up. Exactly what I needed after a busy week."
-            },
-            {
-                "company": "Balanced",
-                "eventType": "Portion-Controlled",
-                "quote": "Great variety, no food waste, and the delivery window is always on time."
-            },
-            {
-                "company": "Busy Professional",
-                "eventType": "No-Prep Meals",
-                "quote": "I can finally keep my weekdays clean. The meals are fresh and taste like real food."
-            },
-            {
-                "company": "Balanced",
-                "eventType": "Kid-Friendly",
-                "quote": "Less stress at dinner time. We just heat, plate, and enjoy."
-            }
-        ]
-    },
-    "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Everything you need to know about meal subscriptions. Can't find your answer? Contact us directly.",
-        "stillQuestions": "Still have questions?",
-        "contactTeam": "Contact Our Team",
-        "items": [
-            {
-                "question": "What’s included in a subscription?",
-                "answer": "Fresh, chef-made meals delivered weekly. You choose your plan, portions, and meal preferences."
-            },
-            {
-                "question": "Can I pause or skip weeks?",
-                "answer": "Yes. You can pause, skip, or change your plan before the weekly cutoff."
-            },
-            {
-                "question": "Do you support dietary preferences?",
-                "answer": "We offer vegetarian, plant-forward, and protein-focused options, plus allergen-friendly selections."
-            },
-            {
-                "question": "How do portions work?",
-                "answer": "Choose 2–4 portions per meal, or individual meals if you’re ordering for one."
-            },
-            {
-                "question": "When do you deliver?",
-                "answer": "We deliver on fixed weekly routes by area. You’ll see available days at checkout."
-            },
-            {
-                "question": "How far in advance do I need to order?",
-                "answer": "Orders close 3–4 days before delivery so chefs can prep fresh meals."
-            },
-            {
-                "question": "Can I cancel anytime?",
-                "answer": "Yes. Cancel or pause your subscription from your account with no long-term commitment."
-            },
-            {
-                "question": "Are meals fresh or frozen?",
-                "answer": "Meals are delivered fresh and are designed for easy reheating."
-            }
-        ]
-    },
-    "footer": {
-        "copyright": "© 2026 Homemade. All rights reserved.",
-        "terms": "Terms",
-        "privacy": "Privacy",
-        "contact": "Contact"
-    },
-    "bookingForm": {
-        "successTitle": "You're Booked!",
-        "successMessage": "Thank you for your request. Our catering team will contact you shortly to finalize your event details!",
-        "bookAnother": "Book Another",
-        "title1": "Reserve Your",
-        "title2": "Catering Service",
-        "subtitle": "From corporate events to celebrations, we deliver exceptional catering experiences tailored to your needs.",
-        "feature1": "5-Star Rated Chefs",
-        "feature2": "Custom Curated Menus",
-        "selectMenuLabel": "Select Menu",
-        "customMenuOption": "-- I'll Customize My Own --",
-        "preferredChefLabel": "Preferred Chef",
-        "anyChefOption": "Any Chef",
-        "cuisineStyleLabel": "Cuisine Style",
-        "cuisinePlaceholder": "e.g. Italian",
-        "eventDetailsLabel": "Event Details",
-        "guests": {
-            "g2": "2 Guests",
-            "g3_5": "3-5 Guests",
-            "g6_10": "6-10 Guests",
-            "g10plus": "10+ Guests"
-        },
-        "namePlaceholder": "Your Name",
-        "emailPlaceholder": "Email Address",
-        "bookNowBtn": "Book Now",
-        "noPaymentText": "No payment required instantly.",
-        "contactedText": "You'll be contacted to finalize details.",
-        "loadingText": "Loading form..."
-    },
-    "quizForm": {
-        "stepProgress": "Step {current} of {total}",
-        "backButton": "Back",
-        "nextButton": "Next",
-        "submitButton": "Join the Waitlist",
-        "occasionTitle": "Choose your plan",
-        "occasionSubtitle": "Pick the subscription that fits your routine.",
-        "step1Header": "Create your first box",
-        "step1Subheader": "Choose your plan and how many meals you want each week.",
-        "planSectionTitle": "Plan",
-        "mealsSectionTitle": "Meals per week",
-        "summaryTitle": "Order summary",
-        "summaryPlan": "Plan",
-        "summaryMeals": "Meals per week",
-        "summaryPricePerMeal": "Price per meal",
-        "summaryDelivery": "Delivery",
-        "summaryDeliveryValue": "Free",
-        "summaryTotal": "Total",
-        "summaryDiscountLabel": "Launch offer applied — 20% OFF",
-        "summaryOffer": "Waitlist bonus — 50% off at launch",
-        "summaryNote": "You’ll unlock the offer after joining the waitlist.",
-        "summaryPause": "Pause anytime",
-        "summaryNoCommitment": "No commitment",
-        "summaryFreshMeals": "Fresh meals, weekly",
-        "summaryLegend": "Legend",
-        "legendLabels": {
-            "chicken": "Chicken",
-            "beef": "Beef",
-            "fish": "Fish",
-            "vegetarian": "Veg",
-            "highProtein": "High Protein",
-            "light": "Light"
-        },
-        "guestsTitle": "How many meals per week?",
-        "guestsSubtitle": "Choose the weekly quantity that fits your routine.",
-        "dateTitle": "How many delivery days?",
-        "dateSubtitle": "Pick how many days you want deliveries each week.",
-        "contactTitle": "Your Details",
-        "contactSubtitle": "Where should we send your waitlist confirmation?",
-        "mealsTitle": "Pick your meals",
-        "mealsSubtitle": "Choose your meals for the week.",
-        "mealsSelected": "{selected}/{total} meals selected",
-        "mealSelectionError": "You can select up to {count} meals.",
-        "viewDetails": "View details",
-        "selectedLabel": "Selected",
-        "addOne": "Add one",
-        "removeOne": "Remove one",
-        "namePlaceholder": "Full Name",
-        "emailPlaceholder": "Email Address",
-        "phonePlaceholder": "Phone Number",
-        "privacyNote": "We respect your privacy. No immediate payment required.",
-        "submitting": "Submitting...",
-        "submitError": "Submission failed. Please try again.",
-        "successTitle": "You're on the Waitlist!",
-        "successMessage": "Thanks! We’ve saved your spot and will email you as soon as we open new subscriptions.",
-        "backHome": "Back to Home",
-        "loading": "Loading...",
-        "mealFilters": {
-            "all": "All",
-            "chicken": "Chicken",
-            "beef": "Beef",
-            "fish": "Fish",
-            "vegetarian": "Vegetarian"
-        },
-        "mealCategoryLabels": {
-            "chicken": "Chicken",
-            "beef": "Beef",
-            "fish": "Fish",
-            "vegetarian": "Vegetarian"
-        },
-        "mealBadgeLabels": {
-            "chicken": "Chicken",
-            "beef": "Beef",
-            "fish": "Fish",
-            "vegetarian": "Veg",
-            "highProtein": "High Protein",
-            "light": "Light"
-        },
-        "mealDetails": {
-            "kcal": "kcal",
-            "grams": "g",
-            "calories": "Calories",
-            "protein": "Protein",
-            "fat": "Fat",
-            "carbs": "Carbs",
-            "moreNutrition": "More Nutrition",
-            "fiber": "Fiber",
-            "sugar": "Sugar",
-            "sodium": "Sodium",
-            "ingredients": "Ingredients"
-        },
-        "mealOptions": {
-            "3": {
-                "label": "3 meals / week",
-                "description": "Light support for busy weeks"
-            },
-            "5": {
-                "label": "5 meals / week",
-                "description": "Full workweek coverage"
-            },
-            "7": {
-                "label": "7 meals / week",
-                "description": "Everyday dinners"
-            },
-            "10": {
-                "label": "10 meals / week",
-                "description": "Maximum flexibility"
-            }
-        },
-        "deliveryOptions": {
-            "1": {
-                "label": "1 delivery day",
-                "description": "All meals in one drop"
-            },
-            "2": {
-                "label": "2 delivery days",
-                "description": "Midweek freshness"
-            },
-            "3": {
-                "label": "3 delivery days",
-                "description": "More frequent top-ups"
-            },
-            "5": {
-                "label": "5 delivery days",
-                "description": "Near-daily convenience"
-            }
-        },
-        "plans": {
-            "balanced": {
-                "label": "Balanced",
-                "description": "Everyday meals with a good balance of protein, carbs, and vegetables."
-            },
-            "high-protein": {
-                "label": "High Protein",
-                "description": "Protein-forward meals built for active, on-the-go schedules."
-            },
-            "vegan": {
-                "label": "Vegan",
-                "description": "Plant-based meals with bold flavor and satisfying portions."
-            },
-            "low-calorie": {
-                "label": "Low Calorie",
-                "description": "Lighter meals with smart portions and clean ingredients."
-            }
-        },
-        "mealItems": {
-            "chicken-teriyaki": {
-                "title": "Chicken Teriyaki Rice Bowl",
-                "description": "Teriyaki-glazed chicken over steamed rice with broccoli and sesame.",
-                "ingredients": "Chicken, rice, broccoli, teriyaki glaze, sesame, scallion"
-            },
-            "chicken-satay": {
-                "title": "Chicken Satay Rice Bowl",
-                "description": "Grilled satay-style chicken with jasmine rice and crisp veggies.",
-                "ingredients": "Chicken, jasmine rice, peanut sauce, cucumber, carrot"
-            },
-            "chicken-shawarma": {
-                "title": "Chicken Shawarma Rice Bowl",
-                "description": "Spiced shawarma chicken with rice, herbs, and pickled onions.",
-                "ingredients": "Chicken, rice, yogurt spice blend, pickled onion, herbs"
-            },
-            "butter-chicken": {
-                "title": "Butter Chicken with Rice",
-                "description": "Creamy butter chicken served with fragrant basmati rice.",
-                "ingredients": "Chicken, basmati rice, tomato cream sauce, spices"
-            },
-            "chicken-pesto": {
-                "title": "Chicken Pesto Pasta",
-                "description": "Pesto chicken pasta with cherry tomatoes and spinach.",
-                "ingredients": "Chicken, pasta, basil pesto, tomato, spinach"
-            },
-            "chili-chicken": {
-                "title": "Chili Chicken Noodles",
-                "description": "Spicy chili chicken tossed with noodles and crunchy veg.",
-                "ingredients": "Chicken, noodles, chili sauce, bell pepper, onion"
-            },
-            "beef-bolognese": {
-                "title": "Beef Bolognese Pasta",
-                "description": "Slow-cooked beef bolognese over al dente pasta.",
-                "ingredients": "Beef, pasta, tomato, onion, garlic, herbs"
-            },
-            "beef-shawarma": {
-                "title": "Beef Shawarma Rice Bowl",
-                "description": "Tender beef shawarma with rice, herbs, and tahini drizzle.",
-                "ingredients": "Beef, rice, shawarma spice, tahini, parsley"
-            },
-            "pulled-beef": {
-                "title": "Mexican Pulled Beef Bowl",
-                "description": "Slow pulled beef with rice, beans, and pico de gallo.",
-                "ingredients": "Beef, rice, beans, tomato, lime, cilantro"
-            },
-            "salmon-teriyaki": {
-                "title": "Salmon Teriyaki Rice Bowl",
-                "description": "Teriyaki salmon with rice and steamed greens.",
-                "ingredients": "Salmon, rice, teriyaki glaze, green beans"
-            },
-            "grilled-salmon": {
-                "title": "Grilled Salmon with Rice & Vegetables",
-                "description": "Oven-grilled salmon with rice and seasonal vegetables.",
-                "ingredients": "Salmon, rice, broccoli, carrot, lemon, dill"
-            },
-            "veg-bowl": {
-                "title": "Vegetable Bowl",
-                "description": "Vegetable-forward bowl with grains and citrus dressing.",
-                "ingredients": "Quinoa, chickpeas, mixed veg, lemon dressing"
-            },
-            "veg-risotto": {
-                "title": "Vegetable Risotto",
-                "description": "Creamy vegetable risotto with herbs and parmesan.",
-                "ingredients": "Arborio rice, mushroom, zucchini, parmesan, herbs"
-            }
-        }
-    },
-    "menuGrid": {
-        "title": "Catering Restaurants",
-        "subtitle": "Explore our diverse restaurant options. Each restaurant can be customized to your needs.",
-        "detectingLocation": "Detecting your location...",
-        "selectCity": "📍 Select City",
-        "showingRestaurants": "Showing {count} restaurant(s) in {city}",
-        "loading": "Loading restaurants from {city}...",
-        "failLoad": "Failed to load restaurants",
-        "noRestaurants": "No restaurants found in {city}",
-        "viewMenu": "View Menu →"
-    },
-    "chefCarousel": {
-        "title1": "Our ",
-        "title2": "Featured",
-        "title3": " Restaurants",
-        "subtitle": "Discover amazing home chefs and restaurants ready to cater your next event.",
-        "loading": "Loading restaurants...",
-        "failLoad": "Failed to load restaurants",
-        "noRestaurants": "No restaurants found."
-    },
-    "packageComparison": {
-        "title": "Compare Packages",
-        "subtitle": "See exactly what's included in each package to find the perfect fit for your team.",
-        "featureCol": "Feature",
-        "starter": "Starter",
-        "growth": "Growth",
-        "premium": "Premium",
-        "mostPopular": "Most Popular",
-        "perPerson": "per person",
-        "select": "Select",
-        "selectPkg": "Select",
-        "features": {
-            "numberOfCourses": "Number of Courses",
-            "courses2": "2 courses",
-            "courses3": "3 courses",
-            "courses4": "4 courses",
-            "menuOptions": "Menu Options",
-            "standard": "Standard",
-            "options5": "5+ options",
-            "unlimited": "Unlimited",
-            "customMenuAdjustments": "Custom Menu Adjustments",
-            "dietaryAccommodations": "Dietary Accommodations",
-            "type1": "1 type",
-            "nonAlcoholicDrinks": "Non-Alcoholic Drinks",
-            "wineBeer": "Wine & Beer",
-            "premiumBeverage": "Premium Beverage Package",
-            "tableSetup": "Table Setup & Cleanup",
-            "premiumTableSetup": "Premium Table Setup",
-            "customLinens": "Custom Linens",
-            "eventCoordinator": "Event Coordinator",
-            "preEventConsultation": "Pre-Event Consultation",
-            "min30": "30 min",
-            "hour1": "1 hour",
-            "postEventFeedback": "Post-Event Feedback",
-            "professionalPhotos": "Professional Photos",
-            "optional": "Optional",
-            "groupSize": "Group Size",
-            "size1530": "15-30",
-            "size2050": "20-50",
-            "size30100": "30-100",
-            "duration": "Duration",
-            "dur253": "2.5-3h",
-            "dur335": "3-3.5h",
-            "dur354": "3.5-4h"
-        }
-    },
-    "chefSignup": {
-        "title": "Are You a Chef?",
-        "subtitle": "Join our exclusive network of top-tier private chefs and showcase your christmas menus.",
-        "applyBtn": "Apply as Chef"
-    },
-    "metadata": {
-        "homeTitle": "Homemade Meal Subscriptions | Fresh Weekly Delivery",
-        "homeDescription": "Choose a meal subscription built for real life. Fresh, chef-made meals delivered weekly across the Netherlands.",
-        "quoteTitle": "Start Your Subscription | Homemade",
-        "quoteDescription": "Answer a few quick questions and start your weekly meal subscription."
-    },
-    "cateringCalculator": {
-        "badge": "💰 Savings Calculator",
-        "title1": "See how much your team",
-        "title2": "could save",
-        "subtitle": "Compare the cost of restaurant catering vs. Homemade catering. Adjust the sliders to match your setup.",
-        "configTitle": "Configure your event",
-        "eventTypeLabel": "Event type",
-        "guestsLabel": "Number of guests",
-        "guestsMin": "5 guests",
-        "guestsMax": "200 guests",
-        "eventsLabel": "Events per year",
-        "eventsMin": "1x",
-        "eventsMax": "24x / year",
-        "noteRef": "💡 Based on average Amsterdam restaurant catering rates vs. Homemade's transparent pricing. Actual savings may vary.",
-        "saveText": "You could save",
-        "perYearText": "per year",
-        "lessThanText": "less than restaurants",
-        "perEventSave": "Per event saving",
-        "over5Years": "Over 5 years",
-        "costBreakdown": "Annual cost breakdown",
-        "restaurantCatering": "Restaurant catering",
-        "homemadeCatering": "Homemade catering",
-        "bookBtn": "Book your first event →",
-        "mealLabels": {
-            "lunch": "Team Lunch",
-            "dinner": "Team Dinner",
-            "drinks": "Drinks & Snacks",
-            "breakfast": "Breakfast Meeting"
-        }
-    },
-    "promoBanner": {
-        "badge": "Limited Spots",
-        "headline": "50% Off at Launch",
-        "subline": "Join the waitlist today",
-        "cta": "Join Waitlist"
-    },
-    "quotePage": {
-        "title": "Join the Waitlist",
-        "subtitle": "Answer a few quick questions and we’ll add you to the waitlist."
+  "navigation": {
+    "howItWorks": "How It Works",
+    "menu": "Plans",
+    "about": "About Us",
+    "faq": "FAQ",
+    "bookNow": "Choose Plan",
+    "blog": "Blog"
+  },
+  "hero": {
+    "titlePart1": "Homemade Meals",
+    "titlePart2": "for",
+    "titleHighlight": "Real Life",
+    "animatedTitleStatic": "Homemade Meal Subscriptions for ",
+    "animatedRotatingWords": [
+      "families",
+      "busy professionals",
+      "plant-forward living",
+      "comfort-first routines"
+    ],
+    "subtitle": "Fresh, chef-made meals delivered weekly. Choose a plan that fits your routine.",
+    "cta": "Choose Your Plan",
+    "launchOfferTitle": "Launch offer",
+    "launchOfferText": "20% off when you join the waitlist",
+    "ctaSecondary": "Try First — No Subscription"
+  },
+  "partners": {
+    "heading": "Proudly Partnering With"
+  },
+  "problemSolution": {
+    "title1": "Why spend your evenings",
+    "title2": "figuring out what to cook?",
+    "solutionTitle": "A weekly meal plan that actually works",
+    "solutionDesc": "Choose a plan, pick your meals, and let us handle the rest.",
+    "benefit1Title": "Consistent, balanced meals",
+    "benefit1Desc": "Chef-made dishes with real ingredients and clear nutrition focus",
+    "benefit2Title": "Zero planning, zero stress",
+    "benefit2Desc": "Skip the shopping, prepping, and cleanup on busy weekdays",
+    "benefit3Title": "Flexible by design",
+    "benefit3Desc": "Pause, skip, or switch plans anytime"
+  },
+  "howItWorks": {
+    "title": "How it Works",
+    "step1Title": "Pick Your Plan",
+    "step1Desc": "Choose the plan that matches your routine and preferences.",
+    "step2Title": "Select Weekly Meals",
+    "step2Desc": "Pick your meals and portion size for the week.",
+    "step3Title": "Delivered Fresh",
+    "step3Desc": "Heat, eat, and enjoy. Pause or skip anytime."
+  },
+  "cuisineShowcase": {
+    "title1": "Choose Your",
+    "title2": "Plan",
+    "subtitle": "Four cornerstone subscriptions designed for the way people eat in the Netherlands.",
+    "requestQuote": "Choose Plan",
+    "planMenu": "Start Your Subscription",
+    "customAlert": "Pause or skip anytime",
+    "items": {
+      "family": {
+        "title": "Balanced",
+        "description": "Everyday meals with a good balance of protein, carbs, and vegetables."
+      },
+      "routine": {
+        "title": "High Protein",
+        "description": "Protein-forward meals built for active, on-the-go schedules."
+      },
+      "plant": {
+        "title": "Vegan",
+        "description": "Plant-based meals with bold flavor and satisfying portions."
+      },
+      "comfort": {
+        "title": "Low Calorie",
+        "description": "Lighter meals with smart portions and clean ingredients."
+      }
     }
+  },
+  "occasions": {
+    "title": "Who It's For",
+    "exploreMenu": "See Details",
+    "items": {
+      "families": {
+        "title": "Busy Families",
+        "subtitle": "Weeknights"
+      },
+      "professionals": {
+        "title": "Busy Professionals",
+        "subtitle": "Routine"
+      },
+      "flexitarians": {
+        "title": "Flexitarians",
+        "subtitle": "Plant-forward"
+      },
+      "comfort": {
+        "title": "Comfort Seekers",
+        "subtitle": "Care"
+      }
+    }
+  },
+  "packageTiers": {
+    "title": "Team Dinner Packages",
+    "subtitle": "Transparent pricing, exceptional value. All packages include professional service and cleanup.",
+    "badgePopular": "Most Popular",
+    "groupLabel": "Group:",
+    "timeLabel": "Time:",
+    "choosePackage": "Choose this package",
+    "note": "All prices exclude VAT. Final quote provided after consultation. Minimum group sizes apply.",
+    "packages": {
+      "starter": {
+        "name": "Starter Team Dinner",
+        "priceUnit": "per person",
+        "groupSize": "15-30 people",
+        "duration": "2.5-3 hours",
+        "description": "Budget-conscious teams, first events",
+        "features": [
+          "2-course menu",
+          "Non-alcoholic beverages",
+          "Table setup & cleanup",
+          "1 dietary accommodation"
+        ]
+      },
+      "growth": {
+        "name": "Growth Team Dinner",
+        "priceUnit": "per person",
+        "groupSize": "20-50 people",
+        "duration": "3-3.5 hours",
+        "description": "Perfect balance of quality and value",
+        "features": [
+          "3-course menu",
+          "Alcoholic beverages (wine/beer)",
+          "Premium table setup",
+          "Unlimited dietary accommodations",
+          "Pre-event consultation (30 min)",
+          "Custom menu adjustments",
+          "5+ menu options"
+        ]
+      },
+      "premium": {
+        "name": "Premium Team Celebration",
+        "priceUnit": "per person",
+        "groupSize": "30-100 people",
+        "duration": "3.5-4 hours",
+        "description": "Ultimate experience for special occasions",
+        "features": [
+          "4-course menu",
+          "Premium beverage package",
+          "Custom linens & premium setup",
+          "Full culinary customization",
+          "1-hour planning call",
+          "Post-event feedback",
+          "Event coordinator/assistant",
+          "Optional professional photos"
+        ]
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What Subscribers Say",
+    "subtitle": "Real stories from people using Homemade every week.",
+    "joinText": "Join thousands of subscribers",
+    "bookButton": "Choose Your Plan",
+    "verifiedClient": "Verified Client",
+    "metrics": {
+      "happyClients": "Happy Clients",
+      "averageRating": "Average Rating",
+      "savings": "Time Saved",
+      "guarantee": "Satisfaction Guarantee"
+    },
+    "items": [
+      {
+        "company": "Balanced",
+        "eventType": "Weekly Dinners",
+        "quote": "Our kids actually eat the meals. The portions are perfect and we save hours every week."
+      },
+      {
+        "company": "High Protein",
+        "eventType": "Weekday Structure",
+        "quote": "I stopped skipping lunch and ordering takeout. The protein options are solid and consistent."
+      },
+      {
+        "company": "Vegan",
+        "eventType": "Flexitarian",
+        "quote": "We wanted more plant-based meals without going fully vegan. These are flavorful and filling."
+      },
+      {
+        "company": "Low Calorie",
+        "eventType": "Easy Reheating",
+        "quote": "Reliable, home-style meals that are easy to heat up. Exactly what I needed after a busy week."
+      },
+      {
+        "company": "Balanced",
+        "eventType": "Portion-Controlled",
+        "quote": "Great variety, no food waste, and the delivery window is always on time."
+      },
+      {
+        "company": "Busy Professional",
+        "eventType": "No-Prep Meals",
+        "quote": "I can finally keep my weekdays clean. The meals are fresh and taste like real food."
+      },
+      {
+        "company": "Balanced",
+        "eventType": "Kid-Friendly",
+        "quote": "Less stress at dinner time. We just heat, plate, and enjoy."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about meal subscriptions. Can't find your answer? Contact us directly.",
+    "stillQuestions": "Still have questions?",
+    "contactTeam": "Contact Our Team",
+    "items": [
+      {
+        "question": "What’s included in a subscription?",
+        "answer": "Fresh, chef-made meals delivered weekly. You choose your plan, portions, and meal preferences."
+      },
+      {
+        "question": "Can I pause or skip weeks?",
+        "answer": "Yes. You can pause, skip, or change your plan before the weekly cutoff."
+      },
+      {
+        "question": "Do you support dietary preferences?",
+        "answer": "We offer vegetarian, plant-forward, and protein-focused options, plus allergen-friendly selections."
+      },
+      {
+        "question": "How do portions work?",
+        "answer": "Choose 2–4 portions per meal, or individual meals if you’re ordering for one."
+      },
+      {
+        "question": "When do you deliver?",
+        "answer": "We deliver on fixed weekly routes by area. You’ll see available days at checkout."
+      },
+      {
+        "question": "How far in advance do I need to order?",
+        "answer": "Orders close 3–4 days before delivery so chefs can prep fresh meals."
+      },
+      {
+        "question": "Can I cancel anytime?",
+        "answer": "Yes. Cancel or pause your subscription from your account with no long-term commitment."
+      },
+      {
+        "question": "Are meals fresh or frozen?",
+        "answer": "Meals are delivered fresh and are designed for easy reheating."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Homemade. All rights reserved.",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "contact": "Contact"
+  },
+  "bookingForm": {
+    "successTitle": "You're Booked!",
+    "successMessage": "Thank you for your request. Our catering team will contact you shortly to finalize your event details!",
+    "bookAnother": "Book Another",
+    "title1": "Reserve Your",
+    "title2": "Catering Service",
+    "subtitle": "From corporate events to celebrations, we deliver exceptional catering experiences tailored to your needs.",
+    "feature1": "5-Star Rated Chefs",
+    "feature2": "Custom Curated Menus",
+    "selectMenuLabel": "Select Menu",
+    "customMenuOption": "-- I'll Customize My Own --",
+    "preferredChefLabel": "Preferred Chef",
+    "anyChefOption": "Any Chef",
+    "cuisineStyleLabel": "Cuisine Style",
+    "cuisinePlaceholder": "e.g. Italian",
+    "eventDetailsLabel": "Event Details",
+    "guests": {
+      "g2": "2 Guests",
+      "g3_5": "3-5 Guests",
+      "g6_10": "6-10 Guests",
+      "g10plus": "10+ Guests"
+    },
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Email Address",
+    "bookNowBtn": "Book Now",
+    "noPaymentText": "No payment required instantly.",
+    "contactedText": "You'll be contacted to finalize details.",
+    "loadingText": "Loading form..."
+  },
+  "quizForm": {
+    "stepProgress": "Step {current} of {total}",
+    "backButton": "Back",
+    "nextButton": "Next",
+    "submitButton": "Join the Waitlist",
+    "occasionTitle": "Choose your plan",
+    "occasionSubtitle": "Pick the subscription that fits your routine.",
+    "step1Header": "Create your first box",
+    "step1Subheader": "Choose your plan and how many meals you want each week.",
+    "planSectionTitle": "Plan",
+    "mealsSectionTitle": "Meals per week",
+    "summaryTitle": "Order summary",
+    "summaryPlan": "Plan",
+    "summaryMeals": "Meals per week",
+    "summaryPricePerMeal": "Price per meal (after discount)",
+    "summaryDelivery": "Delivery",
+    "summaryDeliveryValue": "Free",
+    "summaryTotal": "Total",
+    "summaryDiscountLabel": "Launch offer applied — 20% OFF",
+    "summaryOffer": "Waitlist bonus — 20% off at launch",
+    "summaryNote": "You’ll unlock the offer after joining the waitlist.",
+    "summaryPause": "Pause anytime",
+    "summaryNoCommitment": "No commitment",
+    "summaryFreshMeals": "Fresh meals, weekly",
+    "summaryLegend": "Legend",
+    "legendLabels": {
+      "chicken": "Chicken",
+      "beef": "Beef",
+      "fish": "Fish",
+      "vegetarian": "Veg",
+      "highProtein": "High Protein",
+      "light": "Light"
+    },
+    "guestsTitle": "How many meals per week?",
+    "guestsSubtitle": "Choose the weekly quantity that fits your routine.",
+    "dateTitle": "How many delivery days?",
+    "dateSubtitle": "Pick how many days you want deliveries each week.",
+    "contactTitle": "Your Details",
+    "contactSubtitle": "Where should we send your waitlist confirmation?",
+    "mealsTitle": "Pick your meals",
+    "mealsSubtitle": "Choose your meals for the week.",
+    "mealsSelected": "{selected}/{total} meals selected",
+    "mealSelectionError": "You can select up to {count} meals.",
+    "viewDetails": "View details",
+    "selectedLabel": "Selected",
+    "addOne": "Add one",
+    "removeOne": "Remove one",
+    "namePlaceholder": "Full Name",
+    "emailPlaceholder": "Email Address",
+    "phonePlaceholder": "Phone Number",
+    "privacyNote": "We respect your privacy. No immediate payment required.",
+    "submitting": "Submitting...",
+    "submitError": "Submission failed. Please try again.",
+    "successTitle": "You're on the Waitlist!",
+    "successMessage": "Thanks! We’ve saved your spot and will email you as soon as we open new subscriptions.",
+    "backHome": "Back to Home",
+    "loading": "Loading...",
+    "mealFilters": {
+      "all": "All",
+      "chicken": "Chicken",
+      "beef": "Beef",
+      "fish": "Fish",
+      "vegetarian": "Vegetarian"
+    },
+    "mealCategoryLabels": {
+      "chicken": "Chicken",
+      "beef": "Beef",
+      "fish": "Fish",
+      "vegetarian": "Vegetarian"
+    },
+    "mealBadgeLabels": {
+      "chicken": "Chicken",
+      "beef": "Beef",
+      "fish": "Fish",
+      "vegetarian": "Veg",
+      "highProtein": "High Protein",
+      "light": "Light"
+    },
+    "mealDetails": {
+      "kcal": "kcal",
+      "grams": "g",
+      "calories": "Calories",
+      "protein": "Protein",
+      "fat": "Fat",
+      "carbs": "Carbs",
+      "moreNutrition": "More Nutrition",
+      "fiber": "Fiber",
+      "sugar": "Sugar",
+      "sodium": "Sodium",
+      "ingredients": "Ingredients"
+    },
+    "mealOptions": {
+      "3": {
+        "label": "3 meals / week",
+        "description": "Light support for busy weeks"
+      },
+      "5": {
+        "label": "5 meals / week",
+        "description": "Full workweek coverage"
+      },
+      "7": {
+        "label": "7 meals / week",
+        "description": "Everyday dinners"
+      },
+      "10": {
+        "label": "10 meals / week",
+        "description": "Maximum flexibility"
+      }
+    },
+    "deliveryOptions": {
+      "1": {
+        "label": "1 delivery day",
+        "description": "All meals in one drop"
+      },
+      "2": {
+        "label": "2 delivery days",
+        "description": "Midweek freshness"
+      },
+      "3": {
+        "label": "3 delivery days",
+        "description": "More frequent top-ups"
+      },
+      "5": {
+        "label": "5 delivery days",
+        "description": "Near-daily convenience"
+      }
+    },
+    "plans": {
+      "balanced": {
+        "label": "Balanced",
+        "description": "Everyday meals with a good balance of protein, carbs, and vegetables."
+      },
+      "high-protein": {
+        "label": "High Protein",
+        "description": "Protein-forward meals built for active, on-the-go schedules."
+      },
+      "vegan": {
+        "label": "Vegan",
+        "description": "Plant-based meals with bold flavor and satisfying portions."
+      },
+      "low-calorie": {
+        "label": "Low Calorie",
+        "description": "Lighter meals with smart portions and clean ingredients."
+      }
+    },
+    "mealItems": {
+      "chicken-teriyaki": {
+        "title": "Chicken Teriyaki Rice Bowl",
+        "description": "Teriyaki-glazed chicken over steamed rice with broccoli and sesame.",
+        "ingredients": "Chicken, rice, broccoli, teriyaki glaze, sesame, scallion"
+      },
+      "chicken-satay": {
+        "title": "Chicken Satay Rice Bowl",
+        "description": "Grilled satay-style chicken with jasmine rice and crisp veggies.",
+        "ingredients": "Chicken, jasmine rice, peanut sauce, cucumber, carrot"
+      },
+      "chicken-shawarma": {
+        "title": "Chicken Shawarma Rice Bowl",
+        "description": "Spiced shawarma chicken with rice, herbs, and pickled onions.",
+        "ingredients": "Chicken, rice, yogurt spice blend, pickled onion, herbs"
+      },
+      "butter-chicken": {
+        "title": "Butter Chicken with Rice",
+        "description": "Creamy butter chicken served with fragrant basmati rice.",
+        "ingredients": "Chicken, basmati rice, tomato cream sauce, spices"
+      },
+      "chicken-pesto": {
+        "title": "Chicken Pesto Pasta",
+        "description": "Pesto chicken pasta with cherry tomatoes and spinach.",
+        "ingredients": "Chicken, pasta, basil pesto, tomato, spinach"
+      },
+      "chili-chicken": {
+        "title": "Chili Chicken Noodles",
+        "description": "Spicy chili chicken tossed with noodles and crunchy veg.",
+        "ingredients": "Chicken, noodles, chili sauce, bell pepper, onion"
+      },
+      "beef-bolognese": {
+        "title": "Beef Bolognese Pasta",
+        "description": "Slow-cooked beef bolognese over al dente pasta.",
+        "ingredients": "Beef, pasta, tomato, onion, garlic, herbs"
+      },
+      "beef-shawarma": {
+        "title": "Beef Shawarma Rice Bowl",
+        "description": "Tender beef shawarma with rice, herbs, and tahini drizzle.",
+        "ingredients": "Beef, rice, shawarma spice, tahini, parsley"
+      },
+      "pulled-beef": {
+        "title": "Mexican Pulled Beef Bowl",
+        "description": "Slow pulled beef with rice, beans, and pico de gallo.",
+        "ingredients": "Beef, rice, beans, tomato, lime, cilantro"
+      },
+      "salmon-teriyaki": {
+        "title": "Salmon Teriyaki Rice Bowl",
+        "description": "Teriyaki salmon with rice and steamed greens.",
+        "ingredients": "Salmon, rice, teriyaki glaze, green beans"
+      },
+      "grilled-salmon": {
+        "title": "Grilled Salmon with Rice & Vegetables",
+        "description": "Oven-grilled salmon with rice and seasonal vegetables.",
+        "ingredients": "Salmon, rice, broccoli, carrot, lemon, dill"
+      },
+      "veg-bowl": {
+        "title": "Vegetable Bowl",
+        "description": "Vegetable-forward bowl with grains and citrus dressing.",
+        "ingredients": "Quinoa, chickpeas, mixed veg, lemon dressing"
+      },
+      "veg-risotto": {
+        "title": "Vegetable Risotto",
+        "description": "Creamy vegetable risotto with herbs and parmesan.",
+        "ingredients": "Arborio rice, mushroom, zucchini, parmesan, herbs"
+      }
+    },
+    "tryFirstTitle": "Try First — No Subscription",
+    "tryFirstSubtitle": "One-time order with a single delivery day.",
+    "tryFirstPlanLabel": "Try First",
+    "tryFirstPointOne": "No subscription required — one-time order.",
+    "tryFirstPointTwo": "Single delivery day, choose multiple meals.",
+    "tryFirstPointThree": "Delivery fee €4.99–€5 applies.",
+    "summaryPricePerMealNoDiscount": "Price per meal"
+  },
+  "menuGrid": {
+    "title": "Catering Restaurants",
+    "subtitle": "Explore our diverse restaurant options. Each restaurant can be customized to your needs.",
+    "detectingLocation": "Detecting your location...",
+    "selectCity": "📍 Select City",
+    "showingRestaurants": "Showing {count} restaurant(s) in {city}",
+    "loading": "Loading restaurants from {city}...",
+    "failLoad": "Failed to load restaurants",
+    "noRestaurants": "No restaurants found in {city}",
+    "viewMenu": "View Menu →"
+  },
+  "chefCarousel": {
+    "title1": "Our ",
+    "title2": "Featured",
+    "title3": " Restaurants",
+    "subtitle": "Discover amazing home chefs and restaurants ready to cater your next event.",
+    "loading": "Loading restaurants...",
+    "failLoad": "Failed to load restaurants",
+    "noRestaurants": "No restaurants found."
+  },
+  "packageComparison": {
+    "title": "Compare Packages",
+    "subtitle": "See exactly what's included in each package to find the perfect fit for your team.",
+    "featureCol": "Feature",
+    "starter": "Starter",
+    "growth": "Growth",
+    "premium": "Premium",
+    "mostPopular": "Most Popular",
+    "perPerson": "per person",
+    "select": "Select",
+    "selectPkg": "Select",
+    "features": {
+      "numberOfCourses": "Number of Courses",
+      "courses2": "2 courses",
+      "courses3": "3 courses",
+      "courses4": "4 courses",
+      "menuOptions": "Menu Options",
+      "standard": "Standard",
+      "options5": "5+ options",
+      "unlimited": "Unlimited",
+      "customMenuAdjustments": "Custom Menu Adjustments",
+      "dietaryAccommodations": "Dietary Accommodations",
+      "type1": "1 type",
+      "nonAlcoholicDrinks": "Non-Alcoholic Drinks",
+      "wineBeer": "Wine & Beer",
+      "premiumBeverage": "Premium Beverage Package",
+      "tableSetup": "Table Setup & Cleanup",
+      "premiumTableSetup": "Premium Table Setup",
+      "customLinens": "Custom Linens",
+      "eventCoordinator": "Event Coordinator",
+      "preEventConsultation": "Pre-Event Consultation",
+      "min30": "30 min",
+      "hour1": "1 hour",
+      "postEventFeedback": "Post-Event Feedback",
+      "professionalPhotos": "Professional Photos",
+      "optional": "Optional",
+      "groupSize": "Group Size",
+      "size1530": "15-30",
+      "size2050": "20-50",
+      "size30100": "30-100",
+      "duration": "Duration",
+      "dur253": "2.5-3h",
+      "dur335": "3-3.5h",
+      "dur354": "3.5-4h"
+    }
+  },
+  "chefSignup": {
+    "title": "Are You a Chef?",
+    "subtitle": "Join our exclusive network of top-tier private chefs and showcase your christmas menus.",
+    "applyBtn": "Apply as Chef"
+  },
+  "metadata": {
+    "homeTitle": "Homemade Meal Subscriptions | Fresh Weekly Delivery",
+    "homeDescription": "Choose a meal subscription built for real life. Fresh, chef-made meals delivered weekly across the Netherlands.",
+    "quoteTitle": "Start Your Subscription | Homemade",
+    "quoteDescription": "Answer a few quick questions and start your weekly meal subscription."
+  },
+  "cateringCalculator": {
+    "badge": "💰 Savings Calculator",
+    "title1": "See how much your team",
+    "title2": "could save",
+    "subtitle": "Compare the cost of restaurant catering vs. Homemade catering. Adjust the sliders to match your setup.",
+    "configTitle": "Configure your event",
+    "eventTypeLabel": "Event type",
+    "guestsLabel": "Number of guests",
+    "guestsMin": "5 guests",
+    "guestsMax": "200 guests",
+    "eventsLabel": "Events per year",
+    "eventsMin": "1x",
+    "eventsMax": "24x / year",
+    "noteRef": "💡 Based on average Amsterdam restaurant catering rates vs. Homemade's transparent pricing. Actual savings may vary.",
+    "saveText": "You could save",
+    "perYearText": "per year",
+    "lessThanText": "less than restaurants",
+    "perEventSave": "Per event saving",
+    "over5Years": "Over 5 years",
+    "costBreakdown": "Annual cost breakdown",
+    "restaurantCatering": "Restaurant catering",
+    "homemadeCatering": "Homemade catering",
+    "bookBtn": "Book your first event →",
+    "mealLabels": {
+      "lunch": "Team Lunch",
+      "dinner": "Team Dinner",
+      "drinks": "Drinks & Snacks",
+      "breakfast": "Breakfast Meeting"
+    }
+  },
+  "promoBanner": {
+    "badge": "Limited Spots",
+    "headline": "20% Off at Launch",
+    "subline": "Join the waitlist today",
+    "cta": "Join Waitlist"
+  },
+  "quotePage": {
+    "title": "Join the Waitlist",
+    "subtitle": "Answer a few quick questions and we’ll add you to the waitlist."
+  }
 }

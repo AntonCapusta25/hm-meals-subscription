@@ -7,7 +7,7 @@ import confetti from "canvas-confetti";
 import { trackEvent } from "@/lib/analytics";
 import { useI18n } from "@/contexts/I18nContext";
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 type FormData = {
     plan: string;
@@ -307,7 +307,9 @@ function QuizFormContent() {
     const { dictionary } = useI18n();
     const t = (dictionary as any)?.quizForm || {};
     const pathname = usePathname();
+    const searchParams = useSearchParams();
     const lang = pathname?.split('/')[1] || 'en';
+    const isTryFirst = searchParams?.get("mode") === "trial";
     const planCopy = t.plans || {};
     const mealOptionsCopy = t.mealOptions || {};
     const deliveryOptionsCopy = t.deliveryOptions || {};
@@ -336,6 +338,12 @@ function QuizFormContent() {
 
     const totalSteps = 5;
 
+    useEffect(() => {
+        if (isTryFirst) {
+            updateData({ plan: t.tryFirstPlanLabel || "Try First" });
+        }
+    }, [isTryFirst, t.tryFirstPlanLabel]);
+
     const updateData = (fields: Partial<FormData>) => {
         setFormData(prev => ({ ...prev, ...fields }));
     };
@@ -344,13 +352,19 @@ function QuizFormContent() {
     const filteredMeals = MEAL_ITEMS.filter((m) => mealFilter === "all" || m.category === mealFilter);
     const selectedMealItems = MEAL_ITEMS.filter((meal) => formData.selectedMeals.includes(meal.id));
     const defaultPricePerMeal = 6.49;
-    const basePricePerMeal = selectedMealItems.length
-        ? Number((selectedMealItems.reduce((sum, meal) => sum + meal.price, 0) / selectedMealItems.length).toFixed(2))
+    const selectedMealsTotal = formData.selectedMeals.reduce((sum, id) => {
+        const meal = MEAL_ITEMS.find((item) => item.id === id);
+        return sum + (meal?.price || 0);
+    }, 0);
+    const basePricePerMeal = formData.selectedMeals.length
+        ? Number((selectedMealsTotal / formData.selectedMeals.length).toFixed(2))
         : defaultPricePerMeal;
-    const marketingPricePerMeal = Number((basePricePerMeal * 1.2).toFixed(2));
-    const discountedPricePerMeal = Number((marketingPricePerMeal * 0.8).toFixed(2));
+    const marketingPricePerMeal = isTryFirst ? basePricePerMeal : Number((basePricePerMeal * 1.2).toFixed(2));
+    const discountedPricePerMeal = basePricePerMeal;
     const subtotal = targetMeals > 0 ? Number((marketingPricePerMeal * targetMeals).toFixed(2)) : 0;
     const discountedTotal = targetMeals > 0 ? Number((discountedPricePerMeal * targetMeals).toFixed(2)) : 0;
+    const deliveryFee = isTryFirst ? 4.99 : 0;
+    const finalTotal = Number((discountedTotal + deliveryFee).toFixed(2));
 
     const mealCounts = formData.selectedMeals.reduce<Record<string, number>>((acc, id) => {
         acc[id] = (acc[id] || 0) + 1;
@@ -362,6 +376,10 @@ function QuizFormContent() {
             window.scrollTo({ top: 0, behavior: "auto" });
         }
     }, []);
+
+    const deliveryOptions = isTryFirst
+        ? DELIVERY_DAYS_OPTIONS.filter((opt) => opt.id === "1")
+        : DELIVERY_DAYS_OPTIONS;
 
     const getLabelForBadge = (key: string, fallback: string) => badgeLabels[key] || fallback;
     const getCategoryLabel = (category: string) => {
@@ -451,12 +469,12 @@ function QuizFormContent() {
                     name: formData.name,
                     email: formData.email,
                     phone: formData.phone,
-                    plan: formData.plan,
+                    plan: formData.plan || (isTryFirst ? (t.tryFirstPlanLabel || "Try First") : ""),
                     mealsPerWeek: formData.mealsPerWeek,
                     deliveryDays: formData.deliveryDays,
-                    message: `Plan: ${formData.plan}; Meals per week: ${formData.mealsPerWeek}; Delivery days: ${formData.deliveryDays}; Meals selected: ${formData.selectedMeals.join(", ")}`,
+                    message: `Mode: ${isTryFirst ? "Try First" : "Subscription"}; Plan: ${formData.plan}; Meals per week: ${formData.mealsPerWeek}; Delivery days: ${formData.deliveryDays}; Meals selected: ${formData.selectedMeals.join(", ")}; Delivery fee: €${deliveryFee.toFixed(2)}`,
                     locale: lang,
-                    source: "quiz-form",
+                    source: isTryFirst ? "quiz-form-try-first" : "quiz-form",
                 }),
             });
 
@@ -567,33 +585,56 @@ function QuizFormContent() {
                             transition={{ duration: 0.3 }}
                             className="w-full text-center"
                         >
-                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-dark mb-2 md:mb-4">{t.occasionTitle || "Choose your plan"}</h2>
-                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10 max-w-2xl mx-auto">{t.occasionSubtitle || "Pick the subscription that fits your routine."}</p>
- 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 max-w-4xl mx-auto text-left">
-                                {PLANS.map((occ) => {
-                                    const copy = planCopy[occ.id] || {};
-                                    const label = copy.label || occ.label;
-                                    const description = copy.description || occ.description;
-                                    return (
+                            <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-dark mb-2 md:mb-4">
+                                {isTryFirst ? (t.tryFirstTitle || "Try First — No Subscription") : (t.occasionTitle || "Choose your plan")}
+                            </h2>
+                            <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10 max-w-2xl mx-auto">
+                                {isTryFirst ? (t.tryFirstSubtitle || "One-time order with a single delivery day.") : (t.occasionSubtitle || "Pick the subscription that fits your routine.")}
+                            </p>
+
+                            {isTryFirst ? (
+                                <div className="max-w-3xl mx-auto">
+                                    <div className="bg-white border border-dark/10 rounded-2xl p-5 md:p-8 text-left shadow-sm">
+                                        <ul className="text-sm md:text-base text-gray-600 space-y-2">
+                                            <li>• {t.tryFirstPointOne || "No subscription required — one-time order."}</li>
+                                            <li>• {t.tryFirstPointTwo || "Single delivery day, choose multiple meals."}</li>
+                                            <li>• {t.tryFirstPointThree || "Delivery fee applies."}</li>
+                                        </ul>
+                                    </div>
                                     <button
-                                        key={occ.id}
-                                        onClick={() => { updateData({ plan: label }); setTimeout(nextStep, 300); }}
-                                        className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.plan === label
-                                            ? "bg-orange/10 border-orange text-orange"
-                                            : "bg-white border-dark/10 text-dark hover:bg-orange/5"
-                                            }`}
+                                        onClick={() => setTimeout(nextStep, 200)}
+                                        className="mt-6 inline-flex items-center justify-center gap-2 bg-orange text-white px-6 py-3 rounded-2xl font-bold hover:bg-orange/90 transition-colors"
                                     >
-                                        <occ.icon size={18} className={`md:w-6 md:h-6 ${formData.plan === label ? "text-orange" : "text-gray-400"}`} />
-                                        <div className="flex flex-col">
-                                            <span className="font-bold text-sm md:text-lg">{label}</span>
-                                            <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.plan === label ? "text-orange/90" : "text-gray-500"}`}>
-                                                {description}
-                                            </span>
-                                        </div>
+                                        {t.nextButton || "Next"}
+                                        <ArrowRight size={18} />
                                     </button>
-                                )})}
-                            </div>
+                                </div>
+                            ) : (
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 max-w-4xl mx-auto text-left">
+                                    {PLANS.map((occ) => {
+                                        const copy = planCopy[occ.id] || {};
+                                        const label = copy.label || occ.label;
+                                        const description = copy.description || occ.description;
+                                        return (
+                                        <button
+                                            key={occ.id}
+                                            onClick={() => { updateData({ plan: label }); setTimeout(nextStep, 300); }}
+                                            className={`flex items-center gap-3 md:gap-4 p-3 md:p-6 rounded-2xl border text-left transition-all ${formData.plan === label
+                                                ? "bg-orange/10 border-orange text-orange"
+                                                : "bg-white border-dark/10 text-dark hover:bg-orange/5"
+                                                }`}
+                                        >
+                                            <occ.icon size={18} className={`md:w-6 md:h-6 ${formData.plan === label ? "text-orange" : "text-gray-400"}`} />
+                                            <div className="flex flex-col">
+                                                <span className="font-bold text-sm md:text-lg">{label}</span>
+                                                <span className={`text-[11px] md:text-sm mt-1 leading-snug ${formData.plan === label ? "text-orange/90" : "text-gray-500"}`}>
+                                                    {description}
+                                                </span>
+                                            </div>
+                                        </button>
+                                    )})}
+                                </div>
+                            )}
                         </motion.div>
                     )}
 
@@ -793,27 +834,35 @@ function QuizFormContent() {
                                                 <span className="font-semibold text-dark">{targetMeals || 0}</span>
                                             </div>
                                             <div className="flex justify-between">
-                                                <span className="text-gray-500">{t.summaryPricePerMeal || "Price per meal"}</span>
+                                                <span className="text-gray-500">
+                                                    {isTryFirst ? (t.summaryPricePerMealNoDiscount || "Price per meal") : (t.summaryPricePerMeal || "Price per meal")}
+                                                </span>
                                                 <div className="text-right">
-                                                    <span className="text-gray-500 line-through text-xs mr-2">€{marketingPricePerMeal.toFixed(2)}</span>
+                                                    {!isTryFirst && (
+                                                        <span className="text-gray-500 line-through text-xs mr-2">€{marketingPricePerMeal.toFixed(2)}</span>
+                                                    )}
                                                     <span className="font-semibold text-dark">€{discountedPricePerMeal.toFixed(2)}</span>
                                                 </div>
                                             </div>
                                             <div className="flex justify-between">
                                                 <span className="text-gray-500">{t.summaryDelivery || "Delivery"}</span>
-                                                <span className="font-semibold text-green-600">{t.summaryDeliveryValue || "Free"}</span>
+                                                <span className={`font-semibold ${isTryFirst ? "text-dark" : "text-green-600"}`}>
+                                                    {isTryFirst ? `€${deliveryFee.toFixed(2)}` : (t.summaryDeliveryValue || "Free")}
+                                                </span>
                                             </div>
                                             <div className="border-t border-dark/10 pt-2 mt-2">
                                                 <div className="flex justify-between items-baseline">
                                                     <span className="font-semibold text-dark">{t.summaryTotal || "Total"}</span>
                                                     <div className="text-right">
-                                                        <span className="text-gray-500 line-through text-sm mr-2">€{subtotal.toFixed(2)}</span>
-                                                        <span className="text-xl font-bold text-orange">€{discountedTotal.toFixed(2)}</span>
+                                                        {!isTryFirst && <span className="text-gray-500 line-through text-sm mr-2">€{subtotal.toFixed(2)}</span>}
+                                                        <span className="text-xl font-bold text-orange">€{finalTotal.toFixed(2)}</span>
                                                     </div>
                                                 </div>
-                                                <div className="mt-2 bg-orange/10 rounded-md px-3 py-2 text-center">
-                                                    <span className="text-sm font-semibold text-orange">{t.summaryDiscountLabel || "Launch offer applied — 20% OFF"}</span>
-                                                </div>
+                                                {!isTryFirst && (
+                                                    <div className="mt-2 bg-orange/10 rounded-md px-3 py-2 text-center">
+                                                        <span className="text-sm font-semibold text-orange">{t.summaryDiscountLabel || "Launch offer applied — 20% OFF"}</span>
+                                                    </div>
+                                                )}
                                             </div>
                                         </div>
                                         <div className="space-y-2 pt-2 border-t border-dark/10">
@@ -873,7 +922,7 @@ function QuizFormContent() {
                             <p className="text-gray-600 text-sm md:text-lg mb-5 md:mb-10 max-w-2xl mx-auto">{t.dateSubtitle || "Pick how many days you want deliveries each week."}</p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 max-w-2xl mx-auto">
-                                {DELIVERY_DAYS_OPTIONS.map((opt) => {
+                                {deliveryOptions.map((opt) => {
                                     const copy = deliveryOptionsCopy[opt.id] || {};
                                     const label = copy.label || opt.label;
                                     const description = copy.description || opt.description;

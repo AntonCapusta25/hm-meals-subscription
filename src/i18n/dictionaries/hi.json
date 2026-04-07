@@ -21,7 +21,8 @@
     "subtitle": "ताज़ा, शेफ‑बने भोजन हर हफ्ते डिलीवर। अपने रूटीन के हिसाब से प्लान चुनें।",
     "cta": "अपना प्लान चुनें",
     "launchOfferTitle": "लॉन्च ऑफ़र",
-    "launchOfferText": "वेटलिस्ट जॉइन करने पर 50% छूट"
+    "launchOfferText": "वेटलिस्ट जॉइन करने पर 20% छूट",
+    "ctaSecondary": "पहले ट्राई करें — कोई सब्सक्रिप्शन नहीं"
   },
   "partners": {
     "heading": "गर्व से साझेदारी"
@@ -291,12 +292,12 @@
     "summaryTitle": "ऑर्डर सारांश",
     "summaryPlan": "प्लान",
     "summaryMeals": "हफ्ते के मील",
-    "summaryPricePerMeal": "प्रति मील कीमत",
+    "summaryPricePerMeal": "प्रति मील कीमत (डिस्काउंट के बाद)",
     "summaryDelivery": "डिलीवरी",
     "summaryDeliveryValue": "फ्री",
     "summaryTotal": "कुल",
     "summaryDiscountLabel": "लॉन्च ऑफ़र लागू — 20% OFF",
-    "summaryOffer": "वेटलिस्ट बोनस — लॉन्च पर 50% ऑफ",
+    "summaryOffer": "वेटलिस्ट बोनस — लॉन्च पर 20% ऑफ",
     "summaryNote": "वेटलिस्ट जॉइन करने के बाद ऑफ़र अनलॉक होगा।",
     "summaryPause": "कभी भी पॉज़ करें",
     "summaryNoCommitment": "कोई कमिटमेंट नहीं",
@@ -488,7 +489,14 @@
         "description": "क्रीमी वेजिटेबल रिसोटो, हर्ब्स और पार्मेज़ान के साथ।",
         "ingredients": "आर्बोरियो राइस, मशरूम, ज़ुकीनी, पार्मेज़ान, हर्ब्स"
       }
-    }
+    },
+    "tryFirstTitle": "पहले ट्राई करें — कोई सब्सक्रिप्शन नहीं",
+    "tryFirstSubtitle": "एक बार का ऑर्डर, एक ही डिलीवरी दिन के साथ।",
+    "tryFirstPlanLabel": "पहले ट्राई करें",
+    "tryFirstPointOne": "कोई सब्सक्रिप्शन जरूरी नहीं — एक बार का ऑर्डर।",
+    "tryFirstPointTwo": "एक डिलीवरी दिन, कई मील चुनें।",
+    "tryFirstPointThree": "डिलीवरी शुल्क €4.99–€5 लागू।",
+    "summaryPricePerMealNoDiscount": "प्रति मील कीमत"
   },
   "menuGrid": {
     "title": "कैटरिंग रेस्टोरेंट्स",
@@ -599,7 +607,7 @@
   },
   "promoBanner": {
     "badge": "सीमित स्थान",
-    "headline": "लॉन्च पर 50% ऑफ",
+    "headline": "लॉन्च पर 20% ऑफ",
     "subline": "आज ही वेटलिस्ट जॉइन करें",
     "cta": "वेटलिस्ट जॉइन करें"
   },

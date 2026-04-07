@@ -1,610 +1,618 @@
 {
-    "navigation": {
-        "howItWorks": "Hoe het werkt",
-        "menu": "Plannen",
-        "about": "Over ons",
-        "faq": "FAQ",
-        "bookNow": "Kies plan",
-        "blog": "Blog"
-    },
-    "hero": {
-        "titlePart1": "Homemade maaltijden",
-        "titlePart2": "voor",
-        "titleHighlight": "het echte leven",
-        "animatedTitleStatic": "Homemade maaltijdabonnementen voor ",
-        "animatedRotatingWords": [
-            "gezinnen",
-            "drukke professionals",
-            "plantaardig leven",
-            "comfortgerichte routines"
-        ],
-        "subtitle": "Verse, door chefs bereide maaltijden, wekelijks geleverd. Kies een plan dat bij je routine past.",
-        "cta": "Kies je plan",
-        "launchOfferTitle": "Lanceringsoffer",
-        "launchOfferText": "50% korting wanneer je je inschrijft op de wachtlijst"
-    },
-    "partners": {
-        "heading": "Met trots partner van"
-    },
-    "problemSolution": {
-        "title1": "Waarom je avonden besteden",
-        "title2": "aan uitzoeken wat je gaat koken?",
-        "solutionTitle": "Een wekelijks maaltijdplan dat echt werkt",
-        "solutionDesc": "Kies een plan, selecteer je maaltijden en wij regelen de rest.",
-        "benefit1Title": "Consistente, gebalanceerde maaltijden",
-        "benefit1Desc": "Door chefs bereide gerechten met echte ingrediënten en duidelijke voedingsfocus",
-        "benefit2Title": "Geen planning, geen stress",
-        "benefit2Desc": "Sla boodschappen, voorbereiding en afwas over op drukke dagen",
-        "benefit3Title": "Flexibel ontworpen",
-        "benefit3Desc": "Pauzeer, sla over of wissel van plan wanneer je wilt"
-    },
-    "howItWorks": {
-        "title": "Hoe het werkt",
-        "step1Title": "Kies je plan",
-        "step1Desc": "Kies het plan dat bij je routine en voorkeuren past.",
-        "step2Title": "Selecteer wekelijkse maaltijden",
-        "step2Desc": "Kies je maaltijden en portiegrootte voor de week.",
-        "step3Title": "Vers bezorgd",
-        "step3Desc": "Verwarm, eet en geniet. Pauzeer of sla over wanneer je wilt."
-    },
-    "cuisineShowcase": {
-        "title1": "Kies je",
-        "title2": "plan",
-        "subtitle": "Vier kernabonnementen ontworpen voor hoe mensen in Nederland eten.",
-        "requestQuote": "Kies plan",
-        "planMenu": "Start je abonnement",
-        "customAlert": "Altijd pauzeren of overslaan",
-        "items": {
-            "family": {
-                "title": "Balanced",
-                "description": "Dagelijkse maaltijden met een goede balans van eiwitten, koolhydraten en groenten."
-            },
-            "routine": {
-                "title": "High Protein",
-                "description": "Eiwitrijke maaltijden voor een actieve, drukke agenda."
-            },
-            "plant": {
-                "title": "Vegan",
-                "description": "Plantaardige maaltijden met volle smaak en goede porties."
-            },
-            "comfort": {
-                "title": "Low Calorie",
-                "description": "Lichtere maaltijden met slimme porties en pure ingrediënten."
-            }
-        }
-    },
-    "occasions": {
-        "title": "Voor wie het is",
-        "exploreMenu": "Bekijk details",
-        "items": {
-            "families": {
-                "title": "Drukke gezinnen",
-                "subtitle": "Doordeweeks"
-            },
-            "professionals": {
-                "title": "Drukke professionals",
-                "subtitle": "Routine"
-            },
-            "flexitarians": {
-                "title": "Flexitariërs",
-                "subtitle": "Plantaardig"
-            },
-            "comfort": {
-                "title": "Comfortzoekers",
-                "subtitle": "Zorg"
-            }
-        }
-    },
-    "packageTiers": {
-        "title": "Teamdinerpakketten",
-        "subtitle": "Transparante prijzen, uitzonderlijke waarde. Alle pakketten inclusief professionele service en schoonmaak.",
-        "badgePopular": "Meest populair",
-        "groupLabel": "Groep:",
-        "timeLabel": "Duur:",
-        "choosePackage": "Kies dit pakket",
-        "note": "Alle prijzen excl. btw. Definitieve offerte na consult. Minimale groepsgroottes gelden.",
-        "packages": {
-            "starter": {
-                "name": "Starter Teamdiner",
-                "priceUnit": "per persoon",
-                "groupSize": "15-30 personen",
-                "duration": "2,5-3 uur",
-                "description": "Budgetbewuste teams, eerste events",
-                "features": [
-                    "2-gangen menu",
-                    "Non-alcoholische dranken",
-                    "Tafelopstelling & schoonmaak",
-                    "1 dieetwens"
-                ]
-            },
-            "growth": {
-                "name": "Growth Teamdiner",
-                "priceUnit": "per persoon",
-                "groupSize": "20-50 personen",
-                "duration": "3-3,5 uur",
-                "description": "Perfecte balans tussen kwaliteit en waarde",
-                "features": [
-                    "3-gangen menu",
-                    "Alcoholische dranken (wijn/bier)",
-                    "Premium tafelopstelling",
-                    "Onbeperkte dieetwensen",
-                    "Voorafgaand consult (30 min)",
-                    "Menu-aanpassingen",
-                    "5+ menu-opties"
-                ]
-            },
-            "premium": {
-                "name": "Premium Teamviering",
-                "priceUnit": "per persoon",
-                "groupSize": "30-100 personen",
-                "duration": "3,5-4 uur",
-                "description": "Ultieme ervaring voor speciale gelegenheden",
-                "features": [
-                    "4-gangen menu",
-                    "Premium drankenpakket",
-                    "Luxe linnen & opstelling",
-                    "Volledige culinaire maatwerk",
-                    "1-uur planningscall",
-                    "Feedback na afloop",
-                    "Eventcoördinator/assistent",
-                    "Optioneel professionele foto's"
-                ]
-            }
-        }
-    },
-    "testimonials": {
-        "title": "Wat abonnees zeggen",
-        "subtitle": "Echte verhalen van mensen die Homemade elke week gebruiken.",
-        "joinText": "Sluit je aan bij duizenden abonnees",
-        "bookButton": "Kies je plan",
-        "verifiedClient": "Geverifieerde klant",
-        "metrics": {
-            "happyClients": "Tevreden klanten",
-            "averageRating": "Gemiddelde beoordeling",
-            "savings": "Tijd bespaard",
-            "guarantee": "Tevredenheidsgarantie"
-        },
-        "items": [
-            {
-                "company": "Balanced",
-                "eventType": "Wekelijkse diners",
-                "quote": "Onze kinderen eten de maaltijden echt. De porties zijn perfect en we besparen elke week uren."
-            },
-            {
-                "company": "High Protein",
-                "eventType": "Weekstructuur",
-                "quote": "Ik sla geen lunch meer over of bestel afhaal. De eiwitopties zijn sterk en consistent."
-            },
-            {
-                "company": "Vegan",
-                "eventType": "Flexitarisch",
-                "quote": "We wilden meer plantaardig eten zonder volledig vegan te gaan. Deze zijn smaakvol en vullend."
-            },
-            {
-                "company": "Low Calorie",
-                "eventType": "Makkelijk opwarmen",
-                "quote": "Betrouwbare, huiselijke maaltijden die makkelijk op te warmen zijn. Precies wat ik nodig had."
-            },
-            {
-                "company": "Balanced",
-                "eventType": "Portiegecontroleerd",
-                "quote": "Veel variatie, geen voedselverspilling en de bezorging is altijd op tijd."
-            },
-            {
-                "company": "Drukke professional",
-                "eventType": "Maaltijden zonder prep",
-                "quote": "Ik houd mijn weekdagen eindelijk overzichtelijk. De maaltijden zijn vers en smaken als echt eten."
-            },
-            {
-                "company": "Balanced",
-                "eventType": "Kindvriendelijk",
-                "quote": "Minder stress tijdens het diner. We verwarmen, serveren en genieten."
-            }
-        ]
-    },
-    "faq": {
-        "title": "Veelgestelde vragen",
-        "subtitle": "Alles wat je moet weten over maaltijdabonnementen. Kun je je antwoord niet vinden? Neem contact op.",
-        "stillQuestions": "Nog vragen?",
-        "contactTeam": "Neem contact op",
-        "items": [
-            {
-                "question": "Wat is inbegrepen bij een abonnement?",
-                "answer": "Verse, door chefs bereide maaltijden die wekelijks worden geleverd. Jij kiest je plan, porties en voorkeuren."
-            },
-            {
-                "question": "Kan ik pauzeren of weken overslaan?",
-                "answer": "Ja. Je kunt pauzeren, overslaan of je plan aanpassen vóór de wekelijkse deadline."
-            },
-            {
-                "question": "Ondersteunen jullie dieetwensen?",
-                "answer": "We bieden vegetarische, plantaardige en eiwitrijke opties, plus allergen-vriendelijke keuzes."
-            },
-            {
-                "question": "Hoe werken porties?",
-                "answer": "Kies 2–4 porties per maaltijd, of losse maaltijden als je voor één persoon bestelt."
-            },
-            {
-                "question": "Wanneer leveren jullie?",
-                "answer": "We bezorgen op vaste wekelijkse routes per regio. Je ziet beschikbare dagen bij het afrekenen."
-            },
-            {
-                "question": "Hoe ver van tevoren moet ik bestellen?",
-                "answer": "Bestellingen sluiten 3–4 dagen voor levering, zodat chefs vers kunnen bereiden."
-            },
-            {
-                "question": "Kan ik altijd opzeggen?",
-                "answer": "Ja. Pauzeer of stop je abonnement vanuit je account, zonder lange verplichting."
-            },
-            {
-                "question": "Zijn de maaltijden vers of bevroren?",
-                "answer": "Maaltijden worden vers geleverd en zijn ontworpen om makkelijk op te warmen."
-            }
-        ]
-    },
-    "footer": {
-        "copyright": "© 2026 Homemade. Alle rechten voorbehouden.",
-        "terms": "Voorwaarden",
-        "privacy": "Privacy",
-        "contact": "Contact"
-    },
-    "bookingForm": {
-        "successTitle": "Je bent geboekt!",
-        "successMessage": "Bedankt voor je aanvraag. Ons cateringteam neemt snel contact op om de details te bevestigen!",
-        "bookAnother": "Boek nog een",
-        "title1": "Reserveer je",
-        "title2": "catering",
-        "subtitle": "Van zakelijke events tot vieringen: wij leveren catering op maat.",
-        "feature1": "5-sterren chefs",
-        "feature2": "Op maat samengestelde menu's",
-        "selectMenuLabel": "Selecteer menu",
-        "customMenuOption": "-- Ik stel mijn eigen menu samen --",
-        "preferredChefLabel": "Voorkeurschef",
-        "anyChefOption": "Elke chef",
-        "cuisineStyleLabel": "Keukenstijl",
-        "cuisinePlaceholder": "bijv. Italiaans",
-        "eventDetailsLabel": "Eventdetails",
-        "guests": {
-            "g2": "2 gasten",
-            "g3_5": "3-5 gasten",
-            "g6_10": "6-10 gasten",
-            "g10plus": "10+ gasten"
-        },
-        "namePlaceholder": "Jouw naam",
-        "emailPlaceholder": "E-mailadres",
-        "bookNowBtn": "Nu boeken",
-        "noPaymentText": "Geen directe betaling vereist.",
-        "contactedText": "We nemen contact op om details af te stemmen.",
-        "loadingText": "Formulier laden..."
-    },
-    "quizForm": {
-        "stepProgress": "Stap {current} van {total}",
-        "backButton": "Terug",
-        "nextButton": "Volgende",
-        "submitButton": "Op de wachtlijst",
-        "occasionTitle": "Kies je plan",
-        "occasionSubtitle": "Kies het abonnement dat bij je routine past.",
-        "step1Header": "Stel je eerste box samen",
-        "step1Subheader": "Kies je plan en hoeveel maaltijden je per week wilt.",
-        "planSectionTitle": "Plan",
-        "mealsSectionTitle": "Maaltijden per week",
-        "summaryTitle": "Overzicht",
-        "summaryPlan": "Plan",
-        "summaryMeals": "Maaltijden per week",
-        "summaryPricePerMeal": "Prijs per maaltijd",
-        "summaryDelivery": "Bezorging",
-        "summaryDeliveryValue": "Gratis",
-        "summaryTotal": "Totaal",
-        "summaryDiscountLabel": "Lanceringsoffer toegepast — 20% KORTING",
-        "summaryOffer": "Wachtlijstbonus — 50% korting bij lancering",
-        "summaryNote": "Je ontgrendelt de aanbieding na inschrijving op de wachtlijst.",
-        "summaryPause": "Altijd pauzeren",
-        "summaryNoCommitment": "Geen verplichtingen",
-        "summaryFreshMeals": "Verse maaltijden, wekelijks",
-        "summaryLegend": "Legenda",
-        "legendLabels": {
-            "chicken": "Kip",
-            "beef": "Rund",
-            "fish": "Vis",
-            "vegetarian": "Veg",
-            "highProtein": "High Protein",
-            "light": "Light"
-        },
-        "guestsTitle": "Hoeveel maaltijden per week?",
-        "guestsSubtitle": "Kies de wekelijkse hoeveelheid die bij je routine past.",
-        "dateTitle": "Hoeveel bezorgdagen?",
-        "dateSubtitle": "Kies hoeveel dagen je bezorging wilt per week.",
-        "contactTitle": "Jouw gegevens",
-        "contactSubtitle": "Waar mogen we je wachtlijstbevestiging naartoe sturen?",
-        "mealsTitle": "Kies je maaltijden",
-        "mealsSubtitle": "Selecteer je maaltijden voor de week.",
-        "mealsSelected": "{selected}/{total} maaltijden geselecteerd",
-        "mealSelectionError": "Je kunt tot {count} maaltijden kiezen.",
-        "viewDetails": "Bekijk details",
-        "selectedLabel": "Geselecteerd",
-        "addOne": "Voeg toe",
-        "removeOne": "Verwijder",
-        "namePlaceholder": "Volledige naam",
-        "emailPlaceholder": "E-mailadres",
-        "phonePlaceholder": "Telefoonnummer",
-        "privacyNote": "We respecteren je privacy. Geen directe betaling vereist.",
-        "submitting": "Verzenden...",
-        "submitError": "Verzenden mislukt. Probeer het opnieuw.",
-        "successTitle": "Je staat op de wachtlijst!",
-        "successMessage": "Bedankt! We hebben je plek gereserveerd en mailen zodra we nieuwe abonnementen openen.",
-        "backHome": "Terug naar home",
-        "loading": "Laden...",
-        "mealFilters": {
-            "all": "Alle",
-            "chicken": "Kip",
-            "beef": "Rund",
-            "fish": "Vis",
-            "vegetarian": "Vegetarisch"
-        },
-        "mealCategoryLabels": {
-            "chicken": "Kip",
-            "beef": "Rund",
-            "fish": "Vis",
-            "vegetarian": "Vegetarisch"
-        },
-        "mealBadgeLabels": {
-            "chicken": "Kip",
-            "beef": "Rund",
-            "fish": "Vis",
-            "vegetarian": "Veg",
-            "highProtein": "High Protein",
-            "light": "Light"
-        },
-        "mealDetails": {
-            "kcal": "kcal",
-            "grams": "g",
-            "calories": "Calorieën",
-            "protein": "Eiwit",
-            "fat": "Vet",
-            "carbs": "Koolhydraten",
-            "moreNutrition": "Meer voeding",
-            "fiber": "Vezels",
-            "sugar": "Suiker",
-            "sodium": "Natrium",
-            "ingredients": "Ingrediënten"
-        },
-        "mealOptions": {
-            "3": {
-                "label": "3 maaltijden / week",
-                "description": "Lichte ondersteuning voor drukke weken"
-            },
-            "5": {
-                "label": "5 maaltijden / week",
-                "description": "Volledige werkweekdekking"
-            },
-            "7": {
-                "label": "7 maaltijden / week",
-                "description": "Elke dag diner"
-            },
-            "10": {
-                "label": "10 maaltijden / week",
-                "description": "Maximale flexibiliteit"
-            }
-        },
-        "deliveryOptions": {
-            "1": {
-                "label": "1 bezorgdag",
-                "description": "Alles in één keer geleverd"
-            },
-            "2": {
-                "label": "2 bezorgdagen",
-                "description": "Halverwege vers"
-            },
-            "3": {
-                "label": "3 bezorgdagen",
-                "description": "Vaker bijvullen"
-            },
-            "5": {
-                "label": "5 bezorgdagen",
-                "description": "Bijna dagelijks gemak"
-            }
-        },
-        "plans": {
-            "balanced": {
-                "label": "Balanced",
-                "description": "Dagelijkse maaltijden met een goede balans van eiwitten, koolhydraten en groenten."
-            },
-            "high-protein": {
-                "label": "High Protein",
-                "description": "Eiwitrijke maaltijden voor een actieve, drukke agenda."
-            },
-            "vegan": {
-                "label": "Vegan",
-                "description": "Plantaardige maaltijden met volle smaak en goede porties."
-            },
-            "low-calorie": {
-                "label": "Low Calorie",
-                "description": "Lichtere maaltijden met slimme porties en pure ingrediënten."
-            }
-        },
-        "mealItems": {
-            "chicken-teriyaki": {
-                "title": "Chicken Teriyaki Rice Bowl",
-                "description": "Teriyaki-kip over gestoomde rijst met broccoli en sesam.",
-                "ingredients": "Kip, rijst, broccoli, teriyakisaus, sesam, bosui"
-            },
-            "chicken-satay": {
-                "title": "Chicken Satay Rice Bowl",
-                "description": "Gegrilde satékip met jasmijnrijst en knapperige groente.",
-                "ingredients": "Kip, jasmijnrijst, pindasaus, komkommer, wortel"
-            },
-            "chicken-shawarma": {
-                "title": "Chicken Shawarma Rice Bowl",
-                "description": "Gekruide shawarma-kip met rijst, kruiden en ingelegde ui.",
-                "ingredients": "Kip, rijst, yoghurtkruidenmix, ingelegde ui, kruiden"
-            },
-            "butter-chicken": {
-                "title": "Butter Chicken with Rice",
-                "description": "Romige butter chicken met geurende basmatirijst.",
-                "ingredients": "Kip, basmatirijst, tomatenroomsaus, specerijen"
-            },
-            "chicken-pesto": {
-                "title": "Chicken Pesto Pasta",
-                "description": "Pesto kip-pasta met cherrytomaat en spinazie.",
-                "ingredients": "Kip, pasta, basilicumpesto, tomaat, spinazie"
-            },
-            "chili-chicken": {
-                "title": "Chili Chicken Noodles",
-                "description": "Pittige chili-kip met noedels en knapperige groente.",
-                "ingredients": "Kip, noedels, chilisaus, paprika, ui"
-            },
-            "beef-bolognese": {
-                "title": "Beef Bolognese Pasta",
-                "description": "Langzaam gegaarde bolognesesaus met al dente pasta.",
-                "ingredients": "Rund, pasta, tomaat, ui, knoflook, kruiden"
-            },
-            "beef-shawarma": {
-                "title": "Beef Shawarma Rice Bowl",
-                "description": "Malse rundshawarma met rijst, kruiden en tahin.",
-                "ingredients": "Rund, rijst, shawarmakruiden, tahin, peterselie"
-            },
-            "pulled-beef": {
-                "title": "Mexican Pulled Beef Bowl",
-                "description": "Langzaam getrokken rund met rijst, bonen en pico de gallo.",
-                "ingredients": "Rund, rijst, bonen, tomaat, limoen, koriander"
-            },
-            "salmon-teriyaki": {
-                "title": "Salmon Teriyaki Rice Bowl",
-                "description": "Teriyaki-zalm met rijst en gestoomde groente.",
-                "ingredients": "Zalm, rijst, teriyakisaus, sperziebonen"
-            },
-            "grilled-salmon": {
-                "title": "Grilled Salmon with Rice & Vegetables",
-                "description": "Ovengegrilde zalm met rijst en seizoensgroente.",
-                "ingredients": "Zalm, rijst, broccoli, wortel, citroen, dille"
-            },
-            "veg-bowl": {
-                "title": "Vegetable Bowl",
-                "description": "Groenterijke bowl met granen en citrusdressing.",
-                "ingredients": "Quinoa, kikkererwten, gemengde groente, citroendressing"
-            },
-            "veg-risotto": {
-                "title": "Vegetable Risotto",
-                "description": "Romige groentenrisotto met kruiden en parmezaan.",
-                "ingredients": "Arboriorijst, paddenstoelen, courgette, parmezaan, kruiden"
-            }
-        }
-    },
-    "menuGrid": {
-        "title": "Cateringrestaurants",
-        "subtitle": "Ontdek onze diverse restaurantopties. Elk restaurant is aan te passen aan je wensen.",
-        "detectingLocation": "Locatie wordt bepaald...",
-        "selectCity": "📍 Kies stad",
-        "showingRestaurants": "{count} restaurant(s) in {city} weergegeven",
-        "loading": "Restaurants laden in {city}...",
-        "failLoad": "Restaurants laden mislukt",
-        "noRestaurants": "Geen restaurants gevonden in {city}",
-        "viewMenu": "Bekijk menu →"
-    },
-    "chefCarousel": {
-        "title1": "Onze ",
-        "title2": "uitgelichte",
-        "title3": " restaurants",
-        "subtitle": "Ontdek geweldige thuiskoks en restaurants voor je volgende event.",
-        "loading": "Restaurants laden...",
-        "failLoad": "Restaurants laden mislukt",
-        "noRestaurants": "Geen restaurants gevonden."
-    },
-    "packageComparison": {
-        "title": "Vergelijk pakketten",
-        "subtitle": "Bekijk wat er in elk pakket zit om de beste match te vinden.",
-        "featureCol": "Kenmerk",
-        "starter": "Starter",
-        "growth": "Growth",
-        "premium": "Premium",
-        "mostPopular": "Meest populair",
-        "perPerson": "per persoon",
-        "select": "Selecteer",
-        "selectPkg": "Selecteer",
-        "features": {
-            "numberOfCourses": "Aantal gangen",
-            "courses2": "2 gangen",
-            "courses3": "3 gangen",
-            "courses4": "4 gangen",
-            "menuOptions": "Menu-opties",
-            "standard": "Standaard",
-            "options5": "5+ opties",
-            "unlimited": "Onbeperkt",
-            "customMenuAdjustments": "Menu-aanpassingen",
-            "dietaryAccommodations": "Dieetwensen",
-            "type1": "1 type",
-            "nonAlcoholicDrinks": "Non-alcoholische dranken",
-            "wineBeer": "Wijn & bier",
-            "premiumBeverage": "Premium drankenpakket",
-            "tableSetup": "Tafelopstelling & schoonmaak",
-            "premiumTableSetup": "Premium tafelopstelling",
-            "customLinens": "Luxe linnen",
-            "eventCoordinator": "Eventcoördinator",
-            "preEventConsultation": "Voorafgaand consult",
-            "min30": "30 min",
-            "hour1": "1 uur",
-            "postEventFeedback": "Feedback na afloop",
-            "professionalPhotos": "Professionele foto's",
-            "optional": "Optioneel",
-            "groupSize": "Groepsgrootte",
-            "size1530": "15-30",
-            "size2050": "20-50",
-            "size30100": "30-100",
-            "duration": "Duur",
-            "dur253": "2,5-3u",
-            "dur335": "3-3,5u",
-            "dur354": "3,5-4u"
-        }
-    },
-    "chefSignup": {
-        "title": "Ben jij chef?",
-        "subtitle": "Sluit je aan bij ons exclusieve netwerk van topchefs en toon je kerstmenu's.",
-        "applyBtn": "Aanmelden als chef"
-    },
-    "metadata": {
-        "homeTitle": "Homemade maaltijdabonnementen | Verse wekelijkse bezorging",
-        "homeDescription": "Kies een maaltijdabonnement voor het echte leven. Verse, chef-bereide maaltijden, wekelijks geleverd in Nederland.",
-        "quoteTitle": "Start je abonnement | Homemade",
-        "quoteDescription": "Beantwoord een paar korte vragen en start je wekelijkse maaltijdabonnement."
-    },
-    "cateringCalculator": {
-        "badge": "💰 Besparingscalculator",
-        "title1": "Zie hoeveel je team",
-        "title2": "kan besparen",
-        "subtitle": "Vergelijk restaurantcatering met Homemade catering. Pas de sliders aan jouw situatie aan.",
-        "configTitle": "Configureer je event",
-        "eventTypeLabel": "Type event",
-        "guestsLabel": "Aantal gasten",
-        "guestsMin": "5 gasten",
-        "guestsMax": "200 gasten",
-        "eventsLabel": "Events per jaar",
-        "eventsMin": "1x",
-        "eventsMax": "24x / jaar",
-        "noteRef": "💡 Gebaseerd op gemiddelde Amsterdamse restaurantprijzen vs. Homemade. Werkelijke besparing kan variëren.",
-        "saveText": "Je kunt besparen",
-        "perYearText": "per jaar",
-        "lessThanText": "minder dan restaurants",
-        "perEventSave": "Besparing per event",
-        "over5Years": "Over 5 jaar",
-        "costBreakdown": "Jaarlijkse kostenopbouw",
-        "restaurantCatering": "Restaurantcatering",
-        "homemadeCatering": "Homemade catering",
-        "bookBtn": "Boek je eerste event →",
-        "mealLabels": {
-            "lunch": "Teamlunch",
-            "dinner": "Teamdiner",
-            "drinks": "Borrel & snacks",
-            "breakfast": "Ontbijtmeeting"
-        }
-    },
-    "promoBanner": {
-        "badge": "Beperkte plekken",
-        "headline": "50% korting bij lancering",
-        "subline": "Schrijf je vandaag in op de wachtlijst",
-        "cta": "Op de wachtlijst"
-    },
-    "quotePage": {
-        "title": "Op de wachtlijst",
-        "subtitle": "Beantwoord een paar snelle vragen en we zetten je op de wachtlijst."
+  "navigation": {
+    "howItWorks": "Hoe het werkt",
+    "menu": "Plannen",
+    "about": "Over ons",
+    "faq": "FAQ",
+    "bookNow": "Kies plan",
+    "blog": "Blog"
+  },
+  "hero": {
+    "titlePart1": "Homemade maaltijden",
+    "titlePart2": "voor",
+    "titleHighlight": "het echte leven",
+    "animatedTitleStatic": "Homemade maaltijdabonnementen voor ",
+    "animatedRotatingWords": [
+      "gezinnen",
+      "drukke professionals",
+      "plantaardig leven",
+      "comfortgerichte routines"
+    ],
+    "subtitle": "Verse, door chefs bereide maaltijden, wekelijks geleverd. Kies een plan dat bij je routine past.",
+    "cta": "Kies je plan",
+    "launchOfferTitle": "Lanceringsoffer",
+    "launchOfferText": "20% korting wanneer je je inschrijft op de wachtlijst",
+    "ctaSecondary": "Probeer eerst — geen abonnement"
+  },
+  "partners": {
+    "heading": "Met trots partner van"
+  },
+  "problemSolution": {
+    "title1": "Waarom je avonden besteden",
+    "title2": "aan uitzoeken wat je gaat koken?",
+    "solutionTitle": "Een wekelijks maaltijdplan dat echt werkt",
+    "solutionDesc": "Kies een plan, selecteer je maaltijden en wij regelen de rest.",
+    "benefit1Title": "Consistente, gebalanceerde maaltijden",
+    "benefit1Desc": "Door chefs bereide gerechten met echte ingrediënten en duidelijke voedingsfocus",
+    "benefit2Title": "Geen planning, geen stress",
+    "benefit2Desc": "Sla boodschappen, voorbereiding en afwas over op drukke dagen",
+    "benefit3Title": "Flexibel ontworpen",
+    "benefit3Desc": "Pauzeer, sla over of wissel van plan wanneer je wilt"
+  },
+  "howItWorks": {
+    "title": "Hoe het werkt",
+    "step1Title": "Kies je plan",
+    "step1Desc": "Kies het plan dat bij je routine en voorkeuren past.",
+    "step2Title": "Selecteer wekelijkse maaltijden",
+    "step2Desc": "Kies je maaltijden en portiegrootte voor de week.",
+    "step3Title": "Vers bezorgd",
+    "step3Desc": "Verwarm, eet en geniet. Pauzeer of sla over wanneer je wilt."
+  },
+  "cuisineShowcase": {
+    "title1": "Kies je",
+    "title2": "plan",
+    "subtitle": "Vier kernabonnementen ontworpen voor hoe mensen in Nederland eten.",
+    "requestQuote": "Kies plan",
+    "planMenu": "Start je abonnement",
+    "customAlert": "Altijd pauzeren of overslaan",
+    "items": {
+      "family": {
+        "title": "Balanced",
+        "description": "Dagelijkse maaltijden met een goede balans van eiwitten, koolhydraten en groenten."
+      },
+      "routine": {
+        "title": "High Protein",
+        "description": "Eiwitrijke maaltijden voor een actieve, drukke agenda."
+      },
+      "plant": {
+        "title": "Vegan",
+        "description": "Plantaardige maaltijden met volle smaak en goede porties."
+      },
+      "comfort": {
+        "title": "Low Calorie",
+        "description": "Lichtere maaltijden met slimme porties en pure ingrediënten."
+      }
     }
+  },
+  "occasions": {
+    "title": "Voor wie het is",
+    "exploreMenu": "Bekijk details",
+    "items": {
+      "families": {
+        "title": "Drukke gezinnen",
+        "subtitle": "Doordeweeks"
+      },
+      "professionals": {
+        "title": "Drukke professionals",
+        "subtitle": "Routine"
+      },
+      "flexitarians": {
+        "title": "Flexitariërs",
+        "subtitle": "Plantaardig"
+      },
+      "comfort": {
+        "title": "Comfortzoekers",
+        "subtitle": "Zorg"
+      }
+    }
+  },
+  "packageTiers": {
+    "title": "Teamdinerpakketten",
+    "subtitle": "Transparante prijzen, uitzonderlijke waarde. Alle pakketten inclusief professionele service en schoonmaak.",
+    "badgePopular": "Meest populair",
+    "groupLabel": "Groep:",
+    "timeLabel": "Duur:",
+    "choosePackage": "Kies dit pakket",
+    "note": "Alle prijzen excl. btw. Definitieve offerte na consult. Minimale groepsgroottes gelden.",
+    "packages": {
+      "starter": {
+        "name": "Starter Teamdiner",
+        "priceUnit": "per persoon",
+        "groupSize": "15-30 personen",
+        "duration": "2,5-3 uur",
+        "description": "Budgetbewuste teams, eerste events",
+        "features": [
+          "2-gangen menu",
+          "Non-alcoholische dranken",
+          "Tafelopstelling & schoonmaak",
+          "1 dieetwens"
+        ]
+      },
+      "growth": {
+        "name": "Growth Teamdiner",
+        "priceUnit": "per persoon",
+        "groupSize": "20-50 personen",
+        "duration": "3-3,5 uur",
+        "description": "Perfecte balans tussen kwaliteit en waarde",
+        "features": [
+          "3-gangen menu",
+          "Alcoholische dranken (wijn/bier)",
+          "Premium tafelopstelling",
+          "Onbeperkte dieetwensen",
+          "Voorafgaand consult (30 min)",
+          "Menu-aanpassingen",
+          "5+ menu-opties"
+        ]
+      },
+      "premium": {
+        "name": "Premium Teamviering",
+        "priceUnit": "per persoon",
+        "groupSize": "30-100 personen",
+        "duration": "3,5-4 uur",
+        "description": "Ultieme ervaring voor speciale gelegenheden",
+        "features": [
+          "4-gangen menu",
+          "Premium drankenpakket",
+          "Luxe linnen & opstelling",
+          "Volledige culinaire maatwerk",
+          "1-uur planningscall",
+          "Feedback na afloop",
+          "Eventcoördinator/assistent",
+          "Optioneel professionele foto's"
+        ]
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Wat abonnees zeggen",
+    "subtitle": "Echte verhalen van mensen die Homemade elke week gebruiken.",
+    "joinText": "Sluit je aan bij duizenden abonnees",
+    "bookButton": "Kies je plan",
+    "verifiedClient": "Geverifieerde klant",
+    "metrics": {
+      "happyClients": "Tevreden klanten",
+      "averageRating": "Gemiddelde beoordeling",
+      "savings": "Tijd bespaard",
+      "guarantee": "Tevredenheidsgarantie"
+    },
+    "items": [
+      {
+        "company": "Balanced",
+        "eventType": "Wekelijkse diners",
+        "quote": "Onze kinderen eten de maaltijden echt. De porties zijn perfect en we besparen elke week uren."
+      },
+      {
+        "company": "High Protein",
+        "eventType": "Weekstructuur",
+        "quote": "Ik sla geen lunch meer over of bestel afhaal. De eiwitopties zijn sterk en consistent."
+      },
+      {
+        "company": "Vegan",
+        "eventType": "Flexitarisch",
+        "quote": "We wilden meer plantaardig eten zonder volledig vegan te gaan. Deze zijn smaakvol en vullend."
+      },
+      {
+        "company": "Low Calorie",
+        "eventType": "Makkelijk opwarmen",
+        "quote": "Betrouwbare, huiselijke maaltijden die makkelijk op te warmen zijn. Precies wat ik nodig had."
+      },
+      {
+        "company": "Balanced",
+        "eventType": "Portiegecontroleerd",
+        "quote": "Veel variatie, geen voedselverspilling en de bezorging is altijd op tijd."
+      },
+      {
+        "company": "Drukke professional",
+        "eventType": "Maaltijden zonder prep",
+        "quote": "Ik houd mijn weekdagen eindelijk overzichtelijk. De maaltijden zijn vers en smaken als echt eten."
+      },
+      {
+        "company": "Balanced",
+        "eventType": "Kindvriendelijk",
+        "quote": "Minder stress tijdens het diner. We verwarmen, serveren en genieten."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "subtitle": "Alles wat je moet weten over maaltijdabonnementen. Kun je je antwoord niet vinden? Neem contact op.",
+    "stillQuestions": "Nog vragen?",
+    "contactTeam": "Neem contact op",
+    "items": [
+      {
+        "question": "Wat is inbegrepen bij een abonnement?",
+        "answer": "Verse, door chefs bereide maaltijden die wekelijks worden geleverd. Jij kiest je plan, porties en voorkeuren."
+      },
+      {
+        "question": "Kan ik pauzeren of weken overslaan?",
+        "answer": "Ja. Je kunt pauzeren, overslaan of je plan aanpassen vóór de wekelijkse deadline."
+      },
+      {
+        "question": "Ondersteunen jullie dieetwensen?",
+        "answer": "We bieden vegetarische, plantaardige en eiwitrijke opties, plus allergen-vriendelijke keuzes."
+      },
+      {
+        "question": "Hoe werken porties?",
+        "answer": "Kies 2–4 porties per maaltijd, of losse maaltijden als je voor één persoon bestelt."
+      },
+      {
+        "question": "Wanneer leveren jullie?",
+        "answer": "We bezorgen op vaste wekelijkse routes per regio. Je ziet beschikbare dagen bij het afrekenen."
+      },
+      {
+        "question": "Hoe ver van tevoren moet ik bestellen?",
+        "answer": "Bestellingen sluiten 3–4 dagen voor levering, zodat chefs vers kunnen bereiden."
+      },
+      {
+        "question": "Kan ik altijd opzeggen?",
+        "answer": "Ja. Pauzeer of stop je abonnement vanuit je account, zonder lange verplichting."
+      },
+      {
+        "question": "Zijn de maaltijden vers of bevroren?",
+        "answer": "Maaltijden worden vers geleverd en zijn ontworpen om makkelijk op te warmen."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Homemade. Alle rechten voorbehouden.",
+    "terms": "Voorwaarden",
+    "privacy": "Privacy",
+    "contact": "Contact"
+  },
+  "bookingForm": {
+    "successTitle": "Je bent geboekt!",
+    "successMessage": "Bedankt voor je aanvraag. Ons cateringteam neemt snel contact op om de details te bevestigen!",
+    "bookAnother": "Boek nog een",
+    "title1": "Reserveer je",
+    "title2": "catering",
+    "subtitle": "Van zakelijke events tot vieringen: wij leveren catering op maat.",
+    "feature1": "5-sterren chefs",
+    "feature2": "Op maat samengestelde menu's",
+    "selectMenuLabel": "Selecteer menu",
+    "customMenuOption": "-- Ik stel mijn eigen menu samen --",
+    "preferredChefLabel": "Voorkeurschef",
+    "anyChefOption": "Elke chef",
+    "cuisineStyleLabel": "Keukenstijl",
+    "cuisinePlaceholder": "bijv. Italiaans",
+    "eventDetailsLabel": "Eventdetails",
+    "guests": {
+      "g2": "2 gasten",
+      "g3_5": "3-5 gasten",
+      "g6_10": "6-10 gasten",
+      "g10plus": "10+ gasten"
+    },
+    "namePlaceholder": "Jouw naam",
+    "emailPlaceholder": "E-mailadres",
+    "bookNowBtn": "Nu boeken",
+    "noPaymentText": "Geen directe betaling vereist.",
+    "contactedText": "We nemen contact op om details af te stemmen.",
+    "loadingText": "Formulier laden..."
+  },
+  "quizForm": {
+    "stepProgress": "Stap {current} van {total}",
+    "backButton": "Terug",
+    "nextButton": "Volgende",
+    "submitButton": "Op de wachtlijst",
+    "occasionTitle": "Kies je plan",
+    "occasionSubtitle": "Kies het abonnement dat bij je routine past.",
+    "step1Header": "Stel je eerste box samen",
+    "step1Subheader": "Kies je plan en hoeveel maaltijden je per week wilt.",
+    "planSectionTitle": "Plan",
+    "mealsSectionTitle": "Maaltijden per week",
+    "summaryTitle": "Overzicht",
+    "summaryPlan": "Plan",
+    "summaryMeals": "Maaltijden per week",
+    "summaryPricePerMeal": "Prijs per maaltijd (na korting)",
+    "summaryDelivery": "Bezorging",
+    "summaryDeliveryValue": "Gratis",
+    "summaryTotal": "Totaal",
+    "summaryDiscountLabel": "Lanceringsoffer toegepast — 20% KORTING",
+    "summaryOffer": "Wachtlijstbonus — 20% korting bij lancering",
+    "summaryNote": "Je ontgrendelt de aanbieding na inschrijving op de wachtlijst.",
+    "summaryPause": "Altijd pauzeren",
+    "summaryNoCommitment": "Geen verplichtingen",
+    "summaryFreshMeals": "Verse maaltijden, wekelijks",
+    "summaryLegend": "Legenda",
+    "legendLabels": {
+      "chicken": "Kip",
+      "beef": "Rund",
+      "fish": "Vis",
+      "vegetarian": "Veg",
+      "highProtein": "High Protein",
+      "light": "Light"
+    },
+    "guestsTitle": "Hoeveel maaltijden per week?",
+    "guestsSubtitle": "Kies de wekelijkse hoeveelheid die bij je routine past.",
+    "dateTitle": "Hoeveel bezorgdagen?",
+    "dateSubtitle": "Kies hoeveel dagen je bezorging wilt per week.",
+    "contactTitle": "Jouw gegevens",
+    "contactSubtitle": "Waar mogen we je wachtlijstbevestiging naartoe sturen?",
+    "mealsTitle": "Kies je maaltijden",
+    "mealsSubtitle": "Selecteer je maaltijden voor de week.",
+    "mealsSelected": "{selected}/{total} maaltijden geselecteerd",
+    "mealSelectionError": "Je kunt tot {count} maaltijden kiezen.",
+    "viewDetails": "Bekijk details",
+    "selectedLabel": "Geselecteerd",
+    "addOne": "Voeg toe",
+    "removeOne": "Verwijder",
+    "namePlaceholder": "Volledige naam",
+    "emailPlaceholder": "E-mailadres",
+    "phonePlaceholder": "Telefoonnummer",
+    "privacyNote": "We respecteren je privacy. Geen directe betaling vereist.",
+    "submitting": "Verzenden...",
+    "submitError": "Verzenden mislukt. Probeer het opnieuw.",
+    "successTitle": "Je staat op de wachtlijst!",
+    "successMessage": "Bedankt! We hebben je plek gereserveerd en mailen zodra we nieuwe abonnementen openen.",
+    "backHome": "Terug naar home",
+    "loading": "Laden...",
+    "mealFilters": {
+      "all": "Alle",
+      "chicken": "Kip",
+      "beef": "Rund",
+      "fish": "Vis",
+      "vegetarian": "Vegetarisch"
+    },
+    "mealCategoryLabels": {
+      "chicken": "Kip",
+      "beef": "Rund",
+      "fish": "Vis",
+      "vegetarian": "Vegetarisch"
+    },
+    "mealBadgeLabels": {
+      "chicken": "Kip",
+      "beef": "Rund",
+      "fish": "Vis",
+      "vegetarian": "Veg",
+      "highProtein": "High Protein",
+      "light": "Light"
+    },
+    "mealDetails": {
+      "kcal": "kcal",
+      "grams": "g",
+      "calories": "Calorieën",
+      "protein": "Eiwit",
+      "fat": "Vet",
+      "carbs": "Koolhydraten",
+      "moreNutrition": "Meer voeding",
+      "fiber": "Vezels",
+      "sugar": "Suiker",
+      "sodium": "Natrium",
+      "ingredients": "Ingrediënten"
+    },
+    "mealOptions": {
+      "3": {
+        "label": "3 maaltijden / week",
+        "description": "Lichte ondersteuning voor drukke weken"
+      },
+      "5": {
+        "label": "5 maaltijden / week",
+        "description": "Volledige werkweekdekking"
+      },
+      "7": {
+        "label": "7 maaltijden / week",
+        "description": "Elke dag diner"
+      },
+      "10": {
+        "label": "10 maaltijden / week",
+        "description": "Maximale flexibiliteit"
+      }
+    },
+    "deliveryOptions": {
+      "1": {
+        "label": "1 bezorgdag",
+        "description": "Alles in één keer geleverd"
+      },
+      "2": {
+        "label": "2 bezorgdagen",
+        "description": "Halverwege vers"
+      },
+      "3": {
+        "label": "3 bezorgdagen",
+        "description": "Vaker bijvullen"
+      },
+      "5": {
+        "label": "5 bezorgdagen",
+        "description": "Bijna dagelijks gemak"
+      }
+    },
+    "plans": {
+      "balanced": {
+        "label": "Balanced",
+        "description": "Dagelijkse maaltijden met een goede balans van eiwitten, koolhydraten en groenten."
+      },
+      "high-protein": {
+        "label": "High Protein",
+        "description": "Eiwitrijke maaltijden voor een actieve, drukke agenda."
+      },
+      "vegan": {
+        "label": "Vegan",
+        "description": "Plantaardige maaltijden met volle smaak en goede porties."
+      },
+      "low-calorie": {
+        "label": "Low Calorie",
+        "description": "Lichtere maaltijden met slimme porties en pure ingrediënten."
+      }
+    },
+    "mealItems": {
+      "chicken-teriyaki": {
+        "title": "Chicken Teriyaki Rice Bowl",
+        "description": "Teriyaki-kip over gestoomde rijst met broccoli en sesam.",
+        "ingredients": "Kip, rijst, broccoli, teriyakisaus, sesam, bosui"
+      },
+      "chicken-satay": {
+        "title": "Chicken Satay Rice Bowl",
+        "description": "Gegrilde satékip met jasmijnrijst en knapperige groente.",
+        "ingredients": "Kip, jasmijnrijst, pindasaus, komkommer, wortel"
+      },
+      "chicken-shawarma": {
+        "title": "Chicken Shawarma Rice Bowl",
+        "description": "Gekruide shawarma-kip met rijst, kruiden en ingelegde ui.",
+        "ingredients": "Kip, rijst, yoghurtkruidenmix, ingelegde ui, kruiden"
+      },
+      "butter-chicken": {
+        "title": "Butter Chicken with Rice",
+        "description": "Romige butter chicken met geurende basmatirijst.",
+        "ingredients": "Kip, basmatirijst, tomatenroomsaus, specerijen"
+      },
+      "chicken-pesto": {
+        "title": "Chicken Pesto Pasta",
+        "description": "Pesto kip-pasta met cherrytomaat en spinazie.",
+        "ingredients": "Kip, pasta, basilicumpesto, tomaat, spinazie"
+      },
+      "chili-chicken": {
+        "title": "Chili Chicken Noodles",
+        "description": "Pittige chili-kip met noedels en knapperige groente.",
+        "ingredients": "Kip, noedels, chilisaus, paprika, ui"
+      },
+      "beef-bolognese": {
+        "title": "Beef Bolognese Pasta",
+        "description": "Langzaam gegaarde bolognesesaus met al dente pasta.",
+        "ingredients": "Rund, pasta, tomaat, ui, knoflook, kruiden"
+      },
+      "beef-shawarma": {
+        "title": "Beef Shawarma Rice Bowl",
+        "description": "Malse rundshawarma met rijst, kruiden en tahin.",
+        "ingredients": "Rund, rijst, shawarmakruiden, tahin, peterselie"
+      },
+      "pulled-beef": {
+        "title": "Mexican Pulled Beef Bowl",
+        "description": "Langzaam getrokken rund met rijst, bonen en pico de gallo.",
+        "ingredients": "Rund, rijst, bonen, tomaat, limoen, koriander"
+      },
+      "salmon-teriyaki": {
+        "title": "Salmon Teriyaki Rice Bowl",
+        "description": "Teriyaki-zalm met rijst en gestoomde groente.",
+        "ingredients": "Zalm, rijst, teriyakisaus, sperziebonen"
+      },
+      "grilled-salmon": {
+        "title": "Grilled Salmon with Rice & Vegetables",
+        "description": "Ovengegrilde zalm met rijst en seizoensgroente.",
+        "ingredients": "Zalm, rijst, broccoli, wortel, citroen, dille"
+      },
+      "veg-bowl": {
+        "title": "Vegetable Bowl",
+        "description": "Groenterijke bowl met granen en citrusdressing.",
+        "ingredients": "Quinoa, kikkererwten, gemengde groente, citroendressing"
+      },
+      "veg-risotto": {
+        "title": "Vegetable Risotto",
+        "description": "Romige groentenrisotto met kruiden en parmezaan.",
+        "ingredients": "Arboriorijst, paddenstoelen, courgette, parmezaan, kruiden"
+      }
+    },
+    "tryFirstTitle": "Probeer eerst — geen abonnement",
+    "tryFirstSubtitle": "Eenmalige bestelling met één bezorgdag.",
+    "tryFirstPlanLabel": "Probeer eerst",
+    "tryFirstPointOne": "Geen abonnement nodig — eenmalige bestelling.",
+    "tryFirstPointTwo": "Één bezorgdag, kies meerdere maaltijden.",
+    "tryFirstPointThree": "Bezorgkosten €4,99–€5 van toepassing.",
+    "summaryPricePerMealNoDiscount": "Prijs per maaltijd"
+  },
+  "menuGrid": {
+    "title": "Cateringrestaurants",
+    "subtitle": "Ontdek onze diverse restaurantopties. Elk restaurant is aan te passen aan je wensen.",
+    "detectingLocation": "Locatie wordt bepaald...",
+    "selectCity": "📍 Kies stad",
+    "showingRestaurants": "{count} restaurant(s) in {city} weergegeven",
+    "loading": "Restaurants laden in {city}...",
+    "failLoad": "Restaurants laden mislukt",
+    "noRestaurants": "Geen restaurants gevonden in {city}",
+    "viewMenu": "Bekijk menu →"
+  },
+  "chefCarousel": {
+    "title1": "Onze ",
+    "title2": "uitgelichte",
+    "title3": " restaurants",
+    "subtitle": "Ontdek geweldige thuiskoks en restaurants voor je volgende event.",
+    "loading": "Restaurants laden...",
+    "failLoad": "Restaurants laden mislukt",
+    "noRestaurants": "Geen restaurants gevonden."
+  },
+  "packageComparison": {
+    "title": "Vergelijk pakketten",
+    "subtitle": "Bekijk wat er in elk pakket zit om de beste match te vinden.",
+    "featureCol": "Kenmerk",
+    "starter": "Starter",
+    "growth": "Growth",
+    "premium": "Premium",
+    "mostPopular": "Meest populair",
+    "perPerson": "per persoon",
+    "select": "Selecteer",
+    "selectPkg": "Selecteer",
+    "features": {
+      "numberOfCourses": "Aantal gangen",
+      "courses2": "2 gangen",
+      "courses3": "3 gangen",
+      "courses4": "4 gangen",
+      "menuOptions": "Menu-opties",
+      "standard": "Standaard",
+      "options5": "5+ opties",
+      "unlimited": "Onbeperkt",
+      "customMenuAdjustments": "Menu-aanpassingen",
+      "dietaryAccommodations": "Dieetwensen",
+      "type1": "1 type",
+      "nonAlcoholicDrinks": "Non-alcoholische dranken",
+      "wineBeer": "Wijn & bier",
+      "premiumBeverage": "Premium drankenpakket",
+      "tableSetup": "Tafelopstelling & schoonmaak",
+      "premiumTableSetup": "Premium tafelopstelling",
+      "customLinens": "Luxe linnen",
+      "eventCoordinator": "Eventcoördinator",
+      "preEventConsultation": "Voorafgaand consult",
+      "min30": "30 min",
+      "hour1": "1 uur",
+      "postEventFeedback": "Feedback na afloop",
+      "professionalPhotos": "Professionele foto's",
+      "optional": "Optioneel",
+      "groupSize": "Groepsgrootte",
+      "size1530": "15-30",
+      "size2050": "20-50",
+      "size30100": "30-100",
+      "duration": "Duur",
+      "dur253": "2,5-3u",
+      "dur335": "3-3,5u",
+      "dur354": "3,5-4u"
+    }
+  },
+  "chefSignup": {
+    "title": "Ben jij chef?",
+    "subtitle": "Sluit je aan bij ons exclusieve netwerk van topchefs en toon je kerstmenu's.",
+    "applyBtn": "Aanmelden als chef"
+  },
+  "metadata": {
+    "homeTitle": "Homemade maaltijdabonnementen | Verse wekelijkse bezorging",
+    "homeDescription": "Kies een maaltijdabonnement voor het echte leven. Verse, chef-bereide maaltijden, wekelijks geleverd in Nederland.",
+    "quoteTitle": "Start je abonnement | Homemade",
+    "quoteDescription": "Beantwoord een paar korte vragen en start je wekelijkse maaltijdabonnement."
+  },
+  "cateringCalculator": {
+    "badge": "💰 Besparingscalculator",
+    "title1": "Zie hoeveel je team",
+    "title2": "kan besparen",
+    "subtitle": "Vergelijk restaurantcatering met Homemade catering. Pas de sliders aan jouw situatie aan.",
+    "configTitle": "Configureer je event",
+    "eventTypeLabel": "Type event",
+    "guestsLabel": "Aantal gasten",
+    "guestsMin": "5 gasten",
+    "guestsMax": "200 gasten",
+    "eventsLabel": "Events per jaar",
+    "eventsMin": "1x",
+    "eventsMax": "24x / jaar",
+    "noteRef": "💡 Gebaseerd op gemiddelde Amsterdamse restaurantprijzen vs. Homemade. Werkelijke besparing kan variëren.",
+    "saveText": "Je kunt besparen",
+    "perYearText": "per jaar",
+    "lessThanText": "minder dan restaurants",
+    "perEventSave": "Besparing per event",
+    "over5Years": "Over 5 jaar",
+    "costBreakdown": "Jaarlijkse kostenopbouw",
+    "restaurantCatering": "Restaurantcatering",
+    "homemadeCatering": "Homemade catering",
+    "bookBtn": "Boek je eerste event →",
+    "mealLabels": {
+      "lunch": "Teamlunch",
+      "dinner": "Teamdiner",
+      "drinks": "Borrel & snacks",
+      "breakfast": "Ontbijtmeeting"
+    }
+  },
+  "promoBanner": {
+    "badge": "Beperkte plekken",
+    "headline": "20% korting bij lancering",
+    "subline": "Schrijf je vandaag in op de wachtlijst",
+    "cta": "Op de wachtlijst"
+  },
+  "quotePage": {
+    "title": "Op de wachtlijst",
+    "subtitle": "Beantwoord een paar snelle vragen en we zetten je op de wachtlijst."
+  }
 }

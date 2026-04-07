@@ -43,7 +43,7 @@ export default function FixedPromoBanner() {
 
                 <div className="flex flex-row items-center justify-center flex-1 text-center min-w-0">
                     <span className="font-serif font-bold text-lg md:text-xl leading-tight whitespace-nowrap hidden md:inline mr-4">
-                        {t.headline || "50% Off at Launch"}
+                        {t.headline || "20% Off at Launch"}
                     </span>
                     <span className="text-[10px] md:text-sm text-[#F47A44] font-mono font-bold tracking-widest bg-black/20 px-2 py-1 md:px-3 md:py-1 rounded-md whitespace-nowrap">
                         {t.subline || "Join the waitlist today"}
