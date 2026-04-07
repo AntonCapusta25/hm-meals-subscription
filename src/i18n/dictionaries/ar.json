@@ -496,7 +496,9 @@
     "tryFirstPointOne": "بدون اشتراك — طلب لمرة واحدة.",
     "tryFirstPointTwo": "يوم توصيل واحد، اختر عدة وجبات.",
     "tryFirstPointThree": "رسوم التوصيل 4.99–5€ تطبق.",
-    "summaryPricePerMealNoDiscount": "سعر الوجبة"
+    "summaryPricePerMealNoDiscount": "سعر الوجبة",
+    "mealsSelectedFlexible": "{selected} وجبة محددة",
+    "summaryMealsTryFirst": "الوجبات المحددة"
   },
   "menuGrid": {
     "title": "مطاعم التموين",

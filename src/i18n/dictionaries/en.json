@@ -496,7 +496,9 @@
     "tryFirstPointOne": "No subscription required — one-time order.",
     "tryFirstPointTwo": "Single delivery day, choose multiple meals.",
     "tryFirstPointThree": "Delivery fee €4.99–€5 applies.",
-    "summaryPricePerMealNoDiscount": "Price per meal"
+    "summaryPricePerMealNoDiscount": "Price per meal",
+    "mealsSelectedFlexible": "{selected} meals selected",
+    "summaryMealsTryFirst": "Meals selected"
   },
   "menuGrid": {
     "title": "Catering Restaurants",

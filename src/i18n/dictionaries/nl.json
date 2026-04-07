@@ -496,7 +496,9 @@
     "tryFirstPointOne": "Geen abonnement nodig — eenmalige bestelling.",
     "tryFirstPointTwo": "Één bezorgdag, kies meerdere maaltijden.",
     "tryFirstPointThree": "Bezorgkosten €4,99–€5 van toepassing.",
-    "summaryPricePerMealNoDiscount": "Prijs per maaltijd"
+    "summaryPricePerMealNoDiscount": "Prijs per maaltijd",
+    "mealsSelectedFlexible": "{selected} maaltijden geselecteerd",
+    "summaryMealsTryFirst": "Maaltijden geselecteerd"
   },
   "menuGrid": {
     "title": "Cateringrestaurants",

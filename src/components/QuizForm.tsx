@@ -336,7 +336,8 @@ function QuizFormContent() {
     const [isSuccess, setIsSuccess] = useState(false);
     const [activeMeal, setActiveMeal] = useState<(typeof MEAL_ITEMS)[number] | null>(null);
 
-    const totalSteps = 5;
+    const totalSteps = isTryFirst ? 3 : 5;
+    const displayStep = isTryFirst ? (step === 1 ? 1 : step === 3 ? 2 : 3) : step;
 
     useEffect(() => {
         if (isTryFirst) {
@@ -348,7 +349,8 @@ function QuizFormContent() {
         setFormData(prev => ({ ...prev, ...fields }));
     };
 
-    const targetMeals = Number(formData.mealsPerWeek.match(/\d+/)?.[0] || 0);
+    const mealsLimit = isTryFirst ? 0 : Number(formData.mealsPerWeek.match(/\d+/)?.[0] || 0);
+    const targetMeals = isTryFirst ? formData.selectedMeals.length : mealsLimit;
     const filteredMeals = MEAL_ITEMS.filter((m) => mealFilter === "all" || m.category === mealFilter);
     const selectedMealItems = MEAL_ITEMS.filter((meal) => formData.selectedMeals.includes(meal.id));
     const defaultPricePerMeal = 6.49;
@@ -359,10 +361,11 @@ function QuizFormContent() {
     const basePricePerMeal = formData.selectedMeals.length
         ? Number((selectedMealsTotal / formData.selectedMeals.length).toFixed(2))
         : defaultPricePerMeal;
-    const marketingPricePerMeal = isTryFirst ? basePricePerMeal : Number((basePricePerMeal * 1.2).toFixed(2));
+    const marketingPricePerMeal = Number((basePricePerMeal * 1.2).toFixed(2));
     const discountedPricePerMeal = basePricePerMeal;
+    const displayPricePerMeal = isTryFirst ? marketingPricePerMeal : discountedPricePerMeal;
     const subtotal = targetMeals > 0 ? Number((marketingPricePerMeal * targetMeals).toFixed(2)) : 0;
-    const discountedTotal = targetMeals > 0 ? Number((discountedPricePerMeal * targetMeals).toFixed(2)) : 0;
+    const discountedTotal = targetMeals > 0 ? Number((displayPricePerMeal * targetMeals).toFixed(2)) : 0;
     const deliveryFee = isTryFirst ? 4.99 : 0;
     const finalTotal = Number((discountedTotal + deliveryFee).toFixed(2));
 
@@ -377,9 +380,16 @@ function QuizFormContent() {
         }
     }, []);
 
+    useEffect(() => {
+        if (isTryFirst) {
+            const label = deliveryOptionsCopy["1"]?.label || "1 delivery day";
+            updateData({ deliveryDays: label });
+        }
+    }, [isTryFirst, deliveryOptionsCopy]);
+
     const deliveryOptions = isTryFirst
         ? DELIVERY_DAYS_OPTIONS.filter((opt) => opt.id === "1")
-        : DELIVERY_DAYS_OPTIONS;
+        : DELIVERY_DAYS_OPTIONS.filter((opt) => mealsLimit === 0 || Number(opt.id) <= mealsLimit);
 
     const getLabelForBadge = (key: string, fallback: string) => badgeLabels[key] || fallback;
     const getCategoryLabel = (category: string) => {
@@ -400,9 +410,9 @@ function QuizFormContent() {
 
     const addMeal = (id: string) => {
         setFormData((prev) => {
-            if (targetMeals > 0 && prev.selectedMeals.length >= targetMeals) {
+            if (!isTryFirst && mealsLimit > 0 && prev.selectedMeals.length >= mealsLimit) {
                 const msgTemplate = t.mealSelectionError || "You can select up to {count} meals.";
-                setSelectionError(msgTemplate.replace("{count}", targetMeals.toString()));
+                setSelectionError(msgTemplate.replace("{count}", mealsLimit.toString()));
                 return prev;
             }
             setSelectionError("");
@@ -422,11 +432,25 @@ function QuizFormContent() {
     };
 
     const nextStep = () => {
-        if (step < totalSteps) setStep(step + 1);
+        if (!isTryFirst) {
+            if (step < totalSteps) setStep(step + 1);
+            return;
+        }
+        let next = step + 1;
+        if (next === 2) next = 3;
+        if (next === 4) next = 5;
+        if (next <= 5) setStep(next);
     };
 
     const prevStep = () => {
-        if (step > 1) setStep(step - 1);
+        if (!isTryFirst) {
+            if (step > 1) setStep(step - 1);
+            return;
+        }
+        let prev = step - 1;
+        if (prev === 4) prev = 3;
+        if (prev === 2) prev = 1;
+        if (prev >= 1) setStep(prev);
     };
 
     const triggerConfetti = () => {
@@ -516,10 +540,10 @@ function QuizFormContent() {
     const handleKeyDown = (e: React.KeyboardEvent) => {
         if (e.key === 'Enter') {
             e.preventDefault();
-            if (step === 1 && formData.plan) nextStep();
-            if (step === 2 && formData.mealsPerWeek) nextStep();
-            if (step === 3 && formData.selectedMeals.length === targetMeals && targetMeals > 0) nextStep();
-            if (step === 4 && formData.deliveryDays) nextStep();
+            if (step === 1 && (isTryFirst || formData.plan)) nextStep();
+            if (!isTryFirst && step === 2 && formData.mealsPerWeek) nextStep();
+            if (step === 3 && (isTryFirst ? formData.selectedMeals.length > 0 : (formData.selectedMeals.length === targetMeals && targetMeals > 0))) nextStep();
+            if (!isTryFirst && step === 4 && formData.deliveryDays) nextStep();
             if (step === 5 && formData.name && formData.email && formData.phone) handleSubmit();
         }
     };
@@ -559,14 +583,14 @@ function QuizFormContent() {
             {/* Progress Bar */}
             <div className="mb-4 md:mb-12">
                 <div className="flex justify-between text-[10px] md:text-sm font-medium text-gray-500 mb-2 md:mb-4 tracking-widest uppercase">
-                    <span>{t.stepProgress?.replace('{current}', step.toString()).replace('{total}', totalSteps.toString()) || `Step ${step} of ${totalSteps}`}</span>
-                    <span>{Math.round((step / totalSteps) * 100)}%</span>
+                    <span>{t.stepProgress?.replace('{current}', displayStep.toString()).replace('{total}', totalSteps.toString()) || `Step ${displayStep} of ${totalSteps}`}</span>
+                    <span>{Math.round((displayStep / totalSteps) * 100)}%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
                     <motion.div
                         className="bg-orange h-full"
-                        initial={{ width: `${((step - 1) / totalSteps) * 100}%` }}
-                        animate={{ width: `${(step / totalSteps) * 100}%` }}
+                        initial={{ width: `${((displayStep - 1) / totalSteps) * 100}%` }}
+                        animate={{ width: `${(displayStep / totalSteps) * 100}%` }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                     />
                 </div>
@@ -639,7 +663,7 @@ function QuizFormContent() {
                     )}
 
                     {/* STEP 2: Meals per week */}
-                    {step === 2 && (
+                    {step === 2 && !isTryFirst && (
                         <motion.div
                             key="step2"
                             initial={{ opacity: 0, x: 50 }}
@@ -711,12 +735,15 @@ function QuizFormContent() {
 
                                     <div className="flex items-center justify-between text-sm text-gray-600">
                                         <span>
-                                            {(t.mealsSelected || "{selected}/{total} meals selected")
-                                                .replace("{selected}", formData.selectedMeals.length.toString())
-                                                .replace("{total}", (targetMeals || 0).toString())}
-                                        </span>
-                                        {selectionError && <span className="text-orange">{selectionError}</span>}
-                                    </div>
+                                    {isTryFirst
+                                        ? (t.mealsSelectedFlexible || "{selected} meals selected")
+                                            .replace("{selected}", formData.selectedMeals.length.toString())
+                                        : (t.mealsSelected || "{selected}/{total} meals selected")
+                                            .replace("{selected}", formData.selectedMeals.length.toString())
+                                            .replace("{total}", (targetMeals || 0).toString())}
+                                </span>
+                                {selectionError && <span className="text-orange">{selectionError}</span>}
+                            </div>
 
                                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
                                         {filteredMeals.map((meal) => {
@@ -784,7 +811,9 @@ function QuizFormContent() {
                                                         </div>
                                                     </div>
                                                     <div className="px-3 pb-3 flex items-center justify-between">
-                                                        <span className="text-xs font-semibold text-orange">€{meal.price.toFixed(2)}</span>
+                                                        <span className="text-xs font-semibold text-orange">
+                                                            €{(isTryFirst ? Number((meal.price * 1.2).toFixed(2)) : meal.price).toFixed(2)}
+                                                        </span>
                                                         <div className="flex items-center gap-2">
                                                             <div className="flex items-center gap-1 rounded-full border border-dark/10 px-1">
                                                                 <button
@@ -830,7 +859,9 @@ function QuizFormContent() {
                                         <h3 className="font-display text-lg text-dark">{t.summaryTitle || "Order summary"}</h3>
                                         <div className="space-y-2 text-sm">
                                             <div className="flex justify-between">
-                                                <span className="text-gray-500">{t.summaryMeals || "Meals per week"}</span>
+                                                <span className="text-gray-500">
+                                                    {isTryFirst ? (t.summaryMealsTryFirst || "Meals selected") : (t.summaryMeals || "Meals per week")}
+                                                </span>
                                                 <span className="font-semibold text-dark">{targetMeals || 0}</span>
                                             </div>
                                             <div className="flex justify-between">
@@ -841,7 +872,7 @@ function QuizFormContent() {
                                                     {!isTryFirst && (
                                                         <span className="text-gray-500 line-through text-xs mr-2">€{marketingPricePerMeal.toFixed(2)}</span>
                                                     )}
-                                                    <span className="font-semibold text-dark">€{discountedPricePerMeal.toFixed(2)}</span>
+                                                    <span className="font-semibold text-dark">€{displayPricePerMeal.toFixed(2)}</span>
                                                 </div>
                                             </div>
                                             <div className="flex justify-between">
@@ -909,7 +940,7 @@ function QuizFormContent() {
                     )}
 
                     {/* STEP 4: Delivery Days */}
-                    {step === 4 && (
+                    {step === 4 && !isTryFirst && (
                         <motion.div
                             key="step4"
                             initial={{ opacity: 0, x: 50 }}

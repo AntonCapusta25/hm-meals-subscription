@@ -496,7 +496,9 @@
     "tryFirstPointOne": "कोई सब्सक्रिप्शन जरूरी नहीं — एक बार का ऑर्डर।",
     "tryFirstPointTwo": "एक डिलीवरी दिन, कई मील चुनें।",
     "tryFirstPointThree": "डिलीवरी शुल्क €4.99–€5 लागू।",
-    "summaryPricePerMealNoDiscount": "प्रति मील कीमत"
+    "summaryPricePerMealNoDiscount": "प्रति मील कीमत",
+    "mealsSelectedFlexible": "{selected} मील चुने गए",
+    "summaryMealsTryFirst": "चुने गए मील"
   },
   "menuGrid": {
     "title": "कैटरिंग रेस्टोरेंट्स",

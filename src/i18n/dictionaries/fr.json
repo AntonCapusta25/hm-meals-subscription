@@ -496,7 +496,9 @@
     "tryFirstPointOne": "Pas d’abonnement — commande unique.",
     "tryFirstPointTwo": "Une seule journée de livraison, choisissez plusieurs repas.",
     "tryFirstPointThree": "Frais de livraison 4,99–5 € applicables.",
-    "summaryPricePerMealNoDiscount": "Prix par repas"
+    "summaryPricePerMealNoDiscount": "Prix par repas",
+    "mealsSelectedFlexible": "{selected} repas sélectionnés",
+    "summaryMealsTryFirst": "Repas sélectionnés"
   },
   "menuGrid": {
     "title": "Restaurants de catering",
