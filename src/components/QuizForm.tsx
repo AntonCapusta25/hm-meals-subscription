@@ -338,12 +338,38 @@ function QuizFormContent() {
 
     const totalSteps = isTryFirst ? 3 : 5;
     const displayStep = isTryFirst ? (step === 1 ? 1 : step === 3 ? 2 : 3) : step;
+    const storageKey = isTryFirst ? "quizFormState_tryFirst" : "quizFormState_subscription";
 
     useEffect(() => {
         if (isTryFirst) {
             updateData({ plan: t.tryFirstPlanLabel || "Try First" });
         }
     }, [isTryFirst, t.tryFirstPlanLabel]);
+
+    const normalizeStep = (value: number) => {
+        if (!isTryFirst) return Math.min(Math.max(value, 1), 5);
+        if (value === 2) return 3;
+        if (value === 4) return 5;
+        if (value === 1 || value === 3 || value === 5) return value;
+        return 1;
+    };
+
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+        const saved = window.localStorage.getItem(storageKey);
+        if (!saved) return;
+        try {
+            const parsed = JSON.parse(saved);
+            if (parsed?.data) {
+                setFormData((prev) => ({ ...prev, ...parsed.data }));
+            }
+            if (typeof parsed?.step === "number") {
+                setStep(normalizeStep(parsed.step));
+            }
+        } catch {
+            // ignore bad cache
+        }
+    }, [storageKey, isTryFirst]);
 
     const updateData = (fields: Partial<FormData>) => {
         setFormData(prev => ({ ...prev, ...fields }));
@@ -379,6 +405,12 @@ function QuizFormContent() {
             window.scrollTo({ top: 0, behavior: "auto" });
         }
     }, []);
+
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+        const payload = JSON.stringify({ step, data: formData });
+        window.localStorage.setItem(storageKey, payload);
+    }, [formData, step, storageKey]);
 
     useEffect(() => {
         if (isTryFirst) {
@@ -528,6 +560,9 @@ function QuizFormContent() {
 
             setIsSubmitting(false);
             setIsSuccess(true);
+            if (typeof window !== "undefined") {
+                window.localStorage.removeItem(storageKey);
+            }
             triggerConfetti();
         } catch (error) {
             console.error(error);
@@ -1137,14 +1172,14 @@ function QuizFormContent() {
                     {t.backButton || "Back"}
                 </button>
 
-                {step < totalSteps ? (
+                {((isTryFirst && step !== 5) || (!isTryFirst && step < totalSteps)) ? (
                     <button
                         onClick={nextStep}
                         disabled={
-                            (step === 1 && !formData.plan) ||
-                            (step === 2 && !formData.mealsPerWeek) ||
-                            (step === 3 && (targetMeals === 0 || formData.selectedMeals.length !== targetMeals)) ||
-                            (step === 4 && !formData.deliveryDays)
+                            (!isTryFirst && step === 1 && !formData.plan) ||
+                            (!isTryFirst && step === 2 && !formData.mealsPerWeek) ||
+                            (step === 3 && (isTryFirst ? formData.selectedMeals.length === 0 : (targetMeals === 0 || formData.selectedMeals.length !== targetMeals))) ||
+                            (!isTryFirst && step === 4 && !formData.deliveryDays)
                         }
                         className="flex items-center gap-2 bg-orange text-white px-6 py-3 md:px-8 md:py-3 rounded-xl font-bold hover:bg-orange/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
