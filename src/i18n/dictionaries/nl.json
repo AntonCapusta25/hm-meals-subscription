@@ -21,7 +21,7 @@
     "subtitle": "Verse, door chefs bereide maaltijden, wekelijks geleverd. Kies een plan dat bij je routine past.",
     "cta": "Kies je plan",
     "launchOfferTitle": "Lanceringsoffer",
-    "launchOfferText": "20% korting wanneer je je inschrijft op de wachtlijst",
+    "launchOfferText": "50% korting wanneer je je inschrijft op de wachtlijst",
     "ctaSecondary": "Probeer eerst — geen abonnement"
   },
   "partners": {
@@ -296,8 +296,8 @@
     "summaryDelivery": "Bezorging",
     "summaryDeliveryValue": "Gratis",
     "summaryTotal": "Totaal",
-    "summaryDiscountLabel": "Lanceringsoffer toegepast — 20% KORTING",
-    "summaryOffer": "Wachtlijstbonus — 20% korting bij lancering",
+    "summaryDiscountLabel": "Lanceringsoffer toegepast — 50% KORTING",
+    "summaryOffer": "Wachtlijstbonus — 50% korting bij lancering",
     "summaryNote": "Je ontgrendelt de aanbieding na inschrijving op de wachtlijst.",
     "summaryPause": "Altijd pauzeren",
     "summaryNoCommitment": "Geen verplichtingen",
@@ -609,7 +609,7 @@
   },
   "promoBanner": {
     "badge": "Beperkte plekken",
-    "headline": "20% korting bij lancering",
+    "headline": "50% korting bij lancering",
     "subline": "Schrijf je vandaag in op de wachtlijst",
     "cta": "Op de wachtlijst"
   },

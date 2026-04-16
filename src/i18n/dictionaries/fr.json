@@ -21,7 +21,7 @@
     "subtitle": "Des repas frais préparés par des chefs, livrés chaque semaine. Choisissez un plan adapté à votre rythme.",
     "cta": "Choisir votre plan",
     "launchOfferTitle": "Offre de lancement",
-    "launchOfferText": "20% de réduction en rejoignant la liste d'attente",
+    "launchOfferText": "50% de réduction en rejoignant la liste d'attente",
     "ctaSecondary": "Essayer d'abord — sans abonnement"
   },
   "partners": {
@@ -296,8 +296,8 @@
     "summaryDelivery": "Livraison",
     "summaryDeliveryValue": "Gratuit",
     "summaryTotal": "Total",
-    "summaryDiscountLabel": "Offre de lancement appliquée — 20% OFF",
-    "summaryOffer": "Bonus liste d'attente — 20% à la sortie",
+    "summaryDiscountLabel": "Offre de lancement appliquée — 50% OFF",
+    "summaryOffer": "Bonus liste d'attente — 50% à la sortie",
     "summaryNote": "Vous débloquerez l'offre après inscription à la liste d'attente.",
     "summaryPause": "Pause à tout moment",
     "summaryNoCommitment": "Sans engagement",
@@ -609,7 +609,7 @@
   },
   "promoBanner": {
     "badge": "Places limitées",
-    "headline": "20% au lancement",
+    "headline": "50% au lancement",
     "subline": "Rejoignez la liste d'attente aujourd'hui",
     "cta": "Rejoindre"
   },

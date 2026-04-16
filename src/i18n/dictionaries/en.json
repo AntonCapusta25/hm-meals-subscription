@@ -21,7 +21,7 @@
     "subtitle": "Fresh, chef-made meals delivered weekly. Choose a plan that fits your routine.",
     "cta": "Choose Your Plan",
     "launchOfferTitle": "Launch offer",
-    "launchOfferText": "20% off when you join the waitlist",
+    "launchOfferText": "50% off when you join the waitlist",
     "ctaSecondary": "Try First — No Subscription"
   },
   "partners": {
@@ -296,8 +296,8 @@
     "summaryDelivery": "Delivery",
     "summaryDeliveryValue": "Free",
     "summaryTotal": "Total",
-    "summaryDiscountLabel": "Launch offer applied — 20% OFF",
-    "summaryOffer": "Waitlist bonus — 20% off at launch",
+    "summaryDiscountLabel": "Launch offer applied — 50% OFF",
+    "summaryOffer": "Waitlist bonus — 50% off at launch",
     "summaryNote": "You’ll unlock the offer after joining the waitlist.",
     "summaryPause": "Pause anytime",
     "summaryNoCommitment": "No commitment",
@@ -609,7 +609,7 @@
   },
   "promoBanner": {
     "badge": "Limited Spots",
-    "headline": "20% Off at Launch",
+    "headline": "50% Off at Launch",
     "subline": "Join the waitlist today",
     "cta": "Join Waitlist"
   },

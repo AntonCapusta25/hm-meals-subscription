@@ -387,7 +387,7 @@ function QuizFormContent() {
     const basePricePerMeal = formData.selectedMeals.length
         ? Number((selectedMealsTotal / formData.selectedMeals.length).toFixed(2))
         : defaultPricePerMeal;
-    const marketingPricePerMeal = Number((basePricePerMeal * 1.2).toFixed(2));
+    const marketingPricePerMeal = Number((basePricePerMeal * 2).toFixed(2));
     const discountedPricePerMeal = basePricePerMeal;
     const displayPricePerMeal = isTryFirst ? marketingPricePerMeal : discountedPricePerMeal;
     const subtotal = targetMeals > 0 ? Number((marketingPricePerMeal * targetMeals).toFixed(2)) : 0;
@@ -926,7 +926,7 @@ function QuizFormContent() {
                                                 </div>
                                                 {!isTryFirst && (
                                                     <div className="mt-2 bg-orange/10 rounded-md px-3 py-2 text-center">
-                                                        <span className="text-sm font-semibold text-orange">{t.summaryDiscountLabel || "Launch offer applied — 20% OFF"}</span>
+                                                        <span className="text-sm font-semibold text-orange">{t.summaryDiscountLabel || "Launch offer applied — 50% OFF"}</span>
                                                     </div>
                                                 )}
                                             </div>

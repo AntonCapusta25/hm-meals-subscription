@@ -21,7 +21,7 @@
     "subtitle": "وجبات طازجة من إعداد الطهاة تُسلَّم أسبوعيًا. اختر خطة تناسب روتينك.",
     "cta": "اختر خطتك",
     "launchOfferTitle": "عرض الإطلاق",
-    "launchOfferText": "خصم 20% عند الانضمام لقائمة الانتظار",
+    "launchOfferText": "خصم 50% عند الانضمام لقائمة الانتظار",
     "ctaSecondary": "جرّب أولًا — بدون اشتراك"
   },
   "partners": {
@@ -296,8 +296,8 @@
     "summaryDelivery": "التوصيل",
     "summaryDeliveryValue": "مجاني",
     "summaryTotal": "الإجمالي",
-    "summaryDiscountLabel": "تم تطبيق عرض الإطلاق — خصم 20%",
-    "summaryOffer": "مكافأة قائمة الانتظار — خصم 20% عند الإطلاق",
+    "summaryDiscountLabel": "تم تطبيق عرض الإطلاق — خصم 50%",
+    "summaryOffer": "مكافأة قائمة الانتظار — خصم 50% عند الإطلاق",
     "summaryNote": "ستحصل على العرض بعد الانضمام لقائمة الانتظار.",
     "summaryPause": "إيقاف في أي وقت",
     "summaryNoCommitment": "بدون التزام",
@@ -609,7 +609,7 @@
   },
   "promoBanner": {
     "badge": "أماكن محدودة",
-    "headline": "خصم 20% عند الإطلاق",
+    "headline": "خصم 50% عند الإطلاق",
     "subline": "انضم إلى قائمة الانتظار اليوم",
     "cta": "انضم الآن"
   },

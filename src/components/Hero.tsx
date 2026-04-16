@@ -137,7 +137,7 @@ export default function Hero({ city }: HeroProps) {
                             {t.launchOfferTitle || "Launch offer"}
                         </span>
                         <span className="text-white/80">
-                            {t.launchOfferText || "20% off when you join the waitlist"}
+                            {t.launchOfferText || "50% off when you join the waitlist"}
                         </span>
                     </motion.div>
                 </div>

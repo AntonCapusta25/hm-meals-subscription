@@ -21,7 +21,7 @@
     "subtitle": "ताज़ा, शेफ‑बने भोजन हर हफ्ते डिलीवर। अपने रूटीन के हिसाब से प्लान चुनें।",
     "cta": "अपना प्लान चुनें",
     "launchOfferTitle": "लॉन्च ऑफ़र",
-    "launchOfferText": "वेटलिस्ट जॉइन करने पर 20% छूट",
+    "launchOfferText": "वेटलिस्ट जॉइन करने पर 50% छूट",
     "ctaSecondary": "पहले ट्राई करें — कोई सब्सक्रिप्शन नहीं"
   },
   "partners": {
@@ -296,8 +296,8 @@
     "summaryDelivery": "डिलीवरी",
     "summaryDeliveryValue": "फ्री",
     "summaryTotal": "कुल",
-    "summaryDiscountLabel": "लॉन्च ऑफ़र लागू — 20% OFF",
-    "summaryOffer": "वेटलिस्ट बोनस — लॉन्च पर 20% ऑफ",
+    "summaryDiscountLabel": "लॉन्च ऑफ़र लागू — 50% OFF",
+    "summaryOffer": "वेटलिस्ट बोनस — लॉन्च पर 50% ऑफ",
     "summaryNote": "वेटलिस्ट जॉइन करने के बाद ऑफ़र अनलॉक होगा।",
     "summaryPause": "कभी भी पॉज़ करें",
     "summaryNoCommitment": "कोई कमिटमेंट नहीं",
@@ -609,7 +609,7 @@
   },
   "promoBanner": {
     "badge": "सीमित स्थान",
-    "headline": "लॉन्च पर 20% ऑफ",
+    "headline": "लॉन्च पर 50% ऑफ",
     "subline": "आज ही वेटलिस्ट जॉइन करें",
     "cta": "वेटलिस्ट जॉइन करें"
   },
