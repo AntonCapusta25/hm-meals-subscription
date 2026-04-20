@@ -389,7 +389,7 @@ function QuizFormContent() {
         : defaultPricePerMeal;
     const marketingPricePerMeal = Number((basePricePerMeal * 2).toFixed(2));
     const discountedPricePerMeal = basePricePerMeal;
-    const displayPricePerMeal = isTryFirst ? marketingPricePerMeal : discountedPricePerMeal;
+    const displayPricePerMeal = discountedPricePerMeal;
     const subtotal = targetMeals > 0 ? Number((marketingPricePerMeal * targetMeals).toFixed(2)) : 0;
     const discountedTotal = targetMeals > 0 ? Number((displayPricePerMeal * targetMeals).toFixed(2)) : 0;
     const deliveryFee = isTryFirst ? 4.99 : 0;
@@ -847,7 +847,14 @@ function QuizFormContent() {
                                                     </div>
                                                     <div className="px-3 pb-3 flex items-center justify-between">
                                                         <span className="text-xs font-semibold text-orange">
-                                                            €{(isTryFirst ? Number((meal.price * 1.2).toFixed(2)) : meal.price).toFixed(2)}
+                                                            {isTryFirst ? (
+                                                                <span>
+                                                                    <span className="text-gray-500 line-through mr-1">€{Number((meal.price * 2).toFixed(2)).toFixed(2)}</span>
+                                                                    €{meal.price.toFixed(2)}
+                                                                </span>
+                                                            ) : (
+                                                                <span>€{meal.price.toFixed(2)}</span>
+                                                            )}
                                                         </span>
                                                         <div className="flex items-center gap-2">
                                                             <div className="flex items-center gap-1 rounded-full border border-dark/10 px-1">
@@ -904,9 +911,7 @@ function QuizFormContent() {
                                                     {isTryFirst ? (t.summaryPricePerMealNoDiscount || "Price per meal") : (t.summaryPricePerMeal || "Price per meal")}
                                                 </span>
                                                 <div className="text-right">
-                                                    {!isTryFirst && (
-                                                        <span className="text-gray-500 line-through text-xs mr-2">€{marketingPricePerMeal.toFixed(2)}</span>
-                                                    )}
+                                                    <span className="text-gray-500 line-through text-xs mr-2">€{marketingPricePerMeal.toFixed(2)}</span>
                                                     <span className="font-semibold text-dark">€{displayPricePerMeal.toFixed(2)}</span>
                                                 </div>
                                             </div>
@@ -920,15 +925,13 @@ function QuizFormContent() {
                                                 <div className="flex justify-between items-baseline">
                                                     <span className="font-semibold text-dark">{t.summaryTotal || "Total"}</span>
                                                     <div className="text-right">
-                                                        {!isTryFirst && <span className="text-gray-500 line-through text-sm mr-2">€{subtotal.toFixed(2)}</span>}
+                                                        <span className="text-gray-500 line-through text-sm mr-2">€{subtotal.toFixed(2)}</span>
                                                         <span className="text-xl font-bold text-orange">€{finalTotal.toFixed(2)}</span>
                                                     </div>
                                                 </div>
-                                                {!isTryFirst && (
-                                                    <div className="mt-2 bg-orange/10 rounded-md px-3 py-2 text-center">
-                                                        <span className="text-sm font-semibold text-orange">{t.summaryDiscountLabel || "Launch offer applied — 50% OFF"}</span>
-                                                    </div>
-                                                )}
+                                                <div className="mt-2 bg-orange/10 rounded-md px-3 py-2 text-center">
+                                                    <span className="text-sm font-semibold text-orange">{t.summaryDiscountLabel || "Launch offer applied — 50% OFF"}</span>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className="space-y-2 pt-2 border-t border-dark/10">
