@@ -23,7 +23,6 @@ function getLocale(request: NextRequest): string {
     const negotiatorHeaders: Record<string, string> = {};
     request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
 
-    // @ts-expect-error locales are readonly
     const negotiatorLocales: string[] = [...locales];
 
     // Use negotiator and intl-localematcher to get best locale
