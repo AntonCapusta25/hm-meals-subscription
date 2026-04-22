@@ -3,12 +3,27 @@ import Negotiator from "negotiator";
 import { NextRequest, NextResponse } from "next/server";
 import { defaultLocale, locales } from "./i18n/config";
 
+function isAdminPath(pathname: string): boolean {
+    return locales.some(
+        (locale) => pathname === `/${locale}/admin` || pathname.startsWith(`/${locale}/admin/`)
+    );
+}
+
+function unauthorizedResponse() {
+    return new NextResponse("Authentication required", {
+        status: 401,
+        headers: {
+            "WWW-Authenticate": 'Basic realm="Homemade Admin", charset="UTF-8"',
+        },
+    });
+}
+
 // Get the preferred locale, similar to above or using a library
 function getLocale(request: NextRequest): string {
     const negotiatorHeaders: Record<string, string> = {};
     request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
 
-    // @ts-ignore locales are readonly
+    // @ts-expect-error locales are readonly
     const negotiatorLocales: string[] = [...locales];
 
     // Use negotiator and intl-localematcher to get best locale
@@ -42,7 +57,35 @@ export function middleware(request: NextRequest) {
         (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
     );
 
-    if (pathnameHasLocale) return;
+    if (pathnameHasLocale) {
+        if (isAdminPath(pathname)) {
+            const expectedUser = process.env.ADMIN_DASHBOARD_USER || "admin";
+            const expectedPassword = process.env.ADMIN_DASHBOARD_PASSWORD;
+
+            if (!expectedPassword) {
+                return new NextResponse(
+                    "Admin dashboard is not configured. Set ADMIN_DASHBOARD_PASSWORD.",
+                    { status: 503 }
+                );
+            }
+
+            const authHeader = request.headers.get("authorization");
+            if (!authHeader?.startsWith("Basic ")) {
+                return unauthorizedResponse();
+            }
+
+            const decoded = atob(authHeader.split(" ")[1] || "");
+            const separatorIndex = decoded.indexOf(":");
+            const user = separatorIndex >= 0 ? decoded.slice(0, separatorIndex) : "";
+            const password = separatorIndex >= 0 ? decoded.slice(separatorIndex + 1) : "";
+
+            if (user !== expectedUser || password !== expectedPassword) {
+                return unauthorizedResponse();
+            }
+        }
+
+        return NextResponse.next();
+    }
 
     // Redirect if there is no locale
     const locale = getLocale(request);
