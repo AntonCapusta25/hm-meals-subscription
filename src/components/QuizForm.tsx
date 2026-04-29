@@ -809,9 +809,9 @@ function QuizFormContent() {
                                                                 src={meal.image}
                                                                 alt={meal.title}
                                                                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                                                loading="lazy"
+                                                                loading="eager"
                                                                 decoding="async"
-                                                                fetchPriority="low"
+                                                                fetchPriority="high"
                                                             />
                                                         </button>
                                                     </div>
@@ -1101,7 +1101,7 @@ function QuizFormContent() {
                                 src={activeMeal.image}
                                 alt={activeMeal.title}
                                 className="w-full aspect-[4/3] object-cover"
-                                loading="lazy"
+                                loading="eager"
                                 decoding="async"
                             />
                         </div>
