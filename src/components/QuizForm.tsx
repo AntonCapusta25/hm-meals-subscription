@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, Suspense, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ArrowLeft, CheckCircle2, Utensils, Calendar, Mail, User, Phone, Flame } from "lucide-react";
@@ -805,13 +806,15 @@ function QuizFormContent() {
                                                             ))}
                                                         </div>
                                                         <button type="button" onClick={() => addMeal(meal.id)} className="w-full h-full text-left">
-                                                            <img
+                                                            <Image
                                                                 src={meal.image}
                                                                 alt={meal.title}
+                                                                fill
+                                                                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 280px"
+                                                                quality={72}
                                                                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                                                 loading="eager"
-                                                                decoding="async"
-                                                                fetchPriority="high"
+                                                                fetchPriority="auto"
                                                             />
                                                         </button>
                                                     </div>
@@ -1097,12 +1100,15 @@ function QuizFormContent() {
                             ✕
                         </button>
                         <div className="rounded-xl overflow-hidden -mx-2 -mt-2 mb-4">
-                            <img
+                            <Image
                                 src={activeMeal.image}
                                 alt={activeMeal.title}
+                                width={960}
+                                height={720}
+                                sizes="(max-width: 768px) 100vw, 640px"
+                                quality={78}
                                 className="w-full aspect-[4/3] object-cover"
                                 loading="eager"
-                                decoding="async"
                             />
                         </div>
                         <div className="flex flex-col space-y-1.5 text-center sm:text-left">
